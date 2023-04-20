@@ -1,0 +1,11 @@
+/node_modules/
+/public/
+/storage/
+/vendor/
+.prettierrc
+.env
+.env.example
+tailwind.config
+package.json
+yarn.lock
+README.md

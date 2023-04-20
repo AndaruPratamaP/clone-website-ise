@@ -1,0 +1,42 @@
+<?php
+
+namespace App\Http\Controllers\Presentation;
+
+use App\Core\Application\Services\{controller_name}\{controller_name}Request;
+use App\Core\Application\Services\{controller_name}\{controller_name}Response;
+use App\Core\Application\Services\{controller_name}\{controller_name}Service;
+use App\Core\Domain\Models\Facades\UserAccount;
+use Illuminate\Support\Facades\DB;
+use Livewire\Component;
+use Throwable;
+
+class {controller_name}Controller extends Component
+{
+    private {controller_name}Service $service;
+    private {controller_name}Request $request;
+
+    public array $msg = [
+        "error" => "",
+        "success" => ""
+    ];
+
+    public function boot({controller_name}Service $service)
+    {
+        $this->service = $service;
+    }
+
+    public function index(): array
+    {
+        return [];
+    }
+
+    public function show(string $short_url): ?{controller_name}Response
+    {
+        return new {controller_name}Response();
+    }
+
+    public function store(): ?ShortenerResponse
+    {
+        return new {controller_name}Response();
+    }
+}

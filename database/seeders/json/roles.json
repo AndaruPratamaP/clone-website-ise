@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "name": "USER"
+    },
+    {
+        "id": 2,
+        "name": "ADMIN"
+    },
+    {
+        "id": 3,
+        "name": "SMA/Sederajat"
+    },
+    {
+        "id": 4,
+        "name": "Mahasiswa"
+    },
+    {
+        "id": 5,
+        "name": "Umum"
+    },
+    {
+        "id": 6,
+        "name": "BPH"
+    },
+    {
+        "id": 7,
+        "name": "Icon"
+    },
+    {
+        "id": 8,
+        "name": "Bionix"
+    },
+    {
+        "id": 9,
+        "name": "Rise"
+    },
+    {
+        "id": 10,
+        "name": "Admin Lo"
+    },
+    {
+        "id": 11,
+        "name": "Technical"
+    },
+    {
+        "id": 12,
+        "name": "Paradigm"
+    },
+    {
+        "id": 13,
+        "name": "IT Dev"
+    },
+    {
+        "id": 14,
+        "name": "Finance"
+    },
+    {
+        "id": 15,
+        "name": "Public Relation"
+    },
+    {
+        "id": 16,
+        "name": "Marketing"
+    },
+    {
+        "id": 17,
+        "name": "Creative"
+    }
+]
