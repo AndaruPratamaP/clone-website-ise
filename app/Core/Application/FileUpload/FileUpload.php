@@ -78,12 +78,11 @@ class FileUpload
         $uploaded = Storage::putFileAs(
             $this->path,
             $this->uploaded_file,
-            $file_front."_".$encrypted_seed
+            $file_front . "_" . $encrypted_seed
         );
         if (!$uploaded) {
             Exception::throw("Upload {$this->name} Gagal", 2003);
         }
-        $full_path = $this->path.'/'.$file_front."_".$encrypted_seed;
-        return $full_path;
+        return $this->path . '/' . $file_front . "_" . $encrypted_seed;
     }
 }

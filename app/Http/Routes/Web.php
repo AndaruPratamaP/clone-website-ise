@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return "Hi";
-});
+})->name('home');
 
 Route::get('go/{short}', RedirectShortener::class);
 
@@ -20,12 +20,17 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('dashboard', function () {
         return "welcome";
-    })->name('dashboard')->middleware('permission:test');
+    })->name('dashboard');
+
+    // This route can only be accessed when user have permission to route test
+    Route::get('test', function () {
+        return "test";
+    })->name('test')->middleware('permission:test');
 
     Route::get('logout', Logout::class)->name('logout');
 });
 
-// Routes that have to be authenticated
+// Routes that have to be not authenticated
 Route::middleware(['guest'])->group(function () {
     Route::get('login', Login::class)->name('login');
 });
