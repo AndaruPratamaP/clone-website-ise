@@ -9,6 +9,6 @@ class Logout extends AuthController
     public function render()
     {
         $this->logout();
-        return view('livewire.logout');
+        return view('livewire.auth.logout');
     }
 }

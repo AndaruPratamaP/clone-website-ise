@@ -26,4 +26,14 @@ class ProvinsiResponse implements JsonSerializable
             'name' => $this->name,
         ];
     }
+
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
 }

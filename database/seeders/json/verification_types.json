@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Email Verification"
+    },
+    {
+        "id": 2,
+        "name": "Forgot Password"
+    },
+    {
+        "id": 3,
+        "name": "Whatsapp OTP"
+    },
+    {
+        "id": 4,
+        "name": "Verifikasi Anggota Bionix"
+    }
+]

@@ -2,7 +2,7 @@
 
 namespace App\Core\Application\FileUpload;
 
-use App\Exceptions\Exception;
+use App\Exceptions\IseException;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 
@@ -61,10 +61,10 @@ class FileUpload
             !in_array($this->uploaded_file->getClientOriginalExtension(), $this->available_type) ||
             !in_array($this->uploaded_file->getClientMimeType(), $this->available_mime_type)
         ) {
-            Exception::throw("Tipe File {$this->name} Invalid", 2000);
+            IseException::throw("Tipe File {$this->name} Invalid", 2000);
         }
         if ($this->uploaded_file->getSize() > $this->file_size_limit) {
-            Exception::throw("{$this->name} Harus Dibawah 1Mb", 2000);
+            IseException::throw("{$this->name} Harus Dibawah 1Mb", 2000);
         }
     }
 
@@ -81,7 +81,7 @@ class FileUpload
             $file_front . "_" . $encrypted_seed
         );
         if (!$uploaded) {
-            Exception::throw("Upload {$this->name} Gagal", 2003);
+            IseException::throw("Upload {$this->name} Gagal", 2003);
         }
         return $this->path . '/' . $file_front . "_" . $encrypted_seed;
     }

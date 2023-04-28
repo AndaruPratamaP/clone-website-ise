@@ -2,48 +2,161 @@
 
 namespace App\Http\Controllers\Presentation;
 
-use App\Core\Application\Services\Auth\AuthRequest;
-use App\Core\Application\Services\Auth\AuthResponse;
+use App\Core\Application\Services\Auth\LoginRequest;
 use App\Core\Application\Services\Auth\AuthService;
+use App\Core\Application\Services\Auth\RegisterRequest;
+use App\Core\Application\Services\Auth\VerifyRequest;
+use App\Core\Application\Services\Provinsi\ProvinsiService;
+use App\Core\Application\Services\Role\RoleService;
+use App\Exceptions\IseException;
+use App\Http\Controllers\Pages\BaseController;
+use DanHarrin\LivewireRateLimiting\Exceptions\TooManyRequestsException;
 use Livewire\Component;
+use DanHarrin\LivewireRateLimiting\WithRateLimiting;
+use Illuminate\Support\Facades\DB;
+use Throwable;
 
 class AuthController extends Component
 {
+    use BaseController;
+    use WithRateLimiting;
+
     private AuthService $service;
-    private AuthRequest $request;
+    private ProvinsiService $provinsiService;
+    private RoleService $roleService;
+    private LoginRequest|RegisterRequest|VerifyRequest $request;
+
+    public array $provinces = [];
+    public array $roles = [];
+    public array $referrals = [
+        "Media Sosial ISE!",
+        "Media Partner ISE!",
+        "Sekolah",
+        "Teman/Keluarga",
+        "Lainnya"
+    ];
 
     public array $msg = [
         "error" => "",
         "success" => ""
     ];
 
-    public function boot(AuthService $service)
+    public function boot(AuthService $service, ProvinsiService $provinsiService, RoleService $roleService)
     {
         $this->service = $service;
+        $this->provinsiService = $provinsiService;
+        $this->roleService = $roleService;
+    }
+
+    public function mount()
+    {
+        $this->provinces = $this->provinsiService->getAllProvinsi();
+        $this->roles = $this->roleService->getApplicableRoles();
     }
 
     public function login()
     {
-        $this->request = new AuthRequest(
-            $this->email,
-            $this->password,
-            $this->remember,
-        );
+        try {
+            $this->rateLimit(3);
 
-        $login = $this->service->login($this->request);
+            $this->request = new LoginRequest(
+                $this->email,
+                $this->password,
+                $this->remember,
+            );
 
-        if (!$login) {
-            $this->msg['error'] = "Email atau password salah";
+            $login = $this->service->login($this->request);
+
+            if (!$login) {
+                $this->dispatchToast('error', 'Login gagal', 'Email atau password salah');
+                $this->msg['error'] = "Email atau password salah";
+                return;
+            }
+
+            $this->dispatchToast('success', 'Login berhasil');
+            $this->msg['success'] = "Login berhasil";
+            return redirect()->intended('dashboard');
+        } catch (TooManyRequestsException $exception) {
+            $this->dispatchToast('error', 'Login gagal', "Anda terlalu banyak gagal mencoba, coba lagi dalam {$exception->secondsUntilAvailable} detik");
+        } catch (Throwable $e) {
+            $this->dispatchToast('error', 'Login gagal', $e->getMessage());
+            $this->msg['error'] = $e->getMessage();
             return;
         }
-
-        $this->msg['success'] = "Login berhasil";
-        return redirect()->intended('dashboard');
     }
 
     public function logout()
     {
         $this->service->logout();
-        return redirect()->intended('login');
+        return redirect()->intended('login')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Logout berhasil',
+            'text' => 'Anda telah logout dari sistem',
+        ]);
+    }
+
+    public function register()
+    {
+
+        $this->request = new RegisterRequest(
+            $this->full_name,
+            $this->email,
+            $this->phone,
+            $this->password,
+            $this->institution,
+            $this->referral,
+            $this->province_id,
+            $this->role_id
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->dispatchToast('info', 'Mengirim data...', 'Mohon tunggu sebentar');
+            if (!$this->roleService->isApplicableRole($this->role_id)) {
+                IseException::throw("Role invalid", 1400);
+            }
+            $this->service->register($this->request);
+            $this->dispatchToast('success', 'Registrasi berhasil', 'Silahkan cek email anda untuk verifikasi');
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e;
+            $this->dispatchToast('error', 'Something went wrong', 'Please try again later');
+            return null;
+        }
+        DB::commit();
+
+        return redirect()->intended('login')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Registrasi berhasil',
+            'text' => 'Silahkan cek email anda untuk verifikasi',
+        ]);
+    }
+
+    public function verify()
+    {
+        $this->request = new VerifyRequest(
+            $this->token,
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->service->verify($this->request);
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            return redirect()->intended('login')->with('toastr-toast', [
+                'type' => 'error',
+                'title' => 'Verification failed',
+                'text' => $e->getMessage(),
+            ]);
+        }
+        DB::commit();
+
+        return redirect()->intended('login')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Verification successful',
+            'text' => 'Please login',
+        ]);
     }
 }

@@ -5,7 +5,7 @@ namespace App\Core\Application\Services\Shortener;
 use App\Core\Domain\Models\Facades\Shortener\Shortener;
 use App\Core\Domain\Models\Facades\UserAccount;
 use App\Core\Domain\Repositories\SqlShortenerRepository;
-use App\Exceptions\Exception;
+use App\Exceptions\IseException;
 
 class ShortenerService
 {
@@ -21,7 +21,7 @@ class ShortenerService
         $shortener = $this->repository->getAll();
 
         if ($shortener === null) {
-            Exception::throw("Shortener tidak ditemukan", 500, 404);
+            IseException::throw("Shortener tidak ditemukan", 500);
         }
 
         return array_map(function (Shortener $result) {
@@ -39,7 +39,7 @@ class ShortenerService
         $shortener = $this->repository->findByShortUrl($short_url);
 
         if ($shortener === null) {
-            Exception::throw("Shortener dengan short url {$short_url} tidak ditemukan", 501, 404);
+            IseException::throw("Shortener dengan short url {$short_url} tidak ditemukan", 501);
         }
 
         return new ShortenerResponse(
@@ -67,7 +67,7 @@ class ShortenerService
 
         $done = $this->repository->store($shortener);
         if (!$done) {
-            Exception::throw("Gagal menyimpan shortener", 502, 500);
+            IseException::throw("Gagal menyimpan shortener", 502);
         }
 
         return new ShortenerResponse(
@@ -80,7 +80,7 @@ class ShortenerService
 
     private function generateAlias($latestAlias): string
     {
-        $base = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        $base = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
         $temp = $latestAlias;
         $latestAlias = "";

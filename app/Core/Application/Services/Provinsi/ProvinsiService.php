@@ -4,13 +4,14 @@ namespace App\Core\Application\Services\Provinsi;
 
 use App\Core\Domain\Models\Facades\Provinsi\Provinsi;
 use App\Core\Domain\Repositories\SqlProvinsiRepository;
-use App\Exceptions\Exception;
+use App\Exceptions\IseException;
 
 class ProvinsiService
 {
     private SqlProvinsiRepository $repository;
 
-    public function __construct(SqlProvinsiRepository $repository) {
+    public function __construct(SqlProvinsiRepository $repository)
+    {
         $this->repository = $repository;
     }
 
@@ -18,8 +19,8 @@ class ProvinsiService
     {
         $provinsi = $this->repository->getAll();
 
-        if($provinsi === null) {
-            Exception::throw("Provinsi tidak ditemukan", 100, 404);
+        if ($provinsi === null) {
+            IseException::throw("Provinsi tidak ditemukan", 100);
         }
 
         return array_map(function (Provinsi $result) {
@@ -35,7 +36,7 @@ class ProvinsiService
         $provinsi = $this->repository->find($id);
 
         if ($provinsi === null) {
-            Exception::throw("Provinsi dengan id {$id} tidak ditemukan", 101, 404);
+            IseException::throw("Provinsi dengan id {$id} tidak ditemukan", 101);
         }
 
         return new ProvinsiResponse(

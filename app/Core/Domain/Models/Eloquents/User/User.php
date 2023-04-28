@@ -19,11 +19,13 @@ class User extends model implements AuthenticatableContract
 
     protected $table = 'users';
     protected $fillable = [
+        'id',
         'full_name',
         'email',
         'password',
         'handphone',
         'referral',
+        'institution',
         'is_verified',
         'provinsi_id',
         'role_id',

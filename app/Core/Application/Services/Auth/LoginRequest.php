@@ -2,7 +2,7 @@
 
 namespace App\Core\Application\Services\Auth;
 
-class AuthRequest
+class LoginRequest
 {
     private string $email;
     private string $password;

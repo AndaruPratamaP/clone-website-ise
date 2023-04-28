@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class KabupatenSeeder extends Seeder
 {
@@ -18,6 +17,10 @@ class KabupatenSeeder extends Seeder
         $json = file_get_contents(database_path('seeders/json/kabupaten.json'));
         $kabupatens = json_decode($json, true);
 
+        if ($this->checkIfSeeded(count($kabupatens))) {
+            return;
+        }
+
         $payload = [];
         foreach ($kabupatens as $kabupaten) {
             $payload[] = [
@@ -27,5 +30,24 @@ class KabupatenSeeder extends Seeder
             ];
         }
         DB::table('kabupaten')->insert($payload);
+    }
+
+    public function checkIfSeeded(int $rows): bool
+    {
+        $table_rows = DB::table('kabupaten')->count();
+
+        if ($table_rows === 0) {
+            return false;
+        } elseif ($table_rows !== $rows) {
+            $this->wipe();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public function wipe()
+    {
+        DB::table('kabupaten')->truncate();
     }
 }

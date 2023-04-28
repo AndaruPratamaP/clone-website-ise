@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Core\Domain\Models\Eloquents\User\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -18,6 +17,10 @@ class RoleSeeder extends Seeder
         $json = file_get_contents(database_path('seeders/json/roles.json'));
         $roles = json_decode($json, true);
 
+        if ($this->checkIfSeeded(count($roles))) {
+            return;
+        }
+
         $payload = [];
         foreach ($roles as $role) {
             $payload[] = [
@@ -26,5 +29,24 @@ class RoleSeeder extends Seeder
             ];
         }
         DB::table('roles')->insert($payload);
+    }
+
+    public function checkIfSeeded(int $rows): bool
+    {
+        $table_rows = DB::table('roles')->count();
+
+        if ($table_rows === 0) {
+            return false;
+        } elseif ($table_rows !== $rows) {
+            $this->wipe();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public function wipe()
+    {
+        DB::table('roles')->truncate();
     }
 }

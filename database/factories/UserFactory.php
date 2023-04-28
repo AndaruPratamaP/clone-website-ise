@@ -2,11 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Core\Application\Services\Hash\HashService;
 use App\Core\Domain\Models\Eloquents\Provinsi\Provinsi;
 use App\Core\Domain\Models\Eloquents\Role\Role;
 use App\Core\Domain\Models\Eloquents\User\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
@@ -26,7 +26,7 @@ class UserFactory extends Factory
             'id' => $this->generateUUID(),
             'full_name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
-            'password' => $this->generatePassword(),
+            'password' => HashService::argon('12345678', 'argon2i'),
             'handphone' => $this->randomIndonesianPhoneNumber(),
             'referral' => $this->generateReferral(),
             'verified_at' => now(),
@@ -37,12 +37,13 @@ class UserFactory extends Factory
 
     private function generateReferral(): string
     {
-        $ref = array(
+        $ref = [
             "Media Sosial ISE!",
             "Media Partner ISE!",
             "Sekolah",
-            "Teman/Keluarga"
-        );
+            "Teman/Keluarga",
+            "Lainnya"
+        ];
 
         $referral = $ref[array_rand($ref)];
         return $referral;
@@ -52,17 +53,6 @@ class UserFactory extends Factory
     {
         $uuid = Str::uuid()->toString();
         return $uuid;
-    }
-
-    private function generatePassword(): string
-    {
-        $hashed = Hash::make('12345678', [
-            'memory' => 65536,
-            'time' => 4,
-            'threads' => 1,
-            'argon2i'
-        ]);
-        return $hashed;
     }
 
     private function randomProvinsi(): int

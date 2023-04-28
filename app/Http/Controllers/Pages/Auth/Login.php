@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Pages\Auth;
 
 use App\Http\Controllers\Presentation\AuthController;
+use Throwable;
 
 class Login extends AuthController
 {
     public string $email = '';
     public string $password = '';
     public bool $remember = false;
+    public bool $isValid = false;
 
     protected $rules = [
         'email' => 'required|email',
@@ -17,12 +19,20 @@ class Login extends AuthController
 
     public function render()
     {
-        return view('livewire.login')->layout('layouts.app');
+        return view('livewire.auth.login')->layout('layouts.app');
     }
 
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+
+        try {
+            $this->isValid = true;
+            $this->validate($this->rules);
+        } catch (Throwable $e) {
+            $this->isValid = false;
+            return;
+        }
     }
 
     protected function error($error)

@@ -2,16 +2,16 @@
 
 namespace App\Core\Application\Services\Desa;
 
-use App\Core\Application\Services\Desa\DesaResponse;
 use App\Core\Domain\Models\Facades\Desa\Desa;
 use App\Core\Domain\Repositories\SqlDesaRepository;
-use App\Exceptions\Exception;
+use App\Exceptions\IseException;
 
 class DesaService
 {
     private SqlDesaRepository $repository;
 
-    public function __construct(SqlDesaRepository $repository) {
+    public function __construct(SqlDesaRepository $repository)
+    {
         $this->repository = $repository;
     }
 
@@ -20,8 +20,8 @@ class DesaService
         // Eloquent example : $desas = Desa::with('kecamatan.kabupaten.provinsi')->get();
         $desa = $this->repository->getAll();
 
-        if($desa === null) {
-            Exception::throw("Desa tidak ditemukan", 300, 404);
+        if ($desa === null) {
+            IseException::throw("Desa tidak ditemukan", 300);
         }
 
         return array_map(function (Desa $result) {
@@ -37,7 +37,7 @@ class DesaService
         $desa = $this->repository->find($id);
 
         if ($desa === null) {
-            Exception::throw("Desa dengan id {$id} tidak ditemukan", 301, 404);
+            IseException::throw("Desa dengan id {$id} tidak ditemukan", 301);
         }
 
         return new DesaResponse(

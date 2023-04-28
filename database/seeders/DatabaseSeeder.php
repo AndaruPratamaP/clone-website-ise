@@ -7,18 +7,33 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
-    {
-        $this->call([
+    protected $seeders = [
+        'local' => [
             ProvinsiSeeder::class,
             KabupatenSeeder::class,
             KecamatanSeeder::class,
             DesaSeeder::class,
             RoleSeeder::class,
             RandomUserSeeder::class,
-        ]);
+            VerificationType::class,
+        ],
+        'production' => [
+            ProvinsiSeeder::class,
+            KabupatenSeeder::class,
+            KecamatanSeeder::class,
+            DesaSeeder::class,
+            RoleSeeder::class,
+            VerificationType::class,
+        ],
+    ];
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        if (!array_key_exists(app()->environment(), $this->seeders)) {
+            return;
+        }
+        $this->call($this->seeders[app()->environment()]);
     }
 }

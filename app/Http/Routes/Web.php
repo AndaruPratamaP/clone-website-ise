@@ -4,6 +4,8 @@ use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Auth\Login;
 use App\Http\Controllers\Pages\Auth\Logout;
+use App\Http\Controllers\Pages\Auth\Register;
+use App\Http\Controllers\Pages\Auth\Verify;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +35,6 @@ Route::middleware(['auth'])->group(function () {
 // Routes that have to be not authenticated
 Route::middleware(['guest'])->group(function () {
     Route::get('login', Login::class)->name('login');
+    Route::get('register', Register::class)->name('register');
+    Route::get('verify/{token}', Verify::class)->name('verify');
 });

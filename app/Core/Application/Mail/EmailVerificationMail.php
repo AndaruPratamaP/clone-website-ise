@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 
 use function config;
 
-class AccountVerificationEmail extends Mailable
+class EmailVerificationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,13 +28,14 @@ class AccountVerificationEmail extends Mailable
         $this->token = $token;
     }
 
-    public function build(): AccountVerificationEmail
+    public function build(): EmailVerificationMail
     {
         return $this->from(config('mail.from'))
             ->markdown('emails.email_verification_mail', [
                 "email" => $this->email,
                 "name" => $this->name,
                 "token" => $this->token,
+                "app_url" => config('app.url')
             ]);
     }
 }

@@ -4,13 +4,14 @@ namespace App\Core\Application\Services\Kecamatan;
 
 use App\Core\Domain\Models\Facades\Kecamatan\Kecamatan;
 use App\Core\Domain\Repositories\SqlKecamatanRepository;
-use App\Exceptions\Exception;
+use App\Exceptions\IseException;
 
 class KecamatanService
 {
     private SqlKecamatanRepository $repository;
 
-    public function __construct(SqlKecamatanRepository $repository) {
+    public function __construct(SqlKecamatanRepository $repository)
+    {
         $this->repository = $repository;
     }
 
@@ -18,8 +19,8 @@ class KecamatanService
     {
         $kecamatan = $this->repository->getAll();
 
-        if($kecamatan === null) {
-            Exception::throw("Kecamatan tidak ditemukan", 200, 404);
+        if ($kecamatan === null) {
+            IseException::throw("Kecamatan tidak ditemukan", 200);
         }
 
         return array_map(function (Kecamatan $result) {
@@ -35,7 +36,7 @@ class KecamatanService
         $kecamatan = $this->repository->find($id);
 
         if ($kecamatan === null) {
-            Exception::throw("Kecamatan dengan id {$id} tidak ditemukan", 201, 404);
+            IseException::throw("Kecamatan dengan id {$id} tidak ditemukan", 201);
         }
 
         return new KecamatanResponse(

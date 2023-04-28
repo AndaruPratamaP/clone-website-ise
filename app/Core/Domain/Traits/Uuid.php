@@ -2,7 +2,7 @@
 
 namespace App\Core\Domain\Traits;
 
-use App\Exceptions\Exception;
+use App\Exceptions\IseException;
 use Exception as BaseException;
 use Ramsey\Uuid\Uuid as Ramsey;
 
@@ -18,7 +18,7 @@ trait Uuid
     public function __construct(?string $uuid)
     {
         if ($uuid && !Ramsey::isValid($uuid)) {
-            Exception::throw("Invalid UUID", 101, 422);
+            IseException::throw("Invalid UUID", 101);
         }
         $this->uuid = $uuid;
     }
@@ -31,7 +31,7 @@ trait Uuid
             try {
                 $model->uuid = Ramsey::uuid4()->toString();
             } catch (BaseException $e) {
-                Exception::throw($e->getMessage(), 100);
+                IseException::throw($e->getMessage(), 100);
             }
         });
     }

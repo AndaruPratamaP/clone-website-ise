@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -17,6 +16,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password', 255);
             $table->string('handphone', 16);
+            $table->string('institution', 255)->nullable();
             $table->string('referral', 255)->nullable();
             $table->timestamp('verified_at')->nullable()->default(null);
             $table->string('provinsi_id');
