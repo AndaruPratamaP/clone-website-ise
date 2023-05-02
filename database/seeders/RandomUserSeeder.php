@@ -43,7 +43,7 @@ class RandomUserSeeder extends Seeder
 
         if ($table_rows === 0) {
             return false;
-        } elseif ($table_rows !== $rows) {
+        } elseif ($table_rows < $rows) {
             $this->wipe();
             return false;
         } else {
@@ -53,6 +53,6 @@ class RandomUserSeeder extends Seeder
 
     public function wipe()
     {
-        DB::table('users')->truncate();
+        DB::table('users')->delete();
     }
 }

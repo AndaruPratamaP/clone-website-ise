@@ -9,7 +9,7 @@ class Verification extends model
     protected $table = 'verifications';
     protected $primaryKey = ['code', 'user_id', 'verification_type_id'];
     public $incrementing = false;
-    protected $fillable = ['code', 'user_id', 'verification_type_id', 'created_at', 'updated_at'];
+    protected $fillable = ['code', 'user_id', 'verification_type_id', 'expires_at', 'created_at', 'updated_at'];
     protected $dates = ['created_at', 'updated_at'];
 
     // relation

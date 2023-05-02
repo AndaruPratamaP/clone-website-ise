@@ -3,6 +3,7 @@
 namespace App\Core\Application\Services\Auth;
 
 use App\Core\Application\Mail\EmailVerificationMail;
+use App\Core\Application\Mail\RequestPasswordEmail;
 use App\Core\Application\Services\Hash\HashService;
 use App\Core\Application\Services\Role\RoleService;
 use App\Core\Application\Services\Verification\VerificationService;
@@ -93,11 +94,15 @@ class AuthService
             4320
         );
 
-        Mail::to($user->email)->send(new EmailVerificationMail(
-            $user->email,
-            $user->full_name,
-            $token
-        ));
+        try {
+            Mail::to($user->email)->send(new EmailVerificationMail(
+                $user->email,
+                $user->full_name,
+                $token
+            ));
+        } catch (Throwable $e) {
+            IseException::throw("Gagal mengirim email verifikasi", 1202);
+        }
     }
 
     public function verify(VerifyRequest $request): bool
@@ -124,6 +129,60 @@ class AuthService
         }
 
         $user->verified_at = now();
+        $user->save();
+
+        return true;
+    }
+
+    public function forgotPassword(ForgotPasswordRequest $request): void
+    {
+        $user = User::where('email', $request->getEmail())->first();
+
+        if (!$user) {
+            IseException::throw("Email tidak ditemukan", 1604);
+        }
+
+        $token = $this->verificationService->create(
+            2,
+            'uuid',
+            $user->id,
+            0,
+            4320
+        );
+
+        try {
+            Mail::to($user->email)->send(new RequestPasswordEmail(
+                $token
+            ));
+        } catch (Throwable $e) {
+            IseException::throw("Gagal mengirim email", 1601);
+        }
+    }
+
+    public function changeForgotPassword(ForgotPasswordChangeRequest $request): bool
+    {
+        try {
+            $user_verified = $this->verificationService->verify(
+                $request->getToken(),
+                2,
+            );
+        } catch (IseException $e) {
+            IseException::throw($e->getMessage(), 1603);
+        } catch (Throwable $e) {
+            IseException::throw("Token tidak valid", 1601);
+        }
+
+        if (!$user_verified) {
+            IseException::throw("Token tidak valid", 1601);
+        }
+
+        $user = User::find($user_verified);
+
+        if (!$user) {
+            IseException::throw("User tidak ditemukan", 1602);
+        }
+
+        $user->password = HashService::argon($request->getNewPassword(), 'argon2i');
         $user->save();
 
         return true;

@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\Pages\Auth\Forgot;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Auth\Login;
 use App\Http\Controllers\Pages\Auth\Logout;
 use App\Http\Controllers\Pages\Auth\Register;
+use App\Http\Controllers\Pages\Auth\RequestForgot;
 use App\Http\Controllers\Pages\Auth\Verify;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
 use App\Http\Controllers\Pages\Dashboard\Icon\StepRegistrationExample;
@@ -39,8 +41,8 @@ Route::middleware(['guest'])->group(function () {
     Route::get('login', Login::class)->name('login');
     Route::get('register', Register::class)->name('register');
     Route::get('verify/{token}', Verify::class)->name('verify');
+    Route::get('forgot/{token}', Forgot::class)->name('forgot');
+    Route::get('forgot', RequestForgot::class)->name('request-forgot');
     Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
     Route::get('gts-registration', GtsRegistration::class); #temp for development
 });
-
-

@@ -1,0 +1,23 @@
+name: Deploy to Development
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.DEV_HOST }}
+        username: ${{ secrets.DEV_USER }}
+        password: ${{ secrets.DEV_PASS }}
+        port: ${{ secrets.DEV_PORT }}
+        script: |
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
+          cd /var/www/html
+          ./../deploy.sh

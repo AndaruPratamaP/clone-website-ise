@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Presentation;
 
 use App\Core\Application\Services\Auth\LoginRequest;
 use App\Core\Application\Services\Auth\AuthService;
+use App\Core\Application\Services\Auth\ForgotPasswordChangeRequest;
+use App\Core\Application\Services\Auth\ForgotPasswordRequest;
 use App\Core\Application\Services\Auth\RegisterRequest;
 use App\Core\Application\Services\Auth\VerifyRequest;
 use App\Core\Application\Services\Provinsi\ProvinsiService;
@@ -24,7 +26,7 @@ class AuthController extends Component
     private AuthService $service;
     private ProvinsiService $provinsiService;
     private RoleService $roleService;
-    private LoginRequest|RegisterRequest|VerifyRequest $request;
+    private LoginRequest|RegisterRequest|VerifyRequest|ForgotPasswordRequest|ForgotPasswordChangeRequest $request;
 
     public array $provinces = [];
     public array $roles = [];
@@ -157,6 +159,66 @@ class AuthController extends Component
             'type' => 'success',
             'title' => 'Verification successful',
             'text' => 'Please login',
+        ]);
+    }
+
+    public function requestForgotPassword()
+    {
+        $this->request = new ForgotPasswordRequest(
+            $this->email,
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->rateLimit(3);
+            $this->service->forgotPassword($this->request);
+        } catch (TooManyRequestsException $exception) {
+            $this->dispatchToast('error', 'Terjadi kegagalan', "Anda terlalu banyak gagal mencoba, coba lagi dalam {$exception->secondsUntilAvailable} detik");
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            // check if error code is 1604
+            if ($e->getCode() != 1604) {
+                $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+                return;
+            }
+        }
+        DB::commit();
+
+        return redirect()->intended('login')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Berhasil melakukan reset password',
+            'text' => 'Silahkan cek email anda untuk melakukan reset password jika email anda terdaftar',
+        ]);
+    }
+
+    public function changeForgotPassword()
+    {
+        $this->request = new ForgotPasswordChangeRequest(
+            $this->token,
+            $this->new_password,
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->service->changeForgotPassword($this->request);
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            return redirect()->intended('login')->with('toastr-toast', [
+                'type' => 'error',
+                'title' => 'Gagal melakukan reset password',
+                'text' => $e->getMessage(),
+            ]);
+        }
+        DB::commit();
+
+        return redirect()->intended('login')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Berhasil melakukan reset password',
+            'text' => 'Silahkan login dengan password baru anda',
         ]);
     }
 }
