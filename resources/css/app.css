@@ -3,9 +3,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* reset all basic styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@layer components {
+    /* BIONIX */
+    .bg-gradient-green-l {
+      @apply bg-gradient-to-l from-green-700 to-lightGreen-200 w-max;
+    }
+    .bg-gradient-green-r {
+      @apply bg-gradient-to-r from-green-700 to-lightGreen-200 w-max;
+    }
+    .bg-gradient-green-bl {
+        @apply bg-gradient-to-bl from-green-700 to-lightGreen-200 w-max;
+    }
+    .bg-gradient-green-br {
+      @apply bg-gradient-to-br from-green-700 to-lightGreen-200 w-max;
+    }
+    /* ICON */
+    .bg-gradient-blue-l {
+        @apply bg-gradient-to-l from-[#348BB6] to-[#CCE1F0] w-max;
+      }
+    .bg-gradient-blue-r {
+      @apply bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] w-max;
+    }
+    .bg-gradient-blue-bl {
+      @apply bg-gradient-to-bl from-[#348BB6] to-[#CCE1F0] w-max;
+    }
+    .bg-gradient-blue-br {
+      @apply bg-gradient-to-br from-[#348BB6] to-[#CCE1F0] w-max;
+    }
+    /* RISE */
+    .bg-gradient-orange-l {
+        @apply bg-gradient-to-l from-[#FF9355] to-orange-50 w-max;
+      }
+    .bg-gradient-orange-r {
+      @apply bg-gradient-to-r from-[#FF9355] to-orange-50 w-max;
+    }
+    .bg-gradient-orange-bl {
+      @apply bg-gradient-to-bl from-[#FF9355] to-orange-50 w-max;
+    }
+    .bg-gradient-orange-br {
+      @apply bg-gradient-to-br from-[#FF9355] to-orange-50 w-max;
+    }
+    /* PARADIGM */
+    .bg-gradient-purple-l {
+        @apply bg-gradient-to-l from-orange-50 to-purple-700 w-max;
+      }
+    .bg-gradient-purple-r {
+      @apply bg-gradient-to-r from-orange-50 to-purple-700 w-max;
+    }
+    .bg-gradient-purple-bl {
+      @apply bg-gradient-to-bl from-orange-50 to-purple-700 w-max;
+    }
+    .bg-gradient-purple-br {
+      @apply bg-gradient-to-br from-orange-50 to-purple-700 w-max;
+    }
   }
