@@ -11,6 +11,8 @@ use App\Http\Controllers\Pages\Auth\Verify;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
 use App\Http\Controllers\Pages\Dashboard\Icon\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
+use App\Http\Controllers\Pages\Examples\Aos;
+use App\Http\Controllers\Pages\Examples\Swiper;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -43,6 +45,12 @@ Route::middleware(['guest'])->group(function () {
     Route::get('verify/{token}', Verify::class)->name('verify');
     Route::get('forgot/{token}', Forgot::class)->name('forgot');
     Route::get('forgot', RequestForgot::class)->name('request-forgot');
+});
+
+// check if development
+if (config('app.env') === 'local' || config('app.env') === 'development') {
+    Route::get('swiper', Swiper::class);
+    Route::get('aos', Aos::class);
     Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
     Route::get('gts-registration', GtsRegistration::class); #temp for development
-});
+}

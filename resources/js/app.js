@@ -35,6 +35,11 @@ const swiper = new Swiper('.swiper', {
 
 window.Swiper = swiper;
 
+import AOS from 'aos';
+window.AOS = AOS;
+window.AOS.init();
+
+// Settings
 
 toastr.options = {
     closeButton: false,

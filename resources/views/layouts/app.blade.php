@@ -12,6 +12,8 @@
     {{-- <script defer src="{{ asset('js/cdn.min.js') }}"></script> --}}
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
+    @vite('node_modules/swiper/swiper-bundle.min.css')
+    @vite('node_modules/aos/dist/aos.css')
     @livewireStyles
 </head>
 
