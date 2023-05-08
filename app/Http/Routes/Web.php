@@ -8,6 +8,7 @@ use App\Http\Controllers\Pages\Auth\Logout;
 use App\Http\Controllers\Pages\Auth\Register;
 use App\Http\Controllers\Pages\Auth\RequestForgot;
 use App\Http\Controllers\Pages\Auth\Verify;
+use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
 use App\Http\Controllers\Pages\Dashboard\Icon\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
@@ -57,4 +58,5 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('aos', Aos::class);
     Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
     Route::get('gts-registration', GtsRegistration::class); #temp for development
+    Route::get('my/gts', GtsDashboard::class); #temp for development
 }
