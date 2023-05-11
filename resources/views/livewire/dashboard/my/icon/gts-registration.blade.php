@@ -25,15 +25,21 @@
                                     <label for="email" class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Email <span class="text-[#FF1F00]">*</span>
                                     </label>
                                     <input type="email" name="floating_first_name" id="floating_first_name" class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer" placeholder="Masukkan email aktif kamu" required />
+                                    @error('email')
+                                        <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
                                     <label for="email" class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Sumber Informasi <span class="text-[#FF1F00]">*</span>
                                     </label>
-                                    <select id="underline_select" class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0  peer">
+                                    <select id="sumber_informasi" class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0  peer">
                                         <option selected class="bg-[#1C1C1C]">Dari mana kamu mendapat informasi ini?</option>
                                         <option value="teman" class="bg-[#1C1C1C]">Teman</option>
                                         <option value="sosial_media" class="bg-[#1C1C1C]">Sosial Media</option>
                                     </select>
+                                    @error('sumber_informasi')
+                                        <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="relative z-0 w-full mb-6 group">
                                     <label for="text" class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Bukti Upload Poster di IG Story <span class="text-[#FF1F00]">*</span>
@@ -42,9 +48,12 @@
                                         <div class="flex flex-row items-center gap-[8px] hover:opacity-70 ">
                                             <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 md:w-8 h-4 md:h-8"/>
                                             <span class="text-white font-Inter font-semibold text-xs md:text-[14px] whitespace-nowrap">Upload File</span>
-                                            <input type='file' class="hidden" />
+                                            <input type='file' class="hidden" id="bukti_ig" />
                                         </div>
                                     </label>
+                                    @error('bukti_ig')
+                                        <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="lg:ml-[45.5px] flex items-center flex-row mt-[27px] mb-[20px] lg:mb-[39px] space-x-4 font-medium text-[11px] lg:text-[17px]">
                                     <input wire:model.defer="agree" type="checkbox" id="setuju-kebijakan" name="setuju-kebijakan"
@@ -52,6 +61,9 @@
                                     <label class="text-white" for="setuju-kebijakan"> Saya setuju dengan kebijakan privasi serta <a
                                             href="" class="text-[#66C1A7]" target="_blank">syarat dan
                                             ketentuan</a> yang berlaku</label>
+                                    @error('agree')
+                                        <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <button type="submit" @click=" isSubmitted = true " class="text-white bg-gradient-green-r hover:bg-blue-800 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[16px] w-full h-[42px] lg:h-[48px] px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#66C1A7] hover:opacity-80">Kirim</button>
                             </div>

@@ -10,8 +10,8 @@ class LinkShortenerTable extends ShortenerController
 
     public function render()
     {
-        return view('livewire.link-shortener-table')
-            ->layout('layouts.app');
+        return view('livewire.dashboard.admin.link-shortener.link-shortener-table')
+            ->layout('layouts.dashboard.admin.base');
     }
 
     public function mount()

@@ -8,6 +8,6 @@ class GtsRegistration extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard.my.gts-registration')->layout('layouts.app');
+        return view('livewire.dashboard.my.icon.gts-registration')->layout('layouts.only-layout');
     }
 }

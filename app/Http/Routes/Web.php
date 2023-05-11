@@ -48,8 +48,6 @@ Route::middleware(['guest'])->group(function () {
   Route::get('verify/{token}', Verify::class)->name('verify');
   Route::get('forgot/{token}', Forgot::class)->name('forgot');
   Route::get('forgot', RequestForgot::class)->name('request-forgot');
-  Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
-  Route::get('gts-registration', GtsRegistration::class); #temp for development
 });
 
 // check if development
@@ -57,6 +55,11 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('swiper', Swiper::class);
     Route::get('aos', Aos::class);
     Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
-    Route::get('gts-registration', GtsRegistration::class); #temp for development
-    Route::get('my/gts', GtsDashboard::class); #temp for development
+    Route::get('my/gts/registration', GtsRegistration::class); #temp for development
+    Route::get('my/gts', GtsDashboard::class)->name('my-gts'); #temp for development
+    Route::get('/404', function () {return view('livewire.404');}); #temp for development
+    Route::get('/500', function () {return view('livewire.500');}); #temp for development
+    Route::get('/coming-soon', function () {return view('livewire.coming-soon');}); #temp for development
+    Route::get('/redirect', function () {return view('livewire.redirect');}); #temp for development
+
 }

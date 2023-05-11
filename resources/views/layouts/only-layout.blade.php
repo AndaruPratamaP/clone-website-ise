@@ -18,11 +18,11 @@
 </head>
 
 <body>
-    @include('layouts.navbar')
+    {{-- {{ $slot }}  --}}
 
-    {{ $slot }}
+    {{-- !Temp until all single page view is completed --}}
+    @yield('content')
 
-    @include('layouts.footer')
     @livewireScripts
     @if (session('toastr-toast'))
         <script defer>

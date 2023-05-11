@@ -22,7 +22,9 @@
         @include('layouts.dashboard.navbar')
         <div class="flex flex-row">
             @include('layouts.dashboard.sidebar')
-            {{ $slot }}
+            <div class="flex lg:pl-[260px] pt-20 bg-[#121316]" >
+                {{ $slot }}
+            </div>
         </div>
     </div>
     @livewireScripts

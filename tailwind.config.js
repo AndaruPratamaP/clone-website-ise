@@ -3,6 +3,9 @@ module.exports = {
   content: ['./resources/**/*.blade.php', './resources/**/*.js', './resources/**/*.vue'],
   theme: {
     screens: {
+      xs: '475px',
+      // => @media (min-width: 475px) { ... }
+
       sm: '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -100,5 +103,7 @@ module.exports = {
       display: ['group-focus'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 };

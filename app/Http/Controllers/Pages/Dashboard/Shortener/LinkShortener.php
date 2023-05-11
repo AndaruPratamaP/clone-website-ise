@@ -19,8 +19,8 @@ class LinkShortener extends ShortenerController
 
     public function render()
     {
-        return view('livewire.link-shortener')
-            ->layout('layouts.app');
+        return view('livewire.dashboard.admin.link-shortener.link-shortener')
+            ->layout('layouts.dashboard.admin.base');
     }
 
     public function updated($propertyName)

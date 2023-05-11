@@ -8,6 +8,6 @@ class GtsDashboard extends Component
 {
     public function render()
     {
-        return view('livewire.gts-dashboard')->layout('layouts.dashboard.base');
+        return view('livewire.dashboard.my.icon.gts')->layout('layouts.dashboard.base');
     }
 }
