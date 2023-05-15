@@ -73,3 +73,68 @@
         @apply bg-gradient-to-br from-orange-50 to-purple-700;
     }
 }
+
+/* Toastr Styling Start */
+.toast > .toast-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFEEE4;
+    margin-left: 20px
+}
+
+.toast > .toast-message {
+    font-size: 12px;
+    font-weight: medium;
+    opacity: 80%;
+    margin-left: 20px
+}
+
+.toast > .toast-message > .btn {
+    background-color: #FFEEE4;
+    border-radius: 16px;
+    font-size: 10px;
+    font-weight: medium;
+    color: black;
+}
+
+#toast-container > .toast-success {
+    border-radius: 18.6px;
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    background-color: #006C56;
+    background-image: url('/public/images/toastr/success.png'), linear-gradient(to top right, #006C56 0%, #007860 80%,#AFD196) !important;
+    background-position: 10px center, center;
+    z-index: 9999 !important;
+    background-repeat: no-repeat;
+}
+#toast-container > .toast-error {
+    border-radius: 18.6px;
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    background-color: #FF0000;
+    background-image: url('/public/images/toastr/error.png'), linear-gradient(to top right, #FF0000 0%, #fd655a 80%, #FF94BD) !important;
+    background-position: 10px center, center;
+    z-index: 9999 !important;
+    background-repeat: no-repeat;
+}
+#toast-container > .toast-warning {
+    border-radius: 18.6px;
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    background-color: #FFA800;
+    background-image: url('/public/images/toastr/warning.png'), linear-gradient(to top right, #FFA800 0%, #fbc353 80%, #FFE4AF) !important;
+    background-position: 10px center, center;
+    z-index: 9999 !important;
+    background-repeat: no-repeat;
+}
+#toast-container > .toast-info {
+    border-radius: 18.6px;
+    position: relative;
+    font-family: Montserrat, sans-serif;
+    background-color: #57A5CF;
+    background-image: url('/public/images/toastr/info.png'), linear-gradient(to top right, #57A5CF 0%, #6ab2d9 80%, #FFDCA5) !important;
+    background-position: 10px center, center;
+    z-index: 9999 !important;
+    background-repeat: no-repeat;
+}
+/* Toastr Styling End */
