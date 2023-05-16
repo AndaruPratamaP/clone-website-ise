@@ -65,7 +65,7 @@
                                         <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
                                     @enderror
                                 </div>
-                                <button type="submit" @click=" isSubmitted = true " class="text-white bg-gradient-green-r hover:bg-blue-800 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[16px] w-full h-[42px] lg:h-[48px] px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#66C1A7] hover:opacity-80">Kirim</button>
+                                <button type="submit" @click=" isSubmitted = true " class="text-white bg-gradient-blue-r hover:brightness-90 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[16px] w-full h-[42px] lg:h-[48px] px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#66C1A7] hover:opacity-80">Kirim</button>
                             </div>
                         </form>
                     {{-- If Done --}}

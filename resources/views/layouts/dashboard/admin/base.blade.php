@@ -22,7 +22,7 @@
         @include('layouts.dashboard.admin.navbar')
         <div class="flex flex-row">
             @include('layouts.dashboard.admin.sidebar')
-            <div class="flex lg:pl-[260px] pt-20 bg-[#121316]" >
+            <div class="flex w-full lg:pl-[260px] pt-20 bg-[#121316]" >
                 {{ $slot }}
             </div>
         </div>
