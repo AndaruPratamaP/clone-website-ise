@@ -15,6 +15,7 @@ use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
 use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
 use App\Http\Controllers\Pages\Examples\Aos;
 use App\Http\Controllers\Pages\Examples\Swiper;
+use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -53,15 +54,25 @@ Route::middleware(['guest'])->group(function () {
 
 // check if development
 if (config('app.env') === 'local' || config('app.env') === 'development') {
-    Route::get('swiper', Swiper::class);
-    Route::get('aos', Aos::class);
-    Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
-    Route::get('my', UserHomeDashboard::class)->name('my'); #temp for development
-    Route::get('my/gts', GtsDashboard::class)->name('my.gts'); #temp for development
-    Route::get('my/gts/registration', GtsRegistration::class); #temp for development
-    Route::get('/404', function () {return view('livewire.404');}); #temp for development
-    Route::get('/500', function () {return view('livewire.500');}); #temp for development
-    Route::get('/coming-soon', function () {return view('livewire.coming-soon');}); #temp for development
-    Route::get('/redirect', function () {return view('livewire.redirect');}); #temp for development
-
+  Route::get('swiper', Swiper::class);
+  Route::get('aos', Aos::class);
+  Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
+  Route::get('my', UserHomeDashboard::class)->name('my'); #temp for development
+  Route::get('my/gts', GtsDashboard::class)->name('my.gts'); #temp for development
+  Route::get('my/gts/registration', GtsRegistration::class); #temp for development
+  Route::get('/404', function () {
+    return view('livewire.404');
+  }); #temp for development
+  Route::get('/500', function () {
+    return view('livewire.500');
+  }); #temp for development
+  Route::get('/coming-soon', function () {
+    return view('livewire.coming-soon');
+  }); #temp for development
+  Route::get('/redirect', function () {
+    return view('livewire.redirect');
+  }); #temp for development
 }
+
+//coba
+Route::get('gts-table', GtsTable::class);

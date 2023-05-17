@@ -32,7 +32,7 @@ class VerificationType extends model
 
     // Set default values for these attributes
     protected $attributes = [
-        '' => ,
+        '' => ''
     ];
 
     // Define a one-to-one relationship with the other model
@@ -48,7 +48,7 @@ class VerificationType extends model
     }
 
     // Define a many-to-many relationship with the other model
-    public function Others()
+    public function Others2()
     {
         return $this->belongsToMany(Other::class);
     }
