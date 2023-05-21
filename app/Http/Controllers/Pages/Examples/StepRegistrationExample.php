@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Pages\Dashboard\Icon;
+namespace App\Http\Controllers\Pages\Examples;
 
 use Livewire\Component;
 use Throwable;
@@ -25,7 +25,7 @@ class StepRegistrationExample extends Component
 
     public function render()
     {
-        return view('livewire.step-registration-example')->layout('layouts.app');
+        return view('livewire.step-registration-example')->layout('layouts.only-layout');
     }
 
     public function updated($propertyName)

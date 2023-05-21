@@ -1,4 +1,4 @@
-<div x-data="{ show: false, password: '' }">
+<div x-data="{ show: false, password: '' }" class="bg-slate-300 py-[500px]">
     <form wire:submit.prevent="authenticate">
         <label for="email">Email :</label>
         <input id="email" type="text" wire:model="email">

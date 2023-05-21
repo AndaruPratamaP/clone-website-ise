@@ -18,10 +18,7 @@
 </head>
 
 <body>
-    {{-- {{ $slot }}  --}}
-
-    {{-- !Temp until all single page view is completed --}}
-    @yield('content')
+    {{ $slot }}
 
     @livewireScripts
     @if (session('toastr-toast'))

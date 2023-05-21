@@ -8,14 +8,18 @@ use App\Http\Controllers\Pages\Auth\Logout;
 use App\Http\Controllers\Pages\Auth\Register;
 use App\Http\Controllers\Pages\Auth\RequestForgot;
 use App\Http\Controllers\Pages\Auth\Verify;
+use App\Http\Controllers\Pages\BionixLanding;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
-use App\Http\Controllers\Pages\Dashboard\Icon\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
 use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
 use App\Http\Controllers\Pages\Examples\Aos;
 use App\Http\Controllers\Pages\Examples\Swiper;
+use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsRegistration;
+use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -60,6 +64,13 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
   Route::get('my', UserHomeDashboard::class)->name('my'); #temp for development
   Route::get('my/gts', GtsDashboard::class)->name('my.gts'); #temp for development
   Route::get('my/gts/registration', GtsRegistration::class); #temp for development
+
+  Route::get('my/ux/registration', UxRegistration::class); #temp for development
+  Route::get('my/ds/registration', DsRegistration::class); #temp for development
+  Route::get('my/rise/registration', RiseRegistration::class); #temp for development
+  Route::get('bionix', BionixLanding::class); #temp for development
+  Route::get('shorten', LinkShortener::class); #temp for development
+
   Route::get('/404', function () {
     return view('livewire.404');
   }); #temp for development
