@@ -11,7 +11,7 @@ x-data="{ isOpen: false } ">
         <!-- logo ISE -->
         <div class="hidden md:block md:w-[3.5rem] xl:w-[6.5rem]">
             <a href="/">
-                <img src="{{asset('img/LogoISE.png')}}" alt="logo" ></img>
+                <img src="{{asset('images/LogoISE.png')}}" alt="logo" ></img>
             </a>
         </div>
 
@@ -31,7 +31,7 @@ x-data="{ isOpen: false } ">
 
                     <div class="relative left-0">
                         <a href="/">
-                            <img src="{{asset('img/LogoISE.png')}}" alt="logo" ></img>
+                            <img src="{{asset('images/LogoISE.png')}}" alt="logo" ></img>
                         </a>
                     </div>
                     <div @click="isOpen = false" class="relative right-5">

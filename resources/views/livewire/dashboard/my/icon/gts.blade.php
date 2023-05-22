@@ -138,19 +138,19 @@
            <div class="sm:flex hidden sm:self-start text-2xl text-white font-bold mb-6">Speaker</div>
            <div class="flex flex-col gap-y-5 sm:flex-row sm:gap-x-8 overflow-x-auto sm:my-3 sm:shrink-0 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-500 scrollbar-rounded-[20px]">
             <div class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] max-h-[700px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
-               <img class="rounded-full w-36 h-36" src="{{asset('gambar/solid_white.png')}}" alt="">
+               <img class="rounded-full w-36 h-36" src="{{asset('images/gts/solid_white.png')}}" alt="">
                <p class="text-white font-montserrat font-bold text-lg mt-4">Rifyal Rachmat</p>
                <p class="text-[#B5B3BC] font-montserrat font-normal text-base">Data Scientist at Telkomsel</p>
                <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Selamat tim kamu berhak mengikuti Data Sciece.</p>
             </div>
             <div class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] max-h-[700px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
-                <img class="rounded-full w-36 h-36" src="{{asset('gambar/solid_white.png')}}" alt="">
+                <img class="rounded-full w-36 h-36" src="{{asset('images/gts/solid_white.png')}}" alt="">
                 <p class="text-white font-montserrat font-bold text-lg mt-4">Rifyal Rachmat</p>
                 <p class="text-[#B5B3BC] font-montserrat font-normal text-base">Data Scientist at Telkomsel</p>
                 <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Selamat tim kamu berhak mengikuti Data Sciece.</p>
              </div>
              <div class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] max-h-[700px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
-                <img class="rounded-full w-36 h-36" src="{{asset('gambar/solid_white.png')}}" alt="">
+                <img class="rounded-full w-36 h-36" src="{{asset('images/gts/solid_white.png')}}" alt="">
                 <p class="text-white font-montserrat font-bold text-lg mt-4">Rifyal Rachmat</p>
                 <p class="text-[#B5B3BC] font-montserrat font-normal text-base">Data Scientist at Telkomsel</p>
                 <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Selamat tim kamu berhak mengikuti Data Sciece.</p>

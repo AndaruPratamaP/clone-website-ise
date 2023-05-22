@@ -1,6 +1,3 @@
-@extends('layouts.only-layout')
-
-@section('content')
 <div class="bg-[#121316]">
     <div class="flex h-screen items-center justify-center overflow-hidden">
         <div class=" relative w-[280px] min-[450px]:w-[333px] sm:w-[600px] lg:w-[826px] ">
@@ -13,7 +10,7 @@
             <img class="absolute w-[650px] left-[60px] top-[-300px] mix-blend-overlay blur-[197px] max-[1280px]:hidden" src="{{asset('images/comingsoon/Vector7.png')}}" alt="Vector7">
         </div>
         <div class="absolute z-20">
-                
+
             <div class="relative">
                 <img class="mb-[35px] w-[280px] min-[450px]:w-[333px] sm:w-[600px] lg:w-[826px]" src="{{asset('images/comingsoon/comingsoon.svg')}}" alt="">
             </div>
@@ -22,7 +19,7 @@
                 <div class="flex justify-center z-20">
                     <a href="#">
                         <button class="font-['Montserrat'] font-[600] text-[#121316] bg-[#FFEEE4] rounded-[18px]  sm:rounded-[20px] lg:rounded-[24px] px-[18px] sm:px-[20px] lg:px-[24px] py-[11px] sm:py-[12px] lg:py-[14px] text-[11px] min-[450px]:text-[12px] sm:text-[13px] lg:text-[16px]">
-                        <img class="h-[15px] sm:h-[17px] lg:h-[20px] float-left mr-2  my-[2px] sm:my-[3px] lg:my-[3px]" src="{{asset('images/comingsoon/Fill.png')}}" alt=""> 
+                        <img class="h-[15px] sm:h-[17px] lg:h-[20px] float-left mr-2  my-[2px] sm:my-[3px] lg:my-[3px]" src="{{asset('images/comingsoon/Fill.png')}}" alt="">
                         Notify me when it went live</button>
                     </a>
                 </div>
@@ -35,4 +32,3 @@
 
     </div>
 </div>
-@endsection

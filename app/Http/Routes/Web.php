@@ -1,26 +1,30 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Pages\Error404;
+use App\Http\Controllers\Pages\Error500;
+use App\Http\Controllers\Pages\Auth\Login;
+use App\Http\Controllers\Pages\ComingSoon;
 use App\Http\Controllers\Pages\Auth\Forgot;
+use App\Http\Controllers\Pages\Auth\Logout;
+use App\Http\Controllers\Pages\Auth\Verify;
+use App\Http\Controllers\Pages\Examples\Aos;
+use App\Http\Controllers\Pages\Auth\Register;
+use App\Http\Controllers\Pages\BionixLanding;
+use App\Http\Controllers\Pages\Examples\Swiper;
+use App\Http\Controllers\Pages\Auth\RequestForgot;
+use App\Http\Controllers\Pages\Auth\EmailVerification;
+use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
+use App\Http\Controllers\Pages\Redirect\RedirectShortener;
+use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
+use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsRegistration;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
+use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
+use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
+use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
-use App\Http\Controllers\Pages\Auth\Login;
-use App\Http\Controllers\Pages\Auth\Logout;
-use App\Http\Controllers\Pages\Auth\Register;
-use App\Http\Controllers\Pages\Auth\RequestForgot;
-use App\Http\Controllers\Pages\Auth\Verify;
-use App\Http\Controllers\Pages\BionixLanding;
-use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
-use App\Http\Controllers\Pages\Redirect\RedirectShortener;
-use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
-use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
-use App\Http\Controllers\Pages\Examples\Aos;
-use App\Http\Controllers\Pages\Examples\Swiper;
-use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
-use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
-use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
-use App\Http\Controllers\Pages\Dashboard\Icon\DsRegistration;
-use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
-use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
   return 'Hi';
@@ -70,19 +74,13 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
   Route::get('my/rise/registration', RiseRegistration::class); #temp for development
   Route::get('bionix', BionixLanding::class); #temp for development
   Route::get('shorten', LinkShortener::class); #temp for development
+  Route::get('verify', EmailVerification::class); #temp for development
 
-  Route::get('/404', function () {
-    return view('livewire.404');
-  }); #temp for development
-  Route::get('/500', function () {
-    return view('livewire.500');
-  }); #temp for development
-  Route::get('/coming-soon', function () {
-    return view('livewire.coming-soon');
-  }); #temp for development
-  Route::get('/redirect', function () {
-    return view('livewire.redirect');
-  }); #temp for development
+
+//  Error Pages
+  Route::get('404', Error404::class)->name('404'); #temp for development
+  Route::get('500', Error500::class)->name('500'); #temp for development
+  Route::get('coming-soon', ComingSoon::class)->name('conming-soon'); #temp for development
 }
 
 //coba

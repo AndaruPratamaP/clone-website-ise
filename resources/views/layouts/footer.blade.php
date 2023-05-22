@@ -3,7 +3,7 @@
         <div class="grid grid-flow-col grid-cols-3 grid-rows-3 gap-x-[0.5rem] md:flex md:flex-row md:justify-between xl:gap-[50px] mb-[43px] md:mb-[55px] xl:mb-[100px] md:mx-[17px] xl:ml-[27.5px] space-y-2">
             <div class="row-span-3 md:row-span-1 w-[54.58px] xl:w-[167px]">
             <a href="/">
-                <img src="{{asset('img/LogoPutih2.png')}}" alt="logoputih2" />
+                <img src="{{asset('images/LogoPutih2.png')}}" alt="logoputih2" />
             </a>
         </div>
             <div class="relative grid grid-flow-row row-span-2 md:flex md:flex-col order-6 md:order-none">

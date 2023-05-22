@@ -10,14 +10,14 @@ class RedirectShortener extends ShortenerController
 
     public function render()
     {
-        return view('livewire.redirect-shortener')->layout('layouts.app');
+        return view('livewire.redirect-shortener')->layout('layouts.only-layout');
     }
 
     public function mount($short)
     {
         $response = $this->show($short);
         if (!$response) {
-            return redirect()->route('home');
+            return redirect()->route('404');
         }
         $this->long_url = $response->getLongUrl();
     }
