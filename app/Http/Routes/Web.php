@@ -21,6 +21,7 @@ use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
 use App\Http\Controllers\Pages\Dashboard\Icon\DsRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
+use App\Http\Controllers\Pages\IconLandingPage;
 use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
 use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
@@ -31,6 +32,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('go/{short}', RedirectShortener::class);
+
 
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
@@ -75,6 +77,7 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
   Route::get('bionix', BionixLanding::class); #temp for development
   Route::get('shorten', LinkShortener::class); #temp for development
   Route::get('verify', EmailVerification::class); #temp for development
+  Route::get('/icon', IconLandingPage::class); #temp for development
 
 
 //  Error Pages

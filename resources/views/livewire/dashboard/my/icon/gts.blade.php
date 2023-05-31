@@ -304,10 +304,10 @@
       // If the countdown is finished, display a message
       if (distance < 0) {
         clearInterval(countdownTimer);
-        document.getElementById("days").innerHTML = "Countdown expired!";
-        document.getElementById("hours").innerHTML = "";
-        document.getElementById("minutes").innerHTML = "";
-        document.getElementById("seconds").innerHTML = "";
+        document.getElementById("days").innerHTML = "0";
+        document.getElementById("hours").innerHTML = "0";
+        document.getElementById("minutes").innerHTML = "0";
+        document.getElementById("seconds").innerHTML = "0";
       }
     }, 1000);
   </script>

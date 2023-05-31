@@ -5,7 +5,7 @@
     }
 </style>
 <nav
-class="z-[999] flex flex-row justify-between font-montserrat px-5 sm:px-[34px] items-center xl:px-[130px] pt-[50px] md:items-center fixed top-0 w-full"
+class="z-[999] flex flex-row justify-between font-montserrat px-5 sm:px-[34px] items-center xl:px-[130px] pt-4 lg:pt-[50px] md:items-center fixed top-0 w-full"
 x-data="{ isOpen: false } ">
 
         <!-- logo ISE -->
