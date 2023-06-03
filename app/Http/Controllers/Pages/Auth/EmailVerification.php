@@ -8,6 +8,6 @@ class EmailVerification extends Component
 {
     public function render()
     {
-        return view('livewire.auth.email-verification')->layout('layouts.only-layout');
+        return view('livewire.auth.verify')->layout('layouts.only-layout');
     }
 }
