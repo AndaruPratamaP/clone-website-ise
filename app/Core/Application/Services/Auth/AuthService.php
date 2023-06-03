@@ -74,6 +74,14 @@ class AuthService
         }
         $user_id = Uuid::uuid4()->toString();
 
+        if (User::where('email', $request->getEmail())->first()) {
+            IseException::throw("Email sudah terdaftar", 1202);
+        }
+
+        if (User::where('handphone', $request->getPhone())->first()) {
+            IseException::throw("Nomor handphone sudah terdaftar", 1203);
+        }
+
         $user = User::create([
             'id' => $user_id,
             'full_name' => $request->getFullName(),

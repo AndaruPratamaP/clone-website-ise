@@ -77,7 +77,7 @@ class AuthController extends Component
 
             $this->dispatchToast('success', 'Login berhasil');
             $this->msg['success'] = "Login berhasil";
-            return redirect()->intended('dashboard');
+            return redirect()->intended('my');
         } catch (TooManyRequestsException $exception) {
             $this->dispatchToast('error', 'Login gagal', "Anda terlalu banyak gagal mencoba, coba lagi dalam {$exception->secondsUntilAvailable} detik");
         } catch (Throwable $e) {
@@ -119,6 +119,11 @@ class AuthController extends Component
             }
             $this->service->register($this->request);
             $this->dispatchToast('success', 'Registrasi berhasil', 'Silahkan cek email anda untuk verifikasi');
+        } catch (IseException $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+            $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+            return null;
         } catch (Throwable $e) {
             DB::rollBack();
             $this->msg['error'] = $e;

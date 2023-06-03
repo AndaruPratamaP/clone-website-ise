@@ -12,7 +12,6 @@ class Verify extends AuthController
     public function render()
     {
         $this->token = Route::current()->parameter('token');
-        $this->verify();
-        return view('livewire.auth.verify')->layout('layouts.app');
+        return view('livewire.auth.verify')->layout('layouts.only-layout');
     }
 }

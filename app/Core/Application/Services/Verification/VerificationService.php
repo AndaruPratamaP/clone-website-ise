@@ -9,7 +9,7 @@ use Ramsey\Uuid\Uuid;
 
 class VerificationService
 {
-    private $sqlVerificationType;
+    private SqlVerificationTypeRepository $sqlVerificationType;
     private array $verificationTypes;
 
     private array $generateToken;
