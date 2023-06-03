@@ -33,7 +33,7 @@ class Register extends AuthController
 
     public function render()
     {
-        return view('livewire.auth.register')->layout('layouts.app');
+        return view('livewire.auth.register')->layout('layouts.only-layout');
     }
 
     public function updated($propertyName)

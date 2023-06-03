@@ -39,5 +39,6 @@ class GtsRegistration extends Component
     public function submit()
     {
         $this->validate($this->rules);
+
     }
 }

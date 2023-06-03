@@ -13,9 +13,9 @@ class GtsTable extends GrandTalkshowController
 
   public function render()
   {
-    return view('livewire.gts-table', [
+    return view('livewire.dashboard.admin.icon.gts-table', [
       'gtss' => $this->index($this->search),
-    ])->layout('layouts.app');
+    ])->layout('layouts.dashboard.admin.base');
   }
 
   public function updatingSearch()

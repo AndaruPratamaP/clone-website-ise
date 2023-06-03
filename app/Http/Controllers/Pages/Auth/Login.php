@@ -19,7 +19,7 @@ class Login extends AuthController
 
     public function render()
     {
-        return view('livewire.auth.login')->layout('layouts.app');
+        return view('livewire.auth.login')->layout('layouts.only-layout');
     }
 
     public function updated($propertyName)

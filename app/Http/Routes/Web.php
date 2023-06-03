@@ -69,7 +69,7 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
   Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
   Route::get('my', UserHomeDashboard::class)->name('my'); #temp for development
   Route::get('my/gts', GtsDashboard::class)->name('my.gts'); #temp for development
-  Route::get('my/gts/registration', GtsRegistration::class); #temp for development
+  Route::get('my/gts/registration', GtsRegistration::class)->name('gts.registration'); #temp for development
 
   Route::get('my/ux/registration', UxRegistration::class); #temp for development
   Route::get('my/ds/registration', DsRegistration::class); #temp for development
