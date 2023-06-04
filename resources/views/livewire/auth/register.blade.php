@@ -310,16 +310,25 @@
                             class=" mt-8 xl:mt-1 mb-1 xl:mb-4 rounded-full h-[29px] xl:h-[46px] w-full text-white bg-gradient-to-r from-[#006C56] to-[#AFD196] active:border-[#66C1A7] border-2 border-[#191A1E]"
                             type="submit">
                             <span
-                                class=" block py-0.5 px-6 w-full h-full  font-montserrat font-bold rounded-full text-white bg-transparent hover:bg-[#006C56] transition text-[14px] xl:text-[20px] cursor-pointer">
+                                wire:loading.remove
+                                class=" block py-0.5 px-6 w-full h-full mt-1 font-montserrat font-bold rounded-full text-white bg-transparent hover:bg-[#006C56] transition text-[14px] xl:text-[20px] cursor-pointer">
                                 Sign Up
                             </span>
+                            <div wire:loading
+                            class="inline-block h-6 w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                            role="status">
+                            <span
+                                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                >Loading...</span
+                            >
+                            </div>
                         </button>
                         <div class=" text-center">
                             <div
                                 class=" mb-6 xl:mb-0 inline-block text-[#B5B3BC] text-[12px] xl:text-[16px] font-[600] font-montserrat">
                                 Sudah punya akun?</div>
                             <a class=" inline-block bg-gradient-to-l from-[#006C56] to-[#DBFEC1] bg-clip-text text-transparent text-[12px] xl:text-[16px] font-[700] font-montserrat"
-                                href="">Masuk disini</a>
+                                href="/login">Masuk disini</a>
                         </div>
                     </div>
                 </div>

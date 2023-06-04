@@ -15,7 +15,9 @@ class GrandTalkshowDetailPesertaController extends Component
         "handphone" => "",
         "institution" => "",
         "referral" => "",
-        "share_proof_file" => ""
+        "share_proof_file" => "",
+        "status" => "",
+        "status_id" => ""
     ];
 
     public array $msg = [
@@ -41,7 +43,9 @@ class GrandTalkshowDetailPesertaController extends Component
             "email" => $gts_user->user->email,
             "institution" => $gts_user->user->institution,
             "referral" => $gts_user->referral,
-            "share_proof_file" => $gts_user->share_proof_file
+            "share_proof_file" => $gts_user->share_proof_file,
+            "status" => $gts_user->status_type->name,
+            "status_id" => $gts_user->status_type->id
         ];
     }
 

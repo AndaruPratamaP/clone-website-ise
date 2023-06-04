@@ -29,7 +29,7 @@
                                     Lengkap <span class="text-[#FF1F00]">*</span>
                                 </label>
                                 <input type="text" name="full_name" id="full_name" wire:model="full_name"
-                                    class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
+                                    class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer disabled:brightness-50"
                                     placeholder="Masukkan nama lengkap kamu" disabled />
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
@@ -38,7 +38,7 @@
                                     <span class="text-[#FF1F00]">*</span>
                                 </label>
                                 <input type="email" name="email" id="email" wire:model="email"
-                                    class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
+                                    class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer disabled:brightness-50"
                                     placeholder="Masukkan email aktif kamu" disabled />
                             </div>
                             {{-- <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
@@ -113,6 +113,7 @@
                                             required />
                                     </div>
                                 </label>
+                                <span class="text-xs text-gray-300">Max size 1mb (*.jpg, *.jpeg, *.png)</span>
                                 @error('share_proof_file')
                                     <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
                                 @enderror
@@ -132,7 +133,14 @@
                                 @enderror
                             </div>
                             <button type="submit"
-                                class="text-white bg-gradient-blue-r hover:brightness-90 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[16px] w-full h-[42px] lg:h-[48px] px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#66C1A7] hover:opacity-80">Kirim</button>
+                                class="text-white bg-gradient-blue-r hover:brightness-90 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[16px] w-full h-[42px] lg:h-[48px] px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#66C1A7] hover:opacity-80"><span wire:loading.remove>Submit</span>         <div wire:loading
+                                class="inline-block h-6 w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                                role="status">
+                                <span
+                                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                    >Loading...</span
+                                >
+                                </div></button>
                         </div>
                     </form>
                     {{-- If Done --}}

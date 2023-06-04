@@ -11,3 +11,4 @@ class DsRegistration extends Component
         return view('livewire.dashboard.my.icon.ds-registration')->layout('layouts.only-layout');
     }
 }
+    

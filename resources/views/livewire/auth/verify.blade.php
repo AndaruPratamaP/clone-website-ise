@@ -104,7 +104,15 @@
                 <div class="flex items-center justify-center">
                     <button wire:click="verify"
                         class="flex items-center justify-center font-montserrat my-[20px] bg-gradient-to-r from-[#006C56] to-[#AFD196] rounded-full hover:to-green-500 px-[70px] py-[12px] text-[#FFFFFF]">
-                        <span class="font-semibold text-base">Verifikasi Email</span>
+                        <span wire:loading.remove class="font-semibold text-base">Verifikasi Email</span>
+                        <div wire:loading
+                        class="inline-block h-6 w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                        role="status">
+                        <span
+                            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                            >Loading...</span
+                        >
+                        </div>
                     </button>
                 </div>
                 <div class="text-[#FFFFFF] font-poppins font-normal text-[16px] leading-[29px] mx-10 relative">

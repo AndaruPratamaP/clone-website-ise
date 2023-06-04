@@ -22,6 +22,7 @@ class GrandTalkshowDashboardController extends Component
         "referral" => "",
         "share_proof_file" => "",
         "status" => "",
+        "status_id" => "",
     ];
 
     public array $msg = [
@@ -56,6 +57,7 @@ class GrandTalkshowDashboardController extends Component
             "share_proof_file" => $gts_user->share_proof_file,
             "referral" => $gts_user->referral,
             "status" => $gts_user->status_type->name,
+            "status_id" => $gts_user->status_type->id,
         ];
     }
 }

@@ -3,12 +3,15 @@
 
 <head>
     <style>
+        .body {
+            color: white
+        }
         .container {
             background-color: #191a1e;
             display: flex;
             flex-direction: column;
             width: 300px;
-            height: 530px;
+            height: max-content;
             font-family: "Open Sans", sans-serif;
             padding: 1rem 2rem;
             margin: auto;
@@ -22,6 +25,7 @@
         .title {
             font-weight: 700;
             font-size: 24px;
+            color: white;
         }
 
         .desc-text {

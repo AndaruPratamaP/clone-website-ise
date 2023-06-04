@@ -19,7 +19,7 @@
                                 <div class=" inline text-[#A31400] font-montserrat font-semibold text-[14px] lg:text-[20px]">*</div>
                             </div>
                             <div class=" relative">
-                                <input class=" w-full px-[2.5px] bg-transparent border-b-2 text-[12px] lg:text-[18px] font-montserrat font-[400] h-[28px] lg:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] lg:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] @error('email') border-b-[#A31400] text-[#A31400] @else border-b-[#C5C5C5] text-[#7C7C7C] @enderror" type="text" name="email" id="email" placeholder="Masukkan alamat email anda disini" wire:model="email">
+                                <input required class=" w-full px-[2.5px] bg-transparent border-b-2 text-[12px] lg:text-[18px] font-montserrat font-[400] h-[28px] lg:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] lg:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] @error('email') border-b-[#A31400] text-[#A31400] @else border-b-[#C5C5C5] text-[#7C7C7C] @enderror" type="text" name="email" id="email" placeholder="Masukkan alamat email anda disini" wire:model="email">
                                 @error('email')
                                     <span class="text-[#A31400] text-[12px] font-montserrat font-medium">{{ $message }}</span>
                                 @enderror
@@ -30,7 +30,7 @@
                                     <div class="inline text-[#A31400] font-montserrat font-semibold text-[14px] lg:text-[20px]">*</div>
                                 </div>
                                 <div class=" relative">
-                                    <input class=" w-full px-[2.5px] bg-transparent border-b-2 text-[12px] lg:text-[18px] font-montserrat font-[400] h-[28px] lg:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] lg:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] @error('password') border-b-[#A31400] text-[#A31400] @else border-b-[#C5C5C5] text-[#7C7C7C] @enderror" id="password" x-bind:type="show ? 'text' : 'password'" x-model="password" wire:model="password"
+                                    <input required class=" w-full px-[2.5px] bg-transparent border-b-2 text-[12px] lg:text-[18px] font-montserrat font-[400] h-[28px] lg:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] lg:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] @error('password') border-b-[#A31400] text-[#A31400] @else border-b-[#C5C5C5] text-[#7C7C7C] @enderror" id="password" x-bind:type="show ? 'text' : 'password'" x-model="password" wire:model="password"
                                     name="password" placeholder="Masukkan kata sandi anda disini">
                                     @error('password')
                                         <span class="text-[#A31400] text-[12px] font-montserrat font-medium">{{ $message }}</span>
@@ -50,21 +50,29 @@
                                 </div>
                             </div>
                             <div class="flex mt-6 lg:mt-4 mb-5 lg:mb-14">
-                                <input class=" mr-2  relative top-[0.05rem] lg:top-0.5 w-[10px] h-[10px] lg:w-[15px] lg:h-[15px]" type="checkbox" name="remind" id="remind" wire:model="remember">
+                                {{-- <input class=" mr-2  relative top-[0.05rem] lg:top-0.5 w-[10px] h-[10px] lg:w-[15px] lg:h-[15px]" type="checkbox" name="remind" id="remind" wire:model="remember">
                                 <div class=" inline-block text-[#B5B3BC]  font-[400] self-center grow font-montserrat text-[8px] lg:text-[12px]">Ingatkan saya</div>
-                                <button class=" inline-block text-[#B5B3BC] font-[400] self-center font-montserrat text-[8px] lg:text-[12px]">Lupa Password?</button>
+                                <button class=" inline-block text-[#B5B3BC] font-[400] self-center font-montserrat text-[8px] lg:text-[12px]">Lupa Password?</button> --}}
                             </div>
                             @if (!empty($msg['error']))
                                 <span class="text-[#A31400]">{{ $msg['error'] }}</span>
                             @endif
-                            <button class=" rounded-full w-full h-[29px] md:h-[36px] lg:h-[46px] mb-2 text-white bg-gradient-to-r from-[#006C56] to-[#AFD196] active:border-[#66C1A7] border-2 border-[#191A1E]" type="submit" @if ($errors->any() || !$isValid) disabled @endif>
-                                <span class=" block px-6 w-full h-full py-0.5 md:py-[0.35rem] font-montserrat font-[700] rounded-full text-white bg-transparent hover:bg-[#006C56] transition text-[14px] lg:text-[20px] cursor-pointer">
+                            <button class="rounded-full w-full h-[29px] md:h-[36px] lg:h-[46px] mb-2 text-white bg-gradient-to-r from-[#006C56] to-[#AFD196] active:border-[#66C1A7] border-2 border-[#191A1E]" type="submit">
+                                <span wire:loading.remove class=" block px-6 w-full h-full py-0.5 md:py-[0.35rem] font-montserrat font-[700] rounded-full text-white bg-transparent hover:bg-[#006C56] transition text-[14px] lg:text-[20px] cursor-pointer">
                                     Login
                                 </span>
+                                <div wire:loading
+                                    class="inline-block h-6 w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                                    role="status">
+                                    <span
+                                        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                        >Loading...</span
+                                    >
+                                    </div>
                             </button>
                             <div class=" text-center">
                                 <div class=" inline-block text-[#B5B3BC] text-[12px] lg:text-[16px] font-[600] font-montserrat">Belum punya akun?</div>
-                                <a class=" inline-block bg-gradient-to-r from-[#006C56] to-[#DBFEC1] bg-clip-text text-transparent text-[12px] lg:text-[16px] font-[700] font-montserrat" href="">Daftar disini</a>
+                                <a class=" inline-block bg-gradient-to-r from-[#006C56] to-[#DBFEC1] bg-clip-text text-transparent text-[12px] lg:text-[16px] font-[700] font-montserrat" href="/register">Daftar disini</a>
                             </div>
                             <img class="absolute -bottom-10 -right-10 w-[6rem] h-[6rem] block lg:hidden" src="{{ asset('images/login1decor1.png') }}" alt="">
                         </div>
@@ -85,25 +93,3 @@
     <img class=" absolute -bottom-0 left-0 z-10" src="{{ asset('images/Login_Register_Bottom_Left_Background.png') }}" alt="">
     <img class=" absolute -bottom-0 right-0 z-10" src="{{ asset('images/Login_Register_Bottom_Right_Background.png') }}" alt="">
 </div>
-
-{{-- <div x-data="{ show: false, password: '' }">
-    <form wire:submit.prevent="authenticate">
-        <label for="email">Email :</label>
-        <input id="email" type="text" wire:model="email">
-        @error('email')
-            <span class="text-red-500">{{ $message }}</span>
-        @enderror
-        <label for="password">Password :</label>
-        <input id="password" x-bind:type="show ? 'text' : 'password'" x-model="password" wire:model="password">
-        @error('password')
-            <span class="text-red-500">{{ $message }}</span>
-        @enderror
-        <h1 @click="show = !show">Show Password?</h1>
-        <input type="checkbox" wire:model="remember">
-        @if (!empty($msg['error']))
-            <span class="text-red-500">{{ $msg['error'] }}</span>
-        @endif
-        <button type="submit" @if ($errors->any() || !$isValid) disabled @endif
-            class="disabled:bg-red-500">Submit</button>
-    </form>
-</div> --}}
