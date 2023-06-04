@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             RandomUserSeeder::class,
             VerificationType::class,
+            EventSeeder::class,
+            StatusType::class
         ],
         'production' => [
             ProvinsiSeeder::class,
@@ -24,6 +26,8 @@ class DatabaseSeeder extends Seeder
             DesaSeeder::class,
             RoleSeeder::class,
             VerificationType::class,
+            EventSeeder::class,
+            StatusType::class
         ],
     ];
     /**

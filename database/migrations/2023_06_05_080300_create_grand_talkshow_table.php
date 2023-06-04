@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('referral', 255);
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->string('status_type_id')->default("2");
+            $table->foreign('status_type_id')->references('id')->on('status_types');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

@@ -24,16 +24,13 @@
                     <form x-show="!isSubmitted" wire:submit.prevent="submit" enctype="multipart/form-data">
                         <div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
-                                <label for="name"
+                                <label for="full_name"
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Nama
                                     Lengkap <span class="text-[#FF1F00]">*</span>
                                 </label>
-                                <input type="text" name="name" id="name" wire:model="name"
+                                <input type="text" name="full_name" id="full_name" wire:model="full_name"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Masukkan nama lengkap kamu" required />
-                                @error('name')
-                                <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
-                                @enderror
+                                    placeholder="Masukkan nama lengkap kamu" disabled />
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
                                 <label for="email"
@@ -42,29 +39,26 @@
                                 </label>
                                 <input type="email" name="email" id="email" wire:model="email"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Masukkan email aktif kamu" required />
-                                @error('email')
-                                <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
-                                @enderror
+                                    placeholder="Masukkan email aktif kamu" disabled />
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
-                                <label for="sumber_informasi"
+                                <label for="referral"
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Sumber
                                     Informasi <span class="text-[#FF1F00]">*</span>
                                 </label>
-                                <select id="sumber_informasi" name="sumber_informasi" wire:model="sumber_informasi" required
+                                <select id="referral" name="referral" wire:model="referral" required
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0  peer">
                                     <option selected class="bg-[#1C1C1C]">Dari mana kamu mendapat informasi ini?
                                     </option>
                                     <option value="teman" class="bg-[#1C1C1C]">Teman</option>
                                     <option value="sosial_media" class="bg-[#1C1C1C]">Sosial Media</option>
                                 </select>
-                                @error('sumber_informasi')
-                                <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                @error('referral')
+                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-6 group cursor-pointer">
-                                <label for="bukti_ig"
+                                <label for="share_proof_file"
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">
                                     Bukti Upload Poster di IG Story <span class="text-[#FF1F00]">*</span>
                                 </label>
@@ -72,31 +66,34 @@
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#66C1A7] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">
                                         <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
-                                        <input type='file' class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
+                                        <input type='file'
+                                            class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
                                             file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2
                                             file:rounded-md file:border-0
                                             file:text-xs lg:file:text-sm file:font-semibold
                                             file:bg-transparent file:text-white
                                             file:cursor-pointer cursor-pointer
-                                          " wire:model="bukti_ig" id="bukti_ig" name="bukti_ig" required />
+                                          "
+                                            wire:model="share_proof_file" id="share_proof_file" name="share_proof_file"
+                                            required />
                                     </div>
                                 </label>
-                                @error('bukti_ig')
-                                <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                @error('share_proof_file')
+                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="flex flex-col mb-[20px] lg:mb-[39px]">
-                            <div
-                                class="lg:ml-[45.5px] flex items-center flex-row mt-[27px]  space-x-4 font-medium text-[11px] lg:text-[17px]">
-                                <input wire:model.defer="agree" type="checkbox" id="agree" name="agree"
-                                    class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
-                                <label class="text-white" for="agree"> Saya setuju dengan kebijakan privasi serta <a
-                                        href="" class="text-[#66C1A7]" target="_blank">syarat dan
-                                        ketentuan</a> yang berlaku
-                                </label>
-                                    </div>
+                                <div
+                                    class="lg:ml-[45.5px] flex items-center flex-row mt-[27px]  space-x-4 font-medium text-[11px] lg:text-[17px]">
+                                    <input wire:model.defer="agree" type="checkbox" id="agree" name="agree"
+                                        class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
+                                    <label class="text-white" for="agree"> Saya setuju dengan kebijakan privasi serta
+                                        <a href="" class="text-[#66C1A7]" target="_blank">syarat dan
+                                            ketentuan</a> yang berlaku
+                                    </label>
+                                </div>
                                 @error('agree')
-                                <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
                                 @enderror
                             </div>
                             <button type="submit"

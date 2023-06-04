@@ -128,7 +128,8 @@
                             </div>
                             <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">ICON
                                 <br>
-                                Academy</p>
+                                Academy
+                            </p>
                         </div>
                         <div
                             class="flex flex-col w-24 text-center translate-y-3.5 sm:translate-y-4 lg:translate-y-5 xl:translate-y-6 translate-x-2">
@@ -140,7 +141,8 @@
                             </div>
                             <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">BIONIX
                                 <br>
-                                College <br> Level</p>
+                                College <br> Level
+                            </p>
                         </div>
                         <div class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 translate-x-4">
                             <p
@@ -163,7 +165,8 @@
                             </div>
                             <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">Grand
                                 <br>
-                                Talkshow</p>
+                                Talkshow
+                            </p>
                         </div>
                     </span>
                 </div>
@@ -263,15 +266,23 @@
                     class="flex max-w-[580px] xl:max-w-full w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center">
                     <div class="flex flex-col gap-y-1">
                         <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
-                        <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">Tyas
-                            Sukmaningsih</p>
-                        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Perguruan tinggi</p>
                         <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                            Institut
-                            Teknologi Bandung</p>
+                            {{ $user_data['full_name'] }}</p>
+                        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
+                        <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                            {{ $user_data['institution'] }}</p>
                         <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
-                        <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider">
-                            tyas77@gmail.com</p>
+                        <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                            {{ $user_data['email'] }}</p>
+                        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Handphone</p>
+                        <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                            {{ $user_data['handphone'] }}</p>
+                        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Grand Talkshow Darimana
+                            ?</p>
+                        <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                            {{ $user_data['referral'] }}</p>
+                        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow</p>
+                        <img src="{{ url($user_data['share_proof_file']) }}" />
                     </div>
                 </div>
                 <div class="flex md:hidden md:self-start self-center text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">

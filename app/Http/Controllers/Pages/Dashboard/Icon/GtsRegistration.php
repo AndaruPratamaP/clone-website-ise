@@ -2,27 +2,32 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
-use Livewire\Component;
+use App\Http\Controllers\Presentation\Dashboard\GrandTalkshowRegistrationController;
 use Livewire\WithFileUploads;
 
 
-class GtsRegistration extends Component
+class GtsRegistration extends GrandTalkshowRegistrationController
 {
 
     use WithFileUploads;
 
-    public $name;
+    public $full_name;
     public $email;
-    public $sumber_informasi;
-    public $bukti_ig;
+    public $referral;
+    public $share_proof_file;
     public $agree;
 
+    public array $referrals = [
+        "Media Sosial ISE!",
+        "Media Partner ISE!",
+        "Sekolah",
+        "Teman/Keluarga",
+        "Lainnya"
+    ];
 
     protected $rules = [
-        'name' => 'required|min:5|max:255',
-        'email' => 'required|email|string',
-        'sumber_informasi' => 'required|string',
-        'bukti_ig' => 'required|image:max:1024',
+        'referral' => 'required|string',
+        'share_proof_file' => 'required|image:max:1024',
         'agree' => 'required',
     ];
 
@@ -31,14 +36,39 @@ class GtsRegistration extends Component
         return view('livewire.dashboard.my.icon.gts-registration')->layout('layouts.only-layout');
     }
 
+    public function mount()
+    {
+        if ($this->isRegistered) {
+            return redirect()->route('my.gts');
+        }
+
+        $this->full_name = $this->user_data['full_name'];
+        $this->email = $this->user_data['email'];
+    }
+
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+    }
+
+    public function updatedReferral()
+    {
+        if ($this->otherRef !== "") {
+            $this->referral = $this->otherRef;
+        }
+    }
+
+    public function updatedOtherRef()
+    {
+        if ($this->otherRef !== "") {
+            $this->referral = $this->otherRef;
+        }
     }
 
     public function submit()
     {
         $this->validate($this->rules);
 
+        $this->register();
     }
 }

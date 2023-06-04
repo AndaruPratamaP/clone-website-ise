@@ -8,7 +8,14 @@ class UserHasEvent extends model
 {
     // Specify the table name
     protected $table = 'user_has_event';
+    public $incrementing = false;
     protected $primaryKey = ['users_id', 'events_id'];
+    protected $fillable = [
+        'user_id',
+        'event_id',
+    ];
+    public $timestamps = false;
+
 
     public function user()
     {

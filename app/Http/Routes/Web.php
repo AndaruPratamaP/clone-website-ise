@@ -15,6 +15,7 @@ use App\Http\Controllers\Pages\Examples\Swiper;
 use App\Http\Controllers\Pages\Auth\RequestForgot;
 use App\Http\Controllers\Pages\Auth\EmailVerification;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
+use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
 use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
@@ -87,3 +88,4 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
 
 //coba
 Route::get('gts-table', GtsTable::class);
+Route::get('gts-table/{user_id}', GtsDetailPeserta::class);

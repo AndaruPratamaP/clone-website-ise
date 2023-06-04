@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "name": "Unregistered"
+    },
+    {
+        "id": "2",
+        "name": "Registered"
+    },
+    {
+        "id": "3",
+        "name": "Verified"
+    }
+]

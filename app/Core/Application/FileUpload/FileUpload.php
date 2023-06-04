@@ -16,6 +16,8 @@ class FileUpload
     private string $seed;
     private string $name;
 
+    private string $file_name;
+
     public function __construct(UploadedFile $uploaded_file, string $path, string $seed, string $name)
     {
         $this->uploaded_file = $uploaded_file;
@@ -35,7 +37,7 @@ class FileUpload
             "image/jpg",
             "image/jpeg",
             "image/png",
-            "application/pdf"
+            "application/pdf",
         ];
         $this->file_size_limit = 1048576; // 1Mb
 
@@ -46,7 +48,7 @@ class FileUpload
     {
         return new self(
             $uploaded_file,
-            $path,
+            "public/" . $path,
             $seed,
             $name
         );
@@ -59,7 +61,7 @@ class FileUpload
     {
         if (
             !in_array($this->uploaded_file->getClientOriginalExtension(), $this->available_type) ||
-            !in_array($this->uploaded_file->getClientMimeType(), $this->available_mime_type)
+            !in_array($this->uploaded_file->getMimeType(), $this->available_mime_type)
         ) {
             IseException::throw("Tipe File {$this->name} Invalid", 2000);
         }
@@ -83,6 +85,13 @@ class FileUpload
         if (!$uploaded) {
             IseException::throw("Upload {$this->name} Gagal", 2003);
         }
+
+        $this->file_name = $file_front . "_" . $encrypted_seed;
         return $this->path . '/' . $file_front . "_" . $encrypted_seed;
+    }
+
+    public function getUrl()
+    {
+        return Storage::url($this->path . '/' . $this->file_name);
     }
 }
