@@ -11,9 +11,10 @@ class GtsRegistration extends GrandTalkshowRegistrationController
 
     use WithFileUploads;
 
-    public $full_name;
-    public $email;
-    public $referral;
+    public string $full_name;
+    public string $email;
+    public string $referral;
+    public string $otherRef = '';
     public $share_proof_file;
     public $agree;
 

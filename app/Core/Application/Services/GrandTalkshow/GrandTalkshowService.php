@@ -7,6 +7,7 @@ use App\Core\Application\Services\Event\EventService;
 use App\Core\Domain\Repositories\SqlGrandTalkshowRepository;
 use App\Core\Domain\Models\Eloquents\GrandTalkshow\GrandTalkshow;
 use App\Core\Domain\Models\Eloquents\User\User;
+use App\Core\Domain\Models\Eloquents\UserHasEvent\UserHasEvent;
 use App\Exceptions\IseException;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
@@ -49,6 +50,10 @@ class GrandTalkshowService
         $gtspeserta = GrandTalkshow::where('user_id', $user_id)->firstOrFail();
 
         $gtspeserta->delete();
+
+        $userHasEvent = UserHasEvent::where('user_id', $user_id)->where('event_id', 'a4a6c7cf-0208-11ee-a848-346f24386225');
+
+        $userHasEvent->delete();
     }
 
     public function getPeserta($user_id)

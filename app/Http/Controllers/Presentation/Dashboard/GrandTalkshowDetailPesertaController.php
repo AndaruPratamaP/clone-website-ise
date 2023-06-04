@@ -10,6 +10,7 @@ class GrandTalkshowDetailPesertaController extends Component
     private GrandTalkshowService $gts_service;
 
     public array $user_data = [
+        "user_id" => "",
         "full_name" => "",
         "handphone" => "",
         "institution" => "",
@@ -34,6 +35,7 @@ class GrandTalkshowDetailPesertaController extends Component
         $gts_user = $this->gts_service->getPeserta(request()->route('user_id'));
 
         $this->user_data = [
+            "user_id" => $gts_user->user->id,
             "full_name" => $gts_user->user->full_name,
             "handphone" => $gts_user->user->handphone,
             "email" => $gts_user->user->email,
@@ -43,13 +45,13 @@ class GrandTalkshowDetailPesertaController extends Component
         ];
     }
 
-    public function accept()
+    public function acceptPeserta()
     {
-        $this->gts_service->accept(request()->route('user_id'));
+        $this->gts_service->accept($this->user_data["user_id"]);
     }
 
-    public function reject()
+    public function rejectPeserta()
     {
-        $this->gts_service->reject(request()->route('user_id'));
+        $this->gts_service->reject($this->user_data["user_id"]);
     }
 }

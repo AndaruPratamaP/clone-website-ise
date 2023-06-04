@@ -20,6 +20,7 @@ use App\Http\Controllers\Pages\Redirect\RedirectShortener;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
 use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
 use App\Http\Controllers\Pages\Dashboard\Icon\DsRegistration;
+use App\Http\Controllers\Pages\Dashboard\Icon\GtsAdminAction;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
 use App\Http\Controllers\Pages\IconLandingPage;
@@ -80,12 +81,14 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('/icon', IconLandingPage::class); #temp for development
 
 
+    // gts admin
+    Route::get('gts-table', GtsTable::class)->name("gts.table");
+    Route::get('gts-table/{user_id}', GtsDetailPeserta::class);
+    Route::get('gts-table/{user_id}/{action}', GtsAdminAction::class);
+
+
     //  Error Pages
     Route::get('404', Error404::class)->name('404'); #temp for development
     Route::get('500', Error500::class)->name('500'); #temp for development
     Route::get('coming-soon', ComingSoon::class)->name('conming-soon'); #temp for development
 }
-
-//coba
-Route::get('gts-table', GtsTable::class);
-Route::get('gts-table/{user_id}', GtsDetailPeserta::class);

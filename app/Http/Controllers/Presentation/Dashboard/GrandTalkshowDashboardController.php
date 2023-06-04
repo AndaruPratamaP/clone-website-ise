@@ -20,7 +20,8 @@ class GrandTalkshowDashboardController extends Component
         "handphone" => "",
         "institution" => "",
         "referral" => "",
-        "share_proof_file" => ""
+        "share_proof_file" => "",
+        "status" => "",
     ];
 
     public array $msg = [
@@ -52,8 +53,9 @@ class GrandTalkshowDashboardController extends Component
             "handphone" => $gts_user->user->handphone,
             "email" => $gts_user->user->email,
             "institution" => $gts_user->user->institution,
+            "share_proof_file" => $gts_user->share_proof_file,
             "referral" => $gts_user->referral,
-            "share_proof_file" => $gts_user->share_proof_file
+            "status" => $gts_user->status_type->name,
         ];
     }
 }

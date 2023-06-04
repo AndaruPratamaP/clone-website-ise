@@ -41,7 +41,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan email aktif kamu" disabled />
                             </div>
-                            <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
+                            {{-- <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
                                 <label for="referral"
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Sumber
                                     Informasi <span class="text-[#FF1F00]">*</span>
@@ -56,6 +56,41 @@
                                 @error('referral')
                                     <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
                                 @enderror
+                            </div> --}}
+                            <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
+                                <label for="referral"
+                                    class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Sumber
+                                    Informasi <span class="text-[#FF1F00]">*</span>
+                                </label>
+                                <select
+                                    class=" w-full px-1 bg-transparent border-b-2 text-[12px] xl:text-[18px] font-montserrat font-[400] h-[28px] xl:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] xl:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] appearance-none @error('referral') border-b-[#A31400] text-[#A31400] @else border-b-[#C5C5C5] text-[#7C7C7C] @enderror"
+                                    name="referral" id="referral" wire:model="referral" x-model="referral"
+                                    x-on:change="other_ref = ''">
+                                    <option
+                                        class=" font-montserrat font-medium text-[18px] w-full px-1 bg-[#191A1E] text-[12px] xl:text-[18px] h-[28px] xl:h-[34px]"
+                                        value="" selected>Dari mana kamu mendapat informasi ini?</option>
+                                    @foreach ($referrals as $referral)
+                                        <option
+                                            class=" font-montserrat font-medium text-[18px] w-full px-1 bg-[#191A1E] text-[12px] xl:text-[18px] h-[28px] xl:h-[34px]"
+                                            value="{{ $referral }}">{{ $referral }}</option>
+                                    @endforeach
+                                </select>
+                                <div class=" relative">
+                                    <img class=" absolute bottom-[1rem] lg:bottom-[0.5rem] xl:bottom-[1rem] left-[15rem] lg:left-[18.5rem] xl:left-[21.5rem]"
+                                        src="{{ asset('images/Arrow_Down2.png') }}" alt="">
+                                </div>
+                                <input
+                                    class=" w-full font-[400] h-[28px] xl:h-[34px] bg-transparent text-white text-[12px] xl:text-[18px] outline-none font-montserrat placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] xl:placeholder:text-[18px] placeholder:font-medium px-1 hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] appearance-none"
+                                    id="referral2" wire:model="otherRef" type="text" x-model="other_ref"
+                                    x-show="referral === 'Lainnya'" x-on:input="referral = 'Lainnya'"
+                                    x-on:focusout="if(!other_ref) referral = ''" />
+                                <div class=" w-full bg-white h-[2px]" x-show="referral === 'Lainnya'"
+                                    x-on:focusout="if(!other_ref) referral = ''"></div>
+                                @error('referral')
+                                    <span
+                                        class="text-[#A31400] text-[12px] font-montserrat font-medium">{{ $message }}</span>
+                                @enderror
+
                             </div>
                             <div class="relative z-0 w-full mb-6 group cursor-pointer">
                                 <label for="share_proof_file"

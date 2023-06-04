@@ -1,8 +1,10 @@
 <div class="flex max-w-[580px] xl:max-w-full w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center">
     <div class="flex flex-col gap-y-1">
         <div class="flex flex-row justify-between items-center my-4">
-            <button wire:click="accept" class="bg-green-500 px-4 py-1.5 rounded-xl text-white font-medium">Accept</button>
-            <button wire:click="reject" class="bg-red-500 px-4 py-1.5 rounded-xl text-white font-medium">Reject</button>
+            <a href="{{ $user_data['user_id'] }}/accept"
+                class="bg-green-500 px-4 py-1.5 rounded-xl text-white font-medium">Accept</a>
+            <a href="{{ $user_data['user_id'] }}/reject"
+                class="bg-red-500 px-4 py-1.5 rounded-xl text-white font-medium">Reject</a>
         </div>
         <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
         <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
