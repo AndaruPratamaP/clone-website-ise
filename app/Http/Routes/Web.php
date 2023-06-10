@@ -14,6 +14,7 @@ use App\Http\Controllers\Pages\BionixLanding;
 use App\Http\Controllers\Pages\Examples\Swiper;
 use App\Http\Controllers\Pages\Auth\RequestForgot;
 use App\Http\Controllers\Pages\Auth\EmailVerification;
+use App\Http\Controllers\Pages\Dashboard\AdminHomeDashboard;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
@@ -53,6 +54,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::name('admin.')->prefix('admin')->middleware(['permission:admin'])->group(function () {
+        Route::get('/', AdminHomeDashboard::class)->name("admin");
+
         Route::get('shorten', LinkShortener::class)->name("shortener");
         Route::get('shortener', LinkShortenerTable::class)->name("shortener.table");
 

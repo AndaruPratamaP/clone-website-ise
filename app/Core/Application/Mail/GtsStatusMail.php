@@ -35,6 +35,7 @@ class GtsStatusMail extends Mailable
                 "name" => $this->name,
                 "reason" => $this->reason,
                 "isVerified" => $this->isVerified,
+                "app_url" => config('app.url'),
             ]);
     }
 }

@@ -91,6 +91,7 @@
             font-weight: 600;
             margin: 0 auto;
             gap: 10px;
+            text-align: center;
         }
 
 
@@ -161,7 +162,7 @@
         <tr>
             <td class="desc-text">
                 Halo, {{ $name }}! Terima kasih telah mendaftar sebagai
-                peserta Grand Talk Show 2023. Pendaftaran kamu telah:
+                peserta Grand Talk Show 2023. Status pendaftaran kamu adalah:
             </td>
         </tr>
         <tr>
@@ -173,7 +174,7 @@
             <!-- If Rejected Start -->
             <tr>
                 <td>
-                    <a class="status-bad" href="">Tertolak</a>
+                    <p class="status-bad">Ditolak</p>
                 </td>
             </tr>
             <tr>
@@ -183,8 +184,7 @@
             </tr>
             <tr>
                 <td class="desc-text">
-                    Pendaftaran GTS kamu telah ditolak karena kamu telah
-                    mendaftar ke acara Grand Talk Show 2023 sebelumnya.
+                    {{ $reason }}
                 </td>
             </tr>
             <tr>
@@ -204,7 +204,7 @@
             </tr>
             <tr>
                 <td class="btn">
-                    <a href="">Daftar Kembali!</a>
+                    <a style="display: block;" href="{{ $app_url }}/my/gts/registration">Daftar Kembali!</a>
                 </td>
             </tr>
             <tr>
@@ -217,7 +217,7 @@
             <!-- If Accepted Start -->
             <tr>
                 <td>
-                    <a class="status-ok" href="">Terverifikasi</a>
+                    <p class="status-ok">Terverifikasi</p>
                 </td>
             </tr>
             <tr>
@@ -237,7 +237,7 @@
             </tr>
             <tr>
                 <td>
-                    <a class="contactus-btn" href="">More</a>
+                    <a class="contactus-btn" href="{{ $app_url }}/">More</a>
                 </td>
             </tr>
             <tr>

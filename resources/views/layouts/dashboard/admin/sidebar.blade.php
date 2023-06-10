@@ -14,7 +14,7 @@
                 <img class="w-10 h-10" src="{{ asset('images/logo-ise.png') }}">
             </div>
             <div class="flex flex-col space-y-2 mt-7 text-[#B5B3BC]">
-                <a href="#" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-home class="w-6 h-6 text-[#B5B3BC]" />Beranda</a>
+                <a href="/admin" class="flex flex-row items-center gap-3 group hover:brightness-75 {{ Route::currentRouteName() == 'admin' ? 'brightness-75' : 'brightness-100' }}"><x-heroicon-s-home class="w-6 h-6 text-[#B5B3BC]" />Beranda</a>
                 <a href="#" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-link class="w-6 h-6 text-[#B5B3BC]" />URL Shortener</a>
             </div>
             <hr class="my-4 brightness-75" />
@@ -28,7 +28,7 @@
                 <p href="#" class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-blue-r">ICON</p>
                 <a href="#" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS Academy</a>
                 <a href="#" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX Academy</a>
-                <a href="#" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.gts' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">Grand Talkshow</a>
+                <a href="/admin/gts" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'gts.table' || Route::currentRouteName() == 'gts.detail' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">Grand Talkshow</a>
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
@@ -56,7 +56,7 @@
             <img class="w-10 h-10" src="{{ asset('images/logo-ise.png') }}">
         </div>
         <div class="flex flex-col space-y-2 mt-7 text-[#B5B3BC]">
-            <a href="#" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-home class="w-6 h-6 text-[#B5B3BC]" />Beranda</a>
+            <a href="/admin" class="flex flex-row items-center gap-3 group hover:brightness-75 {{ Route::currentRouteName() == 'admin' ? 'brightness-75' : 'brightness-100' }}"><x-heroicon-s-home class="w-6 h-6 text-[#B5B3BC]" />Beranda</a>
             <div x-data="{open: false}">
                 <button @click="open = !open" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-link class="w-6 h-6 text-[#B5B3BC]" />URL Shortener<x-heroicon-s-chevron-down class="w-6 h-4 text-[#B5B3BC] ml-auto pr-1 mt-1" x-bind:class="open == true ? 'rotate-180' : 'rotate-0'"  /></button>
                 <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
@@ -76,7 +76,7 @@
             <p href="#" class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-blue-r">ICON</p>
             <a href="#" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS Academy</a>
             <a href="#" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX Academy</a>
-            <a href="#" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.gts' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">Grand Talkshow</a>
+            <a href="/admin/gts" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'gts.table' || Route::currentRouteName() == 'gts.detail' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">Grand Talkshow</a>
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
