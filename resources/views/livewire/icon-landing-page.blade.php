@@ -1,6 +1,4 @@
-<!-- Alpine JS -->
-<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
-
+@section('title', 'ICON')
 <div class=" bg-[#121316] min-h-[screen] flex justify-center items-center flex-col relative overflow-hidden">
     {{-- temp fix? --}}
     <div class=" h-20 min-w-screen lg:h-20 xl:h-32">

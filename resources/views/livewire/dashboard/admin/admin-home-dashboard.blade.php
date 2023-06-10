@@ -1,3 +1,4 @@
+@section('title', 'Admin Dashboard')
 <div class="flex flex-col w-full space-y-6 sm:space-y-10 text-white m-4 sm:m-6 font-montserrat min-h-screen">
     <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">Halo, Admin {{ Auth::user()->full_name }}</h1>
     <div>

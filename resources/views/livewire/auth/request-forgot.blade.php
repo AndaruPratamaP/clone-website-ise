@@ -1,3 +1,4 @@
+@section('title', 'Request Forgot Password')
 <div x-data="{ show: false, password: '' }">
     <form wire:submit.prevent="request">
         <label for="email">Email :</label>

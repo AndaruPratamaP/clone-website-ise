@@ -1,4 +1,5 @@
-@if (!$isRegistered)
+@section('title', 'Grand Talkshow Home')
+@if ($isRegistered)
     <div class=" min-h-screen w-full p-4 xl:pl-12 font-poppins">
         <section>
             <div class="flex mb-5">
@@ -11,21 +12,8 @@
                 <div class="flex rounded-xl bg-[#121316] sm:bg-[#191A1E] py-8 px-9 max-w-4xl">
                     <div class="flex flex-col text-white">
                         <p class="text-xl font-medium pb-3 xl:self-start self-center">Deskripsi</p>
-                        <p class="text-sm sm:text-base font-light text-justify pt-4">Selamat tim kamu berhak mengikuti
-                            Data
-                            Science
-                            Academy ISE! 2023.
-                            Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak
-                            mengikuti Data Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Apakah
-                            ingin
-                            mengikuti kegiatan ini? Science Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini?
-                            Apakah
-                            ingin mengikuti kegiatan?
-                            Selamat tim kamu berhak mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak
-                            mengikuti Data Science Academy ISE! 2023. Selamat tim kamu berhak mengikuti Data Selamat tim
-                            kamu berhak mengikuti Data Science Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini?
-                            Science Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini? Apakah ingin mengikuti
-                            kegiatan?
+                        <p class="text-sm sm:text-base font-light text-justify pt-4">
+                            Grand Talkshow merupakan kegiatan talkshow yang sangat interaktif dan menjadi bagian penting dari rangkaian acara pembuka untuk kegiatan ISE! 2023, sebuah acara yang sangat diantisipasi. Dalam Grand Talkshow, para narasumber dan pembicara yang ahli di bidang teknologi akan hadir untuk berbagi pengetahuan dan wawasan mendalam mengenai isu-isu terkini dalam dunia teknologi serta potensinya dalam mempengaruhi masyarakat luas. Acara ini memberikan kesempatan kepada peserta untuk berinteraksi secara langsung dengan para narasumber melalui sesi tanya jawab yang interaktif, di mana mereka dapat mengajukan pertanyaan, berbagi pandangan, dan memperoleh pemahaman yang lebih dalam tentang isu-isu teknologi yang dibahas.
                         </p>
                     </div>
                 </div>
@@ -92,80 +80,44 @@
         <section>
             <div
                 class="flex rounded-xl bg-[#121316] sm:bg-[#191A1E] my-8 pb-16 px-6 h-[250px] items-center justify-center max-w-[896px] lg:max-w-[1150px] 2xl:max-w-[1317px]">
-                <div class="flex flex-col w-full gap-y-16 items-center">
-                    <p class="flex text-white text-2xl font-medium self-center xl:self-start ">Timeline</p>
+                <div class="flex flex-col w-full items-center">
+                    <p class="flex text-white text-2xl font-medium self-center xl:self-start -mt-8">Timeline</p>
                     <span
-                        class="flex flex-row max-w-xl xl:max-w-[800px] 2xl:max-w-4xl w-full justify-between items-center h-[4px] bg-[#333333] text-white ">
+                        class="flex flex-row max-w-sm xl:max-w-[600px] 2xl:max-w-4xl w-full justify-between items-center h-[4px] bg-[#333333] text-white mt-20">
                         <div
-                            class="flex flex-col w-24 text-center translate-y-3.5 sm:translate-y-[1.125rem] md:translate-y-4 lg:translate-y-5 xl:translate-y-6 -translate-x-5 sm:-translate-x-10">
+                            class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 -translate-x-10">
                             <p
                                 class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-                                Jun 2022</p>
+                                12 Jun 2023</p>
                             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
                                 <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
                             </div>
                             <p
                                 class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
-                                Bionix <br> Student <br> Level</p>
+                                Registration <br> Open </p>
                         </div>
-                        <div class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 -translate-x-4">
+                        <div class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3">
                             <p
                                 class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-                                Jun 2022</p>
+                                16 Jul 2022</p>
                             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
                                 <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
                             </div>
                             <p
                                 class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
-                                IS <br> Class</p>
-                        </div>
-                        <div class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 -translate-x-2">
-                            <p
-                                class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-                                Jul 2022</p>
-                            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-                                <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
-                            </div>
-                            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">ICON
-                                <br>
-                                Academy
-                            </p>
+                                Registration <br> Closed</p>
                         </div>
                         <div
-                            class="flex flex-col w-24 text-center translate-y-3.5 sm:translate-y-4 lg:translate-y-5 xl:translate-y-6 translate-x-2">
+                            class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 translate-x-10">
                             <p
                                 class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-                                Sep 2022</p>
-                            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-                                <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
-                            </div>
-                            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">BIONIX
-                                <br>
-                                College <br> Level
-                            </p>
-                        </div>
-                        <div class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 translate-x-4">
-                            <p
-                                class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-                                Sep 2022</p>
-                            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-                                <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
-                            </div>
-                            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">Virtual
-                                <br> Tour
-                            </p>
-                        </div>
-                        <div
-                            class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 translate-x-5 sm:translate-x-10">
-                            <p
-                                class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-                                Nov 2022</p>
+                                22 Jul 2023</p>
                             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
                                 <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
                             </div>
                             <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">Grand
                                 <br>
-                                Talkshow
+                                Talk Show</p>
                             </p>
                         </div>
                     </span>
@@ -315,14 +267,8 @@
                     class="flex md:hidden max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center">
                     <div class="flex flex-col gap-y-3">
                         <p class="flex text-white font-lg text-lg sm:text-2xl font-poppins font-bold tracking-wider">
-                            Lorem Ipsum</p>
-                        <p class="text-sm sm:text-base text-white font-light text-justify">Selamat tim kamu berhak
-                            mengikuti UX Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini? Selamat tim kamu berhak
-                            mengikuti UX Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini?Selamat tim kamu berhak
-                            mengikuti UX Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini?Selamat tim kamu berhak
-                            mengikuti UX Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini?Selamat tim kamu berhak
-                            mengikuti UX Academy ISE! 2023. Apakah ingin
-                            mengikuti kegiatan ini?</p>
+                            Link Webinar</p>
+                        <p class="text-sm sm:text-base text-white font-light text-justify">Terimakasih sudah mendaftar pada Grand Talkshow 2023. Link webinar akan dikirimkan melalui email yang didaftarkan sebelum tanggal 22 Juli 2023.p>
                     </div>
                 </div>
             </div>
@@ -334,7 +280,7 @@
                         <p class="text-xl font-medium">Grand Talkshow Dimulai</p>
                         <div class="flex flex-row gap-x-3 my-7">
                             <div class="flex flex-col items-center justify-center">
-                                <div id="days"
+                                <div id="days_gts"
                                     class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center">
                                     00
                                 </div>
@@ -342,7 +288,7 @@
                             </div>
                             <div class="flex items-center text-white font-bold text-xl self-start pt-3">:</div>
                             <div class="flex flex-col items-center justify-center">
-                                <div id="hours"
+                                <div id="hours_gts"
                                     class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center">
                                     00
                                 </div>
@@ -350,7 +296,7 @@
                             </div>
                             <div class="flex items-center text-white font-bold text-xl self-start pt-3">:</div>
                             <div class="flex flex-col items-center justify-center">
-                                <div id="minutes"
+                                <div id="minutes_gts"
                                     class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center">
                                     00
                                 </div>
@@ -359,19 +305,13 @@
                             <div class="hidden xs:flex items-center text-white font-bold text-xl self-start pt-3">:
                             </div>
                             <div class="hidden xs:flex flex-col items-center justify-center">
-                                <div id="seconds"
+                                <div id="seconds_gts"
                                     class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center">
                                     00
                                 </div>
                                 <p class="flex text-white text-base font-normal">Detik</p>
                             </div>
                         </div>
-                        <button
-                            class="flex md:hidden my-3 w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-gradient-to-r from-[#348BB6] to-[#A3D2F3]">Daftar
-                            Sekarang!</button>
-                        <button
-                            class="flex md:hidden w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a]">Lihat
-                            Guidebook</button>
                     </div>
 
                 </div>
@@ -379,15 +319,9 @@
                 <div
                     class="hidden md:flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center">
                     <div class="flex flex-col gap-y-3">
-                        <p class="flex text-white font-lg text-2xl font-poppins font-bold tracking-wider">Lorem Ipsum
+                        <p class="flex text-white font-lg text-2xl font-poppins font-bold tracking-wider">Link Webinar
                         </p>
-                        <p class="text-base text-white font-light text-justify">Selamat tim kamu berhak mengikuti UX
-                            Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini? Selamat tim kamu berhak mengikuti UX
-                            Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini?Selamat tim kamu berhak mengikuti UX
-                            Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini?Selamat tim kamu berhak mengikuti UX
-                            Academy ISE! 2023. Apakah ingin mengikuti kegiatan ini?Selamat tim kamu berhak mengikuti UX
-                            Academy ISE! 2023. Apakah ingin
-                            mengikuti kegiatan ini?</p>
+                        <p class="text-base text-white font-light text-justify">Terimakasih sudah mendaftar pada Grand Talkshow 2023. Link webinar akan dikirimkan melalui email yang didaftarkan sebelum tanggal 22 Juli 2023.</p>
                     </div>
                 </div>
 
@@ -430,4 +364,39 @@
             document.getElementById("seconds").innerHTML = "0";
         }
     }, 1000);
+
+    // After Regist Countdown
+        // Set the countdown date and time
+        const countdownDate_gts = new Date("July 22, 2023 00:00:00").getTime();
+
+        // Update the countdown every second
+        const countdownTimer_gts = setInterval(() => {
+
+        // Get today's date and time
+        const now = new Date().getTime();
+
+        // Find the distance between now and the countdown date
+        const distance = countdownDate_gts - now;
+
+        // Calculate the days, hours, minutes, and seconds
+        const days_gts = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours_gts = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes_gts = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds_gts = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById("days_gts").innerHTML = `${days_gts}`;
+        document.getElementById("hours_gts").innerHTML = `${hours_gts}`;
+        document.getElementById("minutes_gts").innerHTML = `${minutes_gts}`;
+        document.getElementById("seconds_gts").innerHTML = `${seconds_gts}`;
+
+        // If the countdown is finished, display a message
+        if (distance < 0) {
+            clearInterval(countdownTimer_gts);
+            document.getElementById("days_gts").innerHTML = "0";
+            document.getElementById("hours_gts").innerHTML = "0";
+            document.getElementById("minutes_gts").innerHTML = "0";
+            document.getElementById("seconds_gts").innerHTML = "0";
+        }
+        }, 1000);
 </script>

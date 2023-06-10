@@ -1,3 +1,4 @@
+@section('title', 'Login')
 <div class=" bg-[#121316] min-h-screen flex justify-center items-center relative overflow-x-hidden">
     <img class=" absolute top-0 left-0 z-10" src="{{ asset('images/Login_Register_Top_Left_Background.png') }}" alt="">
     <img class=" absolute top-0 right-0 z-10" src="{{ asset('images/Login_Register_Top_Right_Background.png') }}" alt="">

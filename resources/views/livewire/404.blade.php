@@ -1,3 +1,4 @@
+@section('title', '404 Not Found')
 <div class="flex flex-col items-center justify-center h-fit lg:min-h-screen sm:min-h-screen bg-[#121316]">
     <div class="absolute rounded-full bg-[#00D0FF] bg-opacity-10 blur-2xl">
         <div class="flex">

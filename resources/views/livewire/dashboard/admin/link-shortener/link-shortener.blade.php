@@ -1,8 +1,4 @@
-{{-- @extends('layouts.app')
-
-@section('title', 'UrlShortener')
-
-@section('content') --}}
+@section('title', 'Link Shortener')
 <div x-data="{ customLink: false, isSubmitted: false }" wire:loading.attr="disabled"
     class="flex flex-col items-center justify-center bg-slate-300 p-2">
     <form wire:submit.prevent="submit" :class="{ 'hidden': isSubmitted }"

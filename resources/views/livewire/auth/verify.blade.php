@@ -1,3 +1,4 @@
+@section('title', 'Verify Email')
 <div class="flex flex-col justify-center items-center min-h-screen bg-[#121316]">
     <div class="container mx-auto">
         <div class="border rounded-tr-full absolute bg-[#00D0FF] bg-opacity-10 blur-2xl -bottom-0 -left-0">

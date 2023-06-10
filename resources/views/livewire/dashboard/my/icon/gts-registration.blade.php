@@ -1,3 +1,4 @@
+@section('title', 'GTS Registration')
 <div x-data='{ isSubmitted: false }'
     class="flex justify-center py-14 md:py-72 bg-[#00161B] min-h-screen w-full font-montserrat relative overflow-hidden z-0">
     <div>
@@ -113,7 +114,7 @@
                                             required />
                                     </div>
                                 </label>
-                                <span class="text-xs text-gray-300">Max size 1mb (*.jpg, *.jpeg, *.png)</span>
+                                <div class="text-xs text-gray-300 mt-1">Max size 1mb (*.jpg, *.jpeg, *.png)</div>
                                 @error('share_proof_file')
                                     <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
                                 @enderror
@@ -124,7 +125,7 @@
                                     <input wire:model.defer="agree" type="checkbox" id="agree" name="agree"
                                         class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
                                     <label class="text-white" for="agree"> Saya setuju dengan kebijakan privasi serta
-                                        <a href="" class="text-[#66C1A7]" target="_blank">syarat dan
+                                        <a href="#" class="text-[#66C1A7]" target="_blank">syarat dan
                                             ketentuan</a> yang berlaku
                                     </label>
                                 </div>

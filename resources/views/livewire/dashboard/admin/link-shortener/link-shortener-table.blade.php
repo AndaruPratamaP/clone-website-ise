@@ -1,3 +1,4 @@
+@section('title', 'Link Shortener Table')
 <div class="">
     <table class="table-auto bg-slate-300 p-4 rounded-lg">
         <thead>

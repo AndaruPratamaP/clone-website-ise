@@ -1,3 +1,4 @@
+@section('title', 'GTS Detail Peserta')
 <div class="flex flex-col min-h-screen w-11/12 mx-auto font-poppins">
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div class="flex flex-col items-start gap-2">

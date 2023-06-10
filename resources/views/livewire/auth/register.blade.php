@@ -1,3 +1,4 @@
+@section('title', 'Register')
 <div class=" bg-[#121316] min-h-screen flex justify-center items-center relative overflow-x-hidden">
     <img class=" absolute top-0 left-0 z-10" src="{{ asset('images/Login_Register_Top_Left_Background.png') }}"
         alt="">
@@ -307,11 +308,11 @@
                                 src="{{ asset('images/login1decor1.png') }}" alt="">
                         </div>
                         <button
-                            class=" mt-8 xl:mt-1 mb-1 xl:mb-4 rounded-full h-[29px] xl:h-[46px] w-full text-white bg-gradient-to-r from-[#006C56] to-[#AFD196] active:border-[#66C1A7] border-2 border-[#191A1E]"
+                            class="hover:brightness-75  mt-8 xl:mt-1 mb-1 xl:mb-4 rounded-full h-[29px] xl:h-[46px] w-full text-white bg-gradient-to-r from-[#006C56] to-[#AFD196] active:border-[#66C1A7] border-2 border-[#191A1E]"
                             type="submit">
                             <span
                                 wire:loading.remove
-                                class=" block py-0.5 px-6 w-full h-full mt-1 font-montserrat font-bold rounded-full text-white bg-transparent hover:bg-[#006C56] transition text-[14px] xl:text-[20px] cursor-pointer">
+                                class=" block py-0.5 px-6 w-full h-full mt-1 font-montserrat font-bold rounded-full text-white bg-transparent transition text-[14px] xl:text-[20px] cursor-pointer">
                                 Sign Up
                             </span>
                             <div wire:loading

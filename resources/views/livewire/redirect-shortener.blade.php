@@ -1,3 +1,4 @@
+@section('title', 'Redirecting')
 <div class="relative bg-[#121316] flex min-h-screen w-full justify-center items-center overflow-hidden">
   <img class="absolute rounded-full bg-[#00D0FF] bg-opacity-5 blur-3xl z-0 mix-blend-screen h-[75%] w-[75%]" src="{{ asset('images/redirect/bg-redirect.png') }}">
   <div>

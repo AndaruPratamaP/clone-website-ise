@@ -1,3 +1,4 @@
+@section('title', 'Coming Soon')
 <div class="bg-[#121316]">
     <div class="flex h-screen items-center justify-center overflow-hidden">
         <div class=" relative w-[280px] min-[450px]:w-[333px] sm:w-[600px] lg:w-[826px] ">

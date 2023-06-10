@@ -1,3 +1,4 @@
+@section('title', '500 Server Error')
 <div class="flex flex-col items-center justify-center min-h-screen bg-[#121316]">
     <div class="absolute rounded-full bg-[#00D0FF] bg-opacity-10 blur-2xl">
         <div class="flex">
