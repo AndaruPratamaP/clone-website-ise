@@ -3,6 +3,7 @@
 namespace App\Core\Application\Services\GrandTalkshow;
 
 use App\Core\Application\FileUpload\FileUpload;
+use App\Core\Application\Mail\GtsStatusMail;
 use App\Core\Application\Services\Event\EventService;
 use App\Core\Domain\Repositories\SqlGrandTalkshowRepository;
 use App\Core\Domain\Models\Eloquents\GrandTalkshow\GrandTalkshow;
@@ -11,7 +12,9 @@ use App\Core\Domain\Models\Eloquents\UserHasEvent\UserHasEvent;
 use App\Exceptions\IseException;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Mail;
 use Ramsey\Uuid\Uuid;
+use Throwable;
 
 class GrandTalkshowService
 {
@@ -42,16 +45,37 @@ class GrandTalkshowService
 
         $gtspeserta->save();
 
+        try {
+            Mail::to($gtspeserta->user->email)->send(new GtsStatusMail(
+                "",
+                $gtspeserta->user->full_name,
+                true
+            ));
+        } catch (Throwable $e) {
+            IseException::throw("Gagal mengirim email", 1601);
+        }
+
         return $gtspeserta;
     }
 
-    public function reject($user_id)
+    public function reject($user_id, $reason)
     {
         $gtspeserta = GrandTalkshow::where('user_id', $user_id)->firstOrFail();
+
+        try {
+            Mail::to($gtspeserta->user->email)->send(new GtsStatusMail(
+                $reason,
+                $gtspeserta->user->full_name,
+                true
+            ));
+        } catch (Throwable $e) {
+            IseException::throw("Gagal mengirim email", 1601);
+        }
 
         $gtspeserta->delete();
 
         $userHasEvent = UserHasEvent::where('user_id', $user_id)->where('event_id', 'a4a6c7cf-0208-11ee-a848-346f24386225');
+
 
         $userHasEvent->delete();
     }

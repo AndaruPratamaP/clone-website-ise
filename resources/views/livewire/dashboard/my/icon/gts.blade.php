@@ -255,24 +255,30 @@
                             class="relative z-0 w-14 h-14 rotate-180 text-blue-400" />
                         <div class="flex flex-col">
                             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Pendaftaran</p>
-                            <p class="text-2xl bg-gradient-blue-r font-bold bg-clip-text text-transparent">{{ $user_data['status'] }}
+                            <p class="text-2xl bg-gradient-blue-r font-bold bg-clip-text text-transparent">
+                                {{ $user_data['status'] }}
                             </p>
                         </div>
                     </div>
                 </div>
                 <div
                     class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
-                                <div class="flex flex-row gap-x-6 items-center w-full">
-                        @if($user_data['status_id'] == "3")
-                            <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-blue-400 "  />
+                    <div class="flex flex-row gap-x-6 items-center w-full">
+                        @if ($user_data['status_id'] == '3')
+                            <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-blue-400 " />
                         @else
-                            <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-[#B5B3BC] "  />
+                            <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-[#B5B3BC] " />
                         @endif
 
                         <div class="flex flex-col">
                             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Verifikasi</p>
-                            <p class="text-2xl font-bold text-[#B5B3BC]  @if($user_data['status_id'] == "3") bg-gradient-blue-r bg-clip-text text-transparent  @endif">
-                                Terverifikasi
+                            <p
+                                class="text-2xl font-bold text-[#B5B3BC]  @if ($user_data['status_id'] == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif">
+                                @if ($user_data['status_id'] == '2')
+                                    Belum Terverifikasi
+                                @elseif ($user_data['status_id'] == '3')
+                                    Terverifikasi
+                                @endif
                             </p>
                         </div>
                     </div>
