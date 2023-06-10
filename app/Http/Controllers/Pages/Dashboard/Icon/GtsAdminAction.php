@@ -6,8 +6,6 @@ use App\Http\Controllers\Presentation\Dashboard\GrandTalkshowDetailPesertaContro
 
 class GtsAdminAction extends GrandTalkshowDetailPesertaController
 {
-    public $reason = "Tes";
-
     public function render()
     {
         return view('livewire.dashboard.admin.icon.gts-detail-peserta')->layout('layouts.dashboard.admin.base');

@@ -41,8 +41,8 @@
         </table>
     </div>
 
-    <div class="mt-12 bg-white rounded-lg px-4 py-2 w-full">
-        {{ $gtss->links('') }}
+    <div class="mt-12 bg-transparent rounded-lg px-4 py-2 w-full">
+        {{ $gtss->links() }}
     </div>
 
 </div>
