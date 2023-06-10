@@ -77,7 +77,7 @@ class AuthController extends Component
 
             $this->dispatchToast('success', 'Login berhasil');
             $this->msg['success'] = "Login berhasil";
-            return redirect()->intended('my');
+            return redirect()->intended('login');
         } catch (TooManyRequestsException $exception) {
             $this->dispatchToast('error', 'Login gagal', "Anda terlalu banyak gagal mencoba, coba lagi dalam {$exception->secondsUntilAvailable} detik");
         } catch (Throwable $e) {

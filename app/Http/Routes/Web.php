@@ -38,19 +38,30 @@ Route::get('go/{short}', RedirectShortener::class);
 
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
-    Route::get('shortener', LinkShortenerTable::class);
-    Route::get('shorten', LinkShortener::class);
 
     Route::get('dashboard', function () {
         return 'welcome';
     })->name('dashboard');
 
-    // This route can only be accessed when user have permission to route test
-    Route::get('test', function () {
-        return 'test';
-    })
-        ->name('test')
-        ->middleware('permission:test');
+    Route::name('my.')->prefix('my')->middleware(['permission:my'])->group(function () {
+        Route::get('/', UserHomeDashboard::class)->name('');
+
+        Route::prefix('gts')->middleware(['permission:my.gts'])->group(function () {
+            Route::get('/', GtsDashboard::class)->name('gts');
+            Route::get('/registration', GtsRegistration::class)->name('gts.registration');
+        });
+    });
+
+    Route::name('admin.')->prefix('admin')->middleware(['permission:admin'])->group(function () {
+        Route::get('shorten', LinkShortener::class)->name("shortener");
+        Route::get('shortener', LinkShortenerTable::class)->name("shortener.table");
+
+        Route::prefix('gts')->middleware(['permission:admin.gts'])->group(function () {
+            Route::get('/', GtsTable::class)->name("gts.table");
+            Route::get('/{user_id}', GtsDetailPeserta::class)->name("gts.detail");
+            Route::get('/{user_id}/{action}', GtsAdminAction::class)->name("gts.action");
+        });
+    });
 
     Route::get('logout', Logout::class)->name('logout');
 });
@@ -69,23 +80,12 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('swiper', Swiper::class);
     Route::get('aos', Aos::class);
     Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
-    Route::get('my', UserHomeDashboard::class)->name('my'); #temp for development
-    Route::get('my/gts', GtsDashboard::class)->name('my.gts'); #temp for development
-    Route::get('my/gts/registration', GtsRegistration::class)->name('gts.registration'); #temp for development
 
     Route::get('my/ux/registration', UxRegistration::class); #temp for development
     Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
     Route::get('bionix', BionixLanding::class); #temp for development
-    Route::get('shorten', LinkShortener::class); #temp for development
     Route::get('/icon', IconLandingPage::class); #temp for development
-
-
-    // gts admin
-    Route::get('gts-table', GtsTable::class)->name("gts.table");
-    Route::get('gts-table/{user_id}', GtsDetailPeserta::class);
-    Route::get('gts-table/{user_id}/{action}', GtsAdminAction::class);
-
 
     //  Error Pages
     Route::get('404', Error404::class)->name('404'); #temp for development

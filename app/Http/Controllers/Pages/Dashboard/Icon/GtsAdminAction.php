@@ -25,6 +25,6 @@ class GtsAdminAction extends GrandTalkshowDetailPesertaController
             default:
                 break;
         }
-        redirect()->route("gts.table");
+        redirect()->route("admin.gts.table");
     }
 }

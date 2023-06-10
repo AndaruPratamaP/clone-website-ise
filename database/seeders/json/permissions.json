@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "route": "test"
+    },
+    {
+        "id": 2,
+        "route": "my"
+    },
+    {
+        "id": 3,
+        "route": "my.gts"
+    },
+    {
+        "id": 100,
+        "route": "admin"
+    },
+    {
+        "id": 101,
+        "route": "admin.gts"
+    }
+]

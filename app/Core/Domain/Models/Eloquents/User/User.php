@@ -40,6 +40,9 @@ class User extends model implements AuthenticatableContract
     protected $primaryKey = 'id';
     protected $dates = ['created_at', 'updated_at'];
 
+    protected $adminRolesId = [2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+    protected $userRolesId = [1, 3, 4, 5];
+
     // make relationship
     public function provinsi()
     {
@@ -68,6 +71,28 @@ class User extends model implements AuthenticatableContract
             ->where('permission_id', $permission_id)
             ->first();
         if ($roleHasPermission) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function isAdmin()
+    {
+        $role_id = $this->role->getAttribute('id');
+
+        if (in_array($role_id, $this->adminRolesId)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function isUser()
+    {
+        $role_id = $this->role->getAttribute('id');
+
+        if (in_array($role_id, $this->userRolesId)) {
             return true;
         } else {
             return false;

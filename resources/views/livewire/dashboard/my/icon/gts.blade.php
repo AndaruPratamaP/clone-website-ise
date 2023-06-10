@@ -72,7 +72,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col gap-y-2 w-full">
-                            <a href="{{ route('gts.registration') }}"
+                            <a href="{{ route('my.gts.registration') }}"
                                 class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-gradient-to-r from-[#348BB6] to-[#A3D2F3] hover:brightness-75">Daftar
                                 Sekarang!</a>
                             <a href="/"
