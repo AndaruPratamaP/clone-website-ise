@@ -56,6 +56,6 @@ class GrandTalkshowDetailPesertaController extends Component
 
     public function rejectPeserta()
     {
-        $this->gts_service->reject($this->user_data["user_id"], $this->reason);
+        $this->gts_service->reject($this->user_data["user_id"], request()->query("reason"));
     }
 }
