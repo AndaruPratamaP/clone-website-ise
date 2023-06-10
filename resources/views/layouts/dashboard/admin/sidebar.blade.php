@@ -5,7 +5,7 @@
 </style>
 <div x-data="{ open: false }">
     {{-- Mobile Start --}}
-    <div class="flex h-20 items-center ml-6 lg:hidden fixed top-0 left-0 z-10"  @click="open = !open" >
+    <div class="flex h-20 items-center ml-6 lg:hidden fixed top-0 left-0 z-30"  @click="open = !open" >
         <x-heroicon-s-bars-3 class="w-8 h-8 text-white cursor-pointer" />
     </div>
     <div x-bind:class="open==true ? 'bg-black/70 min-h-screen w-full fixed inset-0 z-50' : ''" @click="open=!open">
@@ -51,7 +51,7 @@
     {{-- Mobile End --}}
 
     {{-- Desktop Start --}}
-    <div class="flex-col scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-500 h-screen w-[260px] bg-[#15161A] text-white fixed top-0 left-0 z-10 hidden lg:flex px-[30px] py-[40px] text-lg scroll overflow-y-auto">
+    <div class="flex-col scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-500 h-screen w-[260px] bg-[#15161A] text-white fixed top-0 left-0 z-30 hidden lg:flex px-[30px] py-[40px] text-lg scroll overflow-y-auto">
         <div class="flex justify-center">
             <img class="w-10 h-10" src="{{ asset('images/logo-ise.png') }}">
         </div>
