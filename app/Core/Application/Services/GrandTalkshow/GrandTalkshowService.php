@@ -66,7 +66,7 @@ class GrandTalkshowService
             Mail::to($gtspeserta->user->email)->send(new GtsStatusMail(
                 $reason,
                 $gtspeserta->user->full_name,
-                true
+                false
             ));
         } catch (Throwable $e) {
             IseException::throw("Gagal mengirim email", 1601);
