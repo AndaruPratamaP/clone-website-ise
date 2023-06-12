@@ -35,6 +35,9 @@ Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
 Route::get('icon', IconLanding::class)->name('landing.icon');
 
+Route::get('coming-soon', ComingSoon::class)->name('conming-soon');
+Route::get('404', Error404::class)->name('404');
+
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
 
@@ -65,9 +68,6 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('logout', Logout::class)->name('logout');
-
-    Route::get('coming-soon', ComingSoon::class)->name('conming-soon');
-    Route::get('404', Error404::class)->name('404');
 });
 
 // Routes that have to be not authenticated
