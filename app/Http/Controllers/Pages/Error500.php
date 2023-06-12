@@ -8,6 +8,6 @@ class Error500 extends Component
 {
     public function render()
     {
-        return view('livewire.500')->layout('layouts.only-layout');
+        return view('livewire.errors.500')->layout('layouts.only-layout');
     }
 }

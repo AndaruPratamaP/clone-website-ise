@@ -1,0 +1,134 @@
+[
+    {
+        "id": "0780c11b-a7bf-4c08-a82c-401ad10dc006",
+        "full_name": "BPH",
+        "email": "bph@ise-its.com",
+        "handphone": "0",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "6"
+    },
+    {
+        "id": "cbf95bba-dbec-4faf-809f-45b2461b56d7",
+        "full_name": "Icon",
+        "email": "icon@ise-its.com",
+        "handphone": "1",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "7"
+    },
+    {
+        "id": "b5fe6ec0-b0fb-443d-94f4-87a27c26d3bb",
+        "full_name": "Bionix",
+        "email": "bionix@ise-its.com",
+        "handphone": "2",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "8"
+    },
+    {
+        "id": "39490b89-86fd-4f11-9e57-7f09fe79f2a7",
+        "full_name": "Rise",
+        "email": "rise@ise-its.com",
+        "handphone": "3",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "9"
+    },
+    {
+        "id": "8fc8ebe3-2ac1-4e24-aa51-1fc49f8405a3",
+        "full_name": "Admin",
+        "email": "admin@ise-its.com",
+        "handphone": "4",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "10"
+    },
+    {
+        "id": "7aa970d7-a3b8-401a-9386-c42dcb3b5fb4",
+        "full_name": "Technical",
+        "email": "technical@ise-its.com",
+        "handphone": "5",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "11"
+    },
+    {
+        "id": "4767be64-fc80-444e-a21d-88cd5da03188",
+        "full_name": "Paradigm",
+        "email": "paradigm@ise-its.com",
+        "handphone": "6",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "12"
+    },
+    {
+        "id": "4abcf305-69a7-4c7a-b2e3-18cbe9cd3a48",
+        "full_name": "IT Dev",
+        "email": "itdev@ise-its.com",
+        "handphone": "7",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "13"
+    },
+    {
+        "id": "d0234086-2c70-4512-99f3-eb0848fb07c0",
+        "full_name": "Finance",
+        "email": "finance@ise-its.com",
+        "handphone": "8",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "14"
+    },
+    {
+        "id": "625844e0-15cd-48de-8f67-f920e3241d1c",
+        "full_name": "Public Relation",
+        "email": "pr@ise-its.com",
+        "handphone": "9",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "15"
+    },
+    {
+        "id": "7314e271-f293-4817-8e36-ad9f58433dd8",
+        "full_name": "Marketing",
+        "email": "marketing@ise-its.com",
+        "handphone": "10",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "16"
+    },
+    {
+        "id": "9586391a-7ebe-40fe-926f-11cc81d26263",
+        "full_name": "Creative",
+        "email": "creative@ise-its.com",
+        "handphone": "11",
+        "institution": "Its",
+        "referral": "Media Sosial ISE!",
+        "verified_at": "2023-06-12 00:00:00",
+        "provinsi_id": "35",
+        "role_id": "17"
+    }
+]
