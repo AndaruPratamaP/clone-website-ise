@@ -28,7 +28,7 @@ class GtsRegistration extends GrandTalkshowRegistrationController
 
     protected $rules = [
         'referral' => 'required|string',
-        'share_proof_file' => 'required|image:max:1024',
+        'share_proof_file' => 'required|image|max:1024',
         'agree' => 'required',
     ];
 

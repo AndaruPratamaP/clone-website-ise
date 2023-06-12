@@ -63,7 +63,7 @@
                     <x-bi-youtube/>
                 </a></div> --}}
                 <div class="scale-75 md:scale-100">
-                <a href="https://tiktok.com" target="blank">
+                <a href="https://www.tiktok.com/@is_expo" target="blank">
                     <x-bi-tiktok/>
                 </a></div>
                 {{-- <div class="scale-75 md:scale-100">

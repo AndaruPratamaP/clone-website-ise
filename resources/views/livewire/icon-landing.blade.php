@@ -61,7 +61,7 @@
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>Grand Talkshow ISE! 2023 </strong> merupakan kegiatan talkshow interaktif yang diadakan secara online dan merupakan rangkaian acara pembuka untuk kegiatan ISE! 2023.  Pada ISE! 2023, Grand Talkshow akan membawakan tema, yaitu <strong>“Tech Innovators: Revolutionizing Industries with IT Solutions”</strong></p>
                             <button class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
-                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
+                                <a href="/login" class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</a>
                             </button>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran ditutup dalam waktu:
@@ -125,7 +125,7 @@
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>UX Academy</strong> merupakan <strong>rangkaian IT pelatihan/workshop</strong> yang memfasilitasi pembelajaran mengenai kemampuan di bidang teknologi dengan menghadirkan pengajar serta mentor yang ahli dan berpengalaman di bidang keilmuan tersebut.</p>
                             <button class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
-                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
+                                <a href="/login" class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</a>
                             </button>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran dibuka dalam waktu:
@@ -171,7 +171,7 @@
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>DS Academy</strong> merupakan <strong>rangkaian IT pelatihan/workshop</strong> yang memfasilitasi pembelajaran mengenai kemampuan di bidang teknologi dengan menghadirkan pengajar serta mentor yang ahli dan berpengalaman di bidang keilmuan tersebut.</p>
                             <button class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
-                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
+                                <a href="/login" class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</a>
                             </button>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran dibuka dalam waktu:
@@ -277,7 +277,7 @@
                                     Agung Budi prasetya
                                 </h5>
                                 <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
-                                    Mahasiswa 2022
+                                    Peserta DS Academy 2022
                                 </h5>
                             </div>
                         </div>
@@ -318,7 +318,7 @@
                                     Felicia Evelina Soetjipto
                                 </h5>
                                 <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
-                                    Mahasiswa 2022
+                                    Peserta DS Academy 2022
                                 </h5>
                             </div>
                         </div>
@@ -359,7 +359,7 @@
                                     Achmad Fahmi Ainur Ridho
                                 </h5>
                                 <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
-                                    Mahasiswa 2022
+                                    Peserta DS Academy 2022
                                 </h5>
                             </div>
                         </div>
