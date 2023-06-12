@@ -75,6 +75,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Toastr Styling Start */
 .toast > .toast-title {
     font-size: 26px;
