@@ -12,8 +12,8 @@
     {{-- <script defer src="{{ asset('js/cdn.min.js') }}"></script> --}}
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
-    @vite('node_modules/swiper/swiper-bundle.min.css')
-    @vite('node_modules/aos/dist/aos.css')
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/css/aos.css" rel="stylesheet">
     @livewireStyles
 </head>
 
@@ -22,7 +22,7 @@
         @include('layouts.dashboard.navbar')
         <div class="flex flex-row">
             @include('layouts.dashboard.sidebar')
-            <div class="flex w-full lg:pl-[260px] pt-20 bg-[#121316]" >
+            <div class="flex w-full lg:pl-[260px] pt-20 bg-[#121316]">
                 {{ $slot }}
             </div>
         </div>
