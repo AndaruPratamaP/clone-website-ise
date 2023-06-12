@@ -6,7 +6,7 @@ use App\Core\Application\Services\Event\EventService;
 use App\Core\Application\Services\GrandTalkshow\GrandTalkshowService;
 use Livewire\Component;
 
-class ADminHomeDashboardController extends Component
+class AdminHomeDashboardController extends Component
 {
     private EventService $event_service;
     private GrandTalkshowService $gts_service;
