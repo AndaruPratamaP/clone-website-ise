@@ -23,9 +23,9 @@
                         <h1 style="line-height: 80%" class=" absolute left-0 xs:top-1 lg:top-5 z-30 font-montserrat text-[40px] xs:text-[60px] sm:text-[70px] md:text-[80px] lg:text-[80px] xl:text-[120px] font-extrabold from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.1)]">ICON</h1>
                     </div>
                     <p class=" mt-10 xs:mt-14 sm:mt-16 md:mt-20 lg:mt-24 xl:mt-32 z-30 font-montserrat lg:bottom-[10rem] xl:bottom-0 text-[9px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[24px] font-bold from-[#FF9355] to-[#FFD693] bg-gradient-to-r text-transparent bg-clip-text">#ISEProvectaFutura</p>
-                    <button style="line-height: 80%" class=" mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[60px] xs:w-[90px] sm:w-[130px] md:w-[145px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px]" type="button">
-                        <a href="#more" class=" font-montserrat text-[7px] xs:text-[10px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-semibold text-[#FFEEE4]">Explore now</a>
-                    </button>
+                    <a href="#more" style="line-height: 80%" class=" mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[60px] xs:w-[90px] sm:w-[130px] md:w-[145px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px]" type="button">
+                        <span class=" font-montserrat text-[7px] xs:text-[10px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-semibold text-[#FFEEE4]">Explore now</span>
+                    </a>
             </div>
         </div>
     </section>
@@ -60,9 +60,9 @@
                         <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>Grand Talkshow ISE! 2023 </strong> merupakan kegiatan talkshow interaktif yang diadakan secara online dan merupakan rangkaian acara pembuka untuk kegiatan ISE! 2023.  Pada ISE! 2023, Grand Talkshow akan membawakan tema, yaitu <strong>“Tech Innovators: Revolutionizing Industries with IT Solutions”</strong></p>
-                            <button class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
-                                <a href="/login" class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</a>
-                            </button>
+                            <a href="/login" class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
+                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
+                            </a>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran ditutup dalam waktu:
                             </h5>
@@ -124,9 +124,9 @@
                         <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>UX Academy</strong> merupakan <strong>rangkaian IT pelatihan/workshop</strong> yang memfasilitasi pembelajaran mengenai kemampuan di bidang teknologi dengan menghadirkan pengajar serta mentor yang ahli dan berpengalaman di bidang keilmuan tersebut.</p>
-                            <button class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
-                                <a href="/login" class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</a>
-                            </button>
+                            <a href="/login" class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
+                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
+                            </a>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran dibuka dalam waktu:
                             </h5>
@@ -170,9 +170,9 @@
                         <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>DS Academy</strong> merupakan <strong>rangkaian IT pelatihan/workshop</strong> yang memfasilitasi pembelajaran mengenai kemampuan di bidang teknologi dengan menghadirkan pengajar serta mentor yang ahli dan berpengalaman di bidang keilmuan tersebut.</p>
-                            <button class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
-                                <a href="/login" class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</a>
-                            </button>
+                            <a href="/login" class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px] self-center" type="button">
+                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
+                            </a>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran dibuka dalam waktu:
                             </h5>
