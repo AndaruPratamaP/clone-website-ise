@@ -24,14 +24,14 @@
                     </div>
                     <p class=" mt-10 xs:mt-14 sm:mt-16 md:mt-20 lg:mt-24 xl:mt-32 z-30 font-montserrat lg:bottom-[10rem] xl:bottom-0 text-[9px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[24px] font-bold from-[#FF9355] to-[#FFD693] bg-gradient-to-r text-transparent bg-clip-text">#ISEProvectaFutura</p>
                     <button style="line-height: 80%" class=" mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[60px] xs:w-[90px] sm:w-[130px] md:w-[145px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent rounded-[24px]" type="button">
-                        <span class=" font-montserrat text-[7px] xs:text-[10px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-semibold text-[#FFEEE4]">Explore now</span>
+                        <a href="#more" class=" font-montserrat text-[7px] xs:text-[10px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-semibold text-[#FFEEE4]">Explore now</a>
                     </button>
             </div>
         </div>
     </section>
     {{-- section 2 --}}
-    <section class=" min-w-full min-h-[20rem] xs:min-h-[21rem] lg:min-h-[29rem] xl:min-h-[41rem]">
-        <div class=" relative z-0">
+    <section class=" min-w-full min-h-[20rem] xs:min-h-[21rem] lg:min-h-[29rem] xl:min-h-[41rem]" >
+        <div class=" relative z-0" id="more">
             <img class=" absolute h-[30rem] lg:w-[70rem] lg:h-[60rem] sm:w-[40rem] xl:w-[85rem] xl:h-[90rem] lg:left-[0rem] xl:left-[0rem] top-0" src= {{ asset('images/icon/IconLP_Sect2_Background.png') }} alt="">
             <img class=" absolute min-w-full lg:min-w-full xl:min-w-full h-[4.5rem] xs:h-[6.5rem] sm:h-[8.5rem] md:h-[10rem] lg:h-[14rem] xl:h-[18rem] top-[2rem] lg:top-[4rem] xl:top-[4rem]" src= {{ asset('images/icon/IconLP_Sect2_Decor.png') }} alt="">
         </div>
@@ -128,7 +128,7 @@
                                 <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
                             </button>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
-                                Pendaftaran ditutup dalam waktu:
+                                Pendaftaran dibuka dalam waktu:
                             </h5>
                             <div class=" mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8">
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
@@ -174,7 +174,7 @@
                                 <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
                             </button>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
-                                Pendaftaran ditutup dalam waktu:
+                                Pendaftaran dibuka dalam waktu:
                             </h5>
                             <div class=" mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8">
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
@@ -249,7 +249,7 @@
                                     <img class=" absolute w-[170px] xs:w-[197.5px] md:w-[210px] lg:w-[231px] xl:w-[350px] h-[215px] xs:h-[255px] md:h-[275px] lg:h-[295px] xl:h-[447px] mx-[2.5rem] xs:mx-[4.75rem] sm:mx-[6.25rem] md:mx-[9rem] lg:mx-0 my-[2.75rem] lg:my-0 lg:left-8 xl:left-12 lg:top-[2rem] xl:top-2 z-10 drop-shadow-[0_4px_4px_rgba(1,1,1,0.25)]" src= {{ asset('images/icon/IconLP_Sect5_ProfileDecor2.png') }} alt="">
                                     <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-[11rem] xs:left-[14.5rem] sm:left-[16rem] md:left-[20rem] lg:left-[13.5rem] xl:left-[20rem] top-[13.5rem] xs:top-[16rem] md:top-[17rem] lg:top-[17rem] xl:top-[23rem] z-30" src= {{ asset('images/icon/IconLP_Sect5_ProfileDecor3.png') }} alt="">
                                 </div>
-                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/icon/IconLP_Sect5_Profile.png') }} alt="">
+                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/icon/icon-testi-2.png') }} alt="">
                             </div>
                             <div style="text-" class=" flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                                 <div class=" inline-block">
@@ -272,12 +272,12 @@
                                         wawasan baru!
                                     </span>
                                 </div>
-                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Dari ICON, wawasanku lebih terbuka tentang sistem informasi dan dapat banyak wawasan baru yang sebelumnya gak aku dapetin di SMA. Selain itu, di ICON aku juga dapet banyak temen baru yang bahkan masih keep contact sampai sekarang sehingga dari sini aku juga bisa memperluas relasi. Last but not least, aku juga dapat Free Pass SNMPTN Sistem Informasi ITS berkat ICON.”</p>
+                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Kami, mahasiswa baru dengan pengetahuan terbatas tentang data science, mendaftar dan diterima di Data Science Academy ISE! Di sana, kami diajarkan materi baru oleh pemateri yang baik, dilengkapi contoh penerapannya. Praktik langsung dan mini project membantu kami memahami materi, didukung oleh mentor. Secara keseluruhan, ISE! Data Science Academy sangat berharga bagi kami.”</p>
                                 <h5 class=" mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold">
-                                    Nama Lengkap
+                                    Agung Budi prasetya
                                 </h5>
                                 <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
-                                    1st Winner ICON 2022
+                                    Mahasiswa 2022
                                 </h5>
                             </div>
                         </div>
@@ -290,7 +290,7 @@
                                     <img class=" absolute w-[170px] xs:w-[197.5px] md:w-[210px] lg:w-[231px] xl:w-[350px] h-[215px] xs:h-[255px] md:h-[275px] lg:h-[295px] xl:h-[447px] mx-[2.5rem] xs:mx-[4.75rem] sm:mx-[6.25rem] md:mx-[9rem] lg:mx-0 my-[2.75rem] lg:my-0 lg:left-8 xl:left-12 lg:top-[2rem] xl:top-2 z-10 drop-shadow-[0_4px_4px_rgba(1,1,1,0.25)]" src= {{ asset('images/icon/IconLP_Sect5_ProfileDecor2.png') }} alt="">
                                     <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-[11rem] xs:left-[14.5rem] sm:left-[16rem] md:left-[20rem] lg:left-[13.5rem] xl:left-[20rem] top-[13.5rem] xs:top-[16rem] md:top-[17rem] lg:top-[17rem] xl:top-[23rem] z-30" src= {{ asset('images/icon/IconLP_Sect5_ProfileDecor3.png') }} alt="">
                                 </div>
-                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/icon/IconLP_Sect5_Profile.png') }} alt="">
+                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/icon/icon-testi-3.png') }} alt="">
                             </div>
                             <div style="text-" class=" flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                                 <div class=" inline-block">
@@ -313,12 +313,53 @@
                                         wawasan baru!
                                     </span>
                                 </div>
-                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Dari ICON, wawasanku lebih terbuka tentang sistem informasi dan dapat banyak wawasan baru yang sebelumnya gak aku dapetin di SMA. Selain itu, di ICON aku juga dapet banyak temen baru yang bahkan masih keep contact sampai sekarang sehingga dari sini aku juga bisa memperluas relasi. Last but not least, aku juga dapat Free Pass SNMPTN Sistem Informasi ITS berkat ICON.”</p>
+                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Meskipun saya merupakan mahasiswa baru. Namun, dengan niat dan keberanian, saya dan dua teman mendaftar dan mengikuti seleksi tersebut. Di sana, kami mendapatkan pengetahuan baru yang menarik dan bervariasi, dengan pemateri yang profesional. Ada juga praktik langsung dan penugasan mini project yang menantang. Intinya mengikuti ISE! Data Science Academy worth it banget👍👍👍”</p>
                                 <h5 class=" mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold">
-                                    Nama Lengkap
+                                    Felicia Evelina Soetjipto
                                 </h5>
                                 <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
-                                    1st Winner ICON 2022
+                                    Mahasiswa 2022
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class=" flex flex-col lg:flex-row">
+                            <div class=" flex justify-center content-center lg:min-w-[300px] xl:min-w-[445px] flex-col">
+                                <div class=" relative">
+                                    <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-4 xs:left-16 sm:left-20 md:left-32 lg:left-4 xl:left-6 top-8 lg:top-[1rem] xl:top-[-1rem] z-30" src= {{ asset('images/icon/IconLP_Sect5_ProfileDecor1.png') }} alt="">
+                                    <img class=" absolute w-[170px] xs:w-[197.5px] md:w-[210px] lg:w-[231px] xl:w-[350px] h-[215px] xs:h-[255px] md:h-[275px] lg:h-[295px] xl:h-[447px] mx-[2.5rem] xs:mx-[4.75rem] sm:mx-[6.25rem] md:mx-[9rem] lg:mx-0 my-[2.75rem] lg:my-0 lg:left-8 xl:left-12 lg:top-[2rem] xl:top-2 z-10 drop-shadow-[0_4px_4px_rgba(1,1,1,0.25)]" src= {{ asset('images/icon/IconLP_Sect5_ProfileDecor2.png') }} alt="">
+                                    <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-[11rem] xs:left-[14.5rem] sm:left-[16rem] md:left-[20rem] lg:left-[13.5rem] xl:left-[20rem] top-[13.5rem] xs:top-[16rem] md:top-[17rem] lg:top-[17rem] xl:top-[23rem] z-30" src= {{ asset('images/icon/IconLP_Sect5_ProfileDecor3.png') }} alt="">
+                                </div>
+                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/icon/icon-testi-1.png') }} alt="">
+                            </div>
+                            <div style="text-" class=" flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+                                <div class=" inline-block">
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none">
+                                        Bisa dapat
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none">
+                                        Free Pass SNMPTN
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none">
+                                    ,
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none">
+                                        banyak relasi
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none">
+                                        , dan
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none">
+                                        wawasan baru!
+                                    </span>
+                                </div>
+                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Partisipasi saya di Data Science Academy ISE! 2022 adalah petualangan menarik. Materi yang diajarkan oleh pemateri ahli sangat mengagumkan dan memberikan wawasan inspiratif tentang pengalaman kerja. Melalui praktik langsung dan mini project, saya semakin mendalami ilmu data science. Melalui ISE! Data Science Academy, semangat saya untuk menjadi data scientist semakin tumbuh.”</p>
+                                <h5 class=" mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold">
+                                    Achmad Fahmi Ainur Ridho
+                                </h5>
+                                <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
+                                    Mahasiswa 2022
                                 </h5>
                             </div>
                         </div>
@@ -378,10 +419,9 @@
             <img class=" z-10 absolute lg:w-[34rem] lg:h-[50rem] xl:w-[50rem] xl:h-[65rem] lg:right-[0rem] xl:right-[0rem]" src= {{ asset('images/icon/IconLP_Sect7_Background1.png') }} alt="">
             <img class=" z-10 absolute hidden lg:block lg:w-[65rem] lg:h-[43rem] xl:w-[80rem] xl:h-[60rem] lg:top-[14rem] xl:top-[16rem] lg:left-[0rem] xl:left-[0rem]" src= {{ asset('images/icon/IconLP_Sect7_Background2.png') }} alt="">
         </div>
-        <div class=" flex justify-center flex-col">
+        {{-- <div class=" flex justify-center flex-col">
             <h3 style=" line-height: 84px" class=" z-30 font-montserrat text-[17px] xs:text-[20px] sm:text-[28px] md:text-[32px] lg:text-[42px] xl:text-[64px] font-bold text-white text-center">Frequently Asked Questions</h3>
             <div class=" mt-2  lg:mt-12 xl:mt-24 lg:mb-10 xl:mb-14 self-center">
-                {{-- Accordion --}}
                 <div x-data="{open:false}" class=" z-30 w-[212px] xs:w-[275px] sm:w-[370px] md:w-[440px] lg:w-[34rem] xl:w-[50rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 lg:w-[34rem] xl:w-[50rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
                         <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Is there a refund if I cancel?</span>
@@ -463,7 +503,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> --}}
     {{-- </section> --}}
 </div>
 
@@ -471,7 +511,7 @@
 <script>
     // GTS Countdown Start
         // Set the countdown date and time
-        const countdownDate_gts = new Date("June 12, 2023 00:00:00").getTime();
+        const countdownDate_gts = new Date("July 16, 2023 00:00:00").getTime();
 
         // Update the countdown every second
         const countdownTimer_gts = setInterval(() => {
