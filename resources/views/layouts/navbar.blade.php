@@ -142,7 +142,7 @@
         <a href="/coming-soon">Paradigm</a>
       </div>
     </div>
-    <div class="flex flex-col gap-[7.72px] md:hidden text-[1rem] mt-2">
+    <div class="flex flex-col gap-[7.72px] md:hidden text-[1rem] mt-2 pb-16">
       <a
         href="/register"
         class="text-center px-[66px] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] border-[0.686667px]"
