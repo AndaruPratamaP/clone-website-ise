@@ -24,10 +24,7 @@ class AdminHomeDashboardController extends Component
         $this->event_service = $event_service;
 
         $this->gts_service = $gts_service;
-    }
 
-    public function getUserData()
-    {
         $this->registered = $this->gts_service->countRegistered();
         $this->verified = $this->gts_service->countVerified();
     }
