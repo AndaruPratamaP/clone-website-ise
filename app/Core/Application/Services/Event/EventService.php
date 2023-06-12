@@ -16,13 +16,13 @@ class EventService
     public function isEventOpen(string $event_id)
     {
         $event = Event::find($event_id);
-        return Carbon::now() < $event->start_date;
+        return Carbon::now() > $event->start_date;
     }
 
     public function getEventDate(string $event_id)
     {
         $event = Event::find($event_id);
-        return $this->isEventOpen($event_id) ? $event->start_date : $event->end_date;
+        return $this->isEventOpen($event_id) ? $event->end_date : $event->start_date;
     }
 
     public function registerUserToEvent(string $event_id, string $user_id)

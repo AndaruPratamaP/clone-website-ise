@@ -143,22 +143,22 @@
       </div>
     </div>
     <div class="flex flex-col gap-[7.72px] md:hidden text-[1rem] mt-2 pb-16">
-      <a
-        href="/register"
-        class="text-center px-[66px] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] border-[0.686667px]"
-        >Sign Up</a
-      >
-      <a
-        href="/login"
-        class="text-center px-[5.313rem] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
-        >Login</a
-      >
+        @if(Auth::check())
+        <a href="/my" class="text-center px-[5.313rem] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] bg-gradient-to-r from-[#006C56] to-[#AFD196]">Dashboard</a>
+        <a href="/logout" class="text-center px-[66px] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] border-[0.686667px]">Logout</a>
+        @else
+        <a
+            href="/register"
+            class="text-center px-[66px] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] border-[0.686667px]"
+            >Sign Up</a
+        >
+        <a
+            href="/login"
+            class="text-center px-[5.313rem] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
+            >Login</a
+        >
+        @endif
     </div>
-    <!-- After Login -->
-    <!-- <div class="flex flex-col gap-[7.72px] md:hidden text-[1rem] mt-2">
-                <a href="/my" class="text-center px-[5.313rem] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] bg-gradient-to-r from-[#006C56] to-[#AFD196]">Dashboard</a>
-                <a href="/logout" class="text-center px-[66px] py-[5.79px] font-semibold rounded-[4.12px] text-[#F3F3F3] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] border-[0.686667px]">Logout</a>
-            </div> -->
   </div>
 
   <!-- Navbar Menu Desktop -->
@@ -247,6 +247,12 @@
 
   <!-- sign up & sign in -->
   <div class="flex gap-[0.278rem] xl:gap-[0.625rem]">
+    @if (Auth::check())
+    <a href="/my" class="text-center text-[8.24px] md:text-[10.5px] xl:text-[1rem] px-[0.658rem] md:px-[8px] xl:px-[12px] py-[5.49px] md:py-[8px] rounded-[4.12px] xl:rounded-[6px] bg-gradient-to-r from-[#006C56] to-[#AFD196] text-[#f3f3f3] xl:font-semibold sm">Dashboard</a>
+    <a href="/logout" class="text-center text-[8.24px] md:text-[10.5px] xl:text-[1rem] px-[0.5rem] md:px-[8px] xl:px-[12px] py-[5.49px] md:py-[8px] border-[0.686667px] xl:border-[1px] border-[#66C1A7] xl:border-[#66C1A7] rounded-[4.12px] xl:rounded-[6px] text-[#F3F3F3] xl:text-[#F3F3F3] font-semibold xl:font-semibold hover:bg-gradient-green-r">Logout</a>
+
+    @else
+
     <a
       href="/register"
       class="text-center text-[8.24px] md:text-[10.5px] xl:text-[1rem] px-[0.5rem] md:px-[8px] xl:px-[12px] py-[5.49px] md:py-[8px] border-[0.686667px] xl:border-[1px] border-[#66C1A7] xl:border-[#66C1A7] rounded-[4.12px] xl:rounded-[6px] text-[#F3F3F3] xl:text-[#F3F3F3] font-semibold xl:font-semibold hover:bg-gradient-green-r"
@@ -257,9 +263,7 @@
       class="text-center text-[8.24px] md:text-[10.5px] xl:text-[1rem] px-[0.658rem] md:px-[8px] xl:px-[12px] py-[5.49px] md:py-[8px] rounded-[4.12px] xl:rounded-[6px] bg-gradient-to-r from-[#006C56] to-[#AFD196] text-[#f3f3f3] xl:font-semibold sm"
       >Login</a
     >
+    @endif
   </div>
-  <!-- <div class="flex gap-[0.278rem] xl:gap-[0.625rem]">
-            <a href="/my" class="text-center text-[8.24px] md:text-[10.5px] xl:text-[1rem] px-[0.658rem] md:px-[8px] xl:px-[12px] py-[5.49px] md:py-[8px] rounded-[4.12px] xl:rounded-[6px] bg-gradient-to-r from-[#006C56] to-[#AFD196] text-[#f3f3f3] xl:font-semibold sm">Dashboard</a>
-            <a href="/logout" class="text-center text-[8.24px] md:text-[10.5px] xl:text-[1rem] px-[0.5rem] md:px-[8px] xl:px-[12px] py-[5.49px] md:py-[8px] border-[0.686667px] xl:border-[1px] border-[#66C1A7] xl:border-[#66C1A7] rounded-[4.12px] xl:rounded-[6px] text-[#F3F3F3] xl:text-[#F3F3F3] font-semibold xl:font-semibold hover:bg-gradient-green-r">Logout</a>
-        </div> -->
+
 </nav>
