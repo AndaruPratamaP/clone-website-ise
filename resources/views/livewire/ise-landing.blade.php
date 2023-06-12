@@ -235,7 +235,7 @@
                 src="{{ asset('/images/landing/frame4.png ') }}">
             <h1
                 class="text-white font-bold text-[24px] md:text-[35px] lg:text-[58px] xl:text-[72px] pt-[20px] md:pt-[40px] lg:pt-[45px] xl:pt-[73px] text-center md:text-justify md:ml-[92px] lg:ml-[128px] xl:ml-[168px]">
-                BIONIX</h1>
+                RISE</h1>
             <div
                 class="flex flex-col md:flex-row mt-[25px] md:mt-[50px] lg:mt-[50px] xl:mt-[79px] md:gap-[20px] justify-center items-center">
                 <div>

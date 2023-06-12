@@ -62,7 +62,7 @@
                             <x-bi-instagram />
                         </a>
                     </div>
-                    <div class="scale-110 mr-1">
+                    {{-- <div class="scale-110 mr-1">
                         <a href="">
                             <x-bi-twitter />
                         </a>
@@ -71,17 +71,17 @@
                         <a href="">
                             <x-bi-youtube />
                         </a>
-                    </div>
+                    </div> --}}
                     <div class="scale-110 mr-1">
-                        <a href="https://tiktok.com" target="blank">
+                        <a href="https://www.tiktok.com/@is_expo" target="blank">
                             <x-bi-tiktok />
                         </a>
                     </div>
-                    <div class="scale-110 mr-1">
+                    {{-- <div class="scale-110 mr-1">
                         <a href="">
                             <x-bi-line />
                         </a>
-                    </div>
+                    </div> --}}
                     <div class="scale-110 mr-1">
                         <a href="https://www.linkedin.com/company/ise-information-systems-expo-2023/" target="blank">
                             <x-bi-linkedin />
@@ -146,26 +146,26 @@
                                 <x-bi-instagram />
                             </a>
                         </div>
-                        <div class="scale-150 lg:mr-2 md:mr-1 hover:brightness-75">
+                        {{-- <div class="scale-150 lg:mr-2 md:mr-1 hover:brightness-75">
                             <a href="">
                                 <x-bi-twitter />
                             </a>
-                        </div>
-                        <div class="scale-150 lg:mr-2 md:mr-1 hover:brightness-75">
+                        </div> --}}
+                        {{-- <div class="scale-150 lg:mr-2 md:mr-1 hover:brightness-75">
                             <a href="">
                                 <x-bi-youtube />
                             </a>
-                        </div>
+                        </div> --}}
                         <div class="scale-150 lg:mr-2 md:mr-1 hover:brightness-75">
-                            <a href="https://tiktok.com" target="blank">
+                            <a href="https://www.tiktok.com/@is_expo" target="blank">
                                 <x-bi-tiktok />
                             </a>
                         </div>
-                        <div class="scale-150 lg:mr-2 md:mr-1 hover:brightness-75">
+                        {{-- <div class="scale-150 lg:mr-2 md:mr-1 hover:brightness-75">
                             <a href="">
                                 <x-bi-line />
                             </a>
-                        </div>
+                        </div> --}}
                         <div class="scale-150 lg:mr-2 md:mr-1 hover:brightness-75">
                             <a href="https://www.linkedin.com/company/ise-information-systems-expo-2023/"
                                 target="blank">

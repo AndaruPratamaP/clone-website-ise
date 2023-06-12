@@ -33,7 +33,7 @@
     x-transition
     x-cloak
     @mousedown.outside="isOpen = false"
-    class="flex flex-col justify-between bg-[#191A1E] text-[#5C5C5C] px-[25px] py-[19px] text-[10.2px] space-y-4"
+    class="flex flex-col justify-between bg-[#191A1E] text-[#5C5C5C] px-[25px] py-[19px] text-[10.2px] space-y-4 h-screen"
     :class="{'absolute w-full min-h-screen top-0 left-0': isOpen, ' hidden': !isOpen }"
   >
     <div class="flex flex-col gap-6">
@@ -184,7 +184,7 @@
         <div class="bg-[#191A1E] rounded-[10px] px-[9px] py-[12px]">
           <div class="grid gap-[15px]">
             <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24] my-[5px]">
-              <a>
+              <a href="coming-soon">
                 <div
                   class="bg bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent cursor-pointer"
                 >
@@ -193,7 +193,7 @@
               </a>
             </div>
             <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24] my-[5px]">
-              <a>
+              <a href="coming-soon">
                 <div
                   class="bg bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent cursor-pointer"
                 >
