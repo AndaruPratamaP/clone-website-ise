@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Pages\Redirect;
 
+use App\Exceptions\IseException;
 use App\Http\Controllers\Presentation\ShortenerController;
 
 class RedirectShortener extends ShortenerController
@@ -15,10 +16,16 @@ class RedirectShortener extends ShortenerController
 
     public function mount($short)
     {
-        $response = $this->show($short);
-        if (!$response) {
-            return redirect()->route('404');
+        try {
+            $response = $this->show($short);
+            $this->long_url = $response->getLongUrl();
+        } catch (IseException $e) {
+            return redirect()->route('404')->with('toastr-toast', [
+                'type' => 'error',
+                'title' => 'Error',
+                'text' => $e->getMessage(),
+            ]);;
+            return null;
         }
-        $this->long_url = $response->getLongUrl();
     }
 }

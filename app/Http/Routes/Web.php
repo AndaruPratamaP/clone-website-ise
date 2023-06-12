@@ -31,11 +31,9 @@ use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\IseLanding;
 
-Route::get('/', function () {
-    return 'Hi';
-})->name('home');
-
 Route::get('go/{short}', RedirectShortener::class);
+Route::get('/', IseLanding::class)->name('landing.ise');
+Route::get('icon', IconLanding::class)->name('landing.icon');
 
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
@@ -67,12 +65,13 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('logout', Logout::class)->name('logout');
+
+    Route::get('coming-soon', ComingSoon::class)->name('conming-soon');
+    Route::get('404', Error404::class)->name('404');
 });
 
 // Routes that have to be not authenticated
 Route::middleware(['guest'])->group(function () {
-    Route::get('/', IseLanding::class)->name('landing.ise');
-    Route::get('icon', IconLanding::class)->name('landing.icon');
     Route::get('login', Login::class)->name('login');
     Route::get('register', Register::class)->name('register');
     Route::get('verify/{token}', Verify::class)->name('verify');
@@ -92,7 +91,6 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('bionix', BionixLanding::class); #temp for development
 
     //  Error Pages
-    Route::get('404', Error404::class)->name('404'); #temp for development
-    Route::get('500', Error500::class)->name('500'); #temp for development
-    Route::get('coming-soon', ComingSoon::class)->name('conming-soon'); #temp for development
+    Route::get('404', Error404::class)->name('404');
+    Route::get('500', Error500::class)->name('500');
 }
