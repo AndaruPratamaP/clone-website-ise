@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
             EventSeeder::class,
             StatusType::class,
             PermissionSeeder::class,
+            AdminSeeder::class,
+            ShortenerSeeder::class,
         ],
         'production' => [
             ProvinsiSeeder::class,
@@ -30,6 +32,8 @@ class DatabaseSeeder extends Seeder
             EventSeeder::class,
             StatusType::class,
             PermissionSeeder::class,
+            AdminSeeder::class,
+            ShortenerSeeder::class,
         ],
     ];
     /**

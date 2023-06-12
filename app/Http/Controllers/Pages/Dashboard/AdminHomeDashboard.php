@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Pages\Dashboard;
 
+use App\Http\Controllers\Presentation\Dashboard\AdminHomeDashboardController;
 use Livewire\Component;
 
-class AdminHomeDashboard extends Component
+class AdminHomeDashboard extends AdminHomeDashboardController
 {
     public function render()
     {

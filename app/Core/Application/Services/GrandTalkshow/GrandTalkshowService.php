@@ -114,4 +114,18 @@ class GrandTalkshowService
 
         return $gtspeserta;
     }
+
+    public function countRegistered()
+    {
+        $count = GrandTalkshow::count();
+
+        return $count;
+    }
+
+    public function countVerified()
+    {
+        $count = GrandTalkshow::where('status_type_id', 3)->count();
+
+        return $count;
+    }
 }
