@@ -39,6 +39,8 @@ class GrandTalkshowRegistrationController extends Component
 
         $this->isRegistered = $this->event_service->isUserOnEvent('a4a6c7cf-0208-11ee-a848-346f24386225', auth()->user()->id);
 
+        $this->isOpen = $this->event_service->isEventOpen('a4a6c7cf-0208-11ee-a848-346f24386225');
+
         $this->user_data = [
             "full_name" => auth()->user()->full_name,
             "email" => auth()->user()->email,

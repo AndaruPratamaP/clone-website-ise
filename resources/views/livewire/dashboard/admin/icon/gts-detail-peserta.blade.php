@@ -4,7 +4,7 @@
         <div class="flex flex-col items-start gap-2">
             <h1 class="text-4xl sm:text-5xl bg-gradient-blue-r bg-clip-text text-transparent font-bold">Detail Peserta GTS</h1>
             <p class="text-base text-white font-semibold">{{ $user_data['user_id'] }}</p>
-            <p class="bg-[#191A1E] px-4 py-1.5 rounded-2xl text-base text-[#B5B3BC] font-semibold">Status: <span class="text-white">{{ $user_data['status'] }}</span></p>
+            <p class="bg-[#191A1E] px-4 py-1.5 rounded-2xl text-base text-[#B5B3BC] font-semibold">Status: <span class="text-white {{ $user_data['status'] == 'Verified' ? 'text-blue-500' : '' }}">{{ $user_data['status'] }}</span></p>
         </div>
         <div class="flex flex-row justify-between items-center gap-4 text-white text-xl font-semibold" x-data="{openReject: false}">
             <a href="{{ $user_data['user_id'] }}/accept"

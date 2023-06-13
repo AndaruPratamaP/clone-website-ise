@@ -1,4 +1,4 @@
-@section('title', 'GTS Detail Peserta')
+@section('title', 'GTS Table')
 <div class="flex flex-col items-center w-[95%] mx-auto p-4 min-h-screen oveflow-hidden font-montserrat">
     <h1 class="text-4xl sm:text-5xl bg-gradient-blue-r bg-clip-text text-transparent font-bold self-start mb-10">Data
         Pendaftar Grand Talkshow</h1>

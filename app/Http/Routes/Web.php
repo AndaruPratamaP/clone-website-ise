@@ -13,7 +13,6 @@ use App\Http\Controllers\Pages\Auth\Register;
 use App\Http\Controllers\Pages\BionixLanding;
 use App\Http\Controllers\Pages\Examples\Swiper;
 use App\Http\Controllers\Pages\Auth\RequestForgot;
-use App\Http\Controllers\Pages\Auth\EmailVerification;
 use App\Http\Controllers\Pages\Dashboard\AdminHomeDashboard;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
@@ -34,6 +33,9 @@ use App\Http\Controllers\Pages\IseLanding;
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
 Route::get('icon', IconLanding::class)->name('landing.icon');
+
+Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
+Route::get('404', Error404::class)->name('404');
 
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
@@ -65,9 +67,6 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::get('logout', Logout::class)->name('logout');
-
-    Route::get('coming-soon', ComingSoon::class)->name('conming-soon');
-    Route::get('404', Error404::class)->name('404');
 });
 
 // Routes that have to be not authenticated

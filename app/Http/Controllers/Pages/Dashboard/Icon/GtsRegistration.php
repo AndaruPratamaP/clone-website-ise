@@ -39,8 +39,20 @@ class GtsRegistration extends GrandTalkshowRegistrationController
 
     public function mount()
     {
+        if (!$this->isOpen) {
+            return redirect()->route('my.gts')->with('toastr-toast', [
+                'type' => 'info',
+                'title' => 'Pendaftaran telah ditutup',
+                'text' => 'Pendaftaran sudah ditutup karena telah melewati masa pendaftaran.',
+            ]);
+        }
+
         if ($this->isRegistered) {
-            return redirect()->route('my.gts');
+            return redirect()->route('my.gts')->with('toastr-toast', [
+                'type' => 'info',
+                'title' => 'Telah terdaftar',
+                'text' => 'Kamu telah terdaftar...',
+            ]);;
         }
 
         $this->full_name = $this->user_data['full_name'];
