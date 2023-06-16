@@ -54,7 +54,7 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::name('admin.')->prefix('admin')->middleware(['permission:admin'])->group(function () {
-        Route::get('/', AdminHomeDashboard::class)->name("admin");
+        Route::get('/', AdminHomeDashboard::class)->name('');
 
         Route::get('shorten', LinkShortener::class)->name("shortener");
         Route::get('shortener', LinkShortenerTable::class)->name("shortener.table");
