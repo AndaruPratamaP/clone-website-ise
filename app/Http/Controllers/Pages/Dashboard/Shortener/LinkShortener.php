@@ -9,6 +9,7 @@ class LinkShortener extends ShortenerController
     public $long_url;
     public $short_url;
     protected $user_id;
+    public bool $is_done = false;
 
     public $shortened = "";
 
@@ -46,7 +47,8 @@ class LinkShortener extends ShortenerController
                 $this->msg["error"] = 'Something went wrong!';
             return;
         }
-        $this->shortened = $response->getShortUrl();
+        $this->shortened = "https://ise-its.com/" . $response->getShortUrl();
+        $this->is_done = true;
         $this->msg["success"] = 'Your message has been sent!';
     }
 }

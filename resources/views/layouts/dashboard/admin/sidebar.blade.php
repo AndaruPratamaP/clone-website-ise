@@ -15,7 +15,13 @@
             </div>
             <div class="flex flex-col space-y-2 mt-7 text-[#B5B3BC]">
                 <a href="/admin" class="flex flex-row items-center gap-3 group hover:brightness-75 {{ Route::currentRouteName() == 'admin' ? 'brightness-75' : 'brightness-100' }}"><x-heroicon-s-home class="w-6 h-6 text-[#B5B3BC]" />Beranda</a>
-                <a href="/coming-soon" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-link class="w-6 h-6 text-[#B5B3BC]" />URL Shortener</a>
+                <div x-data="{open: true}">
+                    <button class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-link class="w-6 h-6 text-[#B5B3BC]" />URL Shortener</button>
+                    <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
+                        <a href="/admin/shorten" class="flex flex-row items-center gap-3 group hover:brightness-75">New Shortener</a>
+                        <a href="/admin/shortener" class="flex flex-row items-center gap-3 group hover:brightness-75">Shortener Table</a>
+                    </div>
+                </div>
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
@@ -60,8 +66,8 @@
             <div x-data="{open: false}">
                 <button @click="open = !open" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-link class="w-6 h-6 text-[#B5B3BC]" />URL Shortener<x-heroicon-s-chevron-down class="w-6 h-4 text-[#B5B3BC] ml-auto pr-1 mt-1" x-bind:class="open == true ? 'rotate-180' : 'rotate-0'"  /></button>
                 <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
-                    <a href="/coming-soon" class="flex flex-row items-center gap-3 group hover:brightness-75">New Shortener</a>
-                    <a href="/coming-soon" class="flex flex-row items-center gap-3 group hover:brightness-75">Shortener Table</a>
+                    <a href="/admin/shorten" class="flex flex-row items-center gap-3 group hover:brightness-75">New Shortener</a>
+                    <a href="/admin/shortener" class="flex flex-row items-center gap-3 group hover:brightness-75">Shortener Table</a>
                 </div>
             </div>
         </div>
