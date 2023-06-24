@@ -68,18 +68,14 @@
                                     name="referral" id="referral" wire:model="referral" x-model="referral"
                                     x-on:change="other_ref = ''">
                                     <option
-                                        class=" font-montserrat font-medium text-[18px] w-full px-1 bg-[#191A1E] text-[12px] xl:text-[18px] h-[28px] xl:h-[34px]"
+                                        class=" font-montserrat font-medium w-full px-1 bg-[#191A1E] text-[12px] xl:text-[18px] h-[28px] xl:h-[34px]"
                                         value="" selected>Dari mana kamu mendapat informasi ini?</option>
                                     @foreach ($referrals as $referral)
                                         <option
-                                            class=" font-montserrat font-medium text-[18px] w-full px-1 bg-[#191A1E] text-[12px] xl:text-[18px] h-[28px] xl:h-[34px]"
+                                            class=" font-montserrat font-medium w-full px-1 bg-[#191A1E] text-[12px] xl:text-[18px] h-[28px] xl:h-[34px]"
                                             value="{{ $referral }}">{{ $referral }}</option>
                                     @endforeach
                                 </select>
-                                <div class=" relative">
-                                    <img class=" absolute bottom-[1rem] lg:bottom-[0.5rem] xl:bottom-[1rem] left-[15rem] lg:left-[18.5rem] xl:left-[21.5rem]"
-                                        src="{{ asset('images/Arrow_Down2.png') }}" alt="">
-                                </div>
                                 <input
                                     class=" w-full font-[400] h-[28px] xl:h-[34px] bg-transparent text-white text-[12px] xl:text-[18px] outline-none font-montserrat placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] xl:placeholder:text-[18px] placeholder:font-medium px-1 hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] appearance-none"
                                     id="referral2" wire:model="otherRef" type="text" x-model="other_ref"
@@ -93,11 +89,12 @@
                                 @enderror
 
                             </div>
-                            <div class="relative z-0 w-full mb-6 group cursor-pointer">
+                            <div class="relative z-0 w-full mb-6 group">
                                 <label for="share_proof_file"
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">
                                     Bukti Upload Poster di IG Story <span class="text-[#FF1F00]">*</span>
                                 </label>
+                                <div class="text-[10px] leading-tight lg:text-sm text-white">Download poster <a target="blank" class="bg-gradient-green-r bg-clip-text text-transparent font-semibold hover:border-b-[1px] border-green-600" href="https://drive.google.com/file/d/11GQH2dr638KDVBmvjZ77wocBgDgQwWs_/view">di sini</a>. Share poster ke instagram story, lalu tag @is_expo dan tag 3 teman kalian.</div>
                                 <label
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#66C1A7] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">

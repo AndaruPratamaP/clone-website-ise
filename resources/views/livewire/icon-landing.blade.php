@@ -419,12 +419,12 @@
             <img class=" z-10 absolute lg:w-[34rem] lg:h-[50rem] xl:w-[50rem] xl:h-[65rem] lg:right-[0rem] xl:right-[0rem]" src= {{ asset('images/icon/IconLP_Sect7_Background1.png') }} alt="">
             <img class=" z-10 absolute hidden lg:block lg:w-[65rem] lg:h-[43rem] xl:w-[80rem] xl:h-[60rem] lg:top-[14rem] xl:top-[16rem] lg:left-[0rem] xl:left-[0rem]" src= {{ asset('images/icon/IconLP_Sect7_Background2.png') }} alt="">
         </div>
-        {{-- <div class=" flex justify-center flex-col">
+        <div class=" flex justify-center flex-col">
             <h3 style=" line-height: 84px" class=" z-30 font-montserrat text-[17px] xs:text-[20px] sm:text-[28px] md:text-[32px] lg:text-[42px] xl:text-[64px] font-bold text-white text-center">Frequently Asked Questions</h3>
             <div class=" mt-2  lg:mt-12 xl:mt-24 lg:mb-10 xl:mb-14 self-center">
                 <div x-data="{open:false}" class=" z-30 w-[212px] xs:w-[275px] sm:w-[370px] md:w-[440px] lg:w-[34rem] xl:w-[50rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 lg:w-[34rem] xl:w-[50rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
-                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Is there a refund if I cancel?</span>
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">ISE! Grand Talkshow itu acara apa sih?</span>
                         <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
                             <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
                         </div>
@@ -432,19 +432,19 @@
                     <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
                     " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[230px] xs:w-[300px] sm:w-[400px] md:w-[470px] lg:min-w-[37rem] xl:min-w-[53rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
                         <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
-                            Is there a refund if I cancel?
+                            ISE! Grand Talkshow itu acara apa sih?
                         </h4>
                         <div class=" z-30 relative w-full">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
                         <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+                            Grand Talkshow merupakan kegiatan talkshow interaktif yang diadakan sebagai acara penutup sekaligus acara puncak dari ISE! 2022.
                         </p>
                     </button>
                 </div>
                 <div x-data="{open:false}" class=" z-30 w-[212px] xs:w-[275px] sm:w-[370px] md:w-[440px] lg:w-[34rem] xl:w-[50rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 lg:w-[34rem] xl:w-[50rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
-                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Will this travel documentary be uploaded on YouTube?</span>
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Kapan acaranya dilaksanakan?</span>
                         <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
                             <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
                         </div>
@@ -452,19 +452,19 @@
                     <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
                     " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[230px] xs:w-[300px] sm:w-[400px] md:w-[470px] lg:min-w-[37rem] xl:min-w-[53rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
                         <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
-                            Will this travel documentary be uploaded on YouTube?
+                            Kapan acaranya dilaksanakan?
                         </h4>
                         <div class=" z-30 relative w-full">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
                         <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+                            Acaranya akan dilaksanakan pada tanggal 22 Juli 2023
                         </p>
                     </button>
                 </div>
                 <div x-data="{open:false}" class=" z-30 w-[212px] xs:w-[275px] sm:w-[370px] md:w-[440px] lg:w-[34rem] xl:w-[50rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 lg:w-[34rem] xl:w-[50rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
-                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Is there a ticket purchase limit?</span>
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Cara daftarnya Bagaimana? Ribet ga?</span>
                         <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
                             <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
                         </div>
@@ -472,19 +472,19 @@
                     <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
                     " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[230px] xs:w-[300px] sm:w-[400px] md:w-[470px] lg:min-w-[37rem] xl:min-w-[53rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
                         <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
-                            Is there a ticket purchase limit?
+                            Cara daftarnya Bagaimana? Ribet ga?
                         </h4>
                         <div class=" z-30 relative w-full">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
                         <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+                            Tenang ajaaa, daftarnya mudah kokk, tinggal masuk ke website ISE! (ise-its.com) dan langsung daftar
                         </p>
                     </button>
                 </div>
                 <div x-data="{open:false}" class=" z-30 w-[212px] xs:w-[275px] sm:w-[370px] md:w-[440px] lg:w-[34rem] xl:w-[50rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 lg:w-[34rem] xl:w-[50rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
-                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Where is the meeting place?</span>
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Tapi, aku gabisa ke surabaya nih? ikutnya gimana?</span>
                         <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
                             <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
                         </div>
@@ -492,18 +492,63 @@
                     <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
                     " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[230px] xs:w-[300px] sm:w-[400px] md:w-[470px] lg:min-w-[37rem] xl:min-w-[53rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
                         <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
-                            Where is the meeting place?
+                            Tapi, aku gabisa ke surabaya nih? ikutnya gimana?
                         </h4>
                         <div class=" z-30 relative w-full">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
                         <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+                            Yang di luar surabaya tenang saja, karena acaranya kita laksanakan secara online
+                        </p>
+                    </button>
+                </div>
+                <div x-data="{open:false}" class=" z-30 w-[212px] xs:w-[275px] sm:w-[370px] md:w-[440px] lg:w-[34rem] xl:w-[50rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
+                    <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 lg:w-[34rem] xl:w-[50rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Di grand talkshow kita bakal bahas apa nih?</span>
+                        <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
+                            <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+                        </div>
+                    </button>
+                    <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
+                    " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[230px] xs:w-[300px] sm:w-[400px] md:w-[470px] lg:min-w-[37rem] xl:min-w-[53rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
+                        <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
+                            Di grand talkshow kita bakal bahas apa nih?
+                        </h4>
+                        <div class=" z-30 relative w-full">
+                            <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
+                        </div>
+                        <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
+                            Grand talkshow akan membawakan satu tema umum, yaitu: “Tech Innovators: Revolutionizing Industries with IT Solutions” dengan subtopik, yaitu:
+                            <ul class="list-disc pl-6 sm:pl-10 pt-1 text-left text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[16px]">
+                                <li>“Are We Heading Towards The Future with No Job Vacancy for Humans?”</li>
+                                <li>“Paving Pathways to IT Career Opportunities in the Digital Era”</li>
+                                <li>“Unleashing the Power of IT Implementation in Business”</li>
+                            </ul>
+                        </p>
+                    </button>
+                </div>
+                <div x-data="{open:false}" class=" z-30 w-[212px] xs:w-[275px] sm:w-[370px] md:w-[440px] lg:w-[34rem] xl:w-[50rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
+                    <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 lg:w-[34rem] xl:w-[50rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Pendaftarannya dibuka sampe kapan?</span>
+                        <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
+                            <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+                        </div>
+                    </button>
+                    <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
+                    " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[230px] xs:w-[300px] sm:w-[400px] md:w-[470px] lg:min-w-[37rem] xl:min-w-[53rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
+                        <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
+                            Pendaftarannya dibuka sampe kapan?
+                        </h4>
+                        <div class=" z-30 relative w-full">
+                            <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
+                        </div>
+                        <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
+                            Grand Talkshow hadir secara gratis tanpa dipungut biaya pendaftaran, namun tetap dapet e-sertifikat ya!
                         </p>
                     </button>
                 </div>
             </div>
-        </div> --}}
+        </div>
     {{-- </section> --}}
 </div>
 

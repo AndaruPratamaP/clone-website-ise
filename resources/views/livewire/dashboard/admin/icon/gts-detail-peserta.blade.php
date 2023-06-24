@@ -19,7 +19,7 @@
                         <label for="reason" class="text-xl font-bold text-white tracking-wider">Reason</label>
                         <p class="text-sm font-light text-white cursor-pointer" @click="openReject = false">Close</p>
                     </div>
-                    <textarea type="text" placeholder="Place your reason for rejecting here.. (max: 255)." name="reason" id="reason" class="px-4 py-3 outline-none select-none text-white border-[1px] border-white rounded-lg w-full h-36 bg-transparent text-base" maxlength="255" ></textarea>
+                    <textarea required type="text" placeholder="Place your reason for rejecting here.. (max: 255)." name="reason" id="reason" class="px-4 py-3 outline-none select-none text-white border-[1px] border-white rounded-lg w-full h-36 bg-transparent text-base" maxlength="255" ></textarea>
                     <button type="submit" class="bg-red-600 py-1.5 text-base rounded-xl hover:brightness-75 w-full">Send</button>
                 </form>
             </div>

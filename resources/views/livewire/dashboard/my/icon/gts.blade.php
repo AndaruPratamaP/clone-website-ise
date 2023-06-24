@@ -134,13 +134,13 @@
             <div class="mt-10 overflow-auto">
                 <div class="sm:flex hidden sm:self-start text-2xl text-white font-bold mb-6">Speaker</div>
                 <div
-                    class="flex flex-col gap-y-5 sm:flex-row sm:gap-x-8 overflow-x-auto sm:my-3 sm:shrink-0 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-500 scrollbar-rounded-[20px]">
+                    class="flex flex-col gap-y-5 sm:flex-row sm:gap-x-8 overflow-x-auto sm:my-3 sm:shrink-0 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-500 scrollbar-rounded-[20px] pb-2">
                     <div
-                        class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] max-h-[700px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
-                        <img class="rounded-full w-36 h-36" src="{{ asset('images/gts/solid_white.png') }}"
-                            alt="">
+                        class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
+                        <img class="rounded-full w-36 h-36" src="{{ asset('images/gts/speaker-2.png') }}"
+                            alt="speaker-2">
                         <p class="text-white font-montserrat font-bold text-lg mt-4">Irzan Raditya</p>
-                        <p class="text-[#B5B3BC] font-montserrat font-normal text-base">IT Professional</p>
+                        <p class="text-[#B5B3BC] font-montserrat font-normal text-base">CEO & Co-Founder of <br> Kata.ai</p>
                         <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">Irzan Raditya, CEO
                             kata.ai, telah mencapai kesuksesan yang luar biasa baik di kata.ai maupun dalam dunia
                             kecerdasan buatan (AI). Di bawah kepemimpinannya, kata.ai telah menjadi perusahaan terkemuka
@@ -150,11 +150,11 @@
                             pelanggan. </p>
                     </div>
                     <div
-                        class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] max-h-[700px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
-                        <img class="rounded-full w-36 h-36" src="{{ asset('images/gts/solid_white.png') }}"
-                            alt="">
+                        class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
+                        <img class="rounded-full w-36 h-36" src="{{ asset('images/gts/speaker-1.png') }}"
+                            alt="speaker-1">
                         <p class="text-white font-montserrat font-bold text-lg mt-4">Belladonna Paramayswari</p>
-                        <p class="text-[#B5B3BC] font-montserrat font-normal text-base">IT Professional</p>
+                        <p class="text-[#B5B3BC] font-montserrat font-normal text-base">Risk Specialist at PT. Bank Mandiri (Persero) Tbk.</p>
                         <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">Belladona
                             Paramayswari adalah seorang profesional IT yang sukses dan berbakat. Dengan pengetahuan
                             mendalam dalam pengembangan perangkat lunak, analisis data, dan manajemen proyek, Belladona
@@ -164,11 +164,11 @@
                             mencerminkan dedikasinya dalam terus mengasah pengetahuan dan keterampilannya.</p>
                     </div>
                     <div
-                        class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] max-h-[700px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
-                        <img class="rounded-full w-36 h-36" src="{{ asset('images/gts/solid_white.png') }}"
-                            alt="">
+                        class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100">
+                        <img class="rounded-full w-36 h-36 object-cover object-top" src="{{ asset('images/gts/speaker-3.png') }}"
+                            alt="speaker-3">
                         <p class="text-white font-montserrat font-bold text-lg mt-4">Sabrina Woro Anggraini</p>
-                        <p class="text-[#B5B3BC] font-montserrat font-normal text-base">IT Professional</p>
+                        <p class="text-[#B5B3BC] font-montserrat font-normal text-base">Co-Founder & Managing Director of Natuno Design Lab</p>
                         <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">Sabrina Woro
                             Anggraini adalah seorang profesional berbakat dan berdedikasi di bidang bisnis dan
                             teknologi. Sabrina, cofounder Notunolab, berpengalaman dalam implementasi teknologi
