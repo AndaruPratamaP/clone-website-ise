@@ -18,10 +18,10 @@
             <div class="relative">
                 <p class="text-center font-['Montserrat'] font-[600] text-[#FFEEE4] text-[13px] min-[450px]:text-[16px] sm:text-[20px] lg:text-[24px] mb-[6px] md:mb-[14px]">Please wait for further confirmation.</p>
                 <div class="flex justify-center z-20">
-                    <a href="#">
+                    <a href="https://www.instagram.com/is_expo/">
                         <button class="font-['Montserrat'] font-[600] text-[#121316] bg-[#FFEEE4] rounded-[18px]  sm:rounded-[20px] lg:rounded-[24px] px-[18px] sm:px-[20px] lg:px-[24px] py-[11px] sm:py-[12px] lg:py-[14px] text-[11px] min-[450px]:text-[12px] sm:text-[13px] lg:text-[16px]">
                         <img class="h-[15px] sm:h-[17px] lg:h-[20px] float-left mr-2  my-[2px] sm:my-[3px] lg:my-[3px]" src="{{asset('images/comingsoon/Fill.png')}}" alt="">
-                        Notify me when it went live</button>
+                        Meanwhile, check our instagram</button>
                     </a>
                 </div>
             </div>

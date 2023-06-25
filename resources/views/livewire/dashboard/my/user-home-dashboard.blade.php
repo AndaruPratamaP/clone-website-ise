@@ -2,7 +2,7 @@
 <div class="flex flex-col w-full space-y-6 sm:space-y-10 text-white m-4 sm:m-6 font-montserrat min-h-screen">
     <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">Halo, Selamat Datang {{ Auth::user()->full_name }}</h1>
     <div>
-        <h2 class="text-xl md:text-2xl font-bold text-[#B5B3BC]">Pengunguman</h2>
+        <h2 class="text-xl md:text-2xl font-bold text-[#B5B3BC]">Pengumuman</h2>
         <div class="flex flex-row flex-wrap gap-4 mt-4 w-full">
             <div class="flex flex-col items-start bg-[#191A1E] rounded-3xl max-w-xs lg:max-w-md w-full px-7 pt-4 pb-6">
                 <p class="text-base md:text-lg font-bold">Announcement</p>

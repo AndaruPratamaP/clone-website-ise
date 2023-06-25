@@ -15,6 +15,7 @@ use App\Http\Controllers\Pages\Auth\Register;
 use App\Http\Controllers\Pages\BionixLanding;
 use App\Http\Controllers\Pages\Examples\Swiper;
 use App\Http\Controllers\Pages\Auth\RequestForgot;
+use App\Http\Controllers\Pages\TermsAndConditions;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
@@ -35,7 +36,7 @@ Route::get('/', IseLanding::class)->name('landing.ise');
 Route::get('icon', IconLanding::class)->name('landing.icon');
 
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
-Route::get('404', Error404::class)->name('404');
+Route::get('/terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
 
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
