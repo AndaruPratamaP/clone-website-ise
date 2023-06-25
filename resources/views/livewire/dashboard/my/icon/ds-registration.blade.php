@@ -405,7 +405,7 @@
                                     name="setuju-kebijakan"
                                     class="rounded-md cursor-pointer checked:bg-purple-200 checked:ring-purple-200 focus:ring-purple-200">
                                 <label class="text-white " for="setuju-kebijakan"> Saya setuju dengan kebijakan
-                                    privasi serta <a href="" class="text-[#66C1A7]" target="_blank">syarat dan
+                                    privasi serta <a href="/terms-and-conditions" class="text-[#66C1A7]" target="_blank">syarat dan
                                         ketentuan</a> yang berlaku</label>
                                 @error('agree')
                                     <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
