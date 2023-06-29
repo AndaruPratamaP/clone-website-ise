@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
+use App\Core\Application\Exports\GTSExport;
 use App\Http\Controllers\Presentation\GrandTalkshowController;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Maatwebsite\Excel\Facades\Excel;
 
 class GtsTable extends GrandTalkshowController
 {
@@ -27,5 +29,10 @@ class GtsTable extends GrandTalkshowController
     public function updatingEntries()
     {
         $this->resetPage();
+    }
+
+    public function export()
+    {
+        return Excel::download(new GTSExport, 'grandtalkshow.xlsx');
     }
 }

@@ -15,6 +15,14 @@ class GrandTalkshow extends model
     protected $primaryKey = 'id';
     protected $guarded = ['id'];
 
+    protected $casts = [
+        'id' => 'string',
+        'share_proof_file' => 'string',
+        'referral' => 'string',
+        'user_id' => 'string',
+        'status_type_id' => 'integer',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');

@@ -62,6 +62,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::prefix('gts')->middleware(['permission:admin.gts'])->group(function () {
             Route::get('/', GtsTable::class)->name("gts.table");
+            Route::get('/export', [GtsTable::class, "export"])->name("gts.export");
             Route::get('/{user_id}', GtsDetailPeserta::class)->name("gts.detail");
             Route::get('/{user_id}/{action}', GtsAdminAction::class)->name("gts.action");
         });
