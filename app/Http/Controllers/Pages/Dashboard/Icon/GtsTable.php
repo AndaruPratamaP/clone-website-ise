@@ -13,7 +13,7 @@ class GtsTable extends GrandTalkshowController
     use WithPagination;
     public string $search = '';
     public string $orderby = '';
-    public string $order = 'asc';
+    public string $order = '';
     public int $entries = 10;
 
     public function render()

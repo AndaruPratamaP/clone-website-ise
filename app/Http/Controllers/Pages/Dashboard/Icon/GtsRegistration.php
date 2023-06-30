@@ -52,7 +52,7 @@ class GtsRegistration extends GrandTalkshowRegistrationController
                 'type' => 'info',
                 'title' => 'Telah terdaftar',
                 'text' => 'Kamu telah terdaftar...',
-            ]);;
+            ]);
         }
 
         $this->full_name = $this->user_data['full_name'];

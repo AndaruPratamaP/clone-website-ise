@@ -2,6 +2,7 @@
 
 namespace App\Core\Domain\Models\Eloquents\Shortener;
 
+use App\Core\Domain\Models\Eloquents\User\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Shortener extends model
@@ -19,4 +20,9 @@ class Shortener extends model
         'is_customized' => 'boolean',
         'visitor' => 'int',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

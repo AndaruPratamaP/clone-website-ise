@@ -259,18 +259,6 @@
                         <img src="{{ url($user_data['share_proof_file']) }}" />
                     </div>
                 </div>
-                <div class="flex md:hidden md:self-start self-center text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">
-                    Pengumuman</div>
-                <div
-                    class="flex md:hidden max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center">
-                    <div class="flex flex-col gap-y-3">
-                        <p class="flex text-white font-lg text-lg sm:text-2xl font-poppins font-bold tracking-wider">
-                            Link Webinar</p>
-                        <p class="text-sm sm:text-base text-white font-light text-justify">Terimakasih sudah mendaftar
-                            pada Grand Talkshow 2023. Link webinar akan dikirimkan melalui email yang didaftarkan
-                            sebelum tanggal 22 Juli 2023.p>
-                    </div>
-                </div>
             </div>
 
 
@@ -315,9 +303,9 @@
                     </div>
 
                 </div>
-                <div class="hidden md:flex self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
+                <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
                 <div
-                    class="hidden md:flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center">
+                    class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center">
                     <div class="flex flex-col gap-y-3">
                         <p class="flex text-white font-lg text-2xl font-poppins font-bold tracking-wider">Link Webinar
                         </p>
