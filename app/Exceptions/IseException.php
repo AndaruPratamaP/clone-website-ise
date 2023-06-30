@@ -6,9 +6,14 @@ use Exception as BaseException;
 
 class IseException extends BaseException
 {
-    public function __construct($message, $code = 0, \Exception $previous = null)
+
+    private $data;
+
+    public function __construct($message, $code = 0, $data, \Exception $previous = null)
     {
         parent::__construct($message, $code, $previous);
+
+        $this->data = $data;
     }
 
     public function __toString()
@@ -19,8 +24,13 @@ class IseException extends BaseException
     /**
      * @throws IseException
      */
-    public static function throw(string $message, int $code)
+    public static function throw(string $message, int $code, $data = null)
     {
-        throw new self($message, $code);
+        throw new self($message, $code, $data);
+    }
+
+    public function getData()
+    {
+        return $this->data;
     }
 }

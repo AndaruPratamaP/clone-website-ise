@@ -2,6 +2,8 @@
 
 namespace App\Core\Domain\Models\Eloquents\Verification;
 
+use App\Core\Domain\Models\Eloquents\User\User;
+use App\Core\Domain\Models\Eloquents\VerificationType\VerificationType;
 use Illuminate\Database\Eloquent\Model;
 
 class Verification extends model

@@ -2,10 +2,14 @@
 
 namespace App\Core\Application\Services\Verification;
 
+use App\Core\Application\Mail\EmailVerificationMail;
+use App\Core\Domain\Models\Eloquents\User\User;
 use App\Core\Domain\Models\Eloquents\Verification\Verification;
 use App\Core\Domain\Repositories\SqlVerificationTypeRepository;
 use App\Exceptions\IseException;
+use Illuminate\Support\Facades\Mail;
 use Ramsey\Uuid\Uuid;
+use Throwable;
 
 class VerificationService
 {
@@ -69,6 +73,11 @@ class VerificationService
         return $token;
     }
 
+    public function delete($code): void
+    {
+        Verification::where('code', $code)->delete();
+    }
+
     public function verify(string $code, int $verification_type): null|string
     {
         $verification = Verification::where('code', $code)
@@ -76,7 +85,7 @@ class VerificationService
             ->firstOrFail();
 
         if ($verification->expires_at < now()) {
-            IseException::throw("Kode verifikasi sudah kadaluarsa", 1502);
+            IseException::throw("Kode verifikasi sudah kadaluarsa, silahkan cek email anda lagi", 1502, $verification);
             return null;
         }
 

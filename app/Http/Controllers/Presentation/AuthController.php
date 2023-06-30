@@ -10,6 +10,7 @@ use App\Core\Application\Services\Auth\RegisterRequest;
 use App\Core\Application\Services\Auth\VerifyRequest;
 use App\Core\Application\Services\Provinsi\ProvinsiService;
 use App\Core\Application\Services\Role\RoleService;
+use App\Core\Application\Services\Verification\VerificationService;
 use App\Exceptions\IseException;
 use App\Http\Controllers\Pages\BaseController;
 use DanHarrin\LivewireRateLimiting\Exceptions\TooManyRequestsException;
@@ -26,6 +27,7 @@ class AuthController extends Component
     private AuthService $service;
     private ProvinsiService $provinsiService;
     private RoleService $roleService;
+    private VerificationService $verifService;
     private LoginRequest|RegisterRequest|VerifyRequest|ForgotPasswordRequest|ForgotPasswordChangeRequest $request;
 
     public array $provinces = [];
@@ -43,11 +45,12 @@ class AuthController extends Component
         "success" => ""
     ];
 
-    public function boot(AuthService $service, ProvinsiService $provinsiService, RoleService $roleService)
+    public function boot(AuthService $service, ProvinsiService $provinsiService, RoleService $roleService, VerificationService $verifService)
     {
         $this->service = $service;
         $this->provinsiService = $provinsiService;
         $this->roleService = $roleService;
+        $this->verifService = $verifService;
     }
 
     public function mount()
@@ -148,6 +151,33 @@ class AuthController extends Component
         DB::beginTransaction();
         try {
             $this->service->verify($this->request);
+        } catch (IseException $e) {
+            DB::rollBack();
+
+            DB::beginTransaction();
+            if ($e->getCode() == 1502) {
+                try {
+                    $data = $e->getData();
+
+                    $user_id = $data->user_id;
+                    $user_email = $data->user->email;
+                    $user_full_name = $data->user->full_name;
+                    $code = $data->code;
+
+                    $this->verifService->delete($code);
+
+                    $this->service->createVerification($user_id, $user_email, $user_full_name);
+                } catch (Throwable $e) {
+                    DB::rollBack();
+                }
+            }
+            DB::commit();
+
+            return redirect()->intended('login')->with('toastr-toast', [
+                'type' => 'error',
+                'title' => 'Verification failed',
+                'text' => $e->getMessage(),
+            ]);
         } catch (Throwable $e) {
             DB::rollBack();
             $this->msg['error'] = $e->getMessage();
