@@ -94,6 +94,11 @@ class AuthService
             'role_id' => $request->getRoleId(),
         ]);
 
+        $this->createVerification($user_id, $user->email, $user->full_name);
+    }
+
+    public function createVerification(string $user_id, string $user_email, string $user_full_name): bool
+    {
         $token = $this->verificationService->create(
             1,
             'uuid',
@@ -103,13 +108,16 @@ class AuthService
         );
 
         try {
-            Mail::to($user->email)->send(new EmailVerificationMail(
-                $user->email,
-                $user->full_name,
+            Mail::to($user_email)->send(new EmailVerificationMail(
+                $user_email,
+                $user_full_name,
                 $token
             ));
+
+            return true;
         } catch (Throwable $e) {
             IseException::throw("Gagal mengirim email verifikasi", 1202);
+            return false;
         }
     }
 
@@ -121,7 +129,7 @@ class AuthService
                 1,
             );
         } catch (IseException $e) {
-            IseException::throw($e->getMessage(), 1203);
+            IseException::throw($e->getMessage(), $e->getCode(), $e->getData());
         } catch (Throwable $e) {
             IseException::throw("Token tidak valid", 1201);
         }
