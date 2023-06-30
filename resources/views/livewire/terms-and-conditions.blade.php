@@ -1,4 +1,4 @@
-@section('title', 'C')
+@section('title', 'Terms and Conditions')
 <div class="flex justify-center w-full min-h-screen bg-[#181818] px-6 py-4">
     <div class="flex flex-col items-center w-[650px] bg-[#1C1E24] text-white rounded-lg py-6 px-8">
         <h1 class="text-center px-6 py-2 rounded-3xl bg-gradient-green-r font-semibold text-base sm:text-xl">

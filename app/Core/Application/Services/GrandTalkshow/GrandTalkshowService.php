@@ -27,14 +27,32 @@ class GrandTalkshowService
         $this->eventService = $eventService;
     }
 
-    public function getAllPeserta($search, $entries)
+    public function getAllPeserta($search, $entries, $orderby, $order)
     {
+        $columns = ['full_name', 'email'];
 
-        $paginate = GrandTalkshow::whereHas('user', function ($q) use ($search) {
-            $q->where('users.full_name', 'like', '%' . $search . '%')->orWhere('users.email', 'like', '%' . $search . '%');
-        })->paginate($entries);
+        $paginate = GrandTalkshow::join('users', 'grand_talkshow.user_id', '=', 'users.id')
+            ->join('status_types', 'grand_talkshow.status_type_id', '=', 'status_types.id')
+            ->where(function ($q) use ($search, $columns) {
+                foreach ($columns as $column) {
+                    $q->orWhere($column, 'like', '%' . $search . '%');
+                }
+            })
+            ->orderBy($this->sanitizeOrderBy($orderby), $this->sanitizeOrder($order))
+            ->paginate($entries);
 
         return $paginate;
+    }
+
+    protected function sanitizeOrderBy($orderby)
+    {
+        $allowedColumns = ['full_name', 'status_type_id'];
+        return in_array($orderby, $allowedColumns) ? $orderby : 'full_name';
+    }
+
+    protected function sanitizeOrder($order)
+    {
+        return in_array(strtolower($order), ['asc', 'desc']) ? strtolower($order) : 'asc';
     }
 
     public function accept($user_id)

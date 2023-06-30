@@ -24,8 +24,8 @@ class GrandTalkshowController extends Component
         $this->service = $service;
     }
 
-    public function index(string $search, int $entries)
+    public function index(string $search, int $entries, string $orderby, string $order)
     {
-        return $this->service->getAllPeserta($search, $entries);
+        return $this->service->getAllPeserta($search, $entries, $orderby, $order);
     }
 }
