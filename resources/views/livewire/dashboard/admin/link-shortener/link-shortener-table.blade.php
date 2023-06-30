@@ -23,6 +23,25 @@
         </div>
     </div>
     <div
+        class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 font-semibold sm:font-bold text-sm sm:text-xl mt-4">
+        <div class="flex flex-row items-center gap-2">
+            <p class="text-white">Order By</p>
+            <select name="orderby" wire:model="orderby" id="orderby" class="px-3 py-2 rounded-lg">
+                <option value="shorteners.created_at" selected>Time</option>
+                <option value="visitor" selected>Visitor</option>
+                <option value="short_url">Short Url</option>
+                <option value="full_name">Pembuat</option>
+            </select>
+        </div>
+        <div class="flex flex-row items-center gap-2">
+            <p class="text-white">Order</p>
+            <select name="order" wire:model="order" id="order" class="px-3 py-2 rounded-lg">
+                <option value="ASC" selected>Ascending</option>
+                <option value="DESC">Descending</option>
+            </select>
+        </div>
+    </div>
+    <div
         class="overflow-x-auto w-full h-[700px] mt-8 scrollbar-thin scrollbar-thumb-amber-800 scrollbar-track-amber-500">
         <table class="table-auto text-start w-full text-white">
             <thead class="font-bold text-2xl border-b-2 border-white h-12">
@@ -30,26 +49,28 @@
                 <th class="pr-40 whitespace-nowrap text-start">Short URL</th>
                 <th class="pr-32 text-start">Long URL</th>
                 <th class="pr-14 text-start">Visitor</th>
-                <th class="pr-4 text-center">User ID</th>
+                <th class="pr-4 text-center">Pembuat</th>
                 <th class="pr-4 text-center">Ation</th>
             </thead>
             <tbody>
-                @foreach ($shorteners as $shortenerObj)
+                @foreach ($shorteners as $shortener)
                     <tr class="font-medium text-lg h-16 border-b-[1px] border-white">
                         <td class="pr-8 ">{{ $loop->iteration }}</td>
-                        <td class="pr-40 whitespace-nowrap ">{{ $shortenerObj->getShortUrl() }}</td>
-                        <td class="pr-32 ">{{ $shortenerObj->getLongUrl() }}</td>
-                        <td class="pr-32 ">{{ $shortenerObj->getVisitor() }}</td>
-                        <td class="pr-32 ">{{ $shortenerObj->getUserId()->toString() }}</td>
+                        <td class="pr-40 whitespace-nowrap ">
+                            {{ config('app.url') . '/go/' . $shortener->short_url }}</td>
+                        <td class="pr-32 ">{{ $shortener->long_url }}</td>
+                        <td class="pr-32 ">{{ $shortener->visitor }}</td>
+                        <td class="pr-32 ">{{ $shortener->user->full_name }}</td>
                         <td class="pr-4 text-center font-semibold"><a
-                                class="py-2 px-4 bg-gradient-orange-r rounded-2xl hover:brightness-75"
-                                href=" /admin/gts/{{ $loop->iteration }}">Edit</a></td>
+                                class="py-2 px-4 bg-red-500 rounded-2xl hover:brightness-75"
+                                href="{{ route('admin.shortener.delete', ['short' => $shortener->short_url]) }}">Delete</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
-{{--
+    {{--
     <div class="mt-12 bg-transparent rounded-lg px-4 py-2 w-full">
         {{ $shorteners->links() }}
     </div> --}}

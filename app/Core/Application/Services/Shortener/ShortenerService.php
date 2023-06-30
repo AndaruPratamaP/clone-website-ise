@@ -2,10 +2,12 @@
 
 namespace App\Core\Application\Services\Shortener;
 
+use App\Core\Domain\Models\Eloquents\Shortener\Shortener as EloquentShortener;
 use App\Core\Domain\Models\Facades\Shortener\Shortener;
 use App\Core\Domain\Models\Facades\UserAccount;
 use App\Core\Domain\Repositories\SqlShortenerRepository;
 use App\Exceptions\IseException;
+use Throwable;
 
 class ShortenerService
 {
@@ -16,22 +18,31 @@ class ShortenerService
         $this->repository = $repository;
     }
 
-    public function getAllShortener(): array
+    public function getAllShortener($search, $entries, $orderby, $order)
     {
-        $shortener = $this->repository->getAll();
+        $columns = ['long_url', 'short_url', 'full_name'];
 
-        if ($shortener === null) {
-            IseException::throw("Shortener tidak ditemukan", 500);
-        }
+        $paginate = EloquentShortener::join('users', 'shorteners.user_id', '=', 'users.id')
+            ->where(function ($q) use ($search, $columns) {
+                foreach ($columns as $column) {
+                    $q->orWhere($column, 'like', '%' . $search . '%');
+                }
+            })
+            ->orderBy($this->sanitizeOrderBy($orderby), $this->sanitizeOrder($order))
+            ->paginate($entries);
 
-        return array_map(function (Shortener $result) {
-            return new ShortenerResponse(
-                $result->getShortUrl(),
-                $result->getLongUrl(),
-                $result->getVisitor(),
-                $result->getUserId()
-            );
-        }, $shortener);
+        return $paginate;
+    }
+
+    protected function sanitizeOrderBy($orderby)
+    {
+        $allowedColumns = ['shorteners.created_at', 'short_url', 'full_name', 'visitor'];
+        return in_array($orderby, $allowedColumns) ? $orderby : 'shorteners.created_at';
+    }
+
+    protected function sanitizeOrder($order)
+    {
+        return in_array(strtolower($order), ['asc', 'desc']) ? strtolower($order) : 'asc';
     }
 
     public function getShortener(string $short_url): ?ShortenerResponse
@@ -116,5 +127,15 @@ class ShortenerService
         }
 
         return implode("", $latestAlias);
+    }
+
+    public function delete(string $shorten): bool
+    {
+        try {
+            EloquentShortener::where('short_url', $shorten)->delete();
+            return true;
+        } catch (Throwable $e) {
+            IseException::throw("Gagal menghapus shortener", 502);
+        }
     }
 }

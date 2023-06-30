@@ -46,8 +46,8 @@ class GrandTalkshowService
 
     protected function sanitizeOrderBy($orderby)
     {
-        $allowedColumns = ['full_name', 'status_type_id'];
-        return in_array($orderby, $allowedColumns) ? $orderby : 'full_name';
+        $allowedColumns = ['grand_talkshow.created_at', 'full_name', 'status_type_id'];
+        return in_array($orderby, $allowedColumns) ? $orderby : 'grand_talkshow.created_at';
     }
 
     protected function sanitizeOrder($order)

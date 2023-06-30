@@ -29,6 +29,7 @@
         <div class="flex flex-row items-center gap-2">
             <p class="text-white">Order By</p>
             <select name="orderby" wire:model="orderby" id="orderby" class="px-3 py-2 rounded-lg">
+                <option value="grand_talkshow.created_at" selected>Time</option>
                 <option value="full_name">Full Name</option>
                 <option value="status_type_id">Status</option>
             </select>
@@ -36,7 +37,7 @@
         <div class="flex flex-row items-center gap-2">
             <p class="text-white">Order</p>
             <select name="order" wire:model="order" id="order" class="px-3 py-2 rounded-lg">
-                <option value="ASC">Ascending</option>
+                <option value="ASC" selected>Ascending</option>
                 <option value="DESC">Descending</option>
             </select>
         </div>
