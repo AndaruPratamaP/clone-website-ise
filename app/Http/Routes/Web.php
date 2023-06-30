@@ -29,6 +29,7 @@ use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
 use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
+use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 
 Route::get('go/{short}', RedirectShortener::class);
@@ -57,8 +58,11 @@ Route::middleware(['auth'])->group(function () {
     Route::name('admin.')->prefix('admin')->middleware(['permission:admin'])->group(function () {
         Route::get('/', AdminHomeDashboard::class)->name('');
 
-        Route::get('shorten', LinkShortener::class)->name("shortener");
-        Route::get('shortener', LinkShortenerTable::class)->name("shortener.table");
+        Route::prefix('shortener')->group(function () {
+            Route::get('/', LinkShortenerTable::class)->name('shortener.table');
+            Route::get('/create', LinkShortener::class)->name('shortener.create');
+            Route::get('/delete/{short}', LinkShortenerAction::class)->name('shortener.delete');
+        });
 
         Route::prefix('gts')->middleware(['permission:admin.gts'])->group(function () {
             Route::get('/', GtsTable::class)->name("gts.table");

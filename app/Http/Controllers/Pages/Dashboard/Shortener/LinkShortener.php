@@ -47,7 +47,7 @@ class LinkShortener extends ShortenerController
                 $this->msg["error"] = 'Something went wrong!';
             return;
         }
-        $this->shortened = "https://ise-its.com/go" . $response->getShortUrl();
+        $this->shortened = "https://ise-its.com/go/" . $response->getShortUrl();
         $this->is_done = true;
         $this->msg["success"] = 'Your message has been sent!';
     }
