@@ -12,12 +12,14 @@ class GtsTable extends GrandTalkshowController
 {
     use WithPagination;
     public string $search = '';
+    public string $orderby = '';
+    public string $order = 'asc';
     public int $entries = 10;
 
     public function render()
     {
         return view('livewire.dashboard.admin.icon.gts-table', [
-            'gtss' => $this->index($this->search, $this->entries),
+            'gtss' => $this->index($this->search, $this->entries, $this->orderby, $this->order),
         ])->layout('layouts.dashboard.admin.base');
     }
 
@@ -27,6 +29,16 @@ class GtsTable extends GrandTalkshowController
     }
 
     public function updatingEntries()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingOrderby()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingOrder()
     {
         $this->resetPage();
     }

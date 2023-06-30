@@ -25,6 +25,23 @@
         </div>
     </div>
     <div
+        class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 font-semibold sm:font-bold text-sm sm:text-xl mt-4">
+        <div class="flex flex-row items-center gap-2">
+            <p class="text-white">Order By</p>
+            <select name="orderby" wire:model="orderby" id="orderby" class="px-3 py-2 rounded-lg">
+                <option value="full_name">Full Name</option>
+                <option value="status_type_id">Status</option>
+            </select>
+        </div>
+        <div class="flex flex-row items-center gap-2">
+            <p class="text-white">Order</p>
+            <select name="order" wire:model="order" id="order" class="px-3 py-2 rounded-lg">
+                <option value="ASC">Ascending</option>
+                <option value="DESC">Descending</option>
+            </select>
+        </div>
+    </div>
+    <div
         class="overflow-x-auto w-full h-[700px] mt-8 scrollbar-thin scrollbar-thumb-amber-800 scrollbar-track-amber-500">
         <table class="table-auto text-start w-full text-white">
             <thead class="font-bold text-2xl border-b-2 border-white h-12">
@@ -37,7 +54,9 @@
             <tbody>
                 @foreach ($gtss as $gts)
                     <tr class="font-medium text-lg h-16 border-b-[1px] border-white">
-                        <td class="pr-8 ">{{ $loop->iteration }}</td>
+                        <td class="pr-8 ">
+                            {{ $loop->iteration + ($gtss->currentPage() - 1) * $entries }}
+                        </td>
                         <td class="pr-40 whitespace-nowrap ">{{ $gts->user->full_name }}</td>
                         <td class="pr-32 ">{{ $gts->referral }}</td>
                         <td
