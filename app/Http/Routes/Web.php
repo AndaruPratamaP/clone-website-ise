@@ -31,6 +31,7 @@ use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
+use App\Http\Controllers\Pages\IsClassRegistration;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
@@ -93,6 +94,7 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('my/ux/registration', UxRegistration::class); #temp for development
     Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
+    Route::get('my/isclass/registration', IsClassRegistration::class); #temp for development
     Route::get('bionix', BionixLanding::class); #temp for development
 
     //  Error Pages
