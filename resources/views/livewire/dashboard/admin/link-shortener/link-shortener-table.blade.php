@@ -70,7 +70,8 @@
             </tbody>
         </table>
     </div>
-    {{--
+
     <div class="mt-12 bg-transparent rounded-lg px-4 py-2 w-full">
         {{ $shorteners->links() }}
-    </div> --}}
+    </div>
+</div>
