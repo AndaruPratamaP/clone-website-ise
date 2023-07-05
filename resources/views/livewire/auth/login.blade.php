@@ -52,8 +52,8 @@
                             </div>
                             <div class="flex mt-6 lg:mt-4 mb-5 lg:mb-14">
                                 {{-- <input class=" mr-2  relative top-[0.05rem] lg:top-0.5 w-[10px] h-[10px] lg:w-[15px] lg:h-[15px]" type="checkbox" name="remind" id="remind" wire:model="remember">
-                                <div class=" inline-block text-[#B5B3BC]  font-[400] self-center grow font-montserrat text-[8px] lg:text-[12px]">Ingatkan saya</div>
-                                <button class=" inline-block text-[#B5B3BC] font-[400] self-center font-montserrat text-[8px] lg:text-[12px]">Lupa Password?</button> --}}
+                                <div class=" inline-block text-[#B5B3BC]  font-[400] self-center grow font-montserrat text-[8px] lg:text-[12px]">Ingatkan saya</div> --}}
+                                <a href="{{route('request-forgot')}}" class=" inline-block text-[#B5B3BC] hover:text-[#6B6B6B] font-[400] self-center font-montserrat text-[8px] lg:text-[12px]">Lupa Password?</a>
                             </div>
                             @if (!empty($msg['error']))
                                 <span class="text-[#A31400]">{{ $msg['error'] }}</span>
@@ -63,7 +63,7 @@
                                     Login
                                 </span>
                                 <div wire:loading
-                                    class="inline-block w-4 h-4 sm:h-6 sm:w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                                    class="inline-block w-4 h-4 md:h-6 md:w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
                                     role="status">
                             </button>
                             <div class=" text-center">
