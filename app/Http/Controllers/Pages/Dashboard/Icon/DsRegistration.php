@@ -61,9 +61,9 @@ class DsRegistration extends Component
         'tujuan_tim' => 'required|string|max:255',
         'sumber_informasi' => 'required',
         'sumber_informasi_lainnya' => 'required|string|max:255',
-        'bukti_ketua' => 'required|image:max:1024',
-        'bukti_anggota1' => 'required|image:max:1024',
-        'bukti_anggota2' => 'required|image:max:1024',
+        'bukti_ketua' => 'required|image|max:1024',
+        'bukti_anggota1' => 'required|image|max:1024',
+        'bukti_anggota2' => 'required|image|max:1024',
     ];
 
 
@@ -84,4 +84,3 @@ class DsRegistration extends Component
     }
 
 }
-    

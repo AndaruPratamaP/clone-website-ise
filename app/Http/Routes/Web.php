@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Pages\DsAcademyLanding;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pages\Error404;
 use App\Http\Controllers\Pages\Error500;
@@ -40,6 +41,7 @@ Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
 Route::get('icon', IconLanding::class)->name('landing.icon');
 Route::get('rise', RiseLanding::class)->name('landing.rise');
+Route::get('icon/ds-academy', DsAcademyLanding::class)->name('landing.dsAcademy');
 
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
 Route::get('/terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
