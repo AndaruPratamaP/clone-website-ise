@@ -10,6 +10,7 @@ use App\Http\Controllers\Pages\Auth\Forgot;
 use App\Http\Controllers\Pages\Auth\Logout;
 use App\Http\Controllers\Pages\Auth\Verify;
 use App\Http\Controllers\Pages\IconLanding;
+use App\Http\Controllers\Pages\RiseLanding;
 use App\Http\Controllers\Pages\Examples\Aos;
 use App\Http\Controllers\Pages\Auth\Register;
 use App\Http\Controllers\Pages\BionixLanding;
@@ -32,10 +33,13 @@ use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\IsClassRegistration;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxSelection;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
 Route::get('icon', IconLanding::class)->name('landing.icon');
+Route::get('rise', RiseLanding::class)->name('landing.rise');
 
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
 Route::get('/terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
@@ -92,6 +96,8 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
 
     Route::get('my/ux/registration', UxRegistration::class); #temp for development
+    Route::get('my/ux/selection', UxSelection::class); #temp for development
+    Route::get('my/ux/commitment', UxCommitment::class); #temp for development
     Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
     Route::get('my/isclass/registration', IsClassRegistration::class); #temp for development

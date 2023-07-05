@@ -97,7 +97,7 @@
             </div>
             <div
                 class="text-[0.875rem] sm:text-base bg-clip-text bg-gradient-orange-r hover:text-transparent focus:text-transparent font-semibold">
-                <a href="/coming-soon" +>RISE</a>
+                <a href="/rise">RISE</a>
             </div>
             <div
                 class="text-[0.875rem] sm:text-base bg-clip-text bg-gradient-purple-r hover:text-transparent focus:text-transparent font-semibold">
@@ -191,7 +191,7 @@
             </div>
         </div>
         <div class="py-[18px] bg-clip-text bg-gradient-orange-r hover:text-transparent focus:text-transparent">
-            <a href="/coming-soon">RISE</a>
+            <a href="/rise">RISE</a>
         </div>
         <div class="py-[18px] bg-clip-text bg-gradient-purple-r hover:text-transparent focus:text-transparent">
             <a href="/coming-soon">Paradigm</a>
