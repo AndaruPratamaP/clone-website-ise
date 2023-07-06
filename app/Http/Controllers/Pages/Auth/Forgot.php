@@ -10,7 +10,6 @@ class Forgot extends AuthController
 {
     public string $token = '';
     public string $new_password = '';
-    public bool $isValid = false;
 
     protected $rules = [
         'new_password' => 'required|min:8',
@@ -23,20 +22,12 @@ class Forgot extends AuthController
 
     public function render()
     {
-        return view('livewire.auth.forgot')->layout('layouts.app');
+        return view('livewire.auth.forgot')->layout('layouts.only-layout');
     }
 
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
-
-        try {
-            $this->isValid = true;
-            $this->validate($this->rules);
-        } catch (Throwable $e) {
-            $this->isValid = false;
-            return;
-        }
     }
 
     protected function error($error)

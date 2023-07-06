@@ -13,7 +13,7 @@ const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',
     },
-    
+
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -34,7 +34,7 @@ const swiper = new Swiper('.swiper', {
             prevEl: '.swiper-button-prev',
         },
     },
-    
+
     // when window width is >= 1024px
     1024: {
         navigation: {
@@ -43,7 +43,7 @@ const swiper = new Swiper('.swiper', {
             prevEl: '.swiper-button-prev',
         },
     }
-  } 
+  }
 });
 
 window.Swiper = swiper;

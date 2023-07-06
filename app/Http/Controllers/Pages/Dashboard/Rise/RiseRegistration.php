@@ -24,7 +24,7 @@ class RiseRegistration extends Component
   public $kartu_pelajar_ketua;
   public $poster_ketua;
 
-  // step 2 
+  // step 2
   public $nama_anggota1;
   public $nomor_telepon_anggota1;
   public $email_anggota1;
@@ -53,22 +53,22 @@ class RiseRegistration extends Component
     'nomor_telepon_ketua' => 'required|max:255',
     'email_ketua' => 'required|email|max:255',
     'twibbon_ketua' => 'required|max:255',
-    'kartu_pelajar_ketua' => 'required|image:max:1024',
-    'poster_ketua' => 'required|image:max:1024',
+    'kartu_pelajar_ketua' => 'required|image|max:1024',
+    'poster_ketua' => 'required|image|max:1024',
     // step 2
     'nama_anggota1' => 'required|max:255',
     'nomor_telepon_anggota1' => 'required|max:255',
     'email_anggota1' => 'required|email|max:255',
     'twibbon_anggota1' => 'required|max:255',
-    'kartu_pelajar_anggota1' => 'required|image:max:1024',
-    'poster_anggota1' => 'required|image:max:1024',
+    'kartu_pelajar_anggota1' => 'required|image|max:1024',
+    'poster_anggota1' => 'required|image|max:1024',
     // step 3
     'nama_anggota2' => 'required|max:255',
     'nomor_telepon_anggota2' => 'required|max:255',
     'email_anggota2' => 'required|email|max:255',
     'twibbon_anggota2' => 'required|max:255',
-    'kartu_pelajar_anggota2' => 'required|image:max:1024',
-    'poster_anggota2' => 'required|image:max:1024',
+    'kartu_pelajar_anggota2' => 'required|image|max:1024',
+    'poster_anggota2' => 'required|image|max:1024',
     // step 4
     'status_biodata' => 'required|max:255',
   ];

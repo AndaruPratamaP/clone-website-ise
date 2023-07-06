@@ -16,8 +16,9 @@ class RequestForgot extends AuthController
 
     public function render()
     {
-        return view('livewire.auth.request-forgot')->layout('layouts.app');
+        return view('livewire.auth.request-forgot')->layout('layouts.only-layout');
     }
+    
 
     public function updated($propertyName)
     {

@@ -20,7 +20,7 @@
                                 <div class=" inline text-[#A31400] font-montserrat font-semibold text-[14px] lg:text-[20px]">*</div>
                             </div>
                             <div class=" relative">
-                                <input required class=" w-full px-[2.5px] bg-transparent border-b-2 text-[12px] lg:text-[18px] font-montserrat font-[400] h-[28px] lg:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] lg:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] @error('email') border-b-[#A31400] text-[#A31400] @else border-b-[#C5C5C5] text-[#7C7C7C] @enderror" type="text" name="email" id="email" placeholder="Masukkan alamat email anda disini" wire:model="email">
+                                <input required class=" w-full px-[2.5px] bg-transparent border-b-2 text-[12px] lg:text-[18px] font-montserrat font-[400] h-[28px] lg:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] lg:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] @error('email') border-b-[#A31400] text-[#A31400] @enderror" type="text" name="email" id="email" placeholder="Masukkan alamat email anda disini" wire:model="email">
                                 @error('email')
                                     <span class="text-[#A31400] text-[12px] font-montserrat font-medium">{{ $message }}</span>
                                 @enderror
@@ -31,7 +31,7 @@
                                     <div class="inline text-[#A31400] font-montserrat font-semibold text-[14px] lg:text-[20px]">*</div>
                                 </div>
                                 <div class=" relative">
-                                    <input required class=" w-full px-[2.5px] bg-transparent border-b-2 text-[12px] lg:text-[18px] font-montserrat font-[400] h-[28px] lg:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] lg:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] @error('password') border-b-[#A31400] text-[#A31400] @else border-b-[#C5C5C5] text-[#7C7C7C] @enderror" id="password" x-bind:type="show ? 'text' : 'password'" x-model="password" wire:model="password"
+                                    <input required class=" w-full px-[2.5px] bg-transparent border-b-2 text-[12px] lg:text-[18px] font-montserrat font-[400] h-[28px] lg:h-[34px] outline-none placeholder:text-[#7C7C7C] placeholder:font-montserrat placeholder:text-[12px] lg:placeholder:text-[18px] placeholder:font-medium hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] text-[#6B6B6B] hover:border-b-[#6B6B6B] active:placeholder:text-[#00668F] active:text-[#00668F] active:border-b-[#00668F] focus:placeholder:text-[#00668F] focus:text-[#00668F] focus:border-b-[#00668F] @error('password') border-b-[#A31400] text-[#A31400] @enderror" id="password" x-bind:type="show ? 'text' : 'password'" x-model="password" wire:model="password"
                                     name="password" placeholder="Masukkan kata sandi anda disini">
                                     @error('password')
                                         <span class="text-[#A31400] text-[12px] font-montserrat font-medium">{{ $message }}</span>
@@ -52,8 +52,8 @@
                             </div>
                             <div class="flex mt-6 lg:mt-4 mb-5 lg:mb-14">
                                 {{-- <input class=" mr-2  relative top-[0.05rem] lg:top-0.5 w-[10px] h-[10px] lg:w-[15px] lg:h-[15px]" type="checkbox" name="remind" id="remind" wire:model="remember">
-                                <div class=" inline-block text-[#B5B3BC]  font-[400] self-center grow font-montserrat text-[8px] lg:text-[12px]">Ingatkan saya</div>
-                                <button class=" inline-block text-[#B5B3BC] font-[400] self-center font-montserrat text-[8px] lg:text-[12px]">Lupa Password?</button> --}}
+                                <div class=" inline-block text-[#B5B3BC]  font-[400] self-center grow font-montserrat text-[8px] lg:text-[12px]">Ingatkan saya</div> --}}
+                                <a href="{{route('request-forgot')}}" class=" inline-block text-[#B5B3BC] hover:text-[#6B6B6B] font-[400] self-center font-montserrat text-[8px] lg:text-[12px]">Lupa Password?</a>
                             </div>
                             @if (!empty($msg['error']))
                                 <span class="text-[#A31400]">{{ $msg['error'] }}</span>
@@ -63,13 +63,8 @@
                                     Login
                                 </span>
                                 <div wire:loading
-                                    class="inline-block h-6 w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                                    class="inline-block w-4 h-4 md:h-6 md:w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
                                     role="status">
-                                    <span
-                                        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-                                        >Loading...</span
-                                    >
-                                    </div>
                             </button>
                             <div class=" text-center">
                                 <div class=" inline-block text-[#B5B3BC] text-[12px] lg:text-[16px] font-[600] font-montserrat">Belum punya akun?</div>
