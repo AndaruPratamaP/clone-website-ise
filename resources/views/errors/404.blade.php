@@ -1,1 +1,1 @@
-{{ redirect()->intended('404')->send() }}
+{{ redirect()->intended('/not-found')->send() }}

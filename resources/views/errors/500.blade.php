@@ -1,1 +1,1 @@
-{{ redirect()->intended('500')->send() }}
+{{ redirect()->intended('/error')->send() }}

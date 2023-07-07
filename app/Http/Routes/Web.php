@@ -48,6 +48,9 @@ Route::get('icon/ds-academy', DsAcademyLanding::class)->name('landing.dsAcademy'
 
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
 Route::get('terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
+    //  Error Pages
+Route::get('not-found', Error404::class)->name('404');
+Route::get('error', Error500::class)->name('500');
 Route::get('maintenance', Maintenance::class)->name('maintenance');
 
 // Routes that require authentication
@@ -109,8 +112,4 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
     Route::get('my/isclass/registration', IsClassRegistration::class); #temp for development
-
-    //  Error Pages
-    Route::get('404', Error404::class)->name('404');
-    Route::get('500', Error500::class)->name('500');
 }
