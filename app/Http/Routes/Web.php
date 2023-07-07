@@ -29,11 +29,11 @@ use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
 use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
-use App\Http\Controllers\Pages\IsClassRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxSelection;
 
