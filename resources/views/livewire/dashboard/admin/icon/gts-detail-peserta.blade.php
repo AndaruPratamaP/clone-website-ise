@@ -28,20 +28,33 @@
     <div class="flex flex-col gap-y-1 bg-[#191A1E] p-6 rounded-xl mt-12 text-base sm:text-lg">
         <p class="flex text-[#B5B3BC] font-normal ">Nama Lengkap</p>
         <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
+    </div>
+    <div class="flex flex-col gap-y-1 bg-[#191A1E] p-6 rounded-xl mt-12 text-base sm:text-lg">
+        <p class="flex text-[#B5B3BC] font-normal ">Nama Lengkap</p>
+        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
             {{ $user_data['full_name'] }}</p>
+        <p class="flex text-[#B5B3BC] font-normal">Asal Instansi</p>
+        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
         <p class="flex text-[#B5B3BC] font-normal">Asal Instansi</p>
         <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
             {{ $user_data['institution'] }}</p>
         <p class="flex text-[#B5B3BC] font-normal">Email</p>
         <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
+        <p class="flex text-[#B5B3BC] font-normal">Email</p>
+        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
             {{ $user_data['email'] }}</p>
+        <p class="flex text-[#B5B3BC] font-normal">Handphone</p>
+        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
         <p class="flex text-[#B5B3BC] font-normal">Handphone</p>
         <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
             {{ $user_data['handphone'] }}</p>
         <p class="flex text-[#B5B3BC] font-normal">Tahu Grand Talkshow Darimana
+        <p class="flex text-[#B5B3BC] font-normal">Tahu Grand Talkshow Darimana
             ?</p>
         <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
+        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
             {{ $user_data['referral'] }}</p>
+        <p class="flex text-[#B5B3BC] font-normal">Bukti Follow</p>
         <p class="flex text-[#B5B3BC] font-normal">Bukti Follow</p>
         <img src="{{ url($user_data['share_proof_file']) }}" />
     </div>

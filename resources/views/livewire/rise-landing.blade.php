@@ -28,7 +28,7 @@
                         <h1 style="line-height: 80%" class=" absolute xs:top-1 lg:top-5 z-30 font-montserrat text-[40px] xs:text-[60px] sm:text-[70px] md:text-[80px] lg:text-[80px] xl:text-[120px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.1)]">RISE!</h1>
                     </div>
                     <p class=" mt-10 xs:mt-14 sm:mt-16 md:mt-20 lg:mt-24 xl:mt-32 z-30 font-montserrat lg:bottom-[10rem] xl:bottom-0 text-[9px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[24px] font-bold from-[#FFD693] to-[#894584] bg-gradient-to-l text-transparent bg-clip-text">#ISEProvectaFutura</p>
-                    <a href="#more" style="line-height: 80%" class="text-center items-center flex justify-center mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[90px] xs:w-[120px] sm:w-[140px] md:w-[160px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r text-transparent rounded-[24px] hover:opacity-75" type="button">
+                    <a href="#more" style="line-height: 80%" class="text-center items-center flex justify-center mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[90px] xs:w-[120px] sm:w-[140px] md:w-[160px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r text-transparent rounded-[24px] hover:brightness-75" type="button">
                         <span class=" font-montserrat text-[7px] xs:text-[10px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-semibold text-[#FFEEE4]">Explore now</span>
                     </a>
             </div>
@@ -61,11 +61,11 @@
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/rise-landing/Sect3-Carousel-Img1.png') }} alt="">
                             <p class=" font-montserrat text-[9px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24">Serangkaian acara Information Systems Expo (ISE!) 2023 yang mengangkat konsep lomba tingkat nasional terkait business case yang diperuntukkan untuk mahasiswa aktif jenjang D3, D4, atau S1 di Indonesia yang dapat diikuti secara berkelompok atau tim yang dilaksanakan secara online.</p>
                             <div class=" flex flex-col lg:flex-row justify-center content-center lg:gap-6">
-                                <a href="/login" class=" text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r text-transparent rounded-[24px] hover:opacity-75 self-center" type="button">
+                                <a href="/login" class=" text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r text-transparent rounded-[24px] hover:brightness-75 self-center" type="button">
                                     <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
                                 </a>
                                 <a href="/login" class=" mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r rounded-[24px] p-[2px] self-center" type="button">
-                                    <div class=" bg-[#141414] hover:opacity-75 w-full h-full rounded-[24px] flex items-center justify-center">
+                                    <div class=" bg-[#141414] hover:brightness-75 w-full h-full rounded-[24px] flex items-center justify-center">
                                         <span class=" inline-block font-montserrat text-[10px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Unduh Guidebook</span>
                                         <img class=" inline-block ml-2 lg:mb-1 w-[16px] lg:w-[21px] h-[16px] lg:h-[20px]" src="{{ asset('images/rise-landing/Sect3-Download-Img.png') }}" alt="">
                                     </div>
@@ -586,44 +586,9 @@
 
 
 <script>
-    // GTS Countdown Start
-        // Set the countdown date and time
-        const countdownDate_gts = new Date("July 16, 2023 00:00:00").getTime();
-
-        // Update the countdown every second
-        const countdownTimer_gts = setInterval(() => {
-        // Get today's date and time
-        const now = new Date().getTime();
-
-        // Find the distance between now and the countdown date
-        const distance = countdownDate_gts - now;
-
-        // Calculate the days, hours, minutes, and seconds
-        const days_gts = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours_gts = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes_gts = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds_gts = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Display the countdown
-        document.getElementById("days_gts").innerHTML = `${days_gts}`;
-        document.getElementById("hours_gts").innerHTML = `${hours_gts}`;
-        document.getElementById("minutes_gts").innerHTML = `${minutes_gts}`;
-        document.getElementById("seconds_gts").innerHTML = `${seconds_gts}`;
-
-        // If the countdown is finished, display a message
-        if (distance < 0) {
-            clearInterval(countdownTimer_gts);
-            document.getElementById("days_gts").innerHTML = "0";
-            document.getElementById("hours_gts").innerHTML = "0";
-            document.getElementById("minutes_gts").innerHTML = "0";
-            document.getElementById("seconds_gts").innerHTML = "0";
-        }
-        }, 1000);
-    // GTS Countdown End
-
     // dsux Countdown Start
         // Set the countdown date and time
-        const countdownDate_dsux = new Date("July 23, 2023 00:00:00").getTime();
+        const countdownDate_dsux = new Date("August 31, 2023 00:00:00").getTime();
 
         // Update the countdown every second
         const countdownTimer_dsux = setInterval(() => {

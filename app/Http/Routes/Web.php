@@ -43,6 +43,9 @@ Route::get('icon', IconLanding::class)->name('landing.icon');
 Route::get('rise', RiseLanding::class)->name('landing.rise');
 Route::get('icon/ds-academy', DsAcademyLanding::class)->name('landing.dsAcademy');
 
+
+Route::get('bionix', BionixLanding::class); #temp for development
+
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
 Route::get('/terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
 
@@ -103,7 +106,6 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
     Route::get('my/isclass/registration', IsClassRegistration::class); #temp for development
-    Route::get('bionix', BionixLanding::class); #temp for development
 
     //  Error Pages
     Route::get('404', Error404::class)->name('404');
