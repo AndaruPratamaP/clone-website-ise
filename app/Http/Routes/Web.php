@@ -36,18 +36,18 @@ use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxSelection;
+use App\Http\Controllers\Pages\Maintenance;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
 Route::get('icon', IconLanding::class)->name('landing.icon');
 Route::get('rise', RiseLanding::class)->name('landing.rise');
+Route::get('bionix', BionixLanding::class)->name('landing.bionix');
 Route::get('icon/ds-academy', DsAcademyLanding::class)->name('landing.dsAcademy');
 
 
-Route::get('bionix', BionixLanding::class); #temp for development
-
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
-Route::get('/terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
+Route::get('terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
 
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
@@ -93,6 +93,8 @@ Route::middleware(['guest'])->group(function () {
     Route::get('forgot/{token}', Forgot::class)->name('forgot');
     Route::get('forgot', RequestForgot::class)->name('request-forgot');
 });
+
+
 
 // check if development
 if (config('app.env') === 'local' || config('app.env') === 'development') {
