@@ -323,12 +323,21 @@
                                 >Loading...</span
                             >
                             </div>
+                            <div wire:loading
+                            class="inline-block h-6 w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                            role="status">
+                            <span
+                                class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                >Loading...</span
+                            >
+                            </div>
                         </button>
                         <div class=" text-center">
                             <div
                                 class=" mb-6 xl:mb-0 inline-block text-[#B5B3BC] text-[12px] xl:text-[16px] font-[600] font-montserrat">
                                 Sudah punya akun?</div>
                             <a class=" inline-block bg-gradient-to-l from-[#006C56] to-[#DBFEC1] bg-clip-text text-transparent text-[12px] xl:text-[16px] font-[700] font-montserrat"
+                                href="/login">Masuk disini</a>
                                 href="/login">Masuk disini</a>
                         </div>
                     </div>

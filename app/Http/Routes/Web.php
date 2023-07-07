@@ -29,22 +29,26 @@ use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
 use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
-use App\Http\Controllers\Pages\IsClassRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxSelection;
+use App\Http\Controllers\Pages\Maintenance;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
 Route::get('icon', IconLanding::class)->name('landing.icon');
 Route::get('rise', RiseLanding::class)->name('landing.rise');
+Route::get('bionix', BionixLanding::class)->name('landing.bionix');
 Route::get('icon/ds-academy', DsAcademyLanding::class)->name('landing.dsAcademy');
 
+
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
-Route::get('/terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
+Route::get('terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
+Route::get('maintenance', Maintenance::class)->name('maintenance');
 
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
@@ -91,6 +95,8 @@ Route::middleware(['guest'])->group(function () {
     Route::get('forgot', RequestForgot::class)->name('request-forgot');
 });
 
+
+
 // check if development
 if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('swiper', Swiper::class);
@@ -103,7 +109,6 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
     Route::get('my/isclass/registration', IsClassRegistration::class); #temp for development
-    Route::get('bionix', BionixLanding::class); #temp for development
 
     //  Error Pages
     Route::get('404', Error404::class)->name('404');

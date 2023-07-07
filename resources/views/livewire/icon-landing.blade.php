@@ -23,7 +23,7 @@
                         <h1 style="line-height: 80%" class=" absolute left-0 xs:top-1 lg:top-5 z-30 font-montserrat text-[40px] xs:text-[60px] sm:text-[70px] md:text-[80px] lg:text-[80px] xl:text-[120px] font-extrabold from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.1)]">ICON</h1>
                     </div>
                     <p class=" mt-10 xs:mt-14 sm:mt-16 md:mt-20 lg:mt-24 xl:mt-32 z-30 font-montserrat lg:bottom-[10rem] xl:bottom-0 text-[9px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[24px] font-bold from-[#FF9355] to-[#FFD693] bg-gradient-to-r text-transparent bg-clip-text">#ISEProvectaFutura</p>
-                    <a href="#more" style="line-height: 80%" class="text-center items-center flex justify-center mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[60px] xs:w-[90px] sm:w-[130px] md:w-[145px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:opacity-75 rounded-[24px]" type="button">
+                    <a href="#more" style="line-height: 80%" class="text-center items-center flex justify-center mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[60px] xs:w-[90px] sm:w-[130px] md:w-[145px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px]" type="button">
                         <span class=" font-montserrat text-[7px] xs:text-[10px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-semibold text-[#FFEEE4]">Explore now</span>
                     </a>
             </div>
@@ -60,7 +60,7 @@
                         <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>Grand Talkshow ISE! 2023 </strong> merupakan kegiatan talkshow interaktif yang diadakan secara online dan merupakan rangkaian acara pembuka untuk kegiatan ISE! 2023.  Pada ISE! 2023, Grand Talkshow akan membawakan tema, yaitu <strong>“Tech Innovators: Revolutionizing Industries with IT Solutions”</strong></p>
-                            <a href="/login" class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:opacity-75 rounded-[24px] self-center" type="button">
+                            <a href="/login" class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
                                 <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
                             </a>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
@@ -69,7 +69,7 @@
                             <div class=" mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8">
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="days_gts"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="days_gts">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Hari
                                         </p>
@@ -77,7 +77,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="hours_gts"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="hours_gts">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Jam
                                         </p>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="minutes_gts"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="minutes_gts">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Menit
                                         </p>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="seconds_gts"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="seconds_gts">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Detik
                                         </p>
@@ -124,7 +124,7 @@
                         <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>UX Academy</strong> merupakan <strong>rangkaian IT pelatihan/workshop</strong> yang memfasilitasi pembelajaran mengenai kemampuan di bidang teknologi dengan menghadirkan pengajar serta mentor yang ahli dan berpengalaman di bidang keilmuan tersebut.</p>
-                            <a href="/login" class=" text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:opacity-75 rounded-[24px] self-center" type="button">
+                            <a href="/login" class=" text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
                                 <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
                             </a>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
@@ -133,7 +133,7 @@
                             <div class=" mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8">
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="days_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="days_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Hari
                                         </p>
@@ -141,7 +141,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="hours_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="hours_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Jam
                                         </p>
@@ -149,7 +149,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="minutes_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="minutes_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Menit
                                         </p>
@@ -157,7 +157,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="seconds_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="seconds_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Detik
                                         </p>
@@ -170,7 +170,7 @@
                         <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>DS Academy</strong> merupakan <strong>rangkaian IT pelatihan/workshop</strong> yang memfasilitasi pembelajaran mengenai kemampuan di bidang teknologi dengan menghadirkan pengajar serta mentor yang ahli dan berpengalaman di bidang keilmuan tersebut.</p>
-                            <a href="/login" class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:opacity-75 rounded-[24px] self-center" type="button">
+                            <a href="/login" class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
                                 <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
                             </a>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
@@ -179,7 +179,7 @@
                             <div class=" mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8">
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="days_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="days_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Hari
                                         </p>
@@ -187,7 +187,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="hours_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="hours_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Jam
                                         </p>
@@ -195,7 +195,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="minutes_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="minutes_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Menit
                                         </p>
@@ -203,7 +203,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#348BB6] to-[#CCE1F0]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="seconds_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%" id="seconds_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#348BB6] to-[#CCE1F0] bg-gradient-to-r bg-clip-text" style="line-height: 100%">
                                             Detik
                                         </p>
@@ -590,39 +590,68 @@
         }, 1000);
     // GTS Countdown End
 
-    // dsux Countdown Start
-        // Set the countdown date and time
-        const countdownDate_dsux = new Date("July 23, 2023 00:00:00").getTime();
+// dsux Countdown Start
+// Set the countdown date and time
+const countdownDate_dsux = new Date('July 23, 2023 00:00:00').getTime();
 
-        // Update the countdown every second
-        const countdownTimer_dsux = setInterval(() => {
+// Update the countdown every second
+const countdownTimer_dsux = setInterval(() => {
+  // Get today's date and time
+  const now = new Date().getTime();
 
-        // Get today's date and time
-        const now = new Date().getTime();
+  // Find the distance between now and the countdown date
+  const distance = countdownDate_dsux - now;
 
-        // Find the distance between now and the countdown date
-        const distance = countdownDate_dsux - now;
+  // Calculate the days, hours, minutes, and seconds
+  const days_dsux = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours_dsux = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes_dsux = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds_dsux = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Calculate the days, hours, minutes, and seconds
-        const days_dsux = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours_dsux = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes_dsux = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds_dsux = Math.floor((distance % (1000 * 60)) / 1000);
+  // Select all elements with the ID "days_dsux" and update their content
+  document.querySelectorAll('#days_dsux').forEach((element) => {
+    element.innerHTML = `${days_dsux}`;
+  });
 
-        // Display the countdown
-        document.getElementById("days_dsux").innerHTML = `${days_dsux}`;
-        document.getElementById("hours_dsux").innerHTML = `${hours_dsux}`;
-        document.getElementById("minutes_dsux").innerHTML = `${minutes_dsux}`;
-        document.getElementById("seconds_dsux").innerHTML = `${seconds_dsux}`;
+  // Select all elements with the ID "hours_dsux" and update their content
+  document.querySelectorAll('#hours_dsux').forEach((element) => {
+    element.innerHTML = `${hours_dsux}`;
+  });
 
-        // If the countdown is finished, display a message
-        if (distance < 0) {
-            clearInterval(countdownTimer_dsux);
-            document.getElementById("days_dsux").innerHTML = "0";
-            document.getElementById("hours_dsux").innerHTML = "0";
-            document.getElementById("minutes_dsux").innerHTML = "0";
-            document.getElementById("seconds_dsux").innerHTML = "0";
-        }
-        }, 1000);
-    // dsux Countdown End
+  // Select all elements with the ID "minutes_dsux" and update their content
+  document.querySelectorAll('#minutes_dsux').forEach((element) => {
+    element.innerHTML = `${minutes_dsux}`;
+  });
+
+  // Select all elements with the ID "seconds_dsux" and update their content
+  document.querySelectorAll('#seconds_dsux').forEach((element) => {
+    element.innerHTML = `${seconds_dsux}`;
+  });
+
+  // If the countdown is finished, display a message
+  if (distance < 0) {
+    clearInterval(countdownTimer_dsux);
+
+    // Select all elements with the ID "days_dsux" and update their content to '0'
+    document.querySelectorAll('#days_dsux').forEach((element) => {
+      element.innerHTML = '0';
+    });
+
+    // Select all elements with the ID "hours_dsux" and update their content to '0'
+    document.querySelectorAll('#hours_dsux').forEach((element) => {
+      element.innerHTML = '0';
+    });
+
+    // Select all elements with the ID "minutes_dsux" and update their content to '0'
+    document.querySelectorAll('#minutes_dsux').forEach((element) => {
+      element.innerHTML = '0';
+    });
+
+    // Select all elements with the ID "seconds_dsux" and update their content to '0'
+    document.querySelectorAll('#seconds_dsux').forEach((element) => {
+      element.innerHTML = '0';
+    });
+  }
+}, 1000);
+// dsux Countdown End
   </script>

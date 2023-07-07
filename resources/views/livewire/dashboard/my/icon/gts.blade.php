@@ -234,6 +234,7 @@
                     </div>
                 </div>
 
+
                 <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-5 mb-3.5">Biodata Kamu
                 </div>
                 <div

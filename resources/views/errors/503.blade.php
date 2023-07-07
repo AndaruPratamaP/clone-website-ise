@@ -1,0 +1,1 @@
+{{ redirect()->intended('maintenance')->send() }}

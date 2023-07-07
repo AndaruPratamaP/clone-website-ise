@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
 
     <style>
+        .body {
+            color: white
+        }
         .container {
             background-color: #191a1e;
             width: 300px;
@@ -22,6 +25,7 @@
         .title {
             font-weight: 700;
             font-size: 24px;
+            color: white;
         }
 
         .desc-text {
