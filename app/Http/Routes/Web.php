@@ -101,16 +101,16 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/{user_id}/{action}', GtsAdminAction::class)->name("gts.action");
         });
         Route::prefix('ux')->middleware(['permission:admin.gts'])->group(function () {
-            Route::get('/', UxTable::class)->name("gts.table");
-            Route::get('/export', [UxTable::class, "export"])->name("gts.export");
-            Route::get('/{user_id}', UxDetailPeserta::class)->name("gts.detail");
-            Route::get('/{user_id}/{action}', UxAdminAction::class)->name("gts.action");
+            Route::get('/', UxTable::class)->name("uxacademy.table");
+            Route::get('/export', [UxTable::class, "export"])->name("uxacademy.export");
+            Route::get('/{user_id}', UxDetailPeserta::class)->name("uxacademy.detail");
+            Route::get('/{user_id}/{action}', UxAdminAction::class)->name("uxacademy.action");
         });
         Route::prefix('ds')->middleware(['permission:admin.gts'])->group(function () {
-            Route::get('/', DsTable::class)->name("gts.table");
-            Route::get('/export', [DsTable::class, "export"])->name("gts.export");
-            Route::get('/{user_id}', DsDetailPeserta::class)->name("gts.detail");
-            Route::get('/{user_id}/{action}', DsAdminAction::class)->name("gts.action");
+            Route::get('/', DsTable::class)->name("dsacademy.table");
+            Route::get('/export', [DsTable::class, "export"])->name("dsacademy.export");
+            Route::get('/{user_id}', DsDetailPeserta::class)->name("dsacademy.detail");
+            Route::get('/{user_id}/{action}', DsAdminAction::class)->name("dsacademy.action");
         });
     });
 
