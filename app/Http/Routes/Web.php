@@ -30,12 +30,20 @@ use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsAdminAction;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsDashboard;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsDetailPeserta;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsTable;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxAdminAction;
 use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxDashboard;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxSelection;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxTable;
 use App\Http\Controllers\Pages\Maintenance;
 
 Route::get('go/{short}', RedirectShortener::class);
@@ -67,6 +75,14 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/', GtsDashboard::class)->name('gts');
             Route::get('/registration', GtsRegistration::class)->name('gts.registration');
         });
+
+        Route::prefix('ds')->group(function () {
+            Route::get('/', DsDashboard::class)->name('dsacademy');
+        });
+
+        Route::prefix('ux')->group(function () {
+            Route::get('/', UxDashboard::class)->name('uxacademy');
+        });
     });
 
     Route::name('admin.')->prefix('admin')->middleware(['permission:admin'])->group(function () {
@@ -83,6 +99,18 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/export', [GtsTable::class, "export"])->name("gts.export");
             Route::get('/{user_id}', GtsDetailPeserta::class)->name("gts.detail");
             Route::get('/{user_id}/{action}', GtsAdminAction::class)->name("gts.action");
+        });
+        Route::prefix('ux')->middleware(['permission:admin.gts'])->group(function () {
+            Route::get('/', UxTable::class)->name("uxacademy.table");
+            Route::get('/export', [UxTable::class, "export"])->name("uxacademy.export");
+            Route::get('/{user_id}', UxDetailPeserta::class)->name("uxacademy.detail");
+            Route::get('/{user_id}/{action}', UxAdminAction::class)->name("uxacademy.action");
+        });
+        Route::prefix('ds')->middleware(['permission:admin.gts'])->group(function () {
+            Route::get('/', DsTable::class)->name("dsacademy.table");
+            Route::get('/export', [DsTable::class, "export"])->name("dsacademy.export");
+            Route::get('/{user_id}', DsDetailPeserta::class)->name("dsacademy.detail");
+            Route::get('/{user_id}/{action}', DsAdminAction::class)->name("dsacademy.action");
         });
     });
 
