@@ -47,21 +47,22 @@
         >
           #ISEProvectaFutura
         </p>
-        <button
+        <a
           style="line-height: 80%"
-          class="mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[60px] xs:w-[90px] sm:w-[130px] md:w-[145px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] flex justify-center items-center"
+          href="#more"
+          class="mt-2 sm:mt-4 lg:mt-4 xl:mt-6 z-30 w-[60px] xs:w-[90px] sm:w-[130px] md:w-[145px] lg:w-[185px] xl:w-[250px] h-[20px] xs:h-[26px] sm:h-[35px] md:h-[40px] lg:h-[43px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] flex justify-center items-center hover:scale-105 transition-all ease-in-out duration-200"
           type="button"
         >
           <span
-            class="font-montserrat text-[7px] xs:text-[10px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-semibold text-[#FFEEE4] hover:brightness-75"
+            class="font-montserrat text-[7px] xs:text-[10px] sm:text-[14px] md:text-[16px] lg:text-[16px] xl:text-[20px] font-semibold text-[#FFEEE4]"
             >Explore now</span
           >
-        </button>
+        </a>
       </div>
     </div>
   </section>
   {{-- section 2 DONE--}}
-  <section class="min-w-full min-h-[20rem] xs:min-h-[21rem] lg:min-h-[29rem] xl:min-h-[41rem]">
+  <section class="min-w-full min-h-[20rem] xs:min-h-[21rem] lg:min-h-[29rem] xl:min-h-[41rem]" id="more">
     <div class="relative z-0">
       <img class=" absolute h-[30rem] lg:w-[70rem] lg:h-[60rem] sm:w-[40rem] xl:w-[85rem] xl:h-[90rem] lg:left-[0rem]
       xl:left-[0rem] top-0" src= {{ asset('images/icon/IconLP_Sect2_Background.png') }} alt=""> <img class=" absolute
@@ -123,19 +124,19 @@
               <p
                 class="font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-4 xl:px-8 mt-[-0.5rem] xl:mt-[-1rem] lg:mt-[-1rem]"
               >
-                Konsep terbaru dari BIONIX Student Level yang ditujukan untuk memberikan pengalaman seputar keilmuan,
+                Konsep terbaru dari BIONIX Competition yang ditujukan untuk memberikan pengalaman seputar keilmuan,
                 kehidupan perkuliahan, dan keprofesian dari Departemen Sistem Informasi ITS dalam bentuk simulasi
                 perkuliahan dengan beberapa materi sesuai dengan kurikulum dan disampaikan oleh dosen Sistem Informasi
-                ITS selama masa belajar mengajar berlangsung. Konsep terbaru dari BIONIX Student Level
+                ITS selama masa belajar mengajar berlangsung. Konsep terbaru dari BIONIX Competition
               </p>
-              <button
-                class="mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
-                type="button"
+              <a
+                href="/login"
+                class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
                   >Registrasi Sekarang</span
                 >
-              </button>
+              </a>
               <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
               >
@@ -225,26 +226,24 @@
           </div>
           <div class="hidden lg:block swiper-slide">
             <div
-              class="flex justify-center content-center flex-col from-[#6BB9E7] to-[#894584] bg-gradient-to-tl mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:mb-10 xl:mb-16 lg:mt-12 xl:mt-32 lg:p-8 xl:p-10 rounded-[25px]"
+              class="flex justify-center content-center flex-col bg-gradient-orange-br mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:mb-10 xl:mb-16 lg:mt-12 xl:mt-32 lg:p-8 xl:p-10 rounded-[25px]"
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-[#894584] lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit mb-4"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
-                <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-[#F3F3F3] font-montserrat">Mentoring</h5>
+                <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-[#FFA969] font-montserrat">Course Material</h5>
               </div>
               <p
-                class="font-semibold lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[21rem] xl:max-w-[33rem]"
+                class="font-semibold lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[16rem] xl:max-w-[31rem]"
               >
-                Daftarlah sekarang dan dapatkan kesempatan mentoring langsung dari pemateri kompeten dalam bidang bisnis
-                dan teknologi informasi di acara RISE 2023. Tingkatkan ide bisnis Anda dengan panduan ahli untuk
-                mencapai kesuksesan.
+              Rasakan atmosfer perkuliahan langsung dan dapatkan materi perkuliahan dasar Departemen Sistem Informasi ITS meliputi pengenalan konsep-konsep fundamental dalam bidang Sistem Informasi.
               </p>
               <div class="relative">
                 <img
-                  class="absolute right-[-15px] bottom-[-15px] lg:w-[230px] xl:w-[280px] lg:h-[140px] xl:h-[170px]"
-                  src="{{ asset('images/rise-landing/Sect3-Disc-Img.png') }}"
+                  class="absolute right-[-15px] bottom-[-15px] lg:w-[200px] xl:w-[270px] lg:h-[180px] xl:h-[230px]"
+                  src="{{ asset('images/bionix/course.png') }}"
                   alt=""
                 />
               </div>
@@ -260,15 +259,63 @@
                 <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-[#F3F3F3] font-montserrat">E-Certificate</h5>
               </div>
               <p
-                class="font-semibold lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[21rem] xl:max-w-[33rem]"
+                class="font-semibold lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[16rem] xl:max-w-[31rem]"
               >
-                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara RISE 2023! Daftarlah sekarang dan ikuti
+                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara BIONIX 2023! Daftarlah sekarang dan ikuti
                 rangkaian kegiatan kami untuk memperoleh sertifikat digital yang telah diverifikasi secara nasional.
               </p>
               <div class="relative">
                 <img
                   class="absolute right-[-15px] bottom-[-15px] lg:w-[200px] xl:w-[270px] lg:h-[150px] xl:h-[200px]"
                   src="{{ asset('images/rise-landing/Sect3-Certificate-Img.png') }}"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="hidden lg:block swiper-slide">
+            <div
+              class="flex justify-center content-center flex-col bg-[#191A1E] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:mb-10 xl:mb-16 lg:mt-12 xl:mt-32 lg:p-8 xl:p-10 rounded-[25px]"
+              style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
+            >
+              <div
+                class="bg-[#121319] lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit mb-4"
+                style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
+              >
+                <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-white font-montserrat">Discount</h5>
+              </div>
+              <p
+                class="font-semibold lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[16rem] xl:max-w-[31rem]"
+              >
+              Ikuti dan dapatkan kesempatan eksklusif untuk mendapatkan potongan harga istimewa untuk pendaftaran BIONIX Competition 2023 dengan syarat dan ketentuan yang berlaku.
+            </p>
+              <div class="relative">
+                <img
+                  class="absolute right-[-15px] bottom-[-15px] lg:w-[200px] xl:w-[270px] lg:h-[150px] xl:h-[200px]"
+                  src="{{ asset('images/bionix/cashback.png') }}"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="flex justify-center content-center flex-col bg-[#F3F3F3] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:p-8 xl:p-10 rounded-[25px]"
+              style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
+            >
+              <div
+                class="bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit mb-4"
+                style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
+              >
+                <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-black font-montserrat">Consumption</h5>
+              </div>
+              <p
+                class="font-semibold lg:text-[16px] xl:text-[24px] text-black font-montserrat lg:max-w-[16rem] xl:max-w-[31rem]"
+              >
+                    Jangan khawatir,Daftarlah sekarang dan nikmati konsumsi gratis yang disediakan khusus untuk setiap peserta IS Class 2023 selama masa pelaksanaan event ini berlangsung.
+                </p>
+              <div class="relative">
+                <img
+                  class="absolute right-[-15px] bottom-[-15px] lg:w-[150px] xl:w-[210px] lg:h-[150px] xl:h-[200px]"
+                  src="{{ asset('images/bionix/shopping.png') }}"
                   alt=""
                 />
               </div>
@@ -299,19 +346,19 @@
               <p
                 class="font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-4 xl:px-8 mt-[-0.5rem] xl:mt-[-1rem] lg:mt-[-1rem]"
               >
-                Konsep terbaru dari BIONIX Student Level yang ditujukan untuk memberikan pengalaman seputar keilmuan,
+                Konsep terbaru dari BIONIX Competition yang ditujukan untuk memberikan pengalaman seputar keilmuan,
                 kehidupan perkuliahan, dan keprofesian dari Departemen Sistem Informasi ITS dalam bentuk simulasi
                 perkuliahan dengan beberapa materi sesuai dengan kurikulum dan disampaikan oleh dosen Sistem Informasi
-                ITS selama masa belajar mengajar berlangsung. Konsep terbaru dari BIONIX Student Level
+                ITS selama masa belajar mengajar berlangsung. Konsep terbaru dari BIONIX Competition
               </p>
-              <button
-                class="mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
-                type="button"
+              <a
+              href="/login"
+                class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
                   >Registrasi Sekarang</span
                 >
-              </button>
+              </a>
               <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
               >
@@ -405,31 +452,29 @@
           </div>
           <div class="swiper-slide">
             <div
-              class="flex content-center flex-col min-h-full xs:min-h-[483px] md:min-h-[580px] from-[#6BB9E7] to-[#894584] bg-gradient-to-tl mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:mt-[14rem] xl:mt-[22rem] p-4 xs:p-6 lg:p-8 xl:p-10 rounded-[25px]"
+              class="flex content-center flex-col min-h-full xs:min-h-[483px] md:min-h-[580px] bg-gradient-orange-br mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:mt-[14rem] xl:mt-[22rem] p-4 xs:p-6 lg:p-8 xl:p-10 rounded-[25px]"
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-[#894584] py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-12 xs:pr-16 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="bg-white py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-12 xs:pr-16 lg:pr-20 xl:pr-24 w-fit mb-4"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5
-                  class="font-bold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[36px] text-[#F3F3F3] font-montserrat"
+                  class="font-bold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[36px] text-[#FFA969] font-montserrat"
                   style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
                 >
-                  Mentoring
+                  Course Material
                 </h5>
               </div>
               <p
                 class="font-semibold min-h-[250px] xs:min-h-[310px] sm:min-h-[280px] md:min-h-[350px] text-[12px] xs:text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[21rem] xl:max-w-[35rem]"
               >
-                Daftarlah sekarang dan dapatkan kesempatan mentoring langsung dari pemateri kompeten dalam bidang bisnis
-                dan teknologi informasi di acara RISE 2023. Tingkatkan ide bisnis Anda dengan panduan ahli untuk
-                mencapai kesuksesan.
+              Rasakan atmosfer perkuliahan langsung dan dapatkan materi perkuliahan dasar Departemen Sistem Informasi ITS meliputi pengenalan konsep-konsep fundamental dalam bidang Sistem Informasi.
               </p>
               <div class="relative">
                 <img
-                  class="absolute right-[-5px] xs:right-[-10px] bottom-[-60px] xs:bottom-[-70px] sm:bottom-[-100px] w-[115px] xs:w-[150px] sm:w-[190px] md:w-[220px] lg:w-[230px] xl:w-[280px] h-[70px] xs:h-[90px] sm:h-[120px] md:h-[130px] lg:h-[140px] xl:h-[170px]"
-                  src="{{ asset('images/rise-landing/Sect3-Disc-Img.png') }}"
+                  class="absolute right-[-5px] xs:right-[-10px] bottom-[-60px] xs:bottom-[-70px] sm:bottom-[-100px] w-1/2"
+                  src="{{ asset('images/bionix/course.png') }}"
                   alt=""
                 />
               </div>
@@ -454,13 +499,74 @@
               <p
                 class="font-semibold min-h-[250px] xs:min-h-[310px] sm:min-h-[280px] md:min-h-[350px] text-[12px] xs:text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[21rem] xl:max-w-[35rem]"
               >
-                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara RISE 2023! Daftarlah sekarang dan ikuti
+                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara BIONIX 2023! Daftarlah sekarang dan ikuti
                 rangkaian kegiatan kami untuk memperoleh sertifikat digital yang telah diverifikasi secara nasional.
               </p>
               <div class="relative">
                 <img
                   class="absolute right-[-5px] bottom-[-60px] sm:bottom-[-110px] w-[100px] sm:w-[190px] lg:w-[200px] xl:w-[270px] h-[75px] sm:h-[140px] lg:h-[150px] xl:h-[200px]"
                   src="{{ asset('images/rise-landing/Sect3-Certificate-Img.png') }}"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex content-center flex-col min-h-full xs:min-h-[483px] md:min-h-[580px] bg-[#191A1E] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:mt-[14rem] xl:mt-[22rem] p-4 xs:p-6 lg:p-8 xl:p-10 rounded-[25px]"
+              style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
+            >
+              <div
+                class="bg-[#121319] py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-12 xs:pr-16 lg:pr-20 xl:pr-24 w-fit mb-4"
+                style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
+              >
+                <h5
+                  class="font-bold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[36px] text-white font-montserrat"
+                  style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                >
+                  Discount
+                </h5>
+              </div>
+              <p
+                class="font-semibold min-h-[250px] xs:min-h-[310px] sm:min-h-[280px] md:min-h-[350px] text-[12px] xs:text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[21rem] xl:max-w-[35rem]"
+              >
+              Ikuti dan dapatkan kesempatan eksklusif untuk mendapatkan potongan harga istimewa untuk pendaftaran BIONIX Competition 2023 dengan syarat dan ketentuan yang berlaku.
+              </p>
+              <div class="relative">
+                <img
+                  class="absolute right-[-5px] xs:right-[-10px] bottom-[-60px] xs:bottom-[-70px] sm:bottom-[-100px] w-1/2"
+                  src="{{ asset('images/bionix/cashback.png') }}"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="flex content-center flex-col min-h-full xs:min-h-[483px] md:min-h-[580px] bg-[#F3F3F3] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:mt-[14rem] xl:mt-[22rem] p-4 xs:p-6 lg:p-8 xl:p-10 rounded-[25px]"
+              style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
+            >
+              <div
+                class="bg-white py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-6 xs:pr-8 lg:pr-20 xl:pr-24 w-fit mb-4"
+                style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
+              >
+                <h5
+                  class="font-bold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[36px] text-black font-montserrat"
+                  style="text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+                >
+                  Consumption
+                </h5>
+              </div>
+              <p
+                class="font-semibold min-h-[250px] xs:min-h-[310px] sm:min-h-[280px] md:min-h-[350px] text-[12px] xs:text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[24px] text-black font-montserrat lg:max-w-[21rem] xl:max-w-[35rem]"
+              >
+                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara BIONIX 2023! Daftarlah sekarang dan ikuti
+                rangkaian kegiatan kami untuk memperoleh sertifikat digital yang telah diverifikasi secara nasional.
+              </p>
+              <div class="relative">
+                <img
+                  class="absolute right-[-5px] bottom-[-60px] sm:bottom-[-110px] w-1/2"
+                  src="{{ asset('images/bionix/shopping.png') }}"
                   alt=""
                 />
               </div>
@@ -521,14 +627,14 @@
                 logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, Final
                 Presentasi Bisnis, dan terakhir Awarding Night.
               </p>
-              <button
-                class="mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
-                type="button"
+              <a
+                class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
+                href="/login"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
                   >Registrasi Sekarang</span
                 >
-              </button>
+              </a>
               <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
               >
@@ -634,7 +740,7 @@
               <p
                 class="font-semibold lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[16rem] xl:max-w-[31rem]"
               >
-                Daftarlah sekarang dan dapatkan kesempatan mendapatkan Free Pass Departemen Sistem Informasi ITS. Raih kemenangan pada kompetisi BIONIX Student Level 2023 dan capai mimpi Anda.
+                Daftarlah sekarang dan dapatkan kesempatan mendapatkan Free Pass Departemen Sistem Informasi ITS. Raih kemenangan pada kompetisi BIONIX Competition 2023 dan capai mimpi Anda.
               </p>
               <div class="relative">
                 <img
@@ -657,7 +763,7 @@
               <p
                 class="font-semibold lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[16rem] xl:max-w-[31rem]"
               >
-                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara RISE 2023! Daftarlah sekarang dan ikuti
+                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara BIONIX 2023! Daftarlah sekarang dan ikuti
                 rangkaian kegiatan kami untuk memperoleh sertifikat digital yang telah diverifikasi secara nasional.
               </p>
               <div class="relative">
@@ -707,7 +813,7 @@
               <p
                 class="font-semibold lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[16rem] xl:max-w-[31rem]"
               >
-                Mendapatkan akomodasi penuh selama perlombaan pada babak semifinal dan final BIONIX Student Level 2023 berlangsung di Departemen Sistem Informasi ITS, Surabaya, Jawa Timur.
+                Mendapatkan akomodasi penuh selama perlombaan pada babak semifinal dan final BIONIX Competition 2023 berlangsung di Departemen Sistem Informasi ITS, Surabaya, Jawa Timur.
               </p>
               <div class="relative">
                 <img
@@ -748,14 +854,14 @@
                 logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, Final
                 hnPresentasi Bisnis, dan terakhir Awarding Night.
               </p>
-              <button
-                class="mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
-                type="button"
+              <a
+                class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
+                href="/login"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
                   >Registrasi Sekarang</span
                 >
-              </button>
+              </a>
               <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
               >
@@ -866,7 +972,7 @@
               <p
                 class="font-semibold min-h-[250px] xs:min-h-[310px] sm:min-h-[280px] md:min-h-[350px] text-[12px] xs:text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[21rem] xl:max-w-[35rem]"
               >
-              Daftarlah sekarang dan dapatkan kesempatan mendapatkan Free Pass Departemen Sistem Informasi ITS. Raih kemenangan pada kompetisi BIONIX Student Level 2023 dan capai mimpi Anda.
+              Daftarlah sekarang dan dapatkan kesempatan mendapatkan Free Pass Departemen Sistem Informasi ITS. Raih kemenangan pada kompetisi BIONIX Competition 2023 dan capai mimpi Anda.
               </p>
               <div class="relative">
                 <img
@@ -896,7 +1002,7 @@
               <p
                 class="font-semibold min-h-[250px] xs:min-h-[310px] sm:min-h-[280px] md:min-h-[350px] text-[12px] xs:text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[21rem] xl:max-w-[35rem]"
               >
-                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara RISE 2023! Daftarlah sekarang dan ikuti
+                Jangan lewatkan kesempatan emas untuk menjadi bagian dari acara BIONIX 2023! Daftarlah sekarang dan ikuti
                 rangkaian kegiatan kami untuk memperoleh sertifikat digital yang telah diverifikasi secara nasional.
               </p>
               <div class="relative">
@@ -958,11 +1064,11 @@
               <p
                 class="font-semibold min-h-[250px] xs:min-h-[310px] sm:min-h-[280px] md:min-h-[350px] text-[12px] xs:text-[14px] sm:text-[16px] lg:text-[16px] xl:text-[24px] text-white font-montserrat lg:max-w-[21rem] xl:max-w-[35rem]"
               >
-              Mendapatkan akomodasi penuh selama perlombaan pada babak semifinal dan final BIONIX Student Level 2023 berlangsung di Departemen Sistem Informasi ITS, Surabaya, Jawa Timur.
+              Mendapatkan akomodasi penuh selama perlombaan pada babak semifinal dan final BIONIX Competition 2023 berlangsung di Departemen Sistem Informasi ITS, Surabaya, Jawa Timur.
               </p>
               <div class="relative">
                 <img
-                  class="absolute right-[-5px] bottom-[-60px] sm:bottom-[-110px] w-[100px] sm:w-[190px] lg:w-[200px] xl:w-[270px] h-[75px] sm:h-[140px] lg:h-[150px] xl:h-[200px]"
+                  class="absolute right-[-15px] bottom-[-15px] lg:w-[200px] xl:w-[270px] lg:h-[150px] xl:h-[200px]"
                   src="{{ asset('images/bionix/cashback.png') }}"
                   alt=""
                 />
@@ -1049,7 +1155,7 @@
                 </div>
                 <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px]
                 xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
-                {{ asset('images/bionix/BionixLP_Sect5_Profile.png') }} alt="">
+                {{ asset('images/bionix/testi-1.png') }} alt="">
               </div>
               <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                 <div class="inline-block">
@@ -1087,20 +1193,17 @@
                 <p
                   class="mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify"
                 >
-                  “Dari BIONIX, wawasanku lebih terbuka tentang sistem informasi dan dapat banyak wawasan baru yang
-                  sebelumnya gak aku dapetin di SMA. Selain itu, di BIONIX aku juga dapet banyak temen baru yang bahkan
-                  masih keep contact sampai sekarang sehingga dari sini aku juga bisa memperluas relasi. Last but not
-                  least, aku juga dapat Free Pass SNMPTN Sistem Informasi ITS berkat BIONIX.”
+                  “Waktu ikut tahun 2020 itu  aku kaget soalnya format  perlombaannya berubah drastis dari yang biasanya ngerjain soal jadi business plan. Alhamdulillah setelah penyisihan, semifinal kemudian masuk final dan ditanya-tanyain pertanyaan-pertanyaan sulit oleh juri, aku sama Fano berhasil meraih Juara 1.”
                 </p>
                 <h5
                   class="mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold"
                 >
-                  Nama Lengkap
+                    Ahmadhian Daffa Yudistira
                 </h5>
                 <h5
                   class="z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold"
                 >
-                  1st Winner BIONIX 2022
+                  1st Winner BIONIX 2020
                 </h5>
               </div>
             </div>
@@ -1123,7 +1226,7 @@
                 </div>
                 <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px]
                 xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
-                {{ asset('images/bionix/BionixLP_Sect5_Profile.png') }} alt="">
+                {{ asset('images/bionix/testi-2.png') }} alt="">
               </div>
               <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                 <div class="inline-block">
@@ -1161,20 +1264,88 @@
                 <p
                   class="mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify"
                 >
-                  “Dari BIONIX, wawasanku lebih terbuka tentang sistem informasi dan dapat banyak wawasan baru yang
-                  sebelumnya gak aku dapetin di SMA. Selain itu, di BIONIX aku juga dapet banyak temen baru yang bahkan
-                  masih keep contact sampai sekarang sehingga dari sini aku juga bisa memperluas relasi. Last but not
-                  least, aku juga dapat Free Pass SNMPTN Sistem Informasi ITS berkat BIONIX.”
+                  “Bionix jadi salah satu kompetisi yang berkesan selama aku di SMK. Acara worth to try yang bukan cuma lomba, tapi juga ngasih banyak pengetahuan baru tentang bisnis yang nggak didapat di sekolah dulu. Ditambah bisa lebih tahu tentang SI ITS dan bisa dapet freepass juga. Semangat buat peserta tahun ini, bionix bisa jadi awal yang bagus buat belajar bisnis dan IT!”
                 </p>
                 <h5
                   class="mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold"
                 >
-                  Nama Lengkap
+                Agnes Juliana
                 </h5>
                 <h5
                   class="z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold"
                 >
-                  1st Winner BIONIX 2022
+                  1st Winner BIONIX 2021
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="flex flex-col lg:flex-row">
+              <div class="flex justify-center content-center lg:min-w-[300px] xl:min-w-[445px] flex-col">
+                <div class="relative">
+                  <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-4
+                  xs:left-16 sm:left-20 md:left-32 lg:left-4 xl:left-6 top-8 lg:top-[1rem] xl:top-[-1rem] z-30" src= {{
+                  asset('images/icon/IconLP_Sect5_ProfileDecor1.png') }} alt=""> <img class=" absolute w-[170px]
+                  xs:w-[197.5px] md:w-[210px] lg:w-[231px] xl:w-[350px] h-[215px] xs:h-[255px] md:h-[275px] lg:h-[295px]
+                  xl:h-[447px] mx-[2.5rem] xs:mx-[4.75rem] sm:mx-[6.25rem] md:mx-[9rem] lg:mx-0 my-[2.75rem] lg:my-0
+                  lg:left-8 xl:left-12 lg:top-[2rem] xl:top-2 z-10 drop-shadow-[0_4px_4px_rgba(1,1,1,0.25)]" src= {{
+                  asset('images/icon/IconLP_Sect5_ProfileDecor2.png') }} alt=""> <img class=" absolute w-[50px]
+                  lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-[11rem] xs:left-[14.5rem]
+                  sm:left-[16rem] md:left-[20rem] lg:left-[13.5rem] xl:left-[20rem] top-[13.5rem] xs:top-[16rem]
+                  md:top-[17rem] lg:top-[17rem] xl:top-[23rem] z-30" src= {{
+                  asset('images/icon/IconLP_Sect5_ProfileDecor3.png') }} alt="">
+                </div>
+                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px]
+                xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
+                {{ asset('images/bionix/testi-3.png') }} alt="">
+              </div>
+              <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+                <div class="inline-block">
+                  <span
+                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
+                  >
+                    Bisa dapat
+                  </span>
+                  <span
+                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none"
+                  >
+                    Free Pass SNMPTN
+                  </span>
+                  <span
+                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none"
+                  >
+                    banyak relasi
+                  </span>
+                  <span
+                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
+                  >
+                    , dan
+                  </span>
+                  <span
+                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none"
+                  >
+                    wawasan baru!
+                  </span>
+                </div>
+                <p
+                  class="mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify"
+                >
+                  “Bionix ini adalah lomba pertama yang aku ikuti sewaktu SMK. Bisa dibilang tiap tahun aku ikut Bionix, kalau ditotal berarti 3 kali. Waktu pertama kali ikut Bionix mikirnya mau buat nambah pengalaman aja, tapi ternyata tiap tahun jadi tertantang buat bisa lolos sampai di final. Dan akhirnya di tahun terakhir SMK Alhamdulillah harapan itu jadi nyata dan bisa dapat freepass SI ITS. ”
+                </p>
+                <h5
+                  class="mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold"
+                >
+                Belva Talihta Dwiyanti
+                </h5>
+                <h5
+                  class="z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold"
+                >
+                  1st Winner BIONIX 2021
                 </h5>
               </div>
             </div>
@@ -1532,7 +1703,7 @@
           >
             <span
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
-              >Is there a refund if I cancel?</span
+              >Apa itu BIONIX?</span
             >
             <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
               <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
@@ -1549,7 +1720,7 @@
             <h4
               class="z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
             >
-              Is there a refund if I cancel?
+              Apa itu BIONIX?
             </h4>
             <div class="z-30 relative w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
@@ -1558,8 +1729,7 @@
             <p
               class="z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet
-              pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+            BIONIX ISE! 2023 adalah rangkaian kompetisi berupa seleksi olimpiade SMA/SMK/sederajat tingkat nasional yang berhadiah free pass SNMPTN Sistem Informasi ITS bagi pemenangnya. BIONIX memiliki tiga tahap kompetisi yaitu penyisihan, semifinal, dan final. Tahapan kompetisi BIONIX akan dilaksanakan secara offline dan online.
             </p>
           </button>
         </div>
@@ -1576,7 +1746,8 @@
           >
             <span
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
-              >Will this travel documentary be uploaded on YouTube?</span
+              >Berapa harga pendaftaran BIONIX?
+</span
             >
             <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
               <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
@@ -1593,7 +1764,8 @@
             <h4
               class="z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
             >
-              Will this travel documentary be uploaded on YouTube?
+              Berapa harga pendaftaran BIONIX?
+
             </h4>
             <div class="z-30 relative w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
@@ -1602,8 +1774,7 @@
             <p
               class="z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet
-              pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+            Biaya pendaftaran BIONIX adalah sebesar Rp100.000,00/tim dengan setiap tim terdiri dari maksimal  2  (dua)  orang.  Harga  pendaftaran  dapat  dikurangi  jika  calon  peserta mendapatkan promo khusus selama masa pendaftaran BIONIX berlangsung.
             </p>
           </button>
         </div>
@@ -1620,7 +1791,7 @@
           >
             <span
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
-              >Is there a ticket purchase limit?</span
+              >Apakah peserta boleh mendaftarkan diri lebih dari satu tim di BIONIX?</span
             >
             <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
               <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
@@ -1637,7 +1808,7 @@
             <h4
               class="z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
             >
-              Is there a ticket purchase limit?
+              Apakah peserta boleh mendaftarkan diri lebih dari satu tim di BIONIX?
             </h4>
             <div class="z-30 relative w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
@@ -1646,8 +1817,7 @@
             <p
               class="z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet
-              pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+            Tidak. Peserta hanya boleh mendaftar di satu tim saja. Jika panitia ISE! 2023 mendeteksi adanya peserta ganda (terdaftar di lebih dari satu tim), maka peserta tersebut akan didiskualifikasi.
             </p>
           </button>
         </div>
@@ -1664,7 +1834,7 @@
           >
             <span
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
-              >Where is the meeting place?</span
+              >Apakah tim BIONIX boleh terdiri atas lintas tahun angkatan ataupun berbeda jenis kelamin?</span
             >
             <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
               <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
@@ -1681,7 +1851,7 @@
             <h4
               class="z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
             >
-              Where is the meeting place?
+              Apakah tim BIONIX boleh terdiri atas lintas tahun angkatan ataupun berbeda jenis kelamin?
             </h4>
             <div class="z-30 relative w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
@@ -1690,8 +1860,93 @@
             <p
               class="z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet
-              pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+            Ya, tim diperbolehkan terdiri atas lintas tahun angkatan maupun berbeda jenis kelamin selama anggota tim masih berasal dari sekolah yang sama.
+            </p>
+          </button>
+        </div>
+        <div
+          x-data="{open:false}"
+          class="z-30 w-[300px] xs:w-[375px] sm:w-[500px] md:w-[600px] lg:w-[48rem] xl:w-[65rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col"
+        >
+          <button
+            @click="open=!open"
+            x-cloak
+            x-transition
+            x-show="!open"
+            class="z-30 w-[300px] xs:w-[375px] sm:w-[500px] md:w-[600px] lg:w-[48rem] xl:w-[65rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent"
+          >
+            <span
+              class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
+              >Di mana pelaksanaan tahap Penyisihan BIONIX?</span
+            >
+            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
+              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            </div>
+          </button>
+          <button
+            @click="open=!open"
+            style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25)"
+            x-show="open"
+            x-cloak
+            class="z-30 flex flex-col px-4 w-[300px] xs:w-[375px] sm:w-[500px] md:w-[600px] lg:min-w-[48rem] xl:min-w-[65rem] mx-4 py-6 text-white self-center rounded-[5px]"
+            x-transition
+          >
+            <h4
+              class="z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
+            >
+              Di mana pelaksanaan tahap Penyisihan BIONIX?
+            </h4>
+            <div class="z-30 relative w-full">
+              <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
+              h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
+            </div>
+            <p
+              class="z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left"
+            >
+            Tahap penyisihan BIONIX akan diadakan secara online, sedangkan Semifinal dan Final akan diadakan secara offline di Departemen Sistem Informasi ITS Surabaya, Jawa Timur. Selama tahapan bersifat online, pengerjaan soal BIONIX dapat dilakukan di mana saja. Hal yang dibutuhkan hanyalah koneksi internet yang stabil dan memadai.
+            </p>
+          </button>
+        </div>
+        <div
+          x-data="{open:false}"
+          class="z-30 w-[300px] xs:w-[375px] sm:w-[500px] md:w-[600px] lg:w-[48rem] xl:w-[65rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col"
+        >
+          <button
+            @click="open=!open"
+            x-cloak
+            x-transition
+            x-show="!open"
+            class="z-30 w-[300px] xs:w-[375px] sm:w-[500px] md:w-[600px] lg:w-[48rem] xl:w-[65rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent"
+          >
+            <span
+              class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
+              >Bagaimana bentuk soal BIONIX?</span
+            >
+            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
+              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            </div>
+          </button>
+          <button
+            @click="open=!open"
+            style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25)"
+            x-show="open"
+            x-cloak
+            class="z-30 flex flex-col px-4 w-[300px] xs:w-[375px] sm:w-[500px] md:w-[600px] lg:min-w-[48rem] xl:min-w-[65rem] mx-4 py-6 text-white self-center rounded-[5px]"
+            x-transition
+          >
+            <h4
+              class="z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
+            >
+              Bagaimana bentuk soal BIONIX?
+            </h4>
+            <div class="z-30 relative w-full">
+              <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
+              h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
+            </div>
+            <p
+              class="z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left"
+            >
+            oal penyisihan BIONIX dikategorikan ke dalam bidang keilmuan sistem informasi seperti Sistem Perusahaan, Data dan Statistik, Manajemen Sistem Informasi, dan Infrastruktur dan Keamanan TI. Untuk mengetahui contoh soal-soal yang akan diujikan, peserta dapat mengikuti simulasi Tryout yang diberikan.
             </p>
           </button>
         </div>
