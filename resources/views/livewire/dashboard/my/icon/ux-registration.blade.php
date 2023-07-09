@@ -415,27 +415,30 @@
                 </div>
               </button>
             </div>
+            <div class="mt-10 sm:mt-24 pb-10 sm:pb-14 flex justify-between flex-row items-center">
+                <a href="https://www.wa.me/+62911" class="items-center hover:brightness-90">
+                  <img
+                    class="w-[45 px] h-[40px] lg:w-[55px] lg:h-[50px] align-top hover:opacity-60"
+                    src="{{ asset('/images/whatsapp.png ') }}"
+                  />
+                </a>
+                <div class="flex flex-row gap-2 md:gap-3 items-center text-slate-300">
+                  <a href="https://www.instagram.com/is_expo/" target="blank">
+                    <x-bi-instagram class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                  </a>
+                  <a href="https://tiktok.com" target="blank">
+                    <x-bi-tiktok class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                  </a>
+                  <a href="https://www.linkedin.com/company/ise-information-systems-expo-2023/" target="blank">
+                    <x-bi-linkedin class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                  </a>
+                </div>
+            </div>
           </div>
           {{-- button step 2 end --}} {{-- step 2 end --}}
         </form>
 
         {{-- form input end --}}
-
-        <footer>
-          <div class="float-right mt-40 mb-16">
-            <div class="flex gap-3 md:gap-4 lg:gap-5">
-              <a href="https://www.instagram.com/is_expo/" target="_blank"
-                ><x-bi-instagram class="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 hover:brightness-75"
-              /></a>
-              <a href="https://www.tiktok.com/@is_expo" target="_blank"
-                ><x-bi-tiktok class="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 hover:brightness-75"
-              /></a>
-              <a href="https://www.linkedin.com/company/ise-information-systems-expo-2023/" target="_blank"
-                ><x-bi-linkedin class="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 hover:brightness-75"
-              /></a>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
   </div>

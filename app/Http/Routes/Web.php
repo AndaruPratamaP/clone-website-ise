@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Pages\DsAcademyLanding;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pages\Error404;
 use App\Http\Controllers\Pages\Error500;
@@ -11,40 +10,44 @@ use App\Http\Controllers\Pages\Auth\Forgot;
 use App\Http\Controllers\Pages\Auth\Logout;
 use App\Http\Controllers\Pages\Auth\Verify;
 use App\Http\Controllers\Pages\IconLanding;
+use App\Http\Controllers\Pages\Maintenance;
 use App\Http\Controllers\Pages\RiseLanding;
 use App\Http\Controllers\Pages\Examples\Aos;
 use App\Http\Controllers\Pages\Auth\Register;
 use App\Http\Controllers\Pages\BionixLanding;
 use App\Http\Controllers\Pages\Examples\Swiper;
+use App\Http\Controllers\Pages\DsAcademyLanding;
 use App\Http\Controllers\Pages\Auth\RequestForgot;
 use App\Http\Controllers\Pages\TermsAndConditions;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsTable;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsDashboard;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxDashboard;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxSelection;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
 use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
 use App\Http\Controllers\Pages\Dashboard\AdminHomeDashboard;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsAdminAction;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxAdminAction;
 use App\Http\Controllers\Pages\Dashboard\Icon\DsRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsAdminAction;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
+use App\Http\Controllers\Pages\Dashboard\Icon\UxDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
-use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
-use App\Http\Controllers\Pages\Dashboard\Icon\DsAdminAction;
-use App\Http\Controllers\Pages\Dashboard\Icon\DsDashboard;
-use App\Http\Controllers\Pages\Dashboard\Icon\DsDetailPeserta;
-use App\Http\Controllers\Pages\Dashboard\Icon\DsTable;
-use App\Http\Controllers\Pages\Dashboard\Icon\UxAdminAction;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixDashboard;
 use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassDashboard;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
-use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRegistration;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
-use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
-use App\Http\Controllers\Pages\Dashboard\Icon\UxDashboard;
-use App\Http\Controllers\Pages\Dashboard\Icon\UxDetailPeserta;
-use App\Http\Controllers\Pages\Dashboard\Icon\UxSelection;
-use App\Http\Controllers\Pages\Dashboard\Icon\UxTable;
-use App\Http\Controllers\Pages\Maintenance;
+use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
@@ -82,6 +85,15 @@ Route::middleware(['auth'])->group(function () {
 
         Route::prefix('ux')->group(function () {
             Route::get('/', UxDashboard::class)->name('uxacademy');
+        });
+
+        Route::prefix('bionix')->group(function () {
+            Route::get('/', BionixDashboard::class)->name('bionix');
+            Route::get('/registration', BionixRegistration::class)->name('bionix.registration');
+        });
+
+        Route::prefix('isclass')->group(function () {
+            Route::get('/', IsClassDashboard::class)->name('isclass');
         });
     });
 
