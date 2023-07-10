@@ -5,18 +5,18 @@ namespace App\Http\Controllers\Pages\Dashboard\Icon;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class UxCommitment extends Component
+class DsSelection extends Component
 {
     use WithFileUploads;
-    public $payment;
+    public $answer;
 
     protected $rules = [
-        'payment' => 'required|image|max:1024',
+        'answer' => 'required|file|mimes:pdf|max:3072',
     ];
 
     public function render()
     {
-        return view('livewire.dashboard.my.icon.ux-commitment')->layout('layouts.only-layout');
+        return view('livewire.dashboard.my.icon.ds-selection')->layout('layouts.only-layout');
     }
 
     public function updated($propertyName)

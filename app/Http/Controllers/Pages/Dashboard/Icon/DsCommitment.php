@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Pages\Dashboard\Icon;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class UxCommitment extends Component
+class DsCommitment extends Component
 {
     use WithFileUploads;
     public $payment;
@@ -16,7 +16,7 @@ class UxCommitment extends Component
 
     public function render()
     {
-        return view('livewire.dashboard.my.icon.ux-commitment')->layout('layouts.only-layout');
+        return view('livewire.dashboard.my.icon.ds-commitment')->layout('layouts.only-layout');
     }
 
     public function updated($propertyName)
