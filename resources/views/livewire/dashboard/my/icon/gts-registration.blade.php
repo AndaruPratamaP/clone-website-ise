@@ -94,7 +94,7 @@
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">
                                     Bukti Upload Poster di IG Story <span class="text-[#FF1F00]">*</span>
                                 </label>
-                                <div class="text-[10px] leading-tight lg:text-sm text-white">Download poster <a target="blank" class="bg-gradient-green-r bg-clip-text text-transparent font-semibold hover:border-b-[1px] border-green-600" href="https://drive.google.com/file/d/11GQH2dr638KDVBmvjZ77wocBgDgQwWs_/view">di sini</a>. Share poster ke instagram story, lalu tag @is_expo dan tag 3 teman kalian.</div>
+                                <div class="text-[10px] leading-tight lg:text-sm text-white">Download poster <a target="blank" class="bg-gradient-green-r bg-clip-text text-transparent font-semibold hover:border-b-[1px] border-green-600" href="https://drive.google.com/file/d/1Sxo3nYNpMgvpIMDElYbRhcGbhIGP0atl/view">di sini</a>. Share poster ke instagram story, lalu tag @is_expo dan tag 3 teman kalian.</div>
                                 <label
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#66C1A7] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">

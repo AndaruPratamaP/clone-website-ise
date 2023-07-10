@@ -1,4 +1,4 @@
-@section('title', 'UX Commitment Fee')
+@section('title', 'DS Commitment Fee')
 {{-- before submit payment --}}
 <div class="bg-[#121316]">
     <div class="relative min-h-screen overflow-hidden mx-auto">
@@ -106,7 +106,7 @@
                 </p>
             </header>
             <div class="font-medium px-5 sm:px-6 md:px-12 lg:px-20 xl:px-24 2xl:px-30 font-['Montserrat']">
-                <p class="text-sm sm:text-lg lg:text-2xl my-4 sm:my-8">Terima kasih telah membayar commitment fee User Experience Academy! Selamat dan semangat mengikuti rangkaian acara.</p>
+                <p class="text-sm sm:text-lg lg:text-2xl my-4 sm:my-8">Terima kasih telah membayar commitment fee Data Science Academy! Selamat dan semangat mengikuti rangkaian acara.</p>
                 <a href="{{route('my.uxacademy')}}">
                 <button
                     class="mt-8 rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none hover:py-3.5">

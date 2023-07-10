@@ -1,9 +1,9 @@
-@section('title', 'DS Academy Home') @if (!$isRegistered)
+@section('title', 'Bionix Roadshow Home') @if (!$isRegistered)
 <div class="min-h-screen w-full p-4 xl:pl-12 font-poppins">
   <section>
     <div class="flex mb-5">
-      <p class="text-2xl bg-gradient-blue-r font-bold bg-clip-text text-transparent tracking-[0.07em]">
-        Data Science Academy
+      <p class="text-2xl bg-gradient-green-r font-bold bg-clip-text text-transparent tracking-[0.07em]">
+        Bionix Competition Roadshow Roadshow
       </p>
     </div>
   </section>
@@ -13,10 +13,10 @@
         <div class="flex flex-col text-white">
           <p class="text-xl font-medium pb-3 xl:self-start self-center">Deskripsi</p>
           <p class="text-sm sm:text-base font-light text-justify pt-4">
-            Data Science Academy ISE! 2023 merupakan kegiatan talkshow interaktif yang diadakan secara online dan
-            merupakan rangkaian acara pembuka untuk kegiatan ISE! 2023. Secara umum, Data Science Academy akan membahas
-            perkembangan era digital dan isu teknologi terkini. Konsep dari Data Science Academy akan dikemas dengan
-            suasana yang lebih santai serta terbuka gratis untuk masyarakat umum. Pada ISE! 2023, Data Science Academy
+            Bionix Competition Roadshow ISE! 2023 merupakan kegiatan talkshow interaktif yang diadakan secara online dan
+            merupakan rangkaian acara pembuka untuk kegiatan ISE! 2023. Secara umum, Bionix Competition Roadshow akan membahas
+            perkembangan era digital dan isu teknologi terkini. Konsep dari Bionix Competition Roadshow akan dikemas dengan
+            suasana yang lebih santai serta terbuka gratis untuk masyarakat umum. Pada ISE! 2023, Bionix Competition
             akan membawakan tema, yaitu “Tech Innovators: Revolutionizing Industries with IT Solutions”
           </p>
         </div>
@@ -71,12 +71,12 @@
           <div class="flex flex-col gap-y-2 w-full">
             <a
               href="{{ route('my.gts.registration') }}"
-              class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-gradient-to-r from-[#348BB6] to-[#A3D2F3] hover:brightness-75"
+              class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-gradient-green-br hover:brightness-75"
               >Daftar Sekarang!</a
             >
             <a
               href="/"
-              class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75"
+              class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
               >Lihat Guidebook</a
             >
           </div>
@@ -99,7 +99,7 @@
               12 Jun 2023
             </p>
             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
+              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-green-r rounded-full mx-auto"></div>
             </div>
             <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Registration <br />
@@ -111,7 +111,7 @@
               16 Jul 2022
             </p>
             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
+              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-green-r rounded-full mx-auto"></div>
             </div>
             <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Registration <br />
@@ -123,7 +123,7 @@
               22 Jul 2023
             </p>
             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
+              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-green-r rounded-full mx-auto"></div>
             </div>
             <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">
               Grand
@@ -209,7 +209,7 @@
     <div class="flex mb-8">
       <p class="text-2xl text-center text-white font-bold tracking-[0.09em] md:tracking-[0.09em]">
         Halo, Selamat Datang di Dashboard
-        <span class="bg-gradient-blue-r font-bold bg-clip-text text-transparent">Data Science Academy</span>
+        <span class="bg-gradient-green-r font-bold bg-clip-text text-transparent">Bionix Competition</span>
       </p>
     </div>
   </section>
@@ -223,10 +223,10 @@
         class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
       >
         <div class="flex flex-row gap-x-6 items-center w-full">
-          <x-heroicon-s-arrow-left-on-rectangle class="relative z-0 w-14 h-14 rotate-180 text-blue-400" />
+          <x-heroicon-s-arrow-left-on-rectangle class="relative z-0 w-14 h-14 rotate-180 text-green-400" />
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Pendaftaran</p>
-            <p class="text-2xl bg-gradient-blue-r font-bold bg-clip-text text-transparent">
+            <p class="text-2xl bg-gradient-green-r font-bold bg-clip-text text-transparent">
               {{ $user_data['status'] }}
             </p>
           </div>
@@ -237,7 +237,7 @@
       >
         <div class="flex flex-row gap-x-6 items-center w-full">
           @if ($user_data['status_id'] == '3')
-          <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-blue-400" />
+          <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-green-400" />
           @else
           <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
           @endif
@@ -245,7 +245,7 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Berkas</p>
             <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
+              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-green-r bg-clip-text text-transparent @endif"
             >
               @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
               Terverifikasi @endif
@@ -258,7 +258,7 @@
       >
         <div class="flex flex-row gap-x-6 items-center w-full">
           @if ($user_data['status_id'] == '3')
-          <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-blue-400" />
+          <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-green-400" />
           @else
           <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
           @endif
@@ -266,7 +266,7 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Administrasi</p>
             <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
+              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-green-r bg-clip-text text-transparent @endif"
             >
               @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
               Terverifikasi @endif
@@ -279,7 +279,7 @@
       >
         <div class="flex flex-row gap-x-6 items-center w-full">
           @if ($user_data['status_id'] == '3')
-          <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-blue-400" />
+          <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-green-400" />
           @else
           <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
           @endif
@@ -287,7 +287,7 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Seleksi</p>
             <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
+              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-green-r bg-clip-text text-transparent @endif"
             >
               @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
               Terverifikasi @endif
@@ -324,7 +324,7 @@
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
                 {{ $user_data['handphone'] }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Data Science Academy Darimana ?</p>
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Bionix Competition Roadshow Darimana ?</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
                 {{ $user_data['referral'] }}
               </p>
@@ -355,7 +355,7 @@
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
                 {{ $user_data['handphone'] }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Data Science Academy Darimana ?</p>
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Bionix Competition Roadshow Darimana ?</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
                 {{ $user_data['referral'] }}
               </p>
@@ -363,38 +363,7 @@
               <img src="{{ url($user_data['share_proof_file']) }}" />
             </div>
           </div>
-          {{-- Anggota 1 End--}} {{-- Anggota 2 Start--}}
-          <div class="flex-col items-left justify-center w-full">
-            <div class="flex flex-row items-center mb-3 w-full gap-2">
-              <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Anggota 2</h3>
-              <hr class="w-full h-[2px] bg-[#171717] opacity-30" />
-            </div>
-            <div class="flex flex-col gap-y-1">
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['full_name'] }}
-              </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['institution'] }}
-              </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['email'] }}
-              </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Handphone</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['handphone'] }}
-              </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Data Science Academy Darimana ?</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['referral'] }}
-              </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow</p>
-              <img src="{{ url($user_data['share_proof_file']) }}" />
-            </div>
-          </div>
-          {{-- Anggota 2 End--}}
+          {{-- Anggota 1 End--}}
         </div>
       </div>
     </div>
@@ -402,7 +371,7 @@
     <div class="flex flex-col items-center md:items-start my-1.5 w-full">
       <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
         <div class="flex flex-col text-white items-center text-center">
-          <p class="text-xl font-medium">Data Science Academy Dimulai</p>
+          <p class="text-xl font-medium">Bionix Competition Roadshow Dimulai</p>
           <div class="flex flex-row gap-x-3 my-7">
             <div class="flex flex-col items-center justify-center">
               <div
@@ -446,6 +415,21 @@
           </div>
         </div>
       </div>
+      {{-- Penyisihan Card Start --}}
+      <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full mt-4">
+        <div class="flex flex-col text-white items-center space-y-4 text-center">
+          <p class="text-xl font-medium text-center">
+            Currently in <span class="bg-gradient-green-r bg-clip-text text-transparent font-bold">Bionix Competition</span>
+          </p>
+          <p class="text-3xl sm:text-5xl bg-gradient-green-r bg-clip-text text-transparent font-bold">Penyisihan</p>
+          <a
+            href="/"
+            class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
+            >Lihat Guidebook</a
+          >
+        </div>
+      </div>
+      {{-- Penyisihan Card End --}}
       <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
       <div class="flex flex-col space-y-4">
         {{-- Seleksi Pengunguman Card Start --}}
@@ -454,24 +438,24 @@
         >
           <div class="flex flex-col gap-y-3">
             <div
-              class="flex flex-row justify-between gap-2 bg-gradient-blue-r px-4 sm:px-9 rounded-t-xl items-center py-4"
+              class="flex flex-row justify-between gap-2 bg-gradient-green-r px-4 sm:px-9 rounded-t-xl items-center py-4"
             >
               <p class="flex text-white font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider">
-                Seleksi Data<br />Science Academy
+                Seleksi Bionix <br/> Competition
               </p>
               <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 sm:w-20 h-12 sm:h-16" />
             </div>
             <div class="flex flex-col items-left justify-center text-left space-y-4 px-4 sm:px-9 text-white">
               <h3 class="font-semibold text-lg">Deadline 24 August 2023</h3>
               <p class="text-base font-light">
-                Hi Futurizen! Saat ini kamu dapat mengunduh soal seleksi Data Science Academy ISE! 2023 dengan batas
+                Hi Futurizen! Saat ini kamu dapat mengunduh soal seleksi Bionix Competition Roadshow ISE! 2023 dengan batas
                 pengumpulan <span class="font-semibold">24 Agustus 2023 Pukul 23.59</span>. Jangan lupa untuk
                 memperhatikan panduan pengumpulan ya!
               </p>
-              <p class="bg-gradient-blue-br text-transparent bg-clip-text font-semibold">GoodLuck!</p>
+              <p class="bg-gradient-green-br text-transparent bg-clip-text font-semibold">GoodLuck!</p>
               <a
-                href="/my/ds/selection"
-                class="bg-gradient-blue-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
+                href="#"
+                class="bg-gradient-green-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
                 >Find out more</a
               >
             </div>
@@ -483,13 +467,14 @@
         >
           <div class="flex flex-col gap-y-3">
             <p
-              class="flex text-transparent bg-gradient-blue-r bg-clip-text font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider gap-1 items-center"
+              class="flex text-transparent bg-gradient-green-r bg-clip-text font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider gap-1 items-center"
             >
               Congratulations <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
             </p>
             <div class="flex flex-col items-left justify-center text-left space-y-4 text-white">
               <p class="text-base font-light">
-                Selamat, pembayaran commitment fee kamu telah terverifikasi, tidak lama lagi kamu akan dihubungi oleh panitia kami melalui Whatasapp untuk proses selanjutnya.
+                Selamat datang di babak Semi-final! Tim kamu berhasil lolos babak penyisihan dan berhak lanjut ke tahap
+                berikutnya. Tetap semangat dan terus berjuang!
               </p>
             </div>
           </div>
@@ -518,22 +503,22 @@
         >
           <div class="flex flex-col gap-y-3">
             <div
-              class="flex flex-row justify-between gap-2 bg-gradient-blue-r px-4 sm:px-9 rounded-t-xl items-center py-4"
+              class="flex flex-row justify-between gap-2 bg-gradient-green-r px-4 sm:px-9 rounded-t-xl items-center py-4"
             >
               <p class="flex text-white font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider">Selamat</p>
               <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 sm:w-20 h-12 sm:h-16" />
             </div>
             <div class="flex flex-col items-left justify-center text-left space-y-4 px-4 sm:px-9 text-white">
-              <h3 class="font-bold text-xl">Tim kamu berhasil lolos tahap seleksi Data Science Academy ISE! 2023</h3>
+              <h3 class="font-bold text-xl">Tim kamu berhasil lolos tahap seleksi Bionix Competition Roadshow ISE! 2023</h3>
               <p class="text-base font-light">Lakukan pembayaran commitment fee agar dapat mengikuti rangkaian acara</p>
               <p class="text-xl font-bold">
                 Jumlah yang harus dibayar: <br />
-                <span class="bg-gradient-blue-br text-transparent bg-clip-text font-bold">Rp 150.000</span>
+                <span class="bg-gradient-green-br text-transparent bg-clip-text font-bold">Rp 150.000</span>
               </p>
 
               <a
-                href="/my/ds/commitment"
-                class="bg-gradient-blue-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
+                href="#"
+                class="bg-gradient-green-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
                 >Bayar</a
               >
             </div>

@@ -1,3 +1,4 @@
+@section('title', 'UX Selection')
 {{-- before submit answer --}}
 <div class="bg-[#121316]">
     <div class="relative min-h-screen overflow-hidden mx-auto">
@@ -19,10 +20,10 @@
                 <p class="text-xs sm:text-base lg:text-xl font-bold">24 Agustus 2023 Pukul 23.59</p>
             </div>
 
-            <form wire:submit.prevent="submit">
+            <form wire:submit.prevent="submit" enctype="multipart/form-data">
                 <div class="px-5 sm:px-6 md:px-12 lg:px-20 xl:px-24 2xl:px-30 font-['Montserrat'] pt-5">
                     <div class="flex flex-col">
-                        <label for="file_soal" class="font-semibold inline font-normal text-xs lg:text-base 2xl:text-xl">File Soal</label>
+                        <label for="file_soal" class="inline font-semibold text-xs lg:text-base 2xl:text-xl">File Soal</label>
                         <a href="#" class="mt-3 mb-4 px-3 py-2 lg:py-3 flex h-full bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border cursor-pointer w-fit border-[#6BB9E7]">
                             <div class="flex flex-row items-center gap-1.5">
                                 <x-heroicon-s-cloud-arrow-down class="w-4 lg:w-8 h-4 lg:h-8 text-slate-100"/>
@@ -56,7 +57,7 @@
                         </a>
                         <button
                         type="submit"
-                        class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                        class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:brightness-75 hover:border-none hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
                       >
                         <span wire:loading.remove>Submit</span>
                         <div

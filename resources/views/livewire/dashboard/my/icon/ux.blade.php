@@ -446,21 +446,6 @@
           </div>
         </div>
       </div>
-      {{-- Penyisihan Card Start --}}
-      <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full mt-4">
-        <div class="flex flex-col text-white items-center space-y-4 text-center">
-          <p class="text-xl font-medium">
-            Currently in <span class="bg-gradient-blue-r bg-clip-text text-transparent font-bold">UX Academy</span>
-          </p>
-          <p class="text-3xl sm:text-5xl bg-gradient-blue-r bg-clip-text text-transparent font-bold">Penyisihan</p>
-          <a
-            href="/"
-            class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75"
-            >Lihat Guidebook</a
-          >
-        </div>
-      </div>
-      {{-- Penyisihan Card End --}}
       <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
       <div class="flex flex-col space-y-4">
         {{-- Seleksi Pengunguman Card Start --}}
@@ -485,7 +470,7 @@
               </p>
               <p class="bg-gradient-blue-br text-transparent bg-clip-text font-semibold">GoodLuck!</p>
               <a
-                href="#"
+                href="/my/ux/selection"
                 class="bg-gradient-blue-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
                 >Find out more</a
               >
@@ -504,8 +489,7 @@
             </p>
             <div class="flex flex-col items-left justify-center text-left space-y-4 text-white">
               <p class="text-base font-light">
-                Selamat datang di babak Semi-final! Tim kamu berhasil lolos babak penyisihan dan berhak lanjut ke tahap
-                berikutnya. Tetap semangat dan terus berjuang!
+                Selamat, pembayaran commitment fee kamu telah terverifikasi, tidak lama lagi kamu akan dihubungi oleh panitia kami melalui Whatasapp untuk proses selanjutnya.
               </p>
             </div>
           </div>
@@ -548,7 +532,7 @@
               </p>
 
               <a
-                href="#"
+                href="/my/ux/commitment"
                 class="bg-gradient-blue-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
                 >Bayar</a
               >

@@ -5,6 +5,7 @@ use App\Http\Controllers\Pages\Error404;
 use App\Http\Controllers\Pages\Error500;
 use App\Http\Controllers\Pages\Auth\Login;
 use App\Http\Controllers\Pages\ComingSoon;
+use App\Http\Controllers\Pages\GtsLanding;
 use App\Http\Controllers\Pages\IseLanding;
 use App\Http\Controllers\Pages\Auth\Forgot;
 use App\Http\Controllers\Pages\Auth\Logout;
@@ -23,9 +24,11 @@ use App\Http\Controllers\Pages\Dashboard\Icon\DsTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\DsDashboard;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsSelection;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxDashboard;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxSelection;
 use App\Http\Controllers\Pages\Redirect\RedirectShortener;
+use App\Http\Controllers\Pages\Dashboard\Icon\DsCommitment;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
 use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
@@ -44,11 +47,11 @@ use App\Http\Controllers\Pages\Dashboard\Bionix\BionixDashboard;
 use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassDashboard;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdDashboard;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
-use App\Http\Controllers\Pages\GtsLanding;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
@@ -91,6 +94,10 @@ Route::middleware(['auth'])->group(function () {
 
         Route::prefix('bionix')->group(function () {
             Route::get('/', BionixDashboard::class)->name('bionix');
+        });
+
+        Route::prefix('bionix-rd')->group(function () {
+            Route::get('/', BionixRdDashboard::class)->name('bionixroadshow');
         });
 
         Route::prefix('isclass')->group(function () {
@@ -150,6 +157,8 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('my/ux/registration', UxRegistration::class); #temp for development
     Route::get('my/ux/selection', UxSelection::class); #temp for development
     Route::get('my/ux/commitment', UxCommitment::class); #temp for development
+    Route::get('my/ds/selection', DsSelection::class); #temp for development
+    Route::get('my/ds/commitment', DsCommitment::class); #temp for development
     Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
     Route::get('my/isclass/registration', IsClassRegistration::class); #temp for development
