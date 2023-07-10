@@ -89,7 +89,6 @@ Route::middleware(['auth'])->group(function () {
 
         Route::prefix('bionix')->group(function () {
             Route::get('/', BionixDashboard::class)->name('bionix');
-            Route::get('/registration', BionixRegistration::class)->name('bionix.registration');
         });
 
         Route::prefix('isclass')->group(function () {
@@ -152,4 +151,5 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
     Route::get('my/isclass/registration', IsClassRegistration::class); #temp for development
+    Route::get('my/bionix/registration', BionixRegistration::class)->name('bionix.registration'); #temp for developmentD
 }
