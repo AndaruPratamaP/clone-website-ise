@@ -36,9 +36,11 @@
                 <p href="/coming-soon"
                     class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-green-br">BIONIX</p>
                 <a href="/coming-soon"
-                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
+                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
                 <a href="/coming-soon"
-                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS
+                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>
+                <a href="/coming-soon"
+                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS
                     Class</a>
             </div>
             <hr class="my-4 brightness-75" />
@@ -46,10 +48,10 @@
                 <p href="/coming-soon"
                     class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-blue-r">ICON</p>
                 <a href="/coming-soon"
-                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS
+                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS
                     Academy</a>
                 <a href="/coming-soon"
-                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX
+                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX
                     Academy</a>
                 <a href="/admin/gts"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.gts.table' || Route::currentRouteName() == 'admin.gts.detail' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">Grand
@@ -60,7 +62,7 @@
                 <p href="/coming-soon"
                     class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-orange-r">RISE</p>
                 <a href="/coming-soon"
-                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'my.bc' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business
+                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'admin.bc' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business
                     Case</a>
             </div>
             <hr class="my-4 brightness-75" />
@@ -68,10 +70,10 @@
                 <p href="/coming-soon"
                     class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-purple-r">Paradigm</p>
                 <a href="/coming-soon"
-                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'my.hoi' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Hall
+                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'admin.hoi' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Hall
                     of ISE!</a>
                 <a href="/coming-soon"
-                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'my.cp' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Closing
+                    class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'admin.cp' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Closing
                     Party</a>
             </div>
             <hr class="my-4 brightness-75" />
@@ -119,9 +121,11 @@
             <p href="/coming-soon" class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-green-br">
                 BIONIX</p>
             <a href="/coming-soon"
-                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
+                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
             <a href="/coming-soon"
-                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS
+                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>
+            <a href="/coming-soon"
+                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS
                 Class</a>
         </div>
         <hr class="my-4 brightness-75" />
@@ -129,10 +133,10 @@
             <p href="/coming-soon" class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-blue-r">
                 ICON</p>
             <a href="/coming-soon"
-                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS
+                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS
                 Academy</a>
             <a href="/coming-soon"
-                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX
+                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX
                 Academy</a>
             <a href="/admin/gts"
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.gts.table' || Route::currentRouteName() == 'admin.gts.detail' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">Grand
@@ -143,7 +147,7 @@
             <p href="/coming-soon"
                 class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-orange-r">RISE</p>
             <a href="/coming-soon"
-                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'my.bc' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business
+                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'admin.bc' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business
                 Case</a>
         </div>
         <hr class="my-4 brightness-75" />
@@ -151,10 +155,10 @@
             <p href="/coming-soon"
                 class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-purple-r">Paradigm</p>
             <a href="/coming-soon"
-                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'my.hoi' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Hall
+                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'admin.hoi' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Hall
                 of ISE!</a>
             <a href="/coming-soon"
-                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'my.cp' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Closing
+                class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'admin.cp' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Closing
                 Party</a>
         </div>
         <hr class="my-4 brightness-75" />

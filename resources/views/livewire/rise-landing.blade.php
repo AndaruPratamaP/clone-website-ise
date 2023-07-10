@@ -1,6 +1,6 @@
 {{-- CHANGE EVERYTHING FROM ICON TO RISEEEE --}}
 
-@section('title', 'RISE 2023')
+@section('title', 'RISE | ISE! 2023')
 <div class=" bg-[#121316] min-h-[screen] flex justify-center items-center flex-col relative overflow-hidden">
     {{-- temp fix? --}}
     <div class=" h-20 min-w-screen lg:h-20 xl:h-32">
@@ -72,12 +72,12 @@
                                 </a>
                             </div>
                             <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text self-center">
-                                Pendaftaran ditutup dalam waktu:
+                                Pendaftaran&nbsp;<span id="regist_status"></span>&nbsp; dalam waktu:
                             </h5>
                             <div class=" mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-4">
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="days_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="days_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%">
                                             Hari
                                         </p>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="hours_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="hours_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%">
                                             Jam
                                         </p>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="minutes_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="minutes_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%">
                                             Menit
                                         </p>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="seconds_dsux"></span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="seconds_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%">
                                             Detik
                                         </p>
@@ -179,7 +179,7 @@
                             <div class=" mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-4">
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="days_dsux">30</span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="days_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%">
                                             Hari
                                         </p>
@@ -187,7 +187,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="hours_dsux">24</span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="hours_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%">
                                             Jam
                                         </p>
@@ -195,7 +195,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="minutes_dsux">60</span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="minutes_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%">
                                             Menit
                                         </p>
@@ -203,7 +203,7 @@
                                 </div>
                                 <div class=" p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]">
                                     <div class=" rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col">
-                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="seconds_dsux">60</span>
+                                        <span class=" self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%" id="seconds_dsux">00</span>
                                         <p class=" self-center text-[#E3E3E3] font-montserrat font-semibold text-[8px] md:text-[10px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text" style="line-height: 100%">
                                             Detik
                                         </p>
@@ -282,7 +282,7 @@
                                     <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-[11rem] xs:left-[14.5rem] sm:left-[16rem] md:left-[20rem] lg:left-[13.5rem] xl:left-[20rem] top-[13.5rem] xs:top-[16rem] md:top-[17rem] lg:top-[17rem] xl:top-[23rem] z-30" src= {{ asset('images/rise-landing/Sect4-Pfp-Decor-BR.png') }} alt="">
                                     <img class=" absolute w-[170px] xs:w-[197.5px] md:w-[210px] lg:w-[231px] xl:w-[350px] h-[215px] xs:h-[255px] md:h-[275px] lg:h-[295px] xl:h-[447px] mx-[2.5rem] xs:mx-[4.75rem] sm:mx-[6.25rem] md:mx-[9rem] lg:mx-0 my-[2.75rem] lg:my-0 lg:left-8 xl:left-12 lg:top-[2rem] xl:top-2 z-10 drop-shadow-[0_4px_4px_rgba(1,1,1,0.25)]" src= {{ asset('images/rise-landing/Sect4-ProfPic-Blur.png') }} alt="">
                                 </div>
-                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/icon/icon-testi-3.png') }} alt="">
+                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/rise-landing/testi-1.png') }} alt="">
                             </div>
                             <div style="text-" class=" flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                                 <div class=" inline-block">
@@ -305,12 +305,12 @@
                                         wawasan baru!
                                     </span>
                                 </div>
-                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Meskipun saya merupakan mahasiswa baru. Namun, dengan niat dan keberanian, saya dan dua teman mendaftar dan mengikuti seleksi tersebut. Di sana, kami mendapatkan pengetahuan baru yang menarik dan bervariasi, dengan pemateri yang profesional. Ada juga praktik langsung dan penugasan mini project yang menantang. Intinya mengikuti ISE! Data Science Academy worth it banget👍👍👍”</p>
+                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Mentornya keren-keren dan penuh wawasan. Saya merasa beruntung bisa mendapatkan dorongan dan bimbingan dari mentor yang kompeten dan berpengalaman. Insight yang diberikan sangat berharga dan mendorong saya untuk terjun ke dunia bisnis. Saya merasa telah memperoleh pengetahuan yang berharga selama kompetisi ini. Pengalaman yang diluar ekspektasi in a good way.                                    ”</p>
                                 <h5 class=" mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold">
-                                    Felicia Evelina Soetjipto
+                                    Muhammad Febriansyah
                                 </h5>
                                 <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
-                                    1st Winner RISE! 2022
+                                    1st Winner BCL 2022
                                 </h5>
                             </div>
                         </div>
@@ -324,7 +324,7 @@
                                     <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-[11rem] xs:left-[14.5rem] sm:left-[16rem] md:left-[20rem] lg:left-[13.5rem] xl:left-[20rem] top-[13.5rem] xs:top-[16rem] md:top-[17rem] lg:top-[17rem] xl:top-[23rem] z-30" src= {{ asset('images/rise-landing/Sect4-Pfp-Decor-BR.png') }} alt="">
                                     <img class=" absolute w-[170px] xs:w-[197.5px] md:w-[210px] lg:w-[231px] xl:w-[350px] h-[215px] xs:h-[255px] md:h-[275px] lg:h-[295px] xl:h-[447px] mx-[2.5rem] xs:mx-[4.75rem] sm:mx-[6.25rem] md:mx-[9rem] lg:mx-0 my-[2.75rem] lg:my-0 lg:left-8 xl:left-12 lg:top-[2rem] xl:top-2 z-10 drop-shadow-[0_4px_4px_rgba(1,1,1,0.25)]" src= {{ asset('images/rise-landing/Sect4-ProfPic-Blur.png') }} alt="">
                                 </div>
-                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/icon/icon-testi-3.png') }} alt="">
+                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/rise-landing/testi-3.png') }} alt="">
                             </div>
                             <div style="text-" class=" flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                                 <div class=" inline-block">
@@ -347,12 +347,54 @@
                                         wawasan baru!
                                     </span>
                                 </div>
-                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Meskipun saya merupakan mahasiswa baru. Namun, dengan niat dan keberanian, saya dan dua teman mendaftar dan mengikuti seleksi tersebut. Di sana, kami mendapatkan pengetahuan baru yang menarik dan bervariasi, dengan pemateri yang profesional. Ada juga praktik langsung dan penugasan mini project yang menantang. Intinya mengikuti ISE! Data Science Academy worth it banget👍👍👍”</p>
+                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“Bionix College level 2022 adalah kompetisi yang menjadi batu loncatan saya dalam giat lomba bisnis. Highlight pada sesi mentoring dari bionix, saya bertemu mentor yang sangat membantu peserta dalam penyempurnaan materi perlombaan. Jujur kaget ketika tim saya menang😁, ingin sesi mentoringnya lebih lama karena bermanfaat banget soalnya.                                    ”</p>
                                 <h5 class=" mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold">
-                                    Felicia Evelina Soetjipto
+                                    Rio Penampati Banurea
                                 </h5>
                                 <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
-                                    1st Winner RISE! 2022
+                                    3rd Winner BCL 2022
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class=" flex flex-col lg:flex-row">
+                            <div class=" flex justify-center content-center lg:min-w-[300px] xl:min-w-[445px] flex-col">
+                                <div class=" relative">
+                                    <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-4 xs:left-16 sm:left-20 md:left-32 lg:left-4 xl:left-6 top-8 lg:top-[1rem] xl:top-[-1rem] z-30" src= {{ asset('images/rise-landing/Sect4-Pfp-Decor-TL.png') }} alt="">
+                                    <img class=" absolute w-[170px] xs:w-[197.5px] md:w-[210px] lg:w-[231px] xl:w-[350px] h-[215px] xs:h-[255px] md:h-[275px] lg:h-[295px] xl:h-[447px] mx-[2.5rem] xs:mx-[4.75rem] sm:mx-[6.25rem] md:mx-[9rem] lg:mx-0 my-[2.75rem] lg:my-0 lg:left-8 xl:left-12 lg:top-[2rem] xl:top-2 z-10 drop-shadow-[0_4px_4px_rgba(1,1,1,0.25)]" src= {{ asset('images/icon/IconLP_Sect5_ProfileDecor2.png') }} alt="">
+                                    <img class=" absolute w-[50px] lg:w-[68px] xl:w-[103px] h-[50px] lg:h-[66px] xl:h-[100px] left-[11rem] xs:left-[14.5rem] sm:left-[16rem] md:left-[20rem] lg:left-[13.5rem] xl:left-[20rem] top-[13.5rem] xs:top-[16rem] md:top-[17rem] lg:top-[17rem] xl:top-[23rem] z-30" src= {{ asset('images/rise-landing/Sect4-Pfp-Decor-BR.png') }} alt="">
+                                    <img class=" absolute w-[170px] xs:w-[197.5px] md:w-[210px] lg:w-[231px] xl:w-[350px] h-[215px] xs:h-[255px] md:h-[275px] lg:h-[295px] xl:h-[447px] mx-[2.5rem] xs:mx-[4.75rem] sm:mx-[6.25rem] md:mx-[9rem] lg:mx-0 my-[2.75rem] lg:my-0 lg:left-8 xl:left-12 lg:top-[2rem] xl:top-2 z-10 drop-shadow-[0_4px_4px_rgba(1,1,1,0.25)]" src= {{ asset('images/rise-landing/Sect4-ProfPic-Blur.png') }} alt="">
+                                </div>
+                                <img class=" self-center w-[151px] xs:w-[180px] md:w-[190px] lg:w-[198px] xl:w-[300px] h-[190px] xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src= {{ asset('images/rise-landing/testi-2.png') }} alt="">
+                            </div>
+                            <div style="text-" class=" flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+                                <div class=" inline-block">
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none">
+                                        Bisa dapat
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text leading-[50%] lg:leading-none">
+                                        Free Pass SNMPTN
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none">
+                                    ,
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text leading-[50%] lg:leading-none">
+                                        banyak relasi
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none">
+                                        , dan
+                                    </span>
+                                    <span class=" z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text leading-[50%] lg:leading-none">
+                                        wawasan baru!
+                                    </span>
+                                </div>
+                                <p class=" mt-4 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[14px] xl:text-[20px] text-white text-justify">“BCL 2022 jadi salah satu tipping point untuk ngembangin ide startup, terutama bisa dapet mentor yang  ga cuma sharing tentang lomba aja, tapi bisa bantu ke next stepnya. Bagiku dapet juara kemarin itu bonus sih, pembelajaran dan mentornya aja udah worth it banget!                                    ”</p>
+                                <h5 class=" mt-6 lg:mt-6 xl:mt-10 z-30 font-montserrat text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[30px] text-white font-bold">
+                                    I Komang Udaya Adi Prabawa
+                                </h5>
+                                <h5 class=" z-30 font-montserrat text-[12px] sm:text-[14px] lg:text-[18px] xl:text-[24px] text-white font-bold">
+                                    2nd Winner BCL 2022
                                 </h5>
                             </div>
                         </div>
@@ -501,7 +543,7 @@
             <div class=" lg:mt-12 xl:mt-24 lg:mb-10 xl:mb-40 self-center">
                 <div x-data="{open:false}" class=" z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
-                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Is there a refund if I cancel?</span>
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Apa beda RISE! dengan BIONIX College Level 2022?</span>
                         <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
                             <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
                         </div>
@@ -509,19 +551,19 @@
                     <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
                     " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:min-w-[50rem] xl:min-w-[68rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
                         <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
-                            Is there a refund if I cancel?
+                            Apa beda RISE! dengan BIONIX College Level 2022?
                         </h4>
                         <div class=" z-30 relative w-full">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
                         <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+                            Tahun 2023 ini nama Bionix College Level diganti dengan Rivalry of Information Sytems Expo! yang memiliki arti kompetisi (Rivalry) dan diharapkan agar tetap bangkit dan bersinar seperti namanya (RISE!)
                         </p>
                     </button>
                 </div>
                 <div x-data="{open:false}" class=" z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
-                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Will this travel documentary be uploaded on YouTube?</span>
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Apa konsep kompetisi RISE!?</span>
                         <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
                             <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
                         </div>
@@ -529,19 +571,19 @@
                     <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
                     " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:min-w-[50rem] xl:min-w-[68rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
                         <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
-                            Will this travel documentary be uploaded on YouTube?
+                            Apa konsep kompetisi RISE!?
                         </h4>
                         <div class=" z-30 relative w-full">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
                         <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+                            Konsep kompetisi RISE! tahun 2023 adalah Business Case Competition dimana peserta dapat menganalisi study case dan data yang telah diberikan.
                         </p>
                     </button>
                 </div>
                 <div x-data="{open:false}" class=" z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
-                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Is there a ticket purchase limit?</span>
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Apa yang spesial di RISE!?</span>
                         <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
                             <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
                         </div>
@@ -549,19 +591,19 @@
                     <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
                     " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:min-w-[50rem] xl:min-w-[68rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
                         <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
-                            Is there a ticket purchase limit?
+                            Apa yang spesial di RISE!?
                         </h4>
                         <div class=" z-30 relative w-full">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
                         <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+                            Bagi kalian penggemar tantangan, RISE! menyediakan tempat yang sesuai dengan adanya babak REAL TIME ANALYSIS
                         </p>
                     </button>
                 </div>
                 <div x-data="{open:false}" class=" z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
                     <button @click="open=!open" x-cloak x-transition x-show="!open" class=" z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] border-t-[1px] lg:border-t-2 border-b-[1px] lg:border-b-2 border-white flex justify-between items-center bg-transparent">
-                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Where is the meeting place?</span>
+                        <span class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Benefit ikut RISE! apa aja?</span>
                         <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
                             <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
                         </div>
@@ -569,13 +611,13 @@
                     <button @click="open=!open" style="background-color: rgba(56, 63, 68, 0.3); box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
                     " x-show="open" x-cloak class=" z-30 flex flex-col px-4 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:min-w-[50rem] xl:min-w-[68rem] mx-4 py-6  text-white self-center rounded-[5px]" x-transition>
                         <h4 class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
-                            Where is the meeting place?
+                            Benefit ikut RISE! apa aja?
                         </h4>
                         <div class=" z-30 relative w-full">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
                         <p class=" z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut lacus a arcu fringilla imperdiet pretium eu nibh. Cras aliquam neque in ligula commodo tincidunt at sit amet lacus. Morbi ac justo lorem.
+                            Banyak benefit yang dapat didapat dari mengikuti RISE! beberapa diantaranya yaitu pendaftaran gratis, sertifikat peserta dan pemenang, mentoring bagi finalis (10 tim) dengan coach dari expert perusahaan langsung, koneksi ke perusahaan lewat serangkaian acara RISE dan jangan lupa ada tiket paradigm bagi juara RISE!
                         </p>
                     </button>
                 </div>
@@ -586,31 +628,29 @@
 
 
 <script>
-    // dsux Countdown Start
-        // Set the countdown date and time
-        const countdownDate_dsux = new Date("August 31, 2023 00:00:00").getTime();
-
-        // Update the countdown every second
-        const countdownTimer_dsux = setInterval(() => {
-
+// dsux Countdown Start
+// Set the countdown date and time
+const currentDate = new Date().getTime();
+const coutdownDate_open = new Date("August 01, 2023 00:00:00").getTime();
+if (currentDate < coutdownDate_open) {
+    document.getElementById("regist_status").innerHTML = `Dibuka`;
+    const countdownDate_dsux = new Date("August 01, 2023 00:00:00").getTime();
+    // Update the countdown every second
+    const countdownTimer_dsux = setInterval(() => {
         // Get today's date and time
         const now = new Date().getTime();
-
         // Find the distance between now and the countdown date
         const distance = countdownDate_dsux - now;
-
         // Calculate the days, hours, minutes, and seconds
         const days_dsux = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours_dsux = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes_dsux = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds_dsux = Math.floor((distance % (1000 * 60)) / 1000);
-
         // Display the countdown
         document.getElementById("days_dsux").innerHTML = `${days_dsux}`;
         document.getElementById("hours_dsux").innerHTML = `${hours_dsux}`;
         document.getElementById("minutes_dsux").innerHTML = `${minutes_dsux}`;
         document.getElementById("seconds_dsux").innerHTML = `${seconds_dsux}`;
-
         // If the countdown is finished, display a message
         if (distance < 0) {
             clearInterval(countdownTimer_dsux);
@@ -619,6 +659,36 @@
             document.getElementById("minutes_dsux").innerHTML = "0";
             document.getElementById("seconds_dsux").innerHTML = "0";
         }
-        }, 1000);
-    // dsux Countdown End
+    }, 1000);
+} else {
+    document.getElementById("regist_status").innerHTML = `Ditutup`;
+    const countdownDate_dsux = new Date("August 31, 2023 00:00:00").getTime();
+    // Update the countdown every second
+    const countdownTimer_dsux = setInterval(() => {
+        // Get today's date and time
+        const now = new Date().getTime();
+        // Find the distance between now and the countdown date
+        const distance = countdownDate_dsux - now;
+        // Calculate the days, hours, minutes, and seconds
+        const days_dsux = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours_dsux = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes_dsux = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds_dsux = Math.floor((distance % (1000 * 60)) / 1000);
+        // Display the countdown
+        document.getElementById("days_dsux").innerHTML = `${days_dsux}`;
+        document.getElementById("hours_dsux").innerHTML = `${hours_dsux}`;
+        document.getElementById("minutes_dsux").innerHTML = `${minutes_dsux}`;
+        document.getElementById("seconds_dsux").innerHTML = `${seconds_dsux}`;
+        // If the countdown is finished, display a message
+        if (distance < 0) {
+            clearInterval(countdownTimer_dsux);
+            document.getElementById("days_dsux").innerHTML = "0";
+            document.getElementById("hours_dsux").innerHTML = "0";
+            document.getElementById("minutes_dsux").innerHTML = "0";
+            document.getElementById("seconds_dsux").innerHTML = "0";
+        }
+    }, 1000);
+}
+// dsux Countdown End
+
   </script>
