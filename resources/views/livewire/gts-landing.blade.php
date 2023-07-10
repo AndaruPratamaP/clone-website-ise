@@ -1,4 +1,4 @@
-@section('title', 'DS Academy | ISE! 2023')
+@section('title', 'Grand Talkshow | ISE! 2023')
 <div class="relative font-montserrat pt-[68px] md:pt-[110px] xl:pt-40  bg-[#121316] h-auto text-white overflow-hidden">
     {{-- Hero Section --}}
     <section id="ds-academy" class="relative h-[280px] md:h-[500px] lg:h-[600px] xl:h-[720px]">
@@ -6,13 +6,11 @@
                <img class="absolute hidden md:block xl:h-auto right-0 -translate-y-44 overflow-hidden" src="{{asset('/images/ds-academy/bg-hero-1.png')}}"/>
         <div class="grid grid-cols-2 gap-9">
             <div class="relative h-[245px] md:h-[500px] lg:h-[600px] xl:h-[720px]">
-                <img class="absolute h-[50.626px] md:h-[120px] xl:h-auto" src="{{ asset('/images/ds-academy/ds-academy-1.png') }}">
-                <img class="absolute w-[28px] md:w-[50px] xl:w-auto left-[33px] md:left-[120px] xl:left-[186px]" src="{{ asset('/images/ds-academy/ds-academy-2.png') }}">
-                <img class="absolute w-[228.051px] md:w-[400px] xl:w-auto top-[35px] md:top-[80px] xl:top-[125px]" src="{{ asset('/images/ds-academy/ds-academy-3.png') }}">
+                <img class="absolute w-[228.051px] md:w-[400px] xl:w-auto top-[35px] md:top-[80px] xl:top-[125px]" src="{{ asset('/images/gts/hero.png') }}">
             </div>
             <div class="relative h-[245px] md:h-[500px] lg:h-[600px] xl:h-[720px]">
                 <div class="relative top-[35px] md:top-28 lg:top-32 xl:top-[200px]">
-                    <div class="text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-bold w-40 md:w-[240px] lg:w-[400px] xl:w-[548px] h-[107px] md:h-[200px] lg:h-[230px] xl:h-[192px] bg bg-clip-text bg-gradient-to-r from-[#398FBA] to-[#97FBFE] text-transparent">Data Science Academy</div>
+                    <div class="text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-bold w-40 md:w-[240px] lg:w-[400px] xl:w-[548px] h-[107px] md:h-[200px] lg:h-[230px] xl:h-[192px] bg bg-clip-text bg-gradient-to-r from-[#398FBA] to-[#97FBFE] text-transparent">Grand Talkshow</div>
                     <div class="xl:mt-16"><a href="#more"><button class="px-[17.791px] md:px-6 lg:px-8 xl:px-10 py-[6.227px] md:py-2 lg:py-3 xl:py-[14px] rounded-full bg bg-gradient-to-r from-[#398FBA] to-[#97FBFE] text-white text-[9px] md:text-base lg:text-lg xl:text-xl hover:brightness-75">Explore Now</button></a></div>
                 </div>
                 <img class="absolute right-0 md:hidden top-[200px]" src="{{ asset('/images/ds-academy/ds-academy-4-mobile.png') }}">
@@ -31,8 +29,8 @@
             <div class="rounded-lg bg-gradient-to-r from-[#894584] to-[#6BB9E7] p-1 mx-auto w-[250px] xs:w-[315px] md:w-[435px] lg:w-[657px] xl:w-[1051px] -translate-x-2 md:-translate-x-4 lg:-translate-x-6 xl:-translate-x-9">
                 <div class="flex flex-col bg-neutral-800 px-4 pt-8 pb-7 text-center rounded-lg h-full">
                     <div class="text-white mb-7 xl:mb-16 text-2xl xl:text-7xl font-bold">About</div>
-                    <span class="mx-auto text-[#D9D9D9] text-sm xl:text-lg font-medium xl:w-[933px]">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Forem ipsum dolor sit amet, consectetur adipiscing elit. </span>
-                    <a href="#" class="text-xs xl:text-base font-semibold text-white bg-gradient-to-r mx-auto mt-6 from-[#398FBA] to-[#97FBFE] rounded-3xl px-3 xl:px-5 py-2 xl:py-3 w-[113px] xl:w-[236px] h-[34px] xl:h-auto hover:brightness-75">Register</a>
+                    <span class="mx-auto text-[#D9D9D9] text-sm xl:text-lg font-medium xl:w-[933px]">Grand Talkshow ISE! 2023 merupakan kegiatan talkshow interaktif yang diadakan secara online dan merupakan rangkaian acara pembuka untuk ISE! 2023. Secara umum, Grand Talkshow akan membahas perkembangan era digital dan isu teknologi terkini.</span>
+                    <a href="/my/gts" class="text-xs xl:text-base font-semibold text-white bg-gradient-to-r mx-auto mt-6 from-[#398FBA] to-[#97FBFE] rounded-3xl px-3 xl:px-5 py-2 xl:py-3 w-[113px] xl:w-[236px] h-[34px] xl:h-auto hover:brightness-75">Register</a>
                 </div>
             </div>
         </div>
@@ -61,13 +59,13 @@
                             <div class="grid gr-row justify-center gap-3 items-center text-white">
                                 <div class="relative h-64 w-72 top-10 justify-content-center">
                                     <img class="absolute h-[240.475px] translate-x-5 md:translate-x-5 -translate-y-12 -z-30" src="{{ asset('/images/ds-academy/speaker-3-mobile.png') }}"/>
-                                    <img class="mx-auto h-[190px] md:h-48" src="{{ asset('/images/ds-academy/speaker.png') }}" />
+                                    <img class="mx-auto w-[150px] -translate-x-1 h-[190px] md:h-48" src="{{ asset('/images/gts/speaker-1bg.png') }}" />
                                 </div>
-                                <div class="mx-auto w-[181px]">Rifyal Rahmat</div>
-                                <div class="text-sm mx-auto w-[165px]">Data Scientist at Telkomsel</div>
+                                <div class="mx-auto w-[181px] font-bold">Irzan Raditya</div>
+                                <div class="text-sm mx-auto w-[165px] font-light text-cyan-200">CEO & Co-Founder of
+                                    Kata.ai</div>
                                 <div class="block mx-auto w-[220px] space-y-5">
-                                    <span>“Are We Heading Towards The Future with No Job Vacancy for Humans?”</span>
-                                    <span clas="block">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, acaliquet odio mattis. Class aptent taciti    sociosqu ad</span>
+                                    <span clas="block">Irzan Raditya, CEO kata.ai, telah mencapai kesuksesan di kata.ai maupun dalam dunia kecerdasan buatan (AI). Di bawah kepemimpinannya, kata.ai telah menjadi perusahaan terkemuka dalam pengembangan solusi AI dan pemrosesan bahasa alami.</span>
                                     <div class="flex flex-row gap-3 justify-center p-5">
                                         <a href="#" target="blank">
                                             <x-bi-linkedin />
@@ -86,13 +84,12 @@
                             <div class="grid gr-row justify-center gap-3 items-center text-white">
                                 <div class="relative h-64 w-72 top-10 justify-content-center">
                                     <img class="absolute h-[240.475px] translate-x-5 md:translate-x-5 -translate-y-12 -z-30" src="{{ asset('/images/ds-academy/speaker-3-mobile.png') }}"/>
-                                    <img class="mx-auto h-[190px] md:h-48" src="{{ asset('/images/ds-academy/speaker.png') }}" />
+                                    <img class="mx-auto h-[190px] md:h-48" src="{{ asset('/images/gts/speaker-2bg.png') }}" />
                                 </div>
-                                <div class="mx-auto w-[181px]">Rifyal Rahmat</div>
-                                <div class="text-sm mx-auto w-[165px]">Data Scientist at Telkomsel</div>
+                                <div class="mx-auto w-[181px] font-bold">Belladonna Paramayswari</div>
+                                <div class="text-sm mx-auto w-[165px] font-light text-cyan-200">Risk Specialist at PT. Bank Mandiri (Persero) Tbk.</div>
                                 <div class="block mx-auto w-[220px] space-y-5">
-                                    <span>“Are We Heading Towards The Future with No Job Vacancy for Humans?”</span>
-                                    <span clas="block">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, acaliquet odio mattis. Class aptent taciti    sociosqu ad</span>
+                                    <span clas="block">Belladona Paramayswari adalah seorang profesional IT yang sukses dan berbakat. Dengan pengetahuan mendalam dalam pengembangan perangkat lunak, analisis data, dan manajemen proyek.</span>
                                     <div class="flex flex-row gap-3 justify-center p-5">
                                         <a href="#" target="blank">
                                             <x-bi-linkedin />
@@ -111,13 +108,12 @@
                             <div class="grid gr-row justify-center gap-3 items-center text-white">
                                 <div class="relative h-64 w-72 top-10 justify-content-center">
                                     <img class="absolute h-[240.475px] translate-x-5 md:translate-x-5 -translate-y-12 -z-30" src="{{ asset('/images/ds-academy/speaker-3-mobile.png') }}"/>
-                                    <img class="mx-auto h-[190px] md:h-48" src="{{ asset('/images/ds-academy/speaker.png') }}" />
+                                    <img class="mx-auto h-[190px] md:h-48" src="{{ asset('/images/gts/speaker-3bg.png') }}" />
                                 </div>
-                                <div class="mx-auto w-[181px]">Rifyal Rahmat</div>
-                                <div class="text-sm mx-auto w-[165px]">Data Scientist at Telkomsel</div>
+                                <div class="mx-auto w-[181px] font-bold">Sabrina Woro Anggraini</div>
+                                <div class="text-sm mx-auto w-[165px] font-light text-cyan-200">Co-Founder & Managing Director of Natuno Design Lab</div>
                                 <div class="block mx-auto w-[220px] space-y-5">
-                                    <span>“Are We Heading Towards The Future with No Job Vacancy for Humans?”</span>
-                                    <span clas="block">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, acaliquet odio mattis. Class aptent taciti    sociosqu ad</span>
+                                    <span clas="block">Sabrina Woro Anggraini adalah seorang profesional berbakat dan berdedikasi di bidang bisnis dan teknologi. Sabrina, cofounder Notunolab, berpengalaman dalam implementasi teknologi informasi (IT) dalam bisnis.</span>
                                     <div class="flex flex-row gap-3 justify-center p-5">
                                         <a href="#" target="blank">
                                             <x-bi-linkedin />
@@ -143,7 +139,7 @@
                 <div class="swiper-pagination"></div>
             </div>
             <!-- PC -->
-            <div class="lg:grid grid-flow-row justify-center pt-2 xl:pt-80 text-center hidden lg:scale-75 xl:scale-110 ">
+            <div class="lg:grid grid-flow-row justify-center pt-2 xl:pt-72 text-center hidden lg:scale-75 xl:scale-110 ">
                 <div class="text-white mb-52 text-7xl font-bold">Our Speakers</div>
 
                 <div class="flex flex-col gap-40">
@@ -151,32 +147,33 @@
                 <div class="w-[955px] h-[405px] p-5 rounded shadow justify-start items-start gap-5 inline-flex text-left">
                     <div>
                         <img class="absolute -translate-x-24 -translate-y-28 md:block" src="{{ asset('/images/ds-academy/speaker-3.png') }}">
-                        <img class="w-[356px] h-[364px] relative rounded" src="{{ asset('/images/ds-academy/speaker.png') }}" />
+                        <img class="w-[310px] translate-x-2 translate-y-[5px] h-[364px] relative rounded" src="{{ asset('/images/gts/speaker-1bg.png') }}" />
                     </div>
                     <div class="grow shrink basis-0 self-stretch flex-col justify-start items-start gap-5 inline-flex">
                         <div class="self-stretch justify-end items-start gap-[50px] inline-flex">
                             <div class="flex-col justify-start items-start gap-2.5 inline-flex">
                                 <div class="w-[266px] h-9 justify-center items-center inline-flex">
-                                    <div class="w-[266px] text-white text-[24px] font-bold leading-9">Rifyal Rahmat</div>
+                                    <div class="w-[266px] text-white text-[24px] font-bold leading-9">Irzan Raditya</div>
                                 </div>
                                 <div class="justify-start items-start gap-2.5 inline-flex">
-                                    <div class="text-cyan-200 text-[24px] font-normal leading-9">Data Scientist at Telkomsel</div>
+                                    <div class="text-cyan-200 text-[24px] font-normal leading-9">CEO & Co-Founder of
+                                        Kata.ai</div>
                                 </div>
                             </div>
-                            <div class="grow shrink basis-0 h-[33px] justify-end items-center gap-[21px] flex">
+                            <div class="grow shrink basis-0 h-[33px] justify-end items-center gap-4 flex">
                                     <a href="#" target="blank">
-                                        <x-bi-linkedin class="w-[25px] h-[25px]"/>
+                                        <x-bi-linkedin class="w-[20px] h-[20px]"/>
                                     </a>
                                     <a href="#" target="blank" >
-                                        <x-bi-instagram class="w-[25px] h-[25px]"/>
+                                        <x-bi-instagram class="w-[20px] h-[20px]"/>
                                     </a>
                                     <a href="#" target="blank">
-                                        <x-bi-twitter class="w-[25px] h-[25px]"/>
+                                        <x-bi-twitter class="w-[20px] h-[20px]"/>
                                     </a>
                             </div>
                         </div>
                         <div class="self-stretch grow shrink basis-0 flex-col justify-start items-start gap-5 flex">
-                            <div class="self-stretch text-white text-[18px] font-medium leading-7">“Are We Heading Towards The Future with No Job Vacancy for Humans?”<br/><br/>Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad</div>
+                            <div class="self-stretch text-white text-[18px] font-medium leading-7">Irzan Raditya, CEO kata.ai, telah mencapai kesuksesan di kata.ai maupun dalam dunia kecerdasan buatan (AI). Di bawah kepemimpinannya, kata.ai telah menjadi perusahaan terkemuka dalam pengembangan solusi AI dan pemrosesan bahasa alami.</div>
                         </div>
                     </div>
                 </div>
@@ -184,32 +181,32 @@
                 <div class="w-[955px] h-[405px] p-5 rounded shadow justify-start items-start gap-5 inline-flex text-left flex-row-reverse">
                     <div>
                         <img class="absolute -translate-x-2 -translate-y-28 md:block" src="{{ asset('/images/ds-academy/speaker-3-rev.png') }}">
-                        <img class="w-[356px] h-[364px] relative rounded" src="{{ asset('/images/ds-academy/speaker.png') }}" />
+                        <img class="w-[356px] h-[364px] translate-y-[5px] relative rounded" src="{{ asset('/images/gts/speaker-2bg.png') }}" />
                     </div>
                     <div class="grow shrink basis-0 self-stretch flex-col justify-start items-start gap-5 inline-flex">
-                        <div class="self-stretch justify-end items-start gap-[50px] inline-flex">
+                        <div class="self-stretch justify-end items-start gap-0 inline-flex">
                             <div class="flex-col justify-start items-start gap-2.5 inline-flex">
-                                <div class="w-[266px] h-9 justify-center items-center inline-flex">
-                                    <div class="w-[266px] text-white text-[24px] font-bold leading-9">Rifyal Rahmat</div>
+                                <div class="w- h-9 justify-center items-center inline-flex">
+                                    <div class="w- text-white text-[24px] font-bold leading-9">Belladonna Paramayswari</div>
                                 </div>
                                 <div class="justify-start items-start gap-2.5 inline-flex">
-                                    <div class="text-cyan-200 text-[24px] font-normal leading-9">Data Scientist at Telkomsel</div>
+                                    <div class="text-cyan-200 text-[24px] font-normal leading-9">Risk Specialist at PT. Bank Mandiri (Persero) Tbk.</div>
                                 </div>
                             </div>
-                            <div class="grow shrink basis-0 h-[33px] justify-end items-center gap-[21px] flex">
+                            <div class="grow shrink basis-0 h-[33px] justify-end items-center gap-4 flex">
                                     <a href="#" target="blank">
-                                        <x-bi-linkedin class="w-[25px] h-[25px]"/>
+                                        <x-bi-linkedin class="w-[20px] h-[20px]"/>
                                     </a>
                                     <a href="#" target="blank" >
-                                        <x-bi-instagram class="w-[25px] h-[25px]"/>
+                                        <x-bi-instagram class="w-[20px] h-[20px]"/>
                                     </a>
                                     <a href="#" target="blank">
-                                        <x-bi-twitter class="w-[25px] h-[25px]"/>
+                                        <x-bi-twitter class="w-[20px] h-[20px]"/>
                                     </a>
                             </div>
                         </div>
                         <div class="self-stretch grow shrink basis-0 flex-col justify-start items-start gap-5 flex">
-                            <div class="self-stretch text-white text-[18px] font-medium leading-7">“Are We Heading Towards The Future with No Job Vacancy for Humans?”<br/><br/>Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad</div>
+                            <div class="self-stretch text-white text-[18px] font-medium leading-7">Belladona Paramayswari adalah seorang profesional IT yang sukses dan berbakat. Dengan pengetahuan mendalam dalam pengembangan perangkat lunak, analisis data, dan manajemen proyek, Belladona telah berhasil menghadirkan solusi inovatif dalam berbagai proyek IT yang kompleks.</div>
                         </div>
                     </div>
                 </div>
@@ -217,32 +214,32 @@
                 <div class="w-[955px] h-[405px] p-5 rounded shadow justify-start items-start gap-5 inline-flex text-left">
                     <div>
                         <img class="absolute -translate-x-24 -translate-y-28 md:block" src="{{ asset('/images/ds-academy/speaker-3.png') }}">
-                        <img class="w-[356px] h-[364px] relative rounded" src="{{ asset('/images/ds-academy/speaker.png') }}" />
+                        <img class="w-[356px] h-[364px] translate-y-[3px] relative rounded" src="{{ asset('/images/gts/speaker-3bg.png') }}" />
                     </div>
                     <div class="grow shrink basis-0 self-stretch flex-col justify-start items-start gap-5 inline-flex">
                         <div class="self-stretch justify-end items-start gap-[50px] inline-flex">
                             <div class="flex-col justify-start items-start gap-2.5 inline-flex">
-                                <div class="w-[266px] h-9 justify-center items-center inline-flex">
-                                    <div class="w-[266px] text-white text-[24px] font-bold leading-9">Rifyal Rahmat</div>
+                                <div class="h-9 justify-center items-center inline-flex">
+                                    <div class="text-white text-[24px] font-bold leading-9">Sabrina Woro Anggraini</div>
                                 </div>
                                 <div class="justify-start items-start gap-2.5 inline-flex">
-                                    <div class="text-cyan-200 text-[24px] font-normal leading-9">Data Scientist at Telkomsel</div>
+                                    <div class="text-cyan-200 text-[24px] font-normal leading-9">Co-Founder & Managing Director of Natuno Design Lab</div>
                                 </div>
                             </div>
-                            <div class="grow shrink basis-0 h-[33px] justify-end items-center gap-[21px] flex">
+                            <div class="grow shrink basis-0 h-[33px] justify-end items-center gap-4 flex">
                                     <a href="#" target="blank">
-                                        <x-bi-linkedin class="w-[25px] h-[25px]"/>
+                                        <x-bi-linkedin class="w-[20px] h-[20px]"/>
                                     </a>
                                     <a href="#" target="blank" >
-                                        <x-bi-instagram class="w-[25px] h-[25px]"/>
+                                        <x-bi-instagram class="w-[20px] h-[20px]"/>
                                     </a>
                                     <a href="#" target="blank">
-                                        <x-bi-twitter class="w-[25px] h-[25px]"/>
+                                        <x-bi-twitter class="w-[20px] h-[20px]"/>
                                     </a>
                             </div>
                         </div>
                         <div class="self-stretch grow shrink basis-0 flex-col justify-start items-start gap-5 flex">
-                            <div class="self-stretch text-white text-[18px] font-medium leading-7">“Are We Heading Towards The Future with No Job Vacancy for Humans?”<br/><br/>Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad</div>
+                            <div class="self-stretch text-white text-[18px] font-medium leading-7">Sabrina Woro Anggraini adalah seorang profesional berbakat dan berdedikasi di bidang bisnis dan teknologi. Sabrina, cofounder Notunolab, berpengalaman dalam implementasi teknologi informasi (IT) dalam bisnis.</div>
                         </div>
                     </div>
                 </div>
@@ -252,7 +249,7 @@
     </section>
     {{-- End Speakers Section --}}
     {{-- Timeline Section --}}
-    <section class=" mt-5 xl:mt-10 w-screen h-[200px] lg:h-[600px] xl:h-[900px]">
+    <section class="mt-14 md:mt-8 xl:mt-10 w-screen h-[200px] lg:h-[600px] xl:h-[900px]">
         <div class=" relative z-0">
             <img class=" z-0 absolute w-[20rem] xs:w-[40rem] md:w-[60rem] lg:w-[70rem] h-[15rem] md:h-[20rem] lg:h-[33rem] xl:w-[80rem] xl:h-[41rem] lg:left-[0rem] xl:left-[0rem] " src="{{asset('images/ds-academy/bg-timeline.png')}}" alt="">
         </div>
@@ -264,7 +261,7 @@
             </div>
             <div class=" mt-8 md:mt-12 lg:mt-16 grid grid-cols-3 gap-3 sm:gap-6 md:gap-7 lg:gap-10 self-center">
                 <div class=" flex justify-center content-center flex-col">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">Jun 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">12 Jun 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-1.png') }} alt="">
                     <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Registration</p>
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Open</p>
@@ -273,7 +270,7 @@
                     </div>
                 </div>
                 <div class=" flex justify-center content-center flex-col">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">Jun 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">16 Jul 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
                         Registration
@@ -284,12 +281,12 @@
                     </div>
                 </div>
                 <div class=" flex justify-center content-center flex-col">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">Jul 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">22 Jul 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
                             Grand
                     </p>
-                    <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Academy</p>
+                    <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Talk Show</p>
                 </div>
             </div>
         </div>
@@ -434,25 +431,4 @@
         </div>
     </section>
     {{-- End FAQ Section --}}
-    {{-- Partner Section --}}
-    <section id="partner" class="text-center mt-[67px] mx-10">
-        <div class="mx-auto font-bold text-xl md:text-3xl lg:text-5xl xl:text-7xl">Meet our event partner</div>
-        <div class="flex justify-center items-center">
-                <div
-                    class="grid grid-rows-3 grid-cols-12 w-[317.2px] md:w-[610px] lg:w-[900px] xl:w-[1180px] mt-[26.5px] md:mt-[75px] lg:mt-[100px] gap-[5.3px] md:gap-[16px] lg:gap-[18px] xl:gap-[20px] ">
-                    <div class="bg-[#191A1E] col-span-6 h-[94.1px] md:h-[200px] lg:h-[300px] xl:h-[350px]">01</div>
-                    <div class="bg-[#191A1E] col-span-6 h-[94.1px] md:h-[200px] lg:h-[300px] xl:h-[350px]">01</div>
-
-                    <div class="bg-[#191A1E] col-span-4 h-[88.72px] md:h-[170px] lg:h-[280px] xl:h-[330px]">01</div>
-                    <div class="bg-[#191A1E] col-span-4 h-[88.72px] md:h-[170px] lg:h-[280px] xl:h-[330px]">01</div>
-                    <div class="bg-[#191A1E] col-span-4 h-[88.72px] md:h-[170px] lg:h-[280px] xl:h-[330px]">01</div>
-
-                    <div class="bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                </div>
-            </div>
-    </section>
-    {{-- End FAQ Partner Section --}}
 </div>

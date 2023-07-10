@@ -48,6 +48,7 @@ use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
+use App\Http\Controllers\Pages\GtsLanding;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
@@ -55,6 +56,7 @@ Route::get('icon', IconLanding::class)->name('landing.icon');
 Route::get('rise', RiseLanding::class)->name('landing.rise');
 Route::get('bionix', BionixLanding::class)->name('landing.bionix');
 Route::get('icon/ds-academy', DsAcademyLanding::class)->name('landing.dsAcademy');
+Route::get('icon/gts', GtsLanding::class)->name('landing.gts');
 
 
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');

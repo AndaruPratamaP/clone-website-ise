@@ -86,7 +86,7 @@
                                     UX Academy</a>
                             </div>
                             <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24]">
-                                <a href="/coming-soon"
+                                <a href="/icon/gts"
                                     class="bg bg-clip-text bg-gradient-blue-r hover:text-transparent focus:text-transparent font-semibold text-[12px]">Grand
                                     Talkshow
                                 </a>
@@ -183,7 +183,7 @@
                         <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24] my-[5px]">
                             <div
                                 class="bg bg-clip-text bg-gradient-blue-r hover:text-transparent focus:text-transparent">
-                                <a href="/coming-soon">Grand Talkshow</a>
+                                <a href="/icon/gts">Grand Talkshow</a>
                             </div>
                         </div>
                     </div>
