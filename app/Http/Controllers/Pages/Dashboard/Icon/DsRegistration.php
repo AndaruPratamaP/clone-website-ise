@@ -18,24 +18,31 @@ class DsRegistration extends Component
     public string $univ_ketua       = '';
     public string $univ_anggota1    = '';
     public string $univ_anggota2    = '';
+    public string $jurusan_ketua    = '';
+    public string $jurusan_anggota1   = '';
+    public string $jurusan_anggota2    = '';
     public string $insta_ketua       = '';
     public string $insta_anggota1    = '';
     public string $insta_anggota2    = '';
     public string $twib_ketua       = '';
     public string $twib_anggota1    = '';
     public string $twib_anggota2    = '';
-    public string $linked_ketua       = '';
-    public string $linked_anggota1    = '';
-    public string $linked_anggota2    = '';
+    public string $wasap_ketua       = '';
+    public string $wasap_anggota1    = '';
+    public string $wasap_anggota2    = '';
     public string $nama_tim       = '';
     public string $alasan_tim    = '';
     public string $tujuan_tim    = '';
+    public string $harapan_tim    = '';
     public string $sumber_informasi    = '';
     public string $sumber_informasi_lainnya    = '';
     public $agree;
     public $bukti_ketua;
     public $bukti_anggota1;
     public $bukti_anggota2;
+    public $cv_ketua;
+    public $cv_anggota1;
+    public $cv_anggota2;
 
     protected $rules = [
         'nama_ketua' => 'required|string|max:255',
@@ -47,18 +54,25 @@ class DsRegistration extends Component
         'univ_ketua' => 'required|string|max:255',
         'univ_anggota1' => 'required|string|max:255',
         'univ_anggota2' => 'required|string|max:255',
+        'jurusan_ketua' => 'required|string|max:255',
+        'jurusan_anggota1' => 'required|string|max:255',
+        'jurusan_anggota2' => 'required|string|max:255',
         'insta_ketua' => 'required|string|max:255',
         'insta_anggota1' => 'required|string|max:255',
         'insta_anggota2' => 'required|string|max:255',
         'twib_ketua' => 'required|string|max:255',
         'twib_anggota1' => 'required|string|max:255',
         'twib_anggota2' => 'required|string|max:255',
-        'linked_ketua' => 'required|string|max:255',
-        'linked_anggota1' => 'required|string|max:255',
-        'linked_anggota2' => 'required|string|max:255',
+        'wasap_ketua' => 'required|string|max:255',
+        'wasap_anggota1' => 'required|string|max:255',
+        'wasap_anggota2' => 'required|string|max:255',
+        'cv_ketua' => 'required|mimes:pdf|max:1024',
+        'cv_anggota1' => 'required|mimes:pdf|max:1024',
+        'cv_anggota2' => 'required|mimes:pdf|max:1024',
         'nama_tim' => 'required|string|max:255',
         'alasan_tim' => 'required|string|max:255',
         'tujuan_tim' => 'required|string|max:255',
+        'harapan_tim' => 'required|string|max:255',
         'sumber_informasi' => 'required',
         'sumber_informasi_lainnya' => 'required|string|max:255',
         'bukti_ketua' => 'required|image|max:1024',
@@ -80,6 +94,7 @@ class DsRegistration extends Component
     }
 
      public function submit() {
+         $this->validate($this->rules);
         dd($this);
     }
 

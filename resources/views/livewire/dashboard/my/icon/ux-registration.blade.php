@@ -1,3 +1,4 @@
+@section('title', 'UX Academy Registration')
 <div x-data="{step:1}" class="bg-[#121316]">
     <div class="relative min-h-screen overflow-hidden mx-auto">
       <div class="">
@@ -220,7 +221,7 @@
                 @error('cv')
                 <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
                 @enderror
-                <label class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]">Max size 3mb (*.Pdf)</label>
+                <label class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]">Max size 1mb (*.Pdf)</label>
               </div>
               <div class="mb-16">
                 <label for="share_proof_file" class="font-semibold text-xs lg:text-base 2xl:text-xl mb-4"
@@ -256,7 +257,7 @@
                 @click.prevent="step=2"
                 x-show="step==1"
               >
-                Berikutnya
+                Next
               </button>
               {{-- button step 1 end--}}
             </div>
@@ -396,7 +397,7 @@
                 class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none mr-4 hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
                 @click.prevent="step=1"
               >
-                Kembali
+                Back
               </button>
               <button
                 type="submit"

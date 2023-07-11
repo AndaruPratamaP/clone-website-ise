@@ -1,3 +1,4 @@
+@section('title', 'IS Class Registration')
 <div class="relative justify-center bg-[#141414] font-montserrat overflow-hidden h-auto">
   <div class="relative hidden md:block">
     <img class="absolute left-0" src="{{asset('images/isclass/bg-pc-1.png')}}" />

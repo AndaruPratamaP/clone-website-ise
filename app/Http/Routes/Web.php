@@ -86,10 +86,16 @@ Route::middleware(['auth'])->group(function () {
 
         Route::prefix('ds')->group(function () {
             Route::get('/', DsDashboard::class)->name('dsacademy');
+            Route::get('/registration', DsRegistration::class)->name('dsacademy.registration');
+            Route::get('/selection', DsSelection::class)->name('dsacademy.selection');
+            Route::get('/commitment', DsCommitment::class)->name('dsacademy.commitment');
         });
 
         Route::prefix('ux')->group(function () {
             Route::get('/', UxDashboard::class)->name('uxacademy');
+            Route::get('/registration', UxRegistration::class)->name('uxacademy.registration');
+            Route::get('/selection', UxSelection::class)->name('uxacademy.selection');
+            Route::get('/commitment', UxCommitment::class)->name('uxacademy.commitment');
         });
 
         Route::prefix('bionix')->group(function () {
@@ -102,6 +108,7 @@ Route::middleware(['auth'])->group(function () {
 
         Route::prefix('isclass')->group(function () {
             Route::get('/', IsClassDashboard::class)->name('isclass');
+            Route::get('/registration', IsClassRegistration::class)->name('isclass.registration');
         });
     });
 
@@ -154,13 +161,6 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('aos', Aos::class);
     Route::get('stepform-example', StepRegistrationExample::class); #example will be deleted
 
-    Route::get('my/ux/registration', UxRegistration::class); #temp for development
-    Route::get('my/ux/selection', UxSelection::class); #temp for development
-    Route::get('my/ux/commitment', UxCommitment::class); #temp for development
-    Route::get('my/ds/selection', DsSelection::class); #temp for development
-    Route::get('my/ds/commitment', DsCommitment::class); #temp for development
-    Route::get('my/ds/registration', DsRegistration::class); #temp for development
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
-    Route::get('my/isclass/registration', IsClassRegistration::class); #temp for development
     Route::get('my/bionix/registration', BionixRegistration::class)->name('bionix.registration'); #temp for developmentD
 }

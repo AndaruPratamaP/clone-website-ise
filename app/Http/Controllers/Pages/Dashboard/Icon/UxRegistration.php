@@ -49,7 +49,7 @@ class UxRegistration extends Component
         'instagram' => 'required|max:255',
         'link_upload_twibbon' => 'required|max:255',
         'share_proof_file' => 'required|image|max:1024',
-        'cv' => 'required|mimes:pdf|file|max:3072',
+        'cv' => 'required|mimes:pdf|file|max:1024',
         'reason' => 'required',
         'hope' => 'required',
         'after_ise' => 'required',

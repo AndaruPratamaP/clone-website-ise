@@ -70,7 +70,7 @@
           </div>
           <div class="flex flex-col gap-y-2 w-full">
             <a
-              href="{{ route('my.gts.registration') }}"
+              href="{{ route('my.uxacademy.registration') }}"
               class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-gradient-to-r from-[#348BB6] to-[#A3D2F3] hover:brightness-75"
               >Daftar Sekarang!</a
             >
@@ -87,48 +87,95 @@
 
   <section>
     <div
-      class="flex rounded-xl bg-[#121316] sm:bg-[#191A1E] my-8 pb-16 px-6 h-[250px] items-center justify-center max-w-[896px] lg:max-w-[1150px] 2xl:max-w-[1317px]"
+      class="flex rounded-xl bg-[#121316] sm:bg-[#191A1E] my-8 pb-16 px-6 h-full sm:h-[250px] items-center justify-center max-w-[896px] lg:max-w-[1150px] 2xl:max-w-[1317px]"
     >
       <div class="flex flex-col w-full items-center">
         <p class="flex text-white text-2xl font-medium self-center xl:self-start -mt-8">Timeline</p>
         <span
-          class="flex flex-row max-w-sm xl:max-w-[600px] 2xl:max-w-4xl w-full justify-between items-center h-[4px] bg-[#333333] text-white mt-20"
+          class="flex flex-col sm:flex-row sm:max-w-lg md:max-w-[630px] xl:max-w-3xl 2xl:max-w-5xl w-[2px] space-y-4 sm:space-y-0 sm:w-full justify-between items-center h-full sm:h-[4px] sm:bg-[#333333] text-white mt-10 sm:mt-20"
         >
-          <div class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 -translate-x-10">
-            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              12 Jun 2023
+          <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3 sm:-translate-x-10">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
+            23 Jul
             </p>
             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
+              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
             </div>
-            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Registration <br />
               Open
             </p>
           </div>
-          <div class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3">
-            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              16 Jul 2022
+          <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3 translate-x-0 sm:-translate-x-4">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
+              18 Aug
             </p>
             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
+              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
             </div>
-            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Registration <br />
               Closed
             </p>
           </div>
-          <div class="flex flex-col w-24 text-center translate-y-2 lg:translate-y-3 translate-x-10">
-            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              22 Jul 2023
+          <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
+              22-24 Sep
             </p>
             <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-3 h-4 bg-gradient-blue-r rounded-full mx-auto"></div>
+              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
             </div>
-            <p class="text-[9px] sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">
-              Grand
-              <br />
-              Talk Show
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
+              Pengerjaan <br />
+              Seleksi
+            </p>
+          </div>
+          <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
+              02 Sep
+            </p>
+            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
+              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            </div>
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
+              Hasil <br />
+              Seleksi
+            </p>
+          </div>
+          <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
+              09-10 Sep
+            </p>
+            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
+              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            </div>
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
+              UXA <br />
+              Week 1
+            </p>
+          </div>
+          <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3 translate-x-0 sm:translate-x-4">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
+              16 - 17 Sep
+            </p>
+            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
+              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            </div>
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
+              UXA <br />
+              Week 2
+            </p>
+          </div>
+          <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3 sm:translate-x-10">
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
+              23 - 24 Sep
+            </p>
+            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
+              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            </div>
+            <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">
+                UXA <br />
+                Week 3
             </p>
           </div>
         </span>

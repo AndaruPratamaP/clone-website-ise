@@ -31,7 +31,8 @@
             <div class="rounded-lg bg-gradient-to-r from-[#894584] to-[#6BB9E7] p-1 mx-auto w-[250px] xs:w-[315px] md:w-[435px] lg:w-[657px] xl:w-[1051px] -translate-x-2 md:-translate-x-4 lg:-translate-x-6 xl:-translate-x-9">
                 <div class="flex flex-col bg-neutral-800 px-4 pt-8 pb-7 text-center rounded-lg h-full">
                     <div class="text-white mb-7 xl:mb-16 text-2xl xl:text-7xl font-bold">About</div>
-                    <span class="mx-auto text-[#D9D9D9] text-sm xl:text-lg font-medium xl:w-[933px]">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.Forem ipsum dolor sit amet, consectetur adipiscing elit. </span>
+                    <span class="mx-auto text-[#D9D9D9] text-sm xl:text-lg font-medium xl:w-[933px]">
+                        Data Science Academy adalah pelatihan data science yang diselenggarakan dengan kerjasama pakar data science, menawarkan kurikulum komprehensif dan pemateri untuk berbagi ilmu dan pengalaman karir di dunia data.</span>
                     <a href="#" class="text-xs xl:text-base font-semibold text-white bg-gradient-to-r mx-auto mt-6 from-[#398FBA] to-[#97FBFE] rounded-3xl px-3 xl:px-5 py-2 xl:py-3 w-[113px] xl:w-[236px] h-[34px] xl:h-auto hover:brightness-75">Register</a>
                 </div>
             </div>
@@ -262,9 +263,9 @@
                 <h4 class=" inline-block z-30 font-montserrat text-[18px] xs:text-[20px] sm:text-[24px] md:text-[26px] lg:text-[32px] xl:text-[48px] font-bold text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-center self-center">Be Ready, Save The</h4>
                 <h4 class=" inline-block sm:ml-1 lg:ml-2 z-30 font-montserrat text-[18px] xs:text-[20px] sm:text-[24px] md:text-[26px] lg:text-[32px] xl:text-[48px] font-bold from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-center self-center">Dates</h4>
             </div>
-            <div class=" mt-8 md:mt-12 lg:mt-16 grid grid-cols-3 gap-3 sm:gap-6 md:gap-7 lg:gap-10 self-center">
+            <div class=" mt-8 md:mt-12 lg:mt-16 grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-6 md:gap-7 lg:gap-10 self-center">
                 <div class=" flex justify-center content-center flex-col">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">Jun 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">23 Jul 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-1.png') }} alt="">
                     <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Registration</p>
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Open</p>
@@ -273,7 +274,7 @@
                     </div>
                 </div>
                 <div class=" flex justify-center content-center flex-col">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">Jun 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">18 Aug 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
                         Registration
@@ -284,12 +285,34 @@
                     </div>
                 </div>
                 <div class=" flex justify-center content-center flex-col">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">Jul 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">22 Sep 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
-                            Grand
+                        Pengerjaan
                     </p>
-                    <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Academy</p>
+                    <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Seleksi</p>
+                    <div class=" relative">
+                        <img class="hidden sm:block absolute w-[75px] sm:w-[95px] md:w-[140px] lg:w-[210px] h-[2px] md:h-[4px] lg:h-[6px] bottom-[3.1rem] sm:bottom-[3.6rem] md:bottom-[3.9rem] lg:bottom-[4.3rem] xl:bottom-24 left-[2.34rem] sm:left-[3.2rem] md:left-[3.6rem] lg:left-[4.3rem] xl:left-[6rem]" src= {{ asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
+                    </div>
+                </div>
+                <div class=" flex justify-center content-center flex-col">
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">2 Sep 2022</p>
+                    <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
+                    <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
+                        Hasil
+                    </p>
+                    <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Seleksi</p>
+                    <div class=" relative">
+                        <img class=" absolute w-[75px] sm:w-[95px] md:w-[140px] lg:w-[210px] h-[2px] md:h-[4px] lg:h-[6px] bottom-[3.1rem] sm:bottom-[3.6rem] md:bottom-[3.9rem] lg:bottom-[4.3rem] xl:bottom-24 left-[2.34rem] sm:left-[3.2rem] md:left-[3.6rem] lg:left-[4.3rem] xl:left-[6rem]" src= {{ asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
+                    </div>
+                </div>
+                <div class=" flex justify-center content-center flex-col">
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">9 Sep 2022</p>
+                    <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
+                    <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
+                            DS Academy
+                    </p>
+                    <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">Week</p>
                 </div>
             </div>
         </div>
@@ -297,7 +320,7 @@
     {{-- End Timeline Section --}}
     {{-- FAQ Section --}}
 
-    <section id="faq" class=" mt-8 sm:mt-20 md:mt-32 lg:mt-12 w-screen min-h-[300px] xs:min-h-[350px] lg:min-h-[570px]">
+    <section id="faq" class=" mt-32 sm:mt-20 md:mt-32 lg:mt-12 w-screen min-h-[300px] xs:min-h-[350px] lg:min-h-[570px]">
         <div class=" relative ">
             <!-- <img class=" z-10 absolute lg:w-[34rem] lg:h-[50rem] xl:w-[50rem] xl:h-[65rem] lg:right-[0rem] xl:right-[0rem]" src= {{ asset('images/icon/IconLP_Sect7_Background1.png') }} alt="">
             <img class=" z-10 absolute hidden lg:block lg:w-[65rem] lg:h-[43rem] xl:w-[80rem] xl:h-[60rem] lg:top-[14rem] xl:top-[16rem] lg:left-[0rem] xl:left-[0rem]" src= {{ asset('images/icon/IconLP_Sect7_Background2.png') }} alt=""> -->

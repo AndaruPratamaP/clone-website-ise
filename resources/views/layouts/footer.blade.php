@@ -18,17 +18,18 @@
             </div>
             <div class="relative flex flex-col order-5 md:order-none">
                 <div class="text-[8.7px] xs:text-sm sm:text-base xl:text-[20px] font-bold mb-[0.193rem] hover:brightness-75"><a href="#">Bionix</a></div>
-                <a href="#" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">BIONIX Competition</a>
-                <a href="#" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">IS Class</a>
+                <a href="/bionix" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">BIONIX Competition</a>
+                <a href="/bionix" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">IS Class</a>
             </div>
             <div class="relative flex flex-col">
                 <div class="text-[8.7px] xs:text-sm sm:text-base xl:text-[20px] font-bold mb-[0.193rem] hover:brightness-75"><a href="#">IT Convention Zone</a></div>
+                <a href="/icon/gts" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">Grand Talkshow ISE! 2023</a>
                 <a href="#" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">Data Science Academy</a>
-                <a href="#" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">Grand Talkshow ISE! 2023</a>
+                <a href="#" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">User Experience Academy</a>
             </div>
             <div class="relative flex flex-col">
                 <div class="text-[8.7px] xs:text-sm sm:text-base xl:text-[20px] font-bold mb-[0.193rem] hover:brightness-75"><a href="#">Rivalry of ISE!</a></div>
-                <a href="#" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">Business Case Competition</a>
+                <a href="/rise" class="text-[5.1px] xs:text-[8px] md:text-[10px] xl:text-[13px] font-medium text-[#B5B3BC] mb-[0.103rem] hover:brightness-75">Business Case Competition</a>
             </div>
             <div class="relative flex flex-col">
                 <div class="text-[8.7px] xs:text-sm sm:text-base xl:text-[20px] font-bold mb-[0.193rem] hover:brightness-75"><a href="#">Paradigm</a></div>
