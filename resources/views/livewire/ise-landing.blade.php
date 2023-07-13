@@ -5,14 +5,16 @@
     <div
         class="relative bg-[#121316] w-full h-[362.4px] xs:h-[600px]  sm:h-[660px] md:h-[700px] lg:h-[1000px] xl:h-[1348px] 2xl:h-[1500px] ">
         <div class="relative ">
-            <img class="absolute h-[362px] xs:h-[600px] sm:h-[660px] md:h-[700px] lg:h-[1000px] xl:h-[1348px] 2xl:h-[1500px]  w-full "
-                src="{{ asset('/images/landing/hero.png ') }}">
+            <img class="absolute h-[362px] xs:h-[600px] sm:h-[660px] md:h-[700px] lg:h-[1000px] xl:h-[1348px] 2xl:h-[1500px] w-full"
+                src="{{ asset('/images/landing/hero.png') }}">
+            <img class="absolute w-[157.44px] xs:w-[207.44px] sm:w-[307.44px] md:w-[347.44px] lg:w-[467.44px] xl:w-[527.44px] 2xl:w-[737.44px] left-1/2 top-[150px] xs:top-[235px] sm:top-[275px] md:top-[290px] lg:top-[430px] xl:top-[550px] 2xl:top-[630px] transform -translate-x-1/2 -translate-y-1/2"
+                src="{{ asset('/images/landing/planet.png') }}" alt="">
             <div class="relative ">
-                <h1 class=" text-[18.82px] xs:text-[32px] sm:text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[88px] text-center text-[#FFEEE4] font-semibold pt-[113px] xs:pt-[185px] sm:pt-[208px] md:pt-[204px] lg:pt-[324px]  xl:pt-[424px] 2xl:pt-[450px]  "data-aos-duration="1500"
+                <h1 class=" text-[18.82px] xs:text-[25px] sm:text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[88px] text-center text-[#FFEEE4] font-semibold pt-[113px] xs:pt-[185px] sm:pt-[208px] md:pt-[204px] lg:pt-[324px]  xl:pt-[424px] 2xl:pt-[450px]  "data-aos-duration="1500"
                     data-aos="fade-down" {{-- x-intersect="$el.classList.add('opacity-100','translate-y-0')" --}}>
                     Unleash Your Future
                 </h1>
-                <h1 class=" text-[29.57px] xs:text-[52px] sm:text-[56px] md:text-[69px] lg:text-[85px] xl:text-[110px] 2xl:text-[135px] text-center text-[#FFEEE4] font-extrabold mt-[0px] "data-aos="fade-up"
+                <h1 class=" text-[29.57px] xs:text-[42px] sm:text-[56px] md:text-[69px] lg:text-[85px] xl:text-[110px] 2xl:text-[135px] text-center text-[#FFEEE4] font-extrabold mt-[0px] "data-aos="fade-up"
                     data-aos-duration="1500">
                     <span
                         class="bg-gradient-to-b from-[#FF9355] to-[#FFD693] inline-block text-transparent bg-clip-text">#</span>ProvectaFutura
@@ -58,9 +60,9 @@
     {{-- About section --}}
 
     {{-- Coming Up section --}}
-    <div class="mt-[-2px] bg-[#121316] w-full h-[580px] md:h-auto">
+    <div class="mt-[-2px] bg-[#121316] w-full h-[580px] md:h-auto pt-16 md:pt-0">
         <h1 data-aos="zoom-in"
-            class=" text-center text-white font-bold text-[24px] md:text-[45px] lg:text-[56px] xl:text-[72px] pb-[40px] xl:pb-[85px] xl:pt-[70px]">
+            class="-mb-20 md:mb-0 text-center text-white font-bold text-[24px] md:text-[45px] lg:text-[56px] xl:text-[72px] pb-[40px] xl:pb-[85px] xl:pt-[70px]">
             Coming up
         </h1>
         <div class="relative">
@@ -87,8 +89,10 @@
                                 kegiatan ISE! 2023. Secara umum, Grand Talkshow akan membahas mengenai isu teknologi
                                 terkini dan potensinya di kalangan masyarakat luas.
                             </p>
-                            <a href="/login" >
-                                <button class="mt-[4px] md:mt-[12px] lg:mt-[20px] bg-gradient-to-r from-[#D1692D] to-[#FFBF7E] text-white rounded-3xl w-[70px] md:w-[102px] lg:w-[172px] h-[20px] md:h-[30px] lg:h-[39px] text-center font-semibold  text-[8px] md:text-[12px] lg:text-[16px] transform transition duration-300 hover:scale-105">Register Now</button>
+                            <a href="/login">
+                                <button
+                                    class="mt-[4px] md:mt-[12px] lg:mt-[20px] bg-gradient-to-r from-[#D1692D] to-[#FFBF7E] text-white rounded-3xl w-[70px] md:w-[102px] lg:w-[172px] h-[20px] md:h-[30px] lg:h-[39px] text-center font-semibold  text-[8px] md:text-[12px] lg:text-[16px] transform transition duration-300 hover:scale-105">Register
+                                    Now</button>
 
                             </a>
                             {{-- <a href="#"
@@ -106,35 +110,61 @@
 
     {{-- What's new section --}}
     <div
-        class="mt-[-2px] bg-[#121316] w-full h-[291.05px] md:h-[600px] lg:h-[761px] xl:h-[1000px] pt-0 lg:pt-[70px] xl:pt-[73px] ">
+        class="relative mt-[-2px] bg-[#121316] w-full h-[291.05px] md:h-[600px] lg:h-[761px] xl:h-[1000px] pt-0 lg:pt-[70px] xl:pt-[73px] ">
         <div class="relative">
-            <img class="absolute xl:h-[677.8px] xl:w-[1429px] mt-[68px] md:mt-[145px] lg:mt-[190px] xl:mt-[258px] pr-[28px] md:pr-[45px] lg:pr-[85px] xl:pr-[85px] 2xl:pr-[0px]"
-                src="{{ asset('/images/landing/background-1.png ') }}">
-            <h1 data-aos="zoom-in"
-                class="text-center text-white font-bold text-[24px] md:text-[45px] lg:text-[56px] xl:text-[72px] pt-[19px] xl:pt-[73px]">
-                What’s New</h1>
-            <img class="w-[250px] md:w-[470px] lg:w-[600px] xl:w-[860px] h-[104px] md:h-[167px] lg:h-[260px] xl:h-[388px] mt-[16px] md:mt-[108px] mx-auto transform transition duration-300 hover:scale-105"
-                src="{{ asset('/images/landing/whatsnewimage.png ') }}">
-            <div class="text-center">
-                <h1
-                    class="text-white font-bold text-[16px] xl:text-[24px] text-center mt-[10px] md:mt-[33px]  mb-[5.3px] xl:mb-[20px] ">
-                    PARADIGM</h1>
-                <h1 class="text-white font-medium text-[14px] xl:text-[18px] text-center mb-[8.62px] xl:mb-[36px]">THE
-                    EXCITEMENT OF A LIFETIME</h1>
-                {{-- <p class="bg-gradient-to-r from-[#006C56] to-[#AFD196] inline-block text-transparent bg-clip-text ">Read
-                    More</p> --}}
+            <div class="relative">
+                <img class="absolute w-[50px] md:w-[127px] lg:w-[207px] xl:w-[287px] hidden xl:block 2xl:hidden md:top-[185px] lg:top-[190px] xl:top-[265px]"
+                    src="{{ asset('/images/landing/background-1.png ') }}" alt="">
+                <img class="absolute hidden xl:block 2xl:hidden md:w-[97px] lg:w-[147px] xl:w-[197px] md:left-[610px] lg:left-[820px] xl:left-[1060px] md:top-[230px] lg:top-[290px] xl:top-[370px]"
+                    src="{{ asset('/images/landing/background-2.png ') }}" alt="">
+
             </div>
+            <h1 data-aos="zoom-in"
+                    class="text-center text-white font-bold text-[24px] md:text-[45px] lg:text-[56px] xl:text-[72px] pt-[19px] xl:pt-[73px]">
+                    What’s New</h1>
+                <img class=" md:w-[470px] lg:w-[600px] xl:w-[850px] h-[104px] md:h-[187px] lg:h-[290px] xl:h-[378px] mt-[16px] md:mt-[108px] transform transition duration-300 hover:scale-105 mx-auto"
+                    src="{{ asset('/images/landing/whatsnewimage.png ') }}">
+                <div class="text-center ">
+                    <h1
+                        class="text-white font-bold text-[16px] xl:text-[24px] text-center mt-[10px] md:mt-[33px]  mb-[5.3px] xl:mb-[20px] ">
+                        PARADIGM</h1>
+                    <h1 class="text-white font-medium text-[14px] xl:text-[18px] text-center mb-[8.62px] xl:mb-[36px]">
+                        THE
+                        EXCITEMENT OF A LIFETIME</h1>
+                    {{-- <p class="bg-gradient-to-r from-[#006C56] to-[#AFD196] inline-block text-transparent bg-clip-text ">Read
+                    More</p> --}}
+                </div>
+            {{-- <img class="absolute xl:h-[677.8px] xl:w-[1429px] mt-[68px] md:mt-[145px] lg:mt-[190px] xl:mt-[258px] pr-[28px] md:pr-[45px] lg:pr-[85px] xl:pr-[85px] 2xl:pr-[0px]"
+                src="{{ asset('/images/landing/background-1.png ') }}"> --}}
+
         </div>
     </div>
     {{-- What's section --}}
 
     <!-- Discover -->
-    <div class="relative">
-        <div class="mt-[-2px] bg-[#121316]">
-            <img src="{{ asset('/images/landing/discover.png') }}" class=" w-full lg:h-[770px] xl:h-[805px]"
+    <div class="mt-[-2px] bg-[#121316]">
+        <div class="relative">
+            <img src="{{ asset('/images/landing/discover.png') }}" class="w-full lg:h-[620px] xl:h-[805px]"
                 alt="">
+            <div class="absolute inset-0 flex flex-col justify-center items-center">
+                <blockquote
+                    class="text-center text-white text-[20px] sm:text-[38px] md:text-[45px] lg:text-[60px] xl:text-[80px] font-bold ml-[-120px] sm:ml-[-180px] md:ml-[-230px] lg:ml-[-300px] xl:ml-[-400px]">
+                    Discover Yourself<br>
+                    <div class="ml-[230px] sm:ml-[380px] md:ml-[480px] lg:ml-[620px] xl:ml-[830px]">
+                        Be
+                        <span
+                            class=" relative inline-block before:absolute before:inset-y-2 sm:before:inset-y-4 md:before:inset-y-4 lg:before:inset-y-6 xl:before:inset-y-8 before:-inset-x-2 sm:before:-inset-x-4 md:before:-inset-x-4 lg:before:-inset-x-5 xl:before:-inset-x-6 before:block before:translate-x-4 before:translate-y-1 sm:before:translate-y-2 md:before:translate-y-3 lg:before:translate-y-4 xl:before:translate-y-5 before:bg-[#1F8069]">
+                            <span
+                                class="relative bg-gradient-to-b from-[#FF9355] to-[#FFD693] inline-block text-transparent bg-clip-text">
+                                The Future.
+                            </span>
+                        </span>
+                    </div>
+                </blockquote>
+            </div>
         </div>
     </div>
+
     <!-- Discover -->
 
     {{-- Introducing --}}
@@ -438,30 +468,33 @@
 
     <!-- Carousel -->
     <div class="mt-[-2px] relative pb-8 sm:pb-32 bg-[#121316]">
-        <div
-            class="w-full  h-[290px] md:h-[400px] lg:h-[680px] xl:h-[810px] flex items-center justify-between">
-            <div
-                class="relative w-2/3">
+        <div class="w-full  h-[290px] md:h-[400px] lg:h-[680px] xl:h-[810px] flex items-center justify-between">
+            <div class="relative w-2/3">
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper space-x-4">
-                        <div class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
+                        <div
+                            class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
                             <img src="{{ asset('images/landing/carousel-1.png') }}" alt="">
                         </div>
-                        <div class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
+                        <div
+                            class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
                             <img src="{{ asset('images/landing/carousel-2.png') }}" alt="">
                         </div>
-                        <div class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
+                        <div
+                            class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
                             <img src="{{ asset('images/landing/carousel-3.png') }}" alt="">
                         </div>
-                        <div class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
+                        <div
+                            class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
                             <img src="{{ asset('images/landing/carousel-4.png') }}" alt="">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="w-1/3">
-                <div class="flex flex-col gap-4 items-center justify-center rotate-90 text-2xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-white text-center tracking-wider whitespace-nowrap uppercase">
+                <div
+                    class="flex flex-col gap-4 items-center justify-center rotate-90 text-2xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-white text-center tracking-wider whitespace-nowrap uppercase">
                     <h2>Throwback</h2>
                     <h2>ISE! 2022</h2>
                 </div>
