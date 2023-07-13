@@ -245,33 +245,30 @@
                   <span class="text-[#FF1F00]">*</span>
                 </label>
                 <select
-                  x-model="sumber_informasi"
-                  id="sumber_informasi"
-                  name="sumber_informasi"
-                  wire:model="sumber_informasi"
-                  class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                >
-                  <option selected class="bg-[#1C1C1C]">Dari mana kamu mendapat informasi ini?</option>
-                  <option value="sosial_media" class="bg-[#1C1C1C]">Media Sosial ISE!</option>
-                  <option value="media_partner" class="bg-[#1C1C1C]">Media Partner ISE!</option>
-                  <option value="sekolah" class="bg-[#1C1C1C]">Sekolah</option>
-                  <option value="teman_keluarga" class="bg-[#1C1C1C]">Teman/Keluarga</option>
-                  <option value="lainnya" class="bg-[#1C1C1C]">Lainnya</option>
-                </select>
-                @error('sumber_informasi')
-                <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
-                @enderror
-
-                <input
-                  wire:model="sumber_informasi_lainnya"
-                  x-on:input="sumber_informasi = 'lainnya'"
-                  x-show="sumber_informasi === 'lainnya'"
-                  class="mt-3 block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#4b4b4b] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                  name="sumber_informasi_lainnya"
-                  type="text"
-                  id="sumber_informasi_lainnya"
-                  placeholder="Masukkan sumber informasi kamu"
-                />
+                name="referral"
+                id="referral"
+                wire:model="referral"
+                x-model="referral"
+                class="w-full bg-[#1C1C1C] border-solid border-b-[#FFEEE4] border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#348BB6] text-[#7C7C7C] focus:border-b-[#348BB6] mb-3 md:mb-4"
+                x-on:change="other_ref = ''"
+                required
+              >
+                <option class="bg-[#1C1C1C] text-[#348BB6]" value="" selected>Pilih salah satu</option>
+                @foreach ($referrals as $referral)
+                <option class="bg-[#1C1C1C] text-[#348BB6]" value="{{ $referral }}">{{ $referral }}</option>
+                @endforeach
+              </select>
+              <input
+                class="w-full bg-[#1C1C1C] border-solid border-b-[#FFEEE4] border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-base 2xl:text-xl hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#348BB6] text-[#7C7C7C] focus:border-b-[#348BB6] mb-3 md:mb-4"
+                placeholder="Masukkan sumber informasi kamu"
+                id="referral2"
+                wire:model="otherRef"
+                type="text"
+                x-model="other_ref"
+                x-show="referral === 'Lainnya'"
+                x-on:input="referral = 'Lainnya'"
+                x-on:focusout="if(!other_ref) referral = ''"
+              />
               </div>
 
               <div

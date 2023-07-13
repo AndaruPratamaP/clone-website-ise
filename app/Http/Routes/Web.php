@@ -48,6 +48,9 @@ use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassDashboard;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdDashboard;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdDpForm;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdPelunasanForm;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
@@ -61,50 +64,53 @@ Route::get('bionix', BionixLanding::class)->name('landing.bionix');
 Route::get('icon/ds-academy', DsAcademyLanding::class)->name('landing.dsAcademy');
 Route::get('icon/gts', GtsLanding::class)->name('landing.gts');
 
-
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
 Route::get('terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
-    //  Error Pages
+//  Error Pages
 Route::get('not-found', Error404::class)->name('404');
 Route::get('error', Error500::class)->name('500');
 Route::get('maintenance', Maintenance::class)->name('maintenance');
 
 // Routes that require authentication
 Route::middleware(['auth'])->group(function () {
+  Route::get('dashboard', function () {
+    return 'welcome';
+  })->name('dashboard');
 
-    Route::get('dashboard', function () {
-        return 'welcome';
-    })->name('dashboard');
+  Route::name('my.')
+    ->prefix('my')
+    ->middleware(['permission:my'])
+    ->group(function () {
+      Route::get('/', UserHomeDashboard::class)->name('');
 
-    Route::name('my.')->prefix('my')->middleware(['permission:my'])->group(function () {
-        Route::get('/', UserHomeDashboard::class)->name('');
-
-        Route::prefix('gts')->middleware(['permission:my.gts'])->group(function () {
-            Route::get('/', GtsDashboard::class)->name('gts');
-            Route::get('/registration', GtsRegistration::class)->name('gts.registration');
+      Route::prefix('gts')
+        ->middleware(['permission:my.gts'])
+        ->group(function () {
+          Route::get('/', GtsDashboard::class)->name('gts');
+          Route::get('/registration', GtsRegistration::class)->name('gts.registration');
         });
 
         Route::prefix('ds')->group(function () {
             Route::get('/', DsDashboard::class)->name('dsacademy');
-            Route::get('/registration', DsRegistration::class)->name('dsacademy.registration');
+
             Route::get('/selection', DsSelection::class)->name('dsacademy.selection');
             Route::get('/commitment', DsCommitment::class)->name('dsacademy.commitment');
         });
 
         Route::prefix('ux')->group(function () {
             Route::get('/', UxDashboard::class)->name('uxacademy');
-            Route::get('/registration', UxRegistration::class)->name('uxacademy.registration');
+
             Route::get('/selection', UxSelection::class)->name('uxacademy.selection');
             Route::get('/commitment', UxCommitment::class)->name('uxacademy.commitment');
         });
 
-        Route::prefix('bionix')->group(function () {
-            Route::get('/', BionixDashboard::class)->name('bionix');
-        });
+      Route::prefix('bionix')->group(function () {
+        Route::get('/', BionixDashboard::class)->name('bionix');
+      });
 
-        Route::prefix('bionix-rd')->group(function () {
-            Route::get('/', BionixRdDashboard::class)->name('bionixroadshow');
-        });
+      Route::prefix('bionix-rd')->group(function () {
+        Route::get('/', BionixRdDashboard::class)->name('bionixroadshow');
+      });
 
         Route::prefix('isclass')->group(function () {
             Route::get('/', IsClassDashboard::class)->name('isclass');
@@ -112,48 +118,55 @@ Route::middleware(['auth'])->group(function () {
         });
     });
 
-    Route::name('admin.')->prefix('admin')->middleware(['permission:admin'])->group(function () {
-        Route::get('/', AdminHomeDashboard::class)->name('');
+  Route::name('admin.')
+    ->prefix('admin')
+    ->middleware(['permission:admin'])
+    ->group(function () {
+      Route::get('/', AdminHomeDashboard::class)->name('');
 
-        Route::prefix('shortener')->group(function () {
-            Route::get('/', LinkShortenerTable::class)->name('shortener.table');
-            Route::get('/create', LinkShortener::class)->name('shortener.create');
-            Route::get('/delete/{short}', LinkShortenerAction::class)->name('shortener.delete');
-        });
+      Route::prefix('shortener')->group(function () {
+        Route::get('/', LinkShortenerTable::class)->name('shortener.table');
+        Route::get('/create', LinkShortener::class)->name('shortener.create');
+        Route::get('/delete/{short}', LinkShortenerAction::class)->name('shortener.delete');
+      });
 
-        Route::prefix('gts')->middleware(['permission:admin.gts'])->group(function () {
-            Route::get('/', GtsTable::class)->name("gts.table");
-            Route::get('/export', [GtsTable::class, "export"])->name("gts.export");
-            Route::get('/{user_id}', GtsDetailPeserta::class)->name("gts.detail");
-            Route::get('/{user_id}/{action}', GtsAdminAction::class)->name("gts.action");
+      Route::prefix('gts')
+        ->middleware(['permission:admin.gts'])
+        ->group(function () {
+          Route::get('/', GtsTable::class)->name('gts.table');
+          Route::get('/export', [GtsTable::class, 'export'])->name('gts.export');
+          Route::get('/{user_id}', GtsDetailPeserta::class)->name('gts.detail');
+          Route::get('/{user_id}/{action}', GtsAdminAction::class)->name('gts.action');
         });
-        Route::prefix('ux')->middleware(['permission:admin.gts'])->group(function () {
-            Route::get('/', UxTable::class)->name("uxacademy.table");
-            Route::get('/export', [UxTable::class, "export"])->name("uxacademy.export");
-            Route::get('/{user_id}', UxDetailPeserta::class)->name("uxacademy.detail");
-            Route::get('/{user_id}/{action}', UxAdminAction::class)->name("uxacademy.action");
+      Route::prefix('ux')
+        ->middleware(['permission:admin.gts'])
+        ->group(function () {
+          Route::get('/', UxTable::class)->name('uxacademy.table');
+          Route::get('/export', [UxTable::class, 'export'])->name('uxacademy.export');
+          Route::get('/{user_id}', UxDetailPeserta::class)->name('uxacademy.detail');
+          Route::get('/{user_id}/{action}', UxAdminAction::class)->name('uxacademy.action');
         });
-        Route::prefix('ds')->middleware(['permission:admin.gts'])->group(function () {
-            Route::get('/', DsTable::class)->name("dsacademy.table");
-            Route::get('/export', [DsTable::class, "export"])->name("dsacademy.export");
-            Route::get('/{user_id}', DsDetailPeserta::class)->name("dsacademy.detail");
-            Route::get('/{user_id}/{action}', DsAdminAction::class)->name("dsacademy.action");
+      Route::prefix('ds')
+        ->middleware(['permission:admin.gts'])
+        ->group(function () {
+          Route::get('/', DsTable::class)->name('dsacademy.table');
+          Route::get('/export', [DsTable::class, 'export'])->name('dsacademy.export');
+          Route::get('/{user_id}', DsDetailPeserta::class)->name('dsacademy.detail');
+          Route::get('/{user_id}/{action}', DsAdminAction::class)->name('dsacademy.action');
         });
     });
 
-    Route::get('logout', Logout::class)->name('logout');
+  Route::get('logout', Logout::class)->name('logout');
 });
 
 // Routes that have to be not authenticated
 Route::middleware(['guest'])->group(function () {
-    Route::get('login', Login::class)->name('login');
-    Route::get('register', Register::class)->name('register');
-    Route::get('verify/{token}', Verify::class)->name('verify');
-    Route::get('forgot/{token}', Forgot::class)->name('forgot');
-    Route::get('forgot', RequestForgot::class)->name('request-forgot');
+  Route::get('login', Login::class)->name('login');
+  Route::get('register', Register::class)->name('register');
+  Route::get('verify/{token}', Verify::class)->name('verify');
+  Route::get('forgot/{token}', Forgot::class)->name('forgot');
+  Route::get('forgot', RequestForgot::class)->name('request-forgot');
 });
-
-
 
 // check if development
 if (config('app.env') === 'local' || config('app.env') === 'development') {
@@ -163,4 +176,11 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
 
     Route::get('my/rise/registration', RiseRegistration::class); #temp for development
     Route::get('my/bionix/registration', BionixRegistration::class)->name('bionix.registration'); #temp for developmentD
+
+
+    Route::get('my/ux/registration', UxRegistration::class)->name('uxacademy.registration');
+    Route::get('my/ds/registration', DsRegistration::class)->name('dsacademy.registration');
+    Route::get('my/bionix-rd/dp', BionixRdDpForm::class)->name('bionixroadshow.dp'); #temp for developmentD
+    Route::get('my/bionix-rd/pelunasan', BionixRdPelunasanForm::class)->name('bionixroadshow.pelunasan'); #temp for developmentD
+    Route::get('my/bionix-rd/registration', BionixRdRegistration::class)->name('bionixroadshow.registration'); #temp for developmentD
 }
