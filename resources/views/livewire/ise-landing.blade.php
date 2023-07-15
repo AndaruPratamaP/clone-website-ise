@@ -506,28 +506,30 @@
     <!-- Carousel -->
 
     {{-- Sponsor section --}}
-    {{-- <div class="mt-[-2px] relative bg-[#121316] w-full md:h-[846px] lg:h-[1246px] xl:h-[1446px]">
+    <div class="mt-[-2px] relative bg-[#121316] w-full md:h-[846px] lg:h-[1246px] xl:h-[1446px] px-2">
         <h1
             class="font-bold text-[19.36px] md:text-[45px] lg:text-[58px] xl:text-[72px] text-white text-center pt-[88px] md:pt-[60px] lg:pt-[90px] xl:pt-[130px]">
             Meet our
             sponsor<br>
             <div class="flex justify-center items-center">
                 <div
-                    class="grid grid-rows-3 grid-cols-12 w-[317.2px] md:w-[610px] lg:w-[900px] xl:w-[1180px] mt-[26.5px] md:mt-[75px] lg:mt-[100px] gap-[5.3px] md:gap-[16px] lg:gap-[18px] xl:gap-[20px] ">
-                    <div class="bg-[#191A1E] col-span-6 h-[94.1px] md:h-[200px] lg:h-[300px] xl:h-[350px]">01</div>
-                    <div class="bg-[#191A1E] col-span-6 h-[94.1px] md:h-[200px] lg:h-[300px] xl:h-[350px]">01</div>
+                    class="grid grid-cols-12 w-[317.2px] md:w-[610px] lg:w-[900px] xl:w-[1180px] mt-[26.5px] md:mt-[75px] lg:mt-[100px] gap-[5.3px] md:gap-[16px] lg:gap-[18px] xl:gap-[20px] ">
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-12 h-[94.1px] sm:h-[170px] md:h-[200px] lg:h-[300px] xl:h-[350px]">
+                        <img src="{{ asset('images/sponsor/kompas-l.png') }}" alt="kompas" class="w-4/5 sm:w-auto">
+                    </div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/pelindo-s.png') }}" alt="pelindo" class="w-4/5 sm:w-auto"></div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/alfa-s.png') }}" alt="alfa" class="w-4/5 sm:w-auto"></div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/ahm-s.png') }}" alt="ahm" class="w-4/5 sm:w-auto"></div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/kai-s.png') }}" alt="kai" class="w-4/5 sm:w-auto"></div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/semen-s.png') }}" alt="semen" class="w-4/5 sm:w-auto"></div>
 
-                    <div class="bg-[#191A1E] col-span-4 h-[88.72px] md:h-[170px] lg:h-[280px] xl:h-[330px]">01</div>
-                    <div class="bg-[#191A1E] col-span-4 h-[88.72px] md:h-[170px] lg:h-[280px] xl:h-[330px]">01</div>
-                    <div class="bg-[#191A1E] col-span-4 h-[88.72px] md:h-[170px] lg:h-[280px] xl:h-[330px]">01</div>
-
-                    <div class="bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
+                    {{-- <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div> --}}
                 </div>
             </div>
-    </div> --}}
+    </div>
     {{-- Sponsor section --}}
 
     {{-- FAQ section --}}

@@ -69,9 +69,6 @@
                             <a href="{{ route('my.gts.registration') }}"
                                 class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-gradient-to-r from-[#348BB6] to-[#A3D2F3] hover:brightness-75">Daftar
                                 Sekarang!</a>
-                            {{-- <a href="/"
-                                class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75">Lihat
-                                Guidebook</a> --}}
                         </div>
                     </div>
 
@@ -323,7 +320,7 @@
 @endif
 
 <script type="text/javascript">
-    const datetime = "{{ $date }}";
+    const datetime = "17 July 2023";
     const countdownDate = new Date(datetime).getTime();
 
     // Update the countdown every second

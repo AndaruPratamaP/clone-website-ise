@@ -42,22 +42,6 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer disabled:brightness-50"
                                     placeholder="Masukkan email aktif kamu" disabled />
                             </div>
-                            {{-- <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
-                                <label for="referral"
-                                    class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Sumber
-                                    Informasi <span class="text-[#FF1F00]">*</span>
-                                </label>
-                                <select id="referral" name="referral" wire:model="referral" required
-                                    class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0  peer">
-                                    <option selected class="bg-[#1C1C1C]">Dari mana kamu mendapat informasi ini?
-                                    </option>
-                                    <option value="teman" class="bg-[#1C1C1C]">Teman</option>
-                                    <option value="sosial_media" class="bg-[#1C1C1C]">Sosial Media</option>
-                                </select>
-                                @error('referral')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
-                                @enderror
-                            </div> --}}
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
                                 <label for="referral"
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Sumber
@@ -142,27 +126,7 @@
                             </button>
                         </div>
                     </form>
-                    {{-- If Done --}}
-                    <div class="flex flex-col justify-center" x-show="isSubmitted">
-                        <h1 class="text-white text-center my-[17px] lg:my-[62px] text-[14px] lg:text-[26px] font-bold ">
-                            Registrasi Berhasil</h1>
-                        <p
-                            class="text-white text-center font-medium text-[12px] lg:text-[18px] flex flex-wrap max-w-3xl">
-                            Selamat, kamu sudah berhasil mendaftar ISE! Grand Talk Show! Sekarang kamu bisa mengakses
-                            dashboard peserta dan melengkapi informasi lainnya.
-                        </p>
-                        <div class="flex flex-row justify-center gap-[16px] mt-6 sm:mt-[39px]">
-                            <div>
-                                <a href="#"
-                                    class="items-center flex justify-center text-white bg-[##1C1C1C] font-semibold ring-2 ring-[#66C1A7] ring-inset font-Inter rounded-md text-[12px] lg:text-[16px] w-28 sm:w-[146.5px] lg:w-[387.5px] h-[42px] lg:h-[48px] px-5 py-2.5 text-center  dark:focus:ring-yellow-500 hover:opacity-80">Tutup</a>
-                            </div>
-                            <div>
-                                <a href="#"
-                                    class="items-center flex justify-center text-white bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:bg-blue-800 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[12px] lg:text-[16px] w-28 sm:w-[146.5px] lg:w-[387.5px] h-[42px] lg:h-[48px] px-[12px] lg:px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#66C1A7] hover:opacity-80">Masuk
-                                    ke dashboard</a>
-                            </div>
-                        </div>
-                    </div>
+                    {{-- <h1 class="text-xl sm:text-3xl text-center text-white font-semibold mt-24 mb-28">Pendaftaran Grand Talkshow 2023 telah ditutup</h1> --}}
 
                     {{-- Footer Form --}}
                     <div class="mt-[38px] flex justify-between flex-row items-center">
