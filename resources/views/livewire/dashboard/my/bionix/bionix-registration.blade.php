@@ -20,6 +20,7 @@
         >
           Form Pendaftaran BIONIX COMPETITION
         </p>
+        {{-- progress bar start --}}
         <div>
           <div class="flex flex-col w-full justify-center">
             <div class="bg-transparent w-[15%] xs:w-[10%] aspect-square"></div>
@@ -146,6 +147,7 @@
             <div class="bg-gradient-to-r from-[#006C56] to-[#AFD196] w-[100%] h-1 absolute z-10" x-show="step==5"></div>
           </div>
         </div>
+        {{-- progress bar end --}}
       </header>
       <div class="mt-14 sm:mt-16 lg:mt-20">
         <div class="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-36 font-['Montserrat']">
