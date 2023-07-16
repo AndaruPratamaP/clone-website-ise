@@ -28,14 +28,15 @@
                     class="flex rounded-xl bg-[#191A1E] p-5 max-w-4xl xl:max-w-[400px] w-full shrink-0 justify-center items-center">
                     <div class="flex flex-col text-white items-center">
                         <p class="text-xl font-medium">
-                            Pendaftaran @if ($isOpen)
+                            {{-- Pendaftaran @if ($isOpen)
                                 Ditutup
                             @else
                                 Dibuka
                             @endif
-                            Dalam
+                            Dalam --}}
+                            Pendaftaran Telah Ditutup
                         </p>
-                        <div class="flex flex-row gap-x-3 my-7">
+                        {{-- <div class="flex flex-row gap-x-3 my-7">
                             <div class="flex flex-col items-center justify-center">
                                 <div id="days"
                                     class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center">
@@ -69,7 +70,7 @@
                             <a href="{{ route('my.gts.registration') }}"
                                 class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-gradient-to-r from-[#348BB6] to-[#A3D2F3] hover:brightness-75">Daftar
                                 Sekarang!</a>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>

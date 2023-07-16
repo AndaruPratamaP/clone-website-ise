@@ -18,11 +18,11 @@
             </div>
             {{-- Form Content --}}
             <div class="flex flex-col max-w-xl lg:max-w-full justify-center items-center mx-auto">
-                <h1 x-show="!isSubmitted"
+                {{-- <h1 x-show="!isSubmitted"
                     class="text-white text-center mt-[30px] mb-[30px] lg:mt-[62px] lg:mb-[62px] text-[16px] lg:text-[26px] font-bold px-4">
-                    Form Pendaftaran Grand Talk Show</h1>
+                    Form Pendaftaran Grand Talk Show</h1> --}}
                 <div class="ml-[26px] mr-[24px] lg:ml-[108px] lg:mr-[128px]">
-                    <form x-show="!isSubmitted" wire:submit.prevent="submit" enctype="multipart/form-data">
+                    {{-- <form x-show="!isSubmitted" wire:submit.prevent="submit" enctype="multipart/form-data">
                         <div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group">
                                 <label for="full_name"
@@ -125,8 +125,8 @@
                                 </div>
                             </button>
                         </div>
-                    </form>
-                    {{-- <h1 class="text-xl sm:text-3xl text-center text-white font-semibold mt-24 mb-28">Pendaftaran Grand Talkshow 2023 telah ditutup</h1> --}}
+                    </form> --}}
+                    <h1 class="text-xl sm:text-3xl text-center text-white font-semibold mt-24 mb-28">Pendaftaran Grand Talkshow 2023 telah ditutup</h1>
 
                     {{-- Footer Form --}}
                     <div class="mt-[38px] flex justify-between flex-row items-center">
