@@ -5,7 +5,6 @@
         <h2 class="text-xl md:text-2xl font-bold text-[#B5B3BC]">Pengumuman</h2>
         <div class="flex flex-row flex-wrap gap-4 mt-4 w-full">
             <div class="flex flex-col items-start bg-[#191A1E] rounded-3xl max-w-xs lg:max-w-md w-full px-7 pt-4 pb-6">
-                <p class="text-base md:text-lg font-bold">Announcement</p>
                 <h2 class="text-xl md:text-2xl font-bold text-blue-400 mt-3 sm:mt-4">Grand Talk Show</h2>
                 <p class="text-sm md:text-base font-medium tracking-wide mt-1 sm:mt-2">Pendaftaran Grand Talk Show telah ditutup, terimakasih atas antusiasmenya. Saksikan acara-acara lain dari kami
                     <a href="https://www.instagram.com/is_expo/" target="blank" class="text-transparent bg-gradient-green-r bg-clip-text hover:border-b-[2px] border-green-400">disini</a></p>

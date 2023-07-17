@@ -31,7 +31,7 @@ class BionixRegistration extends Component
     return view('livewire.dashboard.my.bionix.bionix-registration')->layout('layouts.only-layout');
   }
 
-  public array $payment_methods = ['BCA - 90281741024', 'BNI - 0811111111'];
+//   public array $payment_methods = ['BCA - 90281741024', 'BNI - 0811111111'];
 
   protected $rules = [
     'team_name' => 'required|max:255',

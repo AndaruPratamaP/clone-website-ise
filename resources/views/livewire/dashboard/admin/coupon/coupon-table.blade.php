@@ -1,7 +1,6 @@
-@section('title', 'Link Shortener Table')
+@section('title', 'Coupon Table')
 <div class="flex flex-col items-center w-[95%] mx-auto p-4 min-h-screen oveflow-hidden font-montserrat">
-    <h1 class="text-4xl sm:text-5xl bg-gradient-orange-r bg-clip-text text-transparent font-bold self-start mb-10">Data
-        Link Shortener</h1>
+    <h1 class="text-4xl sm:text-5xl bg-gradient-orange-r bg-clip-text text-transparent font-bold self-start mb-10">Coupon Data</h1>
     <div
         class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 font-semibold sm:font-bold text-sm sm:text-xl">
         <div class="flex flex-row items-center gap-2">
@@ -46,9 +45,9 @@
         <table class="table-auto text-start w-full text-white">
             <thead class="font-bold text-2xl border-b-2 border-white h-12">
                 <th class="pr-8 text-start">#</th>
-                <th class="pr-40 whitespace-nowrap text-start">Short URL</th>
-                <th class="pr-32 text-start">Long URL</th>
-                <th class="pr-14 text-start">Visitor</th>
+                <th class="pr-40 whitespace-nowrap text-start">Coupon</th>
+                <th class="pr-32 text-start">School</th>
+                <th class="pr-14 text-start">Used</th>
                 <th class="pr-4 text-center">Pembuat</th>
                 <th class="pr-4 text-center">Action</th>
             </thead>

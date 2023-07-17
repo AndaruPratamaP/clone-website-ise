@@ -458,10 +458,8 @@
               {{-- step 3 end --}}
               {{-- step 4 start --}}
               <div x-show="step==4">
-                <div class="text-xs lg:text-xl my-6 md:my-8 lg:my-10 xl:my-12 text-gray-300">
-                <p>Commitment fee digunakan sebagai jaminan dan uang akan dikembalikan apabila sudah mengikuti kegiatan sampai akhir</p>
-                </div>
-                <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
+
+                {{-- <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
                   <label for="payment_method" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
                     >Metode Pembayaran<span
                       class="text-[#FF1F00] ml-1"
@@ -482,6 +480,15 @@
                     <option class="bg-[#1C1C1C] text-[#348BB6]" value="{{ $payment_method }}">{{ $payment_method }}</option>
                     @endforeach
                   </select>
+                </div> --}}
+                <div class="font-['Montserrat']">
+                    <p class="text-xs sm:text-base lg:text-xl my-4 sm:my-8">Harap lakukan transfer ke rekening berikut:</p>
+                    <p class="text-xs sm:text-base lg:text-xl">BANK BNI<br>
+                        1295633675 <br>
+                        a.n DEWI ANGELINE</p>
+                    <p class="text-xs sm:text-base lg:text-xl  mt-8">Jumlah yang harus dibayarkan:
+                        <br> <span class="font-bold">Rp 100.000,00</span>
+                        </p>
                 </div>
                 <div class="my-6 md:my-8 lg:my-10 xl:my-12">
                   <label for="payment_proof" class="font-semibold text-xs lg:text-base 2xl:text-xl mb-4"
@@ -490,6 +497,7 @@
                   <label
                     class="mt-3 mb-1 px-3 py-2 lg:py-3 flex h-full bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border cursor-pointer w-fit xs:pr-28 @error('payment_proof') border-red-500 @else border-[#66C1A7] @enderror"
                   >
+
                     <div class="flex flex-row items-center gap-1">
                       <x-heroicon-s-cloud-arrow-up
                         class="w-4 lg:w-8 h-4 lg:h-8 @error('payment_proof') text-red-500 @else text-slate-100 @enderror"
@@ -507,9 +515,11 @@
                   @error('payment_proof')
                   <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
                   @enderror
-                  <label class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
-                    >Max size 1mb (*.jpg, *.jpeg, *.png)</label
+                  <p class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
+                    >Max size 1mb (*.jpg, *.jpeg, *.png)</p
                   >
+                  <p class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
+                  >Format Nama File: nama acara_nama orang/tim</p>
                 </div>
 
               </div>
