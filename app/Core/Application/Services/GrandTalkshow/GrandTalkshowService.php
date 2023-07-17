@@ -10,7 +10,9 @@ use App\Core\Domain\Models\Eloquents\GrandTalkshow\GrandTalkshow;
 use App\Core\Domain\Models\Eloquents\User\User;
 use App\Core\Domain\Models\Eloquents\UserHasEvent\UserHasEvent;
 use App\Exceptions\IseException;
+use App\Jobs\SendNotifyGTSD5Job;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Mail;
 use Ramsey\Uuid\Uuid;
@@ -154,10 +156,12 @@ class GrandTalkshowService
         $emails = $pesertas->pluck('user.email')->toArray();
 
         try {
-            Mail::send('emails.notify-gts', [], function($message) use ($emails)
-            {    
-                $message->to($emails)->subject('[D-5] ISE! Grand Talkshow 2023');    
-            });
+            // Queue the jobs for each email
+            foreach ($emails as $recipientEmail) {
+                SendNotifyGTSD5Job::dispatch($recipientEmail);
+            }
+    
+            return true;
         } catch (Exception $e) {
             IseException::throw(Mail:: failures(), 1603);
             return false;
