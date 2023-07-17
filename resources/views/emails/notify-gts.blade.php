@@ -9,7 +9,7 @@
             }
             .container {
                 background-color: #191a1e;
-                width: 300px;
+                width: 375px;
                 height: max-content;
                 font-family: "Open Sans", sans-serif;
                 padding: 1rem 2rem;
@@ -19,6 +19,8 @@
                 justify-items: center;
                 text-align: center;
                 font-family: Poppins, sans-serif;
+                width: 100% !important;
+                min-width: 100% !important;
             }
 
             .title {
@@ -119,7 +121,20 @@
     <body>
         <table class="container" cellpadding="0" cellspacing="0" border="0">
             <tr>
-                <td class="title">[D-5] ISE! Grand Talkshow 2023</td>
+                <td
+                    class="title"
+                    style="
+                        background: linear-gradient(to right, #006c56, #afd196);
+                        border-radius: 12px;
+                        width: 200px;
+                        text-align: center;
+                        font-weight: 600;
+                        padding: 16px 40px;
+                        margin: 24px auto;
+                    "
+                >
+                    [D-5] ISE! Grand Talkshow 2023
+                </td>
             </tr>
             <tr>
                 <td>
@@ -316,17 +331,17 @@
                 </td>
             </tr>
             <tr>
-                <td class="desc-text" style="padding: 0px 0px 0px 10px">
+                <td class="desc-text" style="padding: 0px 0px 0px 30px">
                     Instagram : @is_expo
                 </td>
             </tr>
             <tr>
-                <td class="desc-text" style="padding: 0px 0px 0px 10px">
+                <td class="desc-text" style="padding: 0px 0px 0px 30px">
                     Twitter : @is_expo
                 </td>
             </tr>
             <tr>
-                <td class="desc-text" style="padding: 0px 0px 0px 10px">
+                <td class="desc-text" style="padding: 0px 0px 0px 30px">
                     Line : @mfd0663i
                 </td>
             </tr>
