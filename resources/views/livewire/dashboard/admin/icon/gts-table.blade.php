@@ -4,6 +4,8 @@
         Pendaftar Grand Talkshow</h1>
     <a href=" {{ route('admin.gts.export') }} "
         class="bg-gradient-green-r px-6 py-2 rounded-xl hover:brightness-75 mr-auto mb-4">Export</a>
+    <a wire:click="sendNotification" onclick="toastrToast({type: `info`,title: `Sedang Mengirim Notifikasi`,text: `Jangan menutup browser...`,})"
+        class="bg-gradient-green-r px-6 py-2 rounded-xl hover:brightness-75 mr-auto mb-4">Send Notification D-5</a>
     <div
         class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 font-semibold sm:font-bold text-sm sm:text-xl">
         <div class="flex flex-row items-center gap-2">

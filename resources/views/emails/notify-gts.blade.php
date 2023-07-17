@@ -276,15 +276,6 @@
                     Natuno Design Lab)
                 </td>
             </tr>
-            <!-- <tr>
-                <td>
-                    <a
-                        class="verify-btn"
-                        href="{{ $app_url . '/verify/' . $token }}"
-                        >Verifikasi Email</a
-                    >
-                </td>
-            </tr> -->
             <tr>
                 <td>
                     <p style="margin: 40px 0px"></p>

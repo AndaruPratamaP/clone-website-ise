@@ -146,4 +146,23 @@ class GrandTalkshowService
 
         return $count;
     }
+
+    public function sendNotify(): bool
+    {
+        // get all peserta which is status verified 3 and get their email from user table
+        $pesertas = GrandTalkshow::where('status_type_id', 3)->get();
+        $emails = $pesertas->pluck('user.email')->toArray();
+
+        try {
+            Mail::send('emails.notify-gts', [], function($message) use ($emails)
+            {    
+                $message->to($emails)->subject('[D-5] ISE! Grand Talkshow 2023');    
+            });
+        } catch (Exception $e) {
+            IseException::throw(Mail:: failures(), 1603);
+            return false;
+        }
+
+        return true;
+    }
 }

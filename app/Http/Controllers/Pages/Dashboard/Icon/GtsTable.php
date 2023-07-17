@@ -47,4 +47,9 @@ class GtsTable extends GrandTalkshowController
     {
         return Excel::download(new GTSExport, 'grandtalkshow.xlsx');
     }
+
+    public function sendNotification()
+    {
+        $this->sendNotify();
+    }
 }
