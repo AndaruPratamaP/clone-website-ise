@@ -165,11 +165,37 @@
             </div>
           </div>
           <!-- step 2 -->
-          <div x-show="step == 2" class="flex flex-col space-y-[45px]">
+          <div x-show="step == 2" class="flex flex-col">
             <p class="text-xs md:text-sm lg:text-base xl:text-lg font-medium text-white">
               Commitment fee digunakan sebagai jaminan dan uang akan dikembalikan apabila sudah mengikuti kegiatan
               sampai akhir
             </p>
+            <p class="text-xs sm:text-base lg:text-xl  mt-8">Jumlah yang harus dibayarkan:
+                <br> <span class="font-bold">Rp 15.000,00</span>
+                </p>
+
+            <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
+                <label for="payment_method" class="inline font-medium text-xs md:text-base xl:text-xl "
+                  >Metode Pembayaran<span
+                    class="text-[#FF1F00] ml-1"
+                    >*</span
+                  ></label
+                >
+
+                <select
+                  name="payment_method"
+                  id="payment_method"
+                  wire:model="payment_method"
+                  x-model="payment_method"
+                  class="w-full bg-[#1C1C1C] border-solid border-b-[#FFEEE4] border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#348BB6] text-[#7C7C7C] focus:border-b-[#66C1A7] mb-3 md:mb-4"
+                  required
+                >
+                  <option class="bg-[#1C1C1C] text-[#348BB6]" value="" selected>Pilih metode pembayaran kamu</option>
+                  @foreach ($payment_methods as $payment_method)
+                  <option class="bg-[#1C1C1C] text-[#348BB6]" value="{{ $payment_method }}">{{ $payment_method }}</option>
+                  @endforeach
+                </select>
+              </div>
 
             <div class="relative z-0 w-full mb-6 group cursor-pointer">
               <label
@@ -191,32 +217,16 @@
                   />
                 </div>
               </label>
-              <label class="text-white text-xs md:text-sm xl:text-base font-thin opacity-80">
+              <p class="text-white text-xs md:text-sm xl:text-base font-thin opacity-80">
                 Max size 1mb (.jpg, .jpeg, png)
-              </label>
+              </p>
+              <p class="text-white text-xs md:text-sm xl:text-base font-thin opacity-80"
+              >Format Nama File: nama acara_nama orang/tim</p>
               @error('bukti_bayar')
               <span class="block text-red-500 text-sm font-thin">{{ $message }}</span>
               @enderror
             </div>
 
-            <div class="relative z-0 w-full mb-6 group cursor-pointer">
-              <label for="tf_method" class="block text-white text-xs md:text-base xl:text-xl font-medium md:mb-1"
-                >Metode Transfer <span class="text-[#FF1F00]">*</span>
-              </label>
-              <select
-                wire:model="tf_method"
-                id="tf_method"
-                name="tf_method"
-                class="bg-[#1C1C1C] border-b-[1.4px] text-white text-sm block w-full p-2.5 text-[11px] md:text-sm xl:text-lg border-[#C5C5C5] rounded-none"
-              >
-                <option selected>Pilih metode transfer</option>
-                <option value="BCA">BCA - 90281741024</option>
-                <option value="BNI">BNI - 0811111111</option>
-              </select>
-              @error('tf_method')
-              <span class="block text-red-500 text-sm font-thin">{{ $message }}</span>
-              @enderror
-            </div>
           </div>
 
           <!-- button -->

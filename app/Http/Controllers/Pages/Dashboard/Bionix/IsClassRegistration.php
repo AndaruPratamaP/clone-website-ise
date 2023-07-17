@@ -23,7 +23,10 @@ class IsClassRegistration extends Component
     public $twibbon;
     // step 2
     public $bukti_bayar;
-    public $tf_method;
+    public $payment_method;
+
+    public array $payment_methods = ['Cash', '1295633675 BNI
+    a/n Dewi Angeline'];
 
     protected $rules = [
       // step 1
@@ -34,7 +37,7 @@ class IsClassRegistration extends Component
       'twibbon' => 'required|string|max:255',
       // step 2
       'bukti_bayar' => 'required|image|max:1024',
-      'tf_method' => 'required|string|max:255',
+      'payment_method' => 'required|string|max:255',
     ];
 
 

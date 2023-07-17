@@ -230,9 +230,10 @@
                 @error('payment_proof')
                 <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
                 @enderror
-                <label class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
-                  >Max size 1mb (*.jpg, *.jpeg, *.png)</label
-                >
+                <p class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
+                  >Max size 1mb (*.jpg, *.jpeg, *.png)</p>
+                <p class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
+                  >Format Nama File: nama acara_nama orang/tim</p>
               </div>
               <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
                 <label for="promo_code" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
