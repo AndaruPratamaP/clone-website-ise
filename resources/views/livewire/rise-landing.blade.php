@@ -665,10 +665,7 @@
                     Bisa dapat
                   </span>
                   <span
-                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text leading-[50%] lg:leading-none"
-                  >
-                    Free Pass SNMPTN
-                  </span>
+
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
                   >
@@ -743,10 +740,7 @@
                     Bisa dapat
                   </span>
                   <span
-                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text leading-[50%] lg:leading-none"
-                  >
-                    Free Pass SNMPTN
-                  </span>
+
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
                   >
@@ -821,10 +815,7 @@
                     Bisa dapat
                   </span>
                   <span
-                    class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text leading-[50%] lg:leading-none"
-                  >
-                    Free Pass SNMPTN
-                  </span>
+
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
                   >

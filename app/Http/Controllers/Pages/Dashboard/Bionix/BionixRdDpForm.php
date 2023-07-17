@@ -22,7 +22,8 @@ class BionixRdDpForm extends Component
     public string $payment_method;
     public $payment_proof;
 
-    public array $payment_methods = ['BCA - 90281741024', 'BNI - 0811111111'];
+    public array $payment_methods = ['Cash', '1295633675 BNI
+    a/n Dewi Angeline'];
 
     protected $rules = [
       'team_name' => 'required|max:255',

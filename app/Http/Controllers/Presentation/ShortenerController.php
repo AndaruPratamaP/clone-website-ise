@@ -39,10 +39,6 @@ class ShortenerController extends Component
 
     public function store(): ?ShortenerResponse
     {
-        if (preg_match('/[0-9]/', $this->short_url)) {
-            $this->msg['error'] = "Short URL tidak boleh mengandung angka";
-            return null;
-        }
 
         $this->request = new ShortenerRequest(
             $this->long_url,

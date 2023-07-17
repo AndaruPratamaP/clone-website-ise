@@ -1165,7 +1165,7 @@
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none"
                   >
-                    Free Pass SNMPTN
+                    Free Pass SNBP
                   </span>
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -1236,7 +1236,7 @@
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none"
                   >
-                    Free Pass SNMPTN
+                    Free Pass SNBP
                   </span>
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -1307,7 +1307,7 @@
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text leading-[50%] lg:leading-none"
                   >
-                    Free Pass SNMPTN
+                    Free Pass SNBP
                   </span>
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -1727,7 +1727,7 @@
             <p
               class="z-30 mt-4 font-montserrat text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[20px] text-white text-left"
             >
-            BIONIX ISE! 2023 adalah rangkaian kompetisi berupa seleksi olimpiade SMA/SMK/sederajat tingkat nasional yang berhadiah free pass SNMPTN Sistem Informasi ITS bagi pemenangnya. BIONIX memiliki tiga tahap kompetisi yaitu penyisihan, semifinal, dan final. Tahapan kompetisi BIONIX akan dilaksanakan secara offline dan online.
+            BIONIX ISE! 2023 adalah rangkaian kompetisi berupa seleksi olimpiade SMA/SMK/sederajat tingkat nasional yang berhadiah free pass SNBP Sistem Informasi ITS bagi pemenangnya. BIONIX memiliki tiga tahap kompetisi yaitu penyisihan, semifinal, dan final. Tahapan kompetisi BIONIX akan dilaksanakan secara offline dan online.
             </p>
           </button>
         </div>

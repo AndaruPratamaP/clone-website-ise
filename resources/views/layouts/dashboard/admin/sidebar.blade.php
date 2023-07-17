@@ -30,6 +30,17 @@
                             class="flex flex-row items-center gap-3 group hover:brightness-75">Shortener Table</a>
                     </div>
                 </div>
+                <div x-data="{ open: true }">
+                    <button class="flex flex-row items-center gap-3 group hover:brightness-75">
+                        <x-heroicon-s-link class="w-6 h-6 text-[#B5B3BC]" />Coupon
+                    </button>
+                    <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
+                        <a href="{{ route('admin.coupon.create') }}"
+                            class="flex flex-row items-center gap-3 group hover:brightness-75">New Coupon</a>
+                        <a href="{{ route('admin.coupon.table') }}"
+                            class="flex flex-row items-center gap-3 group hover:brightness-75">Coupon Table</a>
+                    </div>
+                </div>
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
@@ -113,6 +124,20 @@
                         Shortener</a>
                     <a href="{{ route('admin.shortener.table') }}"
                         class="flex flex-row items-center gap-3 group hover:brightness-75">Shortener Table</a>
+                </div>
+            </div>
+            <div x-data="{ open: false }">
+                <button @click="open = !open" class="flex flex-row items-center gap-3 group hover:brightness-75">
+                    <x-heroicon-s-rectangle-stack class="w-6 h-6 text-[#B5B3BC]" />Coupon
+                    <x-heroicon-s-chevron-down class="w-6 h-4 text-[#B5B3BC] ml-auto pr-1 mt-1"
+                        x-bind:class="open == true ? 'rotate-180' : 'rotate-0'" />
+                </button>
+                <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
+                    <a href="{{ route('admin.coupon.create') }}"
+                        class="flex flex-row items-center gap-3 group hover:brightness-75">New
+                        Coupon</a>
+                    <a href="{{ route('admin.coupon.table') }}"
+                        class="flex flex-row items-center gap-3 group hover:brightness-75">Coupon Table</a>
                 </div>
             </div>
         </div>

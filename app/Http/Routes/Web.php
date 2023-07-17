@@ -32,15 +32,19 @@ use App\Http\Controllers\Pages\Dashboard\Icon\DsCommitment;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDashboard;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxCommitment;
 use App\Http\Controllers\Pages\Dashboard\UserHomeDashboard;
+use PhpOffice\PhpSpreadsheet\Calculation\Financial\Coupons;
 use App\Http\Controllers\Pages\Dashboard\AdminHomeDashboard;
+use App\Http\Controllers\Pages\Dashboard\Coupon\CouponTable;
 use App\Http\Controllers\Pages\Dashboard\Icon\DsAdminAction;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxAdminAction;
+use App\Http\Controllers\Pages\Dashboard\Coupon\CreateCoupon;
 use App\Http\Controllers\Pages\Dashboard\Icon\DsRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsAdminAction;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\DsDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsRegistration;
 use App\Http\Controllers\Pages\Dashboard\Icon\UxDetailPeserta;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdDpForm;
 use App\Http\Controllers\Pages\Dashboard\Icon\GtsDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Rise\RiseRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixDashboard;
@@ -48,11 +52,10 @@ use App\Http\Controllers\Pages\Examples\StepRegistrationExample;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassDashboard;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortener;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdDashboard;
-use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdDpForm;
-use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdPelunasanForm;
-use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdRegistration;
+use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdPelunasanForm;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 
@@ -128,6 +131,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', LinkShortenerTable::class)->name('shortener.table');
         Route::get('/create', LinkShortener::class)->name('shortener.create');
         Route::get('/delete/{short}', LinkShortenerAction::class)->name('shortener.delete');
+      });
+
+      Route::prefix('coupon')->group(function () {
+        Route::get('/', CouponTable::class)->name('coupon.table');
+        Route::get('/create', CreateCoupon::class)->name('coupon.create');
       });
 
       Route::prefix('gts')
