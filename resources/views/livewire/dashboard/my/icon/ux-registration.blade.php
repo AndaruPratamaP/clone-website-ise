@@ -136,7 +136,7 @@
                   />
                   @error('full_name')
                   <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
-  
+
                   @enderror
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
@@ -354,7 +354,7 @@
                   <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
                   @enderror
                 </div>
-  
+
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
                   <label for="referral" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
                     >Darimana Anda mendapatkan informasi terkait ISE! User Experience Academy?<span
@@ -362,7 +362,7 @@
                       >*</span
                     ></label
                   >
-  
+
                   <select
                     name="referral"
                     id="referral"
@@ -432,16 +432,16 @@
               {{-- button step 2 start --}}
               <div x-show="step==2" class="flex w-full flex-row items-center gap-4">
                 <button
-                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                   @click.prevent="step=1">
                   Back
                 </button>
               <button
-                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] h-12 lg:h-14 flex justify-center items-center hover:brightness-75"
+                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] h-10 sm:h-12 lg:h-14 flex justify-center items-center hover:brightness-75"
                 @click.prevent="step=3">
                 Next
               </button>
-  
+
             </div>
               {{-- button step 2 end --}}
               {{-- step 2 end --}}
@@ -489,7 +489,7 @@
                 {{-- button step 3 start --}}
                 <div class="flex w-full flex-row">
                   <button
-                    class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none mr-4 hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                    class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none mr-4 hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                     @click.prevent="step=2"
                   >
                     Back
@@ -497,7 +497,7 @@
                   <button
                     type="submit"
                     wire:click="submit"
-                    class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:brightness-75 h-12 lg:h-14 flex justify-center items-center"
+                    class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:brightness-75 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                   >
                     <span wire:loading.remove>Submit</span>
                     <div

@@ -521,13 +521,13 @@
             <div x-show="step==1" class="flex w-full flex-row items-center gap-4">
               <a href="#" class="w-full">
                 <button
-                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-12 lg:h-14 flex justify-center items-center">
+                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center">
                   Tutup
                 </button>
 
               </a>
               <button
-                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:brightness-75 hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:brightness-75 hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                 @click.prevent="step=2">
                 Next
               </button>
@@ -537,12 +537,12 @@
             {{-- button step 2 start--}}
             <div x-show="step==2" class="flex w-full flex-row items-center gap-4">
                 <button
-                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                   @click.prevent="step=1">
                   Back
                 </button>
               <button
-                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                 @click.prevent="step=3">
                 Next
               </button>
@@ -552,12 +552,12 @@
             {{-- button step 3 start--}}
             <div x-show="step==3" class="flex w-full flex-row items-center gap-4">
                 <button
-                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                   @click.prevent="step=2">
                   Back
                 </button>
               <button
-                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                 @click.prevent="step=4">
                 Next
               </button>
@@ -567,14 +567,14 @@
             {{-- button step 4 start--}}
             <div x-show="step==4" class="flex w-full flex-row items-center gap-4">
                 <button
-                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                   @click.prevent="step=3">
                   Back
                 </button>
                 <button
                 wire:click="submit"
                 type="submit"
-                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
               >
                 <span wire:loading.remove>Submit</span>
                 <div

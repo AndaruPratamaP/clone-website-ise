@@ -403,24 +403,24 @@
    --}}
                 </a>
                 <button
-                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:brightness-75 hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:brightness-75 hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                   @click.prevent="step=2">
                   Berikutnya
                 </button>
-  
+
               </div>
               {{-- button step 1 end--}}
               {{-- button step 2 start--}}
               <div x-show="step==2" class="flex w-full flex-row items-center gap-4">
                   <button
-                    class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                    class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#66C1A7] hover:bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:border-none hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                     @click.prevent="step=1">
                     Sebelumnya
                   </button>
                 <button
                   wire:click="submit"
                   type="submit"
-                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:py-3.5 h-12 lg:h-14 flex justify-center items-center"
+                  class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#006C56] to-[#AFD196] hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                 >
                   <span wire:loading.remove>Kirim</span>
                   <div
@@ -434,10 +434,10 @@
                     >
                   </div>
                 </button>
-  
+
               </div>
               {{-- button step 2 end--}}
-  
+
             </div>
             {{-- button end --}}
           </div>
@@ -445,4 +445,4 @@
       </div>
     </div>
   </div>
-  
+
