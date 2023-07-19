@@ -87,7 +87,7 @@
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col items-center space-y-4">
-            <a href="/coming-soon" class="flex flex-row items-center justify-center gap-2 group border-[1px] border-white rounded-lg w-full py-2 hover:brightness-75"><x-heroicon-s-question-mark-circle class="w-6 h-6 text-white"/>Bantuan</a>
+            <a href="https://wa.me/+6281332049750" class="flex flex-row items-center justify-center gap-2 group border-[1px] border-white rounded-lg w-full py-2 hover:brightness-75"><x-heroicon-s-question-mark-circle class="w-6 h-6 text-white"/>Bantuan</a>
             <a href="/logout" class="flex flex-row items-center gap-2 hover:text-red-500 group"><x-heroicon-s-arrow-left-on-rectangle class="w-6 h-6 text-white group-hover:text-red-500" />Logout</a>
         </div>
     </div>

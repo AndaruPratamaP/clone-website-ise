@@ -273,7 +273,7 @@
       <!-- footer icon -->
 
       <div class="mx-7 mt-[38px] flex justify-between flex-row items-center">
-        <a href="https://www.wa.me/+62911" class="items-center hover:brightness-90">
+        <a href="https://wa.me/+6281332049750" class="items-center hover:brightness-90">
           <img
             class="w-[45 px] h-[40px] lg:w-[55px] lg:h-[50px] align-top hover:opacity-60"
             src="{{ asset('/images/whatsapp.png ') }}"

@@ -599,35 +599,34 @@
                 </div>
               </button>
 
-            </div>
-            {{-- button step 4 end--}}
+                        </div>
+                        {{-- button step 4 end --}}
 
 
-          </div>
-          {{-- button end --}}
-          {{-- footer start --}}
-          <footer class="mt-10 sm:mt-24 pb-10 sm:pb-14 flex justify-between flex-row items-center">
-            <a href="https://www.wa.me/+62911" class="items-center hover:brightness-90">
-              <img
-                class="w-[45 px] h-[40px] lg:w-[55px] lg:h-[50px] align-top hover:opacity-60"
-                src="{{ asset('/images/whatsapp.png ') }}"
-              />
-            </a>
-            <div class="flex flex-row gap-2 md:gap-3 items-center text-slate-300">
-              <a href="https://www.instagram.com/is_expo/" target="blank">
-                <x-bi-instagram class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
-              </a>
-              <a href="https://tiktok.com" target="blank">
-                <x-bi-tiktok class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
-              </a>
-              <a href="https://www.linkedin.com/company/ise-information-systems-expo-2023/" target="blank">
-                <x-bi-linkedin class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
-              </a>
+                    </div>
+                    {{-- button end --}}
+                    {{-- footer start --}}
+                    <footer class="mt-10 sm:mt-24 pb-10 sm:pb-14 flex justify-between flex-row items-center">
+                        <a href="https://wa.me/+6281332049750" class="items-center hover:brightness-90">
+                            <img class="w-[45 px] h-[40px] lg:w-[55px] lg:h-[50px] align-top hover:opacity-60"
+                                src="{{ asset('/images/whatsapp.png ') }}" />
+                        </a>
+                        <div class="flex flex-row gap-2 md:gap-3 items-center text-slate-300">
+                            <a href="https://www.instagram.com/is_expo/" target="blank">
+                                <x-bi-instagram class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                            </a>
+                            <a href="https://tiktok.com" target="blank">
+                                <x-bi-tiktok class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                            </a>
+                            <a href="https://www.linkedin.com/company/ise-information-systems-expo-2023/"
+                                target="blank">
+                                <x-bi-linkedin class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                            </a>
+                        </div>
+                    </footer>
+                    {{-- footer end --}}
+                </div>
             </div>
-          </footer>
-          {{-- footer end --}}
         </div>
-      </div>
     </div>
-  </div>
 </div>
