@@ -203,6 +203,8 @@
                 class="block leading-normal text-xs md:text-base xl:text-xl font-medium text-white"
                 >Foto Bukti Pembayaran <span class="text-[#FF1F00]">*</span>
               </label>
+              <p class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
+              >Format transfer (tulis di keterangan transfer): nama acara_nama orang/tim</p>
               <label
                 class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#66C1A7] cursor-pointer"
               >
@@ -220,8 +222,6 @@
               <p class="text-white text-xs md:text-sm xl:text-base font-thin opacity-80">
                 Max size 1mb (.jpg, .jpeg, png)
               </p>
-              <p class="text-white text-xs md:text-sm xl:text-base font-thin opacity-80"
-              >Format Nama File: nama acara_nama orang/tim</p>
               @error('bukti_bayar')
               <span class="block text-red-500 text-sm font-thin">{{ $message }}</span>
               @enderror

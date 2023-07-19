@@ -56,6 +56,9 @@ use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdPelunasanForm;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassAdminAction;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassDetailPeserta;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 
@@ -161,6 +164,14 @@ Route::middleware(['auth'])->group(function () {
           Route::get('/export', [DsTable::class, 'export'])->name('dsacademy.export');
           Route::get('/{user_id}', DsDetailPeserta::class)->name('dsacademy.detail');
           Route::get('/{user_id}/{action}', DsAdminAction::class)->name('dsacademy.action');
+        });
+      Route::prefix('isclass')
+        ->middleware(['permission:admin.gts'])
+        ->group(function () {
+          Route::get('/', IsClassTable::class)->name('isclass.table');
+          Route::get('/export', [IsClassTable::class, 'export'])->name('isclass.export');
+          Route::get('/{user_id}', IsClassDetailPeserta::class)->name('isclass.detail');
+          Route::get('/{user_id}/{action}', IsClassAdminAction::class)->name('isclass.action');
         });
     });
 

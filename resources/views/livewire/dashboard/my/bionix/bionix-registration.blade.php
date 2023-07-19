@@ -494,6 +494,8 @@
                   <label for="payment_proof" class="font-semibold text-xs lg:text-base 2xl:text-xl mb-4"
                     >Upload Bukti Pembayaran<span class="text-[#FF1F00] ml-1">*</span>
                   </label>
+                  <p class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
+                  >Format transfer (tulis di keterangan transfer): nama acara_nama orang/tim</p>
                   <label
                     class="mt-3 mb-1 px-3 py-2 lg:py-3 flex h-full bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border cursor-pointer w-fit xs:pr-28 @error('payment_proof') border-red-500 @else border-[#66C1A7] @enderror"
                   >
@@ -518,8 +520,6 @@
                   <p class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
                     >Max size 1mb (*.jpg, *.jpeg, *.png)</p
                   >
-                  <p class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
-                  >Format Nama File: nama acara_nama orang/tim</p>
                 </div>
 
               </div>
