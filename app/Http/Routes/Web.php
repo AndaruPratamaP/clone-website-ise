@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Pages\DsAcademyLanding;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pages\Error404;
 use App\Http\Controllers\Pages\Error500;
@@ -7,6 +8,7 @@ use App\Http\Controllers\Pages\Auth\Login;
 use App\Http\Controllers\Pages\ComingSoon;
 use App\Http\Controllers\Pages\GtsLanding;
 use App\Http\Controllers\Pages\IseLanding;
+use App\Http\Controllers\Pages\UxAcademyLanding;  //ux academy
 use App\Http\Controllers\Pages\Auth\Forgot;
 use App\Http\Controllers\Pages\Auth\Logout;
 use App\Http\Controllers\Pages\Auth\Verify;
@@ -17,7 +19,6 @@ use App\Http\Controllers\Pages\Examples\Aos;
 use App\Http\Controllers\Pages\Auth\Register;
 use App\Http\Controllers\Pages\BionixLanding;
 use App\Http\Controllers\Pages\Examples\Swiper;
-use App\Http\Controllers\Pages\DsAcademyLanding;
 use App\Http\Controllers\Pages\Auth\RequestForgot;
 use App\Http\Controllers\Pages\TermsAndConditions;
 use App\Http\Controllers\Pages\Dashboard\Icon\DsTable;
@@ -56,6 +57,9 @@ use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdRegistration;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdPelunasanForm;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassAdminAction;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassDetailPeserta;
+use App\Http\Controllers\Pages\Dashboard\Bionix\IsClassTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 
@@ -162,6 +166,14 @@ Route::middleware(['auth'])->group(function () {
           Route::get('/{user_id}', DsDetailPeserta::class)->name('dsacademy.detail');
           Route::get('/{user_id}/{action}', DsAdminAction::class)->name('dsacademy.action');
         });
+      Route::prefix('isclass')
+        ->middleware(['permission:admin.gts'])
+        ->group(function () {
+          Route::get('/', IsClassTable::class)->name('isclass.table');
+          Route::get('/export', [IsClassTable::class, 'export'])->name('isclass.export');
+          Route::get('/{user_id}', IsClassDetailPeserta::class)->name('isclass.detail');
+          Route::get('/{user_id}/{action}', IsClassAdminAction::class)->name('isclass.action');
+        });
     });
 
   Route::get('logout', Logout::class)->name('logout');
@@ -192,3 +204,5 @@ if (config('app.env') === 'local' || config('app.env') === 'development') {
     Route::get('my/bionix-rd/pelunasan', BionixRdPelunasanForm::class)->name('bionixroadshow.pelunasan'); #temp for developmentD
     Route::get('my/bionix-rd/registration', BionixRdRegistration::class)->name('bionixroadshow.registration'); #temp for developmentD
 }
+
+Route::get('icon/academy/ux', UxAcademyLanding::class)->name('landing.uxAcademy');

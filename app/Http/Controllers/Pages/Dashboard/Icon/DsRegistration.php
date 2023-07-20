@@ -34,12 +34,13 @@ class DsRegistration extends Component
     public string $alasan_tim    = '';
     public string $tujuan_tim    = '';
     public string $harapan_tim    = '';
-    public string $referral;
-    public string $otherRef = '';
+    public string $sumber_informasi    = '';
+    public string $sumber_informasi_lainnya    = '';
     public $agree;
     public $bukti_ketua;
     public $bukti_anggota1;
     public $bukti_anggota2;
+    public $bukti_pembayaran;
     public $cv_ketua;
     public $cv_anggota1;
     public $cv_anggota2;
@@ -73,13 +74,14 @@ class DsRegistration extends Component
         'alasan_tim' => 'required|string|max:255',
         'tujuan_tim' => 'required|string|max:255',
         'harapan_tim' => 'required|string|max:255',
-        'referral' => 'required|string|max:255',
-        'bukti_ketua' => 'required|image|max:1024',
-        'bukti_anggota1' => 'required|image|max:1024',
-        'bukti_anggota2' => 'required|image|max:1024',
+        'sumber_informasi' => 'required',
+        'sumber_informasi_lainnya' => 'required|string|max:255',
+        'bukti_ketua' => 'required|image:max:1024',
+        'bukti_anggota1' => 'required|image:max:1024',
+        'bukti_anggota2' => 'required|image:max:1024',
+        'bukti_pembayaran' => 'required|image:max:1024',
     ];
 
-    public array $referrals = ['Media Sosial ISE!', 'Media Partner ISE!', 'Sekolah', 'Teman/Keluarga', 'Lainnya'];
 
     public function render()
     {
@@ -89,10 +91,11 @@ class DsRegistration extends Component
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+
+
     }
 
      public function submit() {
-         $this->validate($this->rules);
         dd($this);
     }
 

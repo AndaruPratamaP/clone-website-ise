@@ -448,16 +448,12 @@
               {{-- step 3 start --}}
               <div x-show="step==3">
                 <div class="my-6 md:my-8 lg:my-10 xl:my-12">
-                  <p class="text-xs lg:text-xl">
-                    Harap lakukan transfer ke rekening berikut:<br>
-                    <br>
-                    BANK MANDIRI<br>
-                    1640004185593<br>
-                    a.n EVANRIZA SAFIQ ARIADI<br>
-                    <br>
-                    Jumlah yang harus dibayarkan:<br>
-                    Rp 10.000,00<br>
-                  </p>
+                  <div class="text-white flex flex-col gap-y-10 font-montserrat text-xs leading-5 lg:text-[19px] font-medium w-full">
+                    <div>Harap lakukan transfer ke rekening berikut:</div>
+                    <div>BNI<br>1295633675 <br>a.n DEWI ANGELINE</div>
+                    <div>Jumlah yang harus dibayarkan: <br>Rp 30.000,00</div>
+                    <div>Format transfer (tulis di keterangan transfer):<br>nama acara_nama orang/tim</div>
+                  </div>
                 </div>
                 <div class="mb-16">
                   <label for="payment_proof" class="font-semibold text-xs lg:text-base 2xl:text-xl mb-4"
@@ -516,7 +512,7 @@
               </div>
               {{-- step 3 end --}}
               <div class="mt-10 sm:mt-24 pb-10 sm:pb-14 flex justify-between flex-row items-center">
-                  <a href="https://www.wa.me/+62911" class="items-center hover:brightness-90">
+                  <a href="https://wa.me/+6281332049750" class="items-center hover:brightness-90">
                     <img
                       class="w-[45 px] h-[40px] lg:w-[55px] lg:h-[50px] align-top hover:opacity-60"
                       src="{{ asset('/images/whatsapp.png ') }}"

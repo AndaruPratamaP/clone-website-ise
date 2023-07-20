@@ -48,6 +48,7 @@ class LinkShortener extends ShortenerController
             return;
         }
         $this->shortened = "https://ise-its.com/go/" . $response->getShortUrl();
+        // dd($this);
         $this->is_done = true;
         $this->msg["success"] = 'Your message has been sent!';
     }
