@@ -1,5 +1,5 @@
 @section('title', 'UX Academy Home') @if (!$isRegistered)
-<div class="min-h-screen w-full p-4 xl:pl-12 font-poppins">
+<div class="w-full min-h-screen p-4 xl:pl-12 font-poppins">
   <section>
     <div class="flex mb-5">
       <p class="text-2xl bg-gradient-blue-r font-bold bg-clip-text text-transparent tracking-[0.07em]">
@@ -11,8 +11,8 @@
     <div class="flex flex-col-reverse xl:flex-row gap-x-5 gap-y-5">
       <div class="flex rounded-xl bg-[#121316] sm:bg-[#191A1E] py-8 px-9 max-w-4xl">
         <div class="flex flex-col text-white">
-          <p class="text-xl font-medium pb-3 xl:self-start self-center">Deskripsi</p>
-          <p class="text-sm sm:text-base font-light text-justify pt-4">
+          <p class="self-center pb-3 text-xl font-medium xl:self-start">Deskripsi</p>
+          <p class="pt-4 text-sm font-light text-justify sm:text-base">
             User Experience Academy ISE! 2023 merupakan kegiatan talkshow interaktif yang diadakan secara online dan
             merupakan rangkaian acara pembuka untuk kegiatan ISE! 2023. Secara umum, User Experience Academy akan membahas
             perkembangan era digital dan isu teknologi terkini. Konsep dari User Experience Academy akan dikemas dengan
@@ -25,8 +25,8 @@
       <div
         class="flex rounded-xl bg-[#191A1E] p-5 max-w-4xl xl:max-w-[400px] w-full shrink-0 justify-center items-center"
       >
-        <div class="flex flex-col text-white items-center text-center">
-          <p class="text-xl font-medium">Pendaftaran @if ($isOpen) Ditutup @else Dibuka @endif Dalam</p>
+        <div class="flex flex-col items-center text-center text-white">
+          <p class="text-xl font-medium">Pendaftaran Ditutup Dalam</p>
           <div class="flex flex-row gap-x-3 my-7">
             <div class="flex flex-col items-center justify-center">
               <div
@@ -35,9 +35,9 @@
               >
                 00
               </div>
-              <p class="flex text-white text-base font-normal">Hari</p>
+              <p class="flex text-base font-normal text-white">Hari</p>
             </div>
-            <div class="flex items-center text-white font-bold text-xl self-start pt-3">:</div>
+            <div class="flex items-center self-start pt-3 text-xl font-bold text-white">:</div>
             <div class="flex flex-col items-center justify-center">
               <div
                 id="hours"
@@ -45,9 +45,9 @@
               >
                 00
               </div>
-              <p class="flex text-white text-base font-normal">Jam</p>
+              <p class="flex text-base font-normal text-white">Jam</p>
             </div>
-            <div class="flex items-center text-white font-bold text-xl self-start pt-3">:</div>
+            <div class="flex items-center self-start pt-3 text-xl font-bold text-white">:</div>
             <div class="flex flex-col items-center justify-center">
               <div
                 id="minutes"
@@ -55,20 +55,20 @@
               >
                 00
               </div>
-              <p class="flex text-white text-base font-normal">Menit</p>
+              <p class="flex text-base font-normal text-white">Menit</p>
             </div>
-            <div class="hidden xs:flex items-center text-white font-bold text-xl self-start pt-3">:</div>
-            <div class="hidden xs:flex flex-col items-center justify-center">
+            <div class="items-center self-start hidden pt-3 text-xl font-bold text-white xs:flex">:</div>
+            <div class="flex-col items-center justify-center hidden xs:flex">
               <div
                 id="seconds"
                 class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
               >
                 00
               </div>
-              <p class="flex text-white text-base font-normal">Detik</p>
+              <p class="flex text-base font-normal text-white">Detik</p>
             </div>
           </div>
-          <div class="flex flex-col gap-y-2 w-full">
+          <div class="flex flex-col w-full gap-y-2">
             <a
               href="{{ route('my.uxacademy.registration') }}"
               class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-gradient-to-r from-[#348BB6] to-[#A3D2F3] hover:brightness-75"
@@ -89,8 +89,8 @@
     <div
       class="flex rounded-xl bg-[#121316] sm:bg-[#191A1E] my-8 pb-16 px-6 h-full sm:h-[250px] items-center justify-center max-w-[896px] lg:max-w-[1150px] 2xl:max-w-[1317px]"
     >
-      <div class="flex flex-col w-full items-center">
-        <p class="flex text-white text-2xl font-medium self-center xl:self-start -mt-8">Timeline</p>
+      <div class="flex flex-col items-center w-full">
+        <p class="flex self-center -mt-8 text-2xl font-medium text-white xl:self-start">Timeline</p>
         <span
           class="flex flex-col sm:flex-row sm:max-w-lg md:max-w-[630px] xl:max-w-3xl 2xl:max-w-5xl w-[2px] space-y-4 sm:space-y-0 sm:w-full justify-between items-center h-full sm:h-[4px] sm:bg-[#333333] text-white mt-10 sm:mt-20"
         >
@@ -98,8 +98,8 @@
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
             23 Jul
             </p>
-            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
+              <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Registration <br />
@@ -110,8 +110,8 @@
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
               18 Aug
             </p>
-            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
+              <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Registration <br />
@@ -122,8 +122,8 @@
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
               22-24 Sep
             </p>
-            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
+              <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Pengerjaan <br />
@@ -134,8 +134,8 @@
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
               02 Sep
             </p>
-            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
+              <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Hasil <br />
@@ -146,8 +146,8 @@
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
               09-10 Sep
             </p>
-            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
+              <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               UXA <br />
@@ -158,8 +158,8 @@
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
               16 - 17 Sep
             </p>
-            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
+              <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               UXA <br />
@@ -170,8 +170,8 @@
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
               23 - 24 Sep
             </p>
-            <div class="sm:w-5 sm:h-5 w-4 h-4 bg-black mx-auto rounded-full">
-              <div class="sm:w-4 sm:h-5 w-4 h-5 bg-gradient-blue-r rounded-full mx-auto"></div>
+            <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
+              <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins">
                 UXA <br />
@@ -186,7 +186,7 @@
   <section>
     {{--
     <div class="mt-10 overflow-auto">
-      <div class="sm:flex hidden sm:self-start text-2xl text-white font-bold mb-6">Speaker</div>
+      <div class="hidden mb-6 text-2xl font-bold text-white sm:flex sm:self-start">Speaker</div>
       <div
         class="flex flex-col gap-y-5 sm:flex-row sm:gap-x-8 overflow-x-auto sm:my-3 sm:shrink-0 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-500 scrollbar-rounded-[20px] pb-2"
       >
@@ -194,12 +194,12 @@
           class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100"
         >
           <img class="rounded-full w-36 h-36" src="{{ asset('images/gts/speaker-2.png') }}" alt="speaker-2" />
-          <p class="text-white font-montserrat font-bold text-lg mt-4">Irzan Raditya</p>
+          <p class="mt-4 text-lg font-bold text-white font-montserrat">Irzan Raditya</p>
           <p class="text-[#B5B3BC] font-montserrat font-normal text-base">
             CEO & Co-Founder of <br />
             Kata.ai
           </p>
-          <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">
+          <p class="mt-4 text-sm text-justify text-white sm:text-base font-montserrat">
             Irzan Raditya, CEO kata.ai, telah mencapai kesuksesan yang luar biasa baik di kata.ai maupun dalam dunia
             kecerdasan buatan (AI). Di bawah kepemimpinannya, kata.ai telah menjadi perusahaan terkemuka dalam
             pengembangan solusi AI dan pemrosesan bahasa alami. Pendekatan visioner Irzan dan pemahamannya yang mendalam
@@ -211,11 +211,11 @@
           class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100"
         >
           <img class="rounded-full w-36 h-36" src="{{ asset('images/gts/speaker-1.png') }}" alt="speaker-1" />
-          <p class="text-white font-montserrat font-bold text-lg mt-4">Belladonna Paramayswari</p>
+          <p class="mt-4 text-lg font-bold text-white font-montserrat">Belladonna Paramayswari</p>
           <p class="text-[#B5B3BC] font-montserrat font-normal text-base">
             Risk Specialist at PT. Bank Mandiri (Persero) Tbk.
           </p>
-          <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">
+          <p class="mt-4 text-sm text-justify text-white sm:text-base font-montserrat">
             Belladona Paramayswari adalah seorang profesional IT yang sukses dan berbakat. Dengan pengetahuan mendalam
             dalam pengembangan perangkat lunak, analisis data, dan manajemen proyek, Belladona telah berhasil
             menghadirkan solusi inovatif dalam berbagai proyek IT yang kompleks. Belladona saat ini bergelut dengan
@@ -228,15 +228,15 @@
           class="flex flex-col text-center max-w-[600px] sm:max-w-[400px] w-full h-full bg-[#303030] rounded-xl items-center p-9 sm:shrink-0 sm:opacity-80 hover:opacity-100"
         >
           <img
-            class="rounded-full w-36 h-36 object-cover object-top"
+            class="object-cover object-top rounded-full w-36 h-36"
             src="{{ asset('images/gts/speaker-3.png') }}"
             alt="speaker-3"
           />
-          <p class="text-white font-montserrat font-bold text-lg mt-4">Sabrina Woro Anggraini</p>
+          <p class="mt-4 text-lg font-bold text-white font-montserrat">Sabrina Woro Anggraini</p>
           <p class="text-[#B5B3BC] font-montserrat font-normal text-base">
             Co-Founder & Managing Director of Natuno Design Lab
           </p>
-          <p class="text-sm sm:text-base text-white font-montserrat text-justify mt-4">
+          <p class="mt-4 text-sm text-justify text-white sm:text-base font-montserrat">
             Sabrina Woro Anggraini adalah seorang profesional berbakat dan berdedikasi di bidang bisnis dan teknologi.
             Sabrina, cofounder Notunolab, berpengalaman dalam implementasi teknologi informasi (IT) dalam bisnis. Dengan
             pemahaman yang mendalam tentang potensi positif IT dalam efisiensi operasional dan pertumbuhan bisnis,
@@ -251,29 +251,29 @@
   </section>
 </div>
 @else {{-- vvv Sesudah daftar vvv --}}
-<div class="min-h-screen w-full p-4 xl:pl-12 font-poppins">
+<div class="w-full min-h-screen p-4 xl:pl-12 font-poppins">
   <section>
     <div class="flex mb-8">
       <p class="text-2xl text-center text-white font-bold tracking-[0.09em] md:tracking-[0.09em]">
         Halo, Selamat Datang di Dashboard
-        <span class="bg-gradient-blue-r font-bold bg-clip-text text-transparent">User Experience Academy</span>
+        <span class="font-bold text-transparent bg-gradient-blue-r bg-clip-text">User Experience Academy</span>
       </p>
     </div>
   </section>
 
   <div class="hidden self-start text-2xl text-[#B5B3BC] font-bold mb-2 md:flex">Status</div>
 
-  <section class="flex flex-col-reverse md:flex-row justify-center gap-x-8 w-full">
+  <section class="flex flex-col-reverse justify-center w-full md:flex-row gap-x-8">
     <div class="flex flex-col my-1.5 w-full items-center md:w-full">
       <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mb-2 md:hidden">Status</div>
       <div
         class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
       >
-        <div class="flex flex-row gap-x-6 items-center w-full">
-          <x-heroicon-s-arrow-left-on-rectangle class="relative z-0 w-14 h-14 rotate-180 text-blue-400" />
+        <div class="flex flex-row items-center w-full gap-x-6">
+          <x-heroicon-s-arrow-left-on-rectangle class="relative z-0 text-blue-400 rotate-180 w-14 h-14" />
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Pendaftaran</p>
-            <p class="text-2xl bg-gradient-blue-r font-bold bg-clip-text text-transparent">
+            <p class="text-2xl font-bold text-transparent bg-gradient-blue-r bg-clip-text">
               {{ $isRegistered ? 'Sudah Terdaftar' : 'Belum Terdaftar' }}
             </p>
           </div>
@@ -282,9 +282,11 @@
       <div
         class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
       >
-        <div class="flex flex-row gap-x-6 items-center w-full">
-          @if ($peserta->status_type->id != '4' && $peserta->status_type->id != '7')
-          <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-blue-400" />
+        <div class="flex flex-row items-center w-full gap-x-6">
+          @if($peserta->status_type->id == '7')
+          <x-heroicon-s-folder-open class="relative z-0 text-red-800 w-14 h-14" />
+          @elseif ($peserta->status_type->id != '4' && $peserta->status_type->id != '7')
+          <x-heroicon-s-folder-open class="relative z-0 text-blue-400 w-14 h-14" />
           @else
           <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
           @endif
@@ -292,14 +294,16 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Berkas</p>
             <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
+              class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '5') bg-gradient-blue-r bg-clip-text text-transparent @endif"
             >
               @if($peserta->status_type->id == '4')
                 Sedang Diperiksa Admin
               @elseif($peserta->status_type->id == '7')
+              <span class="text-red-800">
                 Ditolak Admin
+              </span>
               @else
-                Terverifikasi
+              <span class="text-transparent bg-gradient-blue-r bg-clip-text">Terverifikasi</span>
               @endif
             </p>
           </div>
@@ -308,27 +312,33 @@
       <div
         class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
       >
-        <div class="flex flex-row gap-x-6 items-center w-full">
-          @if ($peserta->status_type->id >= 7)
-          <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-blue-400" />
+        <div class="flex flex-row items-center w-full gap-x-6">
+          @if($peserta->status_type->id == 10)
+            <x-heroicon-s-arrow-trending-up class="relative z-0 text-red-800 w-14 h-14" />
+          @elseif ($peserta->status_type->id >= 8)
+            <x-heroicon-s-arrow-trending-up class="relative z-0 text-blue-400 w-14 h-14" />
           @else
-          <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
+            <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
           @endif
 
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Seleksi</p>
             <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
+              class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '6') bg-gradient-blue-r bg-clip-text text-transparent @endif"
             >
             @if($peserta->status_type->id == '5' && $peserta->answer_file == null)
-              Silahkan Upload Jawaban
+            <span id="status_seleksi">Silahkan Upload Jawaban</span>
             @elseif($peserta->status_type->id == '5' && $peserta->answer_file !== null)
               Sedang Diperiksa Admin
             @elseif($peserta->status_type->id == '8')
+            <span class="text-transparent bg-gradient-blue-r bg-clip-text">
               Lolos Seleksi
+            </span>
             @elseif($peserta->status_type->id == '10')
-              Tidak Lolos Seleksi
-            @else 
+            <span class="text-red-800">
+                Tidak Lolos Seleksi
+              </span>
+            @else
               Menunggu seleksi berkas
             @endif
             </p>
@@ -340,81 +350,81 @@
       <div
         class="flex max-w-[580px] xl:max-w-full w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center"
       >
-        <div class="flex flex-col items-left justify-center space-y-6 w-full">
+        <div class="flex flex-col justify-center w-full space-y-6 items-left">
           {{-- Ketua Tim Start--}}
-          <div class="flex-col items-left justify-center w-full">
+          <div class="flex-col justify-center w-full items-left">
             <div class="flex flex-col gap-y-1">
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->user->full_name }}
               </p>
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->user->institution }}
               </p>
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Jurusan</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->major }}
               </p>
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->user->email }}
               </p>
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Handphone</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->user->handphone }}
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Instagram</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->instagram_link }}
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Twibbon</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->twibbon_link }}
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">CV</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <a href="{{ url($peserta->cv_file) }}" target="_blank">Lihat CV</a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Kartu Pelajar</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <img src="{{ url($peserta->student_card) }}" />
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa alasan anda mengikuti ISE! User Experience Academy?</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->motive_1 }}
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa yang anda harapkan dari ISE! User Experience Academy?</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->motive_2 }}
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa yang dapat kamu lakukan dengan ilmu yang diperoleh pasca ISE! User Experience Academy?</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->motive_3 }}
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Darimana Anda mendapatkan informasi terkait ISE! User Experience Academy?</p>
-              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->motive_4 }}
               </p>
             </div>
           </div>
-          {{-- Ketua Tim End--}} 
+          {{-- Ketua Tim End--}}
         </div>
       </div>
     </div>
 
     <div class="flex flex-col items-center md:items-start my-1.5 w-full">
       <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
-        <div class="flex flex-col text-white items-center text-center">
-          <p class="text-xl font-medium">User Experience Academy Dimulai</p>
+        <div class="flex flex-col items-center text-center text-white">
+          <p class="text-xl font-medium">Seleksi UX Academy Dimulai</p>
           <div class="flex flex-row gap-x-3 my-7">
             <div class="flex flex-col items-center justify-center">
               <div
@@ -423,9 +433,9 @@
               >
                 00
               </div>
-              <p class="flex text-white text-base font-normal">Hari</p>
+              <p class="flex text-base font-normal text-white">Hari</p>
             </div>
-            <div class="flex items-center text-white font-bold text-xl self-start pt-3">:</div>
+            <div class="flex items-center self-start pt-3 text-xl font-bold text-white">:</div>
             <div class="flex flex-col items-center justify-center">
               <div
                 id="hours_gts"
@@ -433,9 +443,9 @@
               >
                 00
               </div>
-              <p class="flex text-white text-base font-normal">Jam</p>
+              <p class="flex text-base font-normal text-white">Jam</p>
             </div>
-            <div class="flex items-center text-white font-bold text-xl self-start pt-3">:</div>
+            <div class="flex items-center self-start pt-3 text-xl font-bold text-white">:</div>
             <div class="flex flex-col items-center justify-center">
               <div
                 id="minutes_gts"
@@ -443,50 +453,88 @@
               >
                 00
               </div>
-              <p class="flex text-white text-base font-normal">Menit</p>
+              <p class="flex text-base font-normal text-white">Menit</p>
             </div>
-            <div class="hidden xs:flex items-center text-white font-bold text-xl self-start pt-3">:</div>
-            <div class="hidden xs:flex flex-col items-center justify-center">
+            <div class="items-center self-start hidden pt-3 text-xl font-bold text-white xs:flex">:</div>
+            <div class="flex-col items-center justify-center hidden xs:flex">
               <div
                 id="seconds_gts"
                 class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
               >
                 00
               </div>
-              <p class="flex text-white text-base font-normal">Detik</p>
+              <p class="flex text-base font-normal text-white">Detik</p>
             </div>
           </div>
+          <a
+          href="/"
+          class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75"
+          >Lihat Guidebook</a
+        >
         </div>
       </div>
       <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
       <div class="flex flex-col space-y-4">
-        {{-- Seleksi Pengunguman Card Start --}}
-        <!-- Tambahin pengumuman sudah terdaftar -->
-        @if($peserta->status_type->id == '5' && $peserta->answer_file == null) 
+        @if($peserta->status_type->id == '4')
+        {{-- After Register --}}
+         <div class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9">
+      <div class="flex flex-col gap-y-3">
+        <p
+          class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-blue-r bg-clip-text font-lg sm:text-2xl font-poppins"
+        >
+          Terimakasih Sudah Mendaftar
+        </p>
+        <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+          <p class="text-base font-light">
+            Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 22 Agustus 2023 hingga 24 Agustus 2023.
+          </p>
+        </div>
+      </div>
+    </div>
+      </div>
+
+        @elseif($peserta->status_type->id == '5' && $peserta->answer_file == null)
         <!-- Lolos Berkas -->
+        <div id="after_regist_announcement"
+        class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+      >
+        <div class="flex flex-col gap-y-3">
+          <p
+            class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-blue-r bg-clip-text font-lg sm:text-2xl font-poppins"
+          >
+            Berkas Berhasil Diverifikasi
+          </p>
+          <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+            <p class="text-base font-light">
+              Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 22 Agustus 2023 hingga 24 Agustus 2023.
+            </p>
+          </div>
+        </div>
+      </div>
         <div
-          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 pb-8 justify-start items-center"
+        id="selection_announcement"
+          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 pb-8 justify-start items-center hidden"
         >
           <div class="flex flex-col gap-y-3">
             <div
-              class="flex flex-row justify-between gap-2 bg-gradient-blue-r px-4 sm:px-9 rounded-t-xl items-center py-4"
+              class="flex flex-row items-center justify-between gap-2 px-4 py-4 bg-gradient-blue-r sm:px-9 rounded-t-xl"
             >
-              <p class="flex text-white font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider">
+              <p class="flex text-xl font-bold tracking-wider text-white font-lg sm:text-2xl font-poppins">
                 Seleksi User <br /> Experience Academy
               </p>
-              <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 sm:w-20 h-12 sm:h-16" />
+              <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 h-12 sm:w-20 sm:h-16" />
             </div>
-            <div class="flex flex-col items-left justify-center text-left space-y-4 px-4 sm:px-9 text-white">
-              <h3 class="font-semibold text-lg">Deadline 24 August 2023</h3>
+            <div class="flex flex-col justify-center px-4 space-y-4 text-left text-white items-left sm:px-9">
+              <h3 class="text-lg font-semibold">Deadline 24 August 2023</h3>
               <p class="text-base font-light">
                 Hi Futurizen! Saat ini kamu dapat mengunduh soal seleksi User Experience Academy ISE! 2023 dengan batas
                 pengumpulan <span class="font-semibold">24 Agustus 2023 Pukul 23.59</span>. Jangan lupa untuk
                 memperhatikan panduan pengumpulan ya!
               </p>
-              <p class="bg-gradient-blue-br text-transparent bg-clip-text font-semibold">GoodLuck!</p>
+              <p class="font-semibold text-transparent bg-gradient-blue-br bg-clip-text">GoodLuck!</p>
               <a
                 href="{{ route('my.uxacademy.selection') }}"
-                class="bg-gradient-blue-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
+                class="w-full py-3 font-semibold text-center rounded-md bg-gradient-blue-r hover:brightness-75"
                 >Find out more</a
               >
             </div>
@@ -495,75 +543,63 @@
         {{-- Seleksi Pengunguman Card End --}} {{-- Congratz Pengunguman Card Start --}}
         @elseif($peserta->status_type->id == '7')
           <!-- Gagal Berkas -->
-          <p>Gagal Berkas</p>
-        @elseif($peserta->status_type->id == '8')
-          <!-- Lolos Seleksi -->
-          <p>Lolos Seleksi</p>
-        @elseif($peserta->status_type->id == '10')
-          <p>Gagal Seleksi</p>
-        @endif
-        <!-- <div
+          <div
           class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
         >
           <div class="flex flex-col gap-y-3">
             <p
-              class="flex text-transparent bg-gradient-blue-r bg-clip-text font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider gap-1 items-center"
-            >
-              Congratulations <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
-            </p>
-            <div class="flex flex-col items-left justify-center text-left space-y-4 text-white">
-              <p class="text-base font-light">
-                Selamat, pembayaran commitment fee kamu telah terverifikasi, tidak lama lagi kamu akan dihubungi oleh panitia kami melalui Whatasapp untuk proses selanjutnya.
-              </p>
-            </div>
-          </div>
-        </div>
-        {{-- Congratz Pengunguman Card End --}} {{-- Gagal Pengunguman Card Start --}}
-        <div
-          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
-        >
-          <div class="flex flex-col gap-y-3">
-            <p
-              class="flex text-red-700 font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider gap-1 items-center"
+              class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
             >
               Jangan Putus Asa
             </p>
-            <div class="flex flex-col items-left justify-center text-left space-y-4 text-white">
+            <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
               <p class="text-base font-light">
-                Tim kamu dinyatakan gagal babak penyisihan. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                Kamu dinyatakan gagal dalam verifikasi berkas UX Academy 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
                 Tetap semangat dan terus berjuang!
+                <div class="my-1"></div>
+                Hubungi kami apabila ada pertanyaaan lebih lanjut.
+                <a href="https://wa.me/+6281332049750" target="blank" class="text-blue-400 hover:underline decoration-blue-400 ">Contact Us</a>
               </p>
             </div>
           </div>
         </div>
-        {{-- Gagal Pengunguman Card End --}} {{-- Commitment Fee Pengunguman Card Start --}}
-        <div
-          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 pb-8 justify-start items-center"
+        @elseif($peserta->status_type->id == '8')
+          <!-- Lolos Seleksi -->
+          <div
+          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
         >
           <div class="flex flex-col gap-y-3">
-            <div
-              class="flex flex-row justify-between gap-2 bg-gradient-blue-r px-4 sm:px-9 rounded-t-xl items-center py-4"
+            <p
+              class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-blue-r bg-clip-text font-lg sm:text-2xl font-poppins"
             >
-              <p class="flex text-white font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider">Selamat</p>
-              <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 sm:w-20 h-12 sm:h-16" />
-            </div>
-            <div class="flex flex-col items-left justify-center text-left space-y-4 px-4 sm:px-9 text-white">
-              <h3 class="font-bold text-xl">Tim kamu berhasil lolos tahap seleksi User Experience Academy ISE! 2023</h3>
-              <p class="text-base font-light">Lakukan pembayaran commitment fee agar dapat mengikuti rangkaian acara</p>
-              <p class="text-xl font-bold">
-                Jumlah yang harus dibayar: <br />
-                <span class="bg-gradient-blue-br text-transparent bg-clip-text font-bold">Rp 150.000</span>
+              Congratulations <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+            <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+              <p class="text-base font-light">
+                Selamat, kamu telah lolos seleksi UX Academy 2023, tidak lama lagi kamu akan dihubungi oleh panitia kami melalui Whatasapp untuk proses selanjutnya.
               </p>
-
-              <a
-                href="/my/ux/commitment"
-                class="bg-gradient-blue-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
-                >Bayar</a
-              >
             </div>
           </div>
         </div>
-        {{-- Commitment Fee Pengunguman Card End --}} -->
+        @elseif($peserta->status_type->id == '10')
+        <div
+        class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+      >
+        <div class="flex flex-col gap-y-3">
+          <p
+            class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
+          >
+            Jangan Putus Asa
+          </p>
+          <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+            <p class="text-base font-light">
+              Kamu dinyatakan gagal dalam seleksi UX Academy 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+              Tetap semangat dan terus berjuang!
+            </p>
+          </div>
+        </div>
+      </div>
+        @endif
       </div>
     </div>
   </section>
@@ -571,7 +607,7 @@
 @endif
 
 <script type="text/javascript">
-  const datetime = '{{ $date }}';
+  const datetime = "August 19, 2023 00:00:00";
   const countdownDate = new Date(datetime).getTime();
 
   // Update the countdown every second
@@ -606,7 +642,9 @@
 
   // After Regist Countdown
   // Set the countdown date and time
-  const countdownDate_gts = new Date('July 22, 2023 00:00:00').getTime();
+  const countdownDate_gts = new Date('August 22, 2023 00:00:00').getTime();
+  const countdownDate_seleksi = new Date('August 22, 2023 00:00:00').getTime();
+  const countdownDate_close_seleksi = new Date('August 24, 2023 00:00:00').getTime();
 
   // Update the countdown every second
   const countdownTimer_gts = setInterval(() => {
@@ -614,7 +652,14 @@
     const now = new Date().getTime();
 
     // Find the distance between now and the countdown date
-    const distance = countdownDate_gts - now;
+    let distance;
+    if (countdownDate_gts - now < 0) {
+        distance = countdownDate_close_seleksi - now;
+    } else {
+        distance = countdownDate_gts - now;
+    }
+
+    const distance_selection = countdownDate_seleksi - now;
 
     // Calculate the days, hours, minutes, and seconds
     const days_gts = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -627,6 +672,16 @@
     document.getElementById('hours_gts').innerHTML = `${hours_gts}`;
     document.getElementById('minutes_gts').innerHTML = `${minutes_gts}`;
     document.getElementById('seconds_gts').innerHTML = `${seconds_gts}`;
+    document.getElementById('status_seleksi').innerHTML = 'Menunggu seleksi berkas'
+
+    // Seleksi Start
+    if (distance_selection < 0) {
+      document.getElementById('status_seleksi').innerHTML = 'Silahkan Upload Jawaban'
+      document.getElementById('selection_announcement').classList.remove('hidden');
+      document.getElementById('after_regist_announcement').classList.add('hidden');
+    } else {
+
+    }
 
     // If the countdown is finished, display a message
     if (distance < 0) {
@@ -635,6 +690,10 @@
       document.getElementById('hours_gts').innerHTML = '0';
       document.getElementById('minutes_gts').innerHTML = '0';
       document.getElementById('seconds_gts').innerHTML = '0';
+
     }
   }, 1000);
+
+    //   Start Selection
+
 </script>

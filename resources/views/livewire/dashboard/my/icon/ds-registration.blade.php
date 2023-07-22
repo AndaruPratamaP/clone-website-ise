@@ -13,22 +13,22 @@
                 <img class="" src="{{ asset('images/gts/ICON.png') }}">
             </div>
             {{-- Form Content --}}
-            <div class="flex flex-col max-w-xl lg:max-w-full justify-center items-center mx-auto">
+            <div class="flex flex-col items-center justify-center max-w-xl mx-auto lg:max-w-full">
                 <h1
                     class="text-white text-center mt-[30px] mb-[30px] lg:mt-[62px] lg:mb-[50px] text-[16px] lg:text-[26px] font-bold px-4">
                     Form Pendaftaran Data Science Academy</h1>
-                <div class="relative flex flex-row pb-1 w-full">
+                <div class="relative flex flex-row w-full pb-1">
                     <div class="relative max-w-[228px] w-full h-[2px] bg-white flex self-center justify-self-center"
                         x-bind:class="step >= 1 ? 'bg-gradient-blue-r' : 'bg-white'">
                     </div>
-                    <div class="w-8 lg:w-16 h-8 lg:h-16 rounded-full  p-2"
+                    <div class="w-8 h-8 p-2 rounded-full lg:w-16 lg:h-16"
                         x-bind:class="step >= 1 ? 'bg-gradient-blue-r' : 'bg-white'">
-                        <x-heroicon-s-user-group class="w-4 lg:w-12 text-white" />
+                        <x-heroicon-s-user-group class="w-4 text-white lg:w-12" />
                     </div>
                     <div class="relative max-w-[415px] w-full h-[2px] bg-white flex self-center justify-self-center"
                         x-bind:class="step >= 2 ? 'bg-gradient-blue-r' : 'bg-white'">
                     </div>
-                    <div class="w-8 lg:w-16 h-8 lg:h-16 rounded-full  p-2"
+                    <div class="w-8 h-8 p-2 rounded-full lg:w-16 lg:h-16"
                         x-bind:class="step >= 2 ? 'bg-gradient-blue-r' : 'bg-white'">
                         <svg class="w-4 lg:w-12" viewBox="0 0 30 28" xmlns="http://www.w3.org/2000/svg">
                             <path class="" x-bind:class="step >= 2 ? 'fill-white' : ''"
@@ -39,7 +39,7 @@
                     <div class="relative max-w-[228px] w-full h-[2px] bg-white flex self-center justify-self-center"
                         x-bind:class="step >= 3 ? 'bg-gradient-blue-r' : 'bg-white'">
                     </div>
-                    <div class="w-8 lg:w-16 h-8 lg:h-16 rounded-full  p-2"
+                    <div class="w-8 h-8 p-2 rounded-full lg:w-16 lg:h-16"
                         x-bind:class="step >= 3 ? 'bg-gradient-blue-r' : 'bg-white'">
                         <svg class="w-4 lg:w-12" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
                             <path class="" x-bind:class="step >= 3 ? 'fill-white' : ''"
@@ -50,7 +50,7 @@
                     <div class="relative max-w-[228px] w-full h-[2px] bg-white flex self-center justify-self-center"
                         x-bind:class="step >= 4 ? 'bg-gradient-blue-r' : 'bg-white'">
                     </div>
-                    <div class="w-8 lg:w-16 h-8 lg:h-16 rounded-full  p-2"
+                    <div class="w-8 h-8 p-2 rounded-full lg:w-16 lg:h-16"
                         x-bind:class="step >= 4 ? 'bg-gradient-blue-r' : 'bg-white'">
                         <svg class="w-4 lg:w-12" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg">
                             <path class="" x-bind:class="step >= 4 ? 'fill-white' : ''"
@@ -61,7 +61,7 @@
                     <div class="relative max-w-[228px] w-full h-[2px] bg-white flex self-center justify-self-center"
                         x-bind:class="step >= 4 ? 'bg-gradient-blue-r' : 'bg-white'">
                     </div>
-                    <div class="w-8 lg:w-16 h-8 lg:h-16 rounded-full  p-2"
+                    <div class="w-8 h-8 p-2 rounded-full lg:w-16 lg:h-16"
                         x-bind:class="step >= 5 ? 'bg-gradient-blue-r' : 'bg-white'">
                         <svg class="w-4 lg:w-11" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
                             <path class="" x-bind:class="step >= 5 ? 'fill-white' : ''"
@@ -76,7 +76,7 @@
 
 
 
-                <div class="relative flex flex-row pb-6 w-full">
+                <div class="relative flex flex-row w-full pb-6">
                     <div class="relative max-w-[100px] w-full h-[2px] bg-none flex self-center ">
                     </div>
                     <div>
@@ -117,21 +117,21 @@
                 {{-- <div class="flex flex-row mb-6 gap-x-10 xs:gap-x-20" x-bind:class="step <= 3 ? '' : 'hidden'">
                     <div class="flex flex-col">
                         <p x-on:click="step = 1"
-                            class="cursor-pointer text-white text-xs xs:text-sm lg:text-xl font-bold">Ketua</p>
+                            class="text-xs font-bold text-white cursor-pointer xs:text-sm lg:text-xl">Ketua</p>
                         <div class="relative w-[80px] lg:w-[140px]  h-[2px] bg-white flex"
                             x-bind:class="step >= 1 ? 'bg-gradient-blue-r' : 'bg-white'">
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p x-on:click="step = 2"
-                            class="cursor-pointer text-white text-xs xs:text-sm lg:text-xl font-bold">Anggota 1</p>
+                            class="text-xs font-bold text-white cursor-pointer xs:text-sm lg:text-xl">Anggota 1</p>
                         <div class="relative w-[80px] lg:w-[140px]  h-[2px] bg-white flex"
                             x-bind:class="step >= 2 ? 'bg-gradient-blue-r' : 'bg-white'">
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p x-on:click="step = 3"
-                            class="cursor-pointer text-white text-xs xs:text-sm lg:text-xl font-bold">Anggota 2</p>
+                            class="text-xs font-bold text-white cursor-pointer xs:text-sm lg:text-xl">Anggota 2</p>
                         <div class="relative w-[80px] lg:w-[140px]  h-[2px] bg-white flex"
                             x-bind:class="step >= 3 ? 'bg-gradient-blue-r' : 'bg-white'">
                         </div>
@@ -160,7 +160,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama tim kamu" required />
                                 @error('nama_tim')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -175,7 +175,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan alasan kamu" required />
                                 @error('alasan_tim')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -190,7 +190,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan harapan kamu" required />
                                 @error('harapan_tim')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -206,7 +206,7 @@
                                     placeholder="Jelaskan untuk apa ilmu yang kamu dapatkan dari kegiatan ini"
                                     required />
                                 @error('tujuan_tim')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -230,7 +230,7 @@
                                     <option value="lainnya" class="bg-[#1C1C1C]">Lainnya</option>
                                 </select>
                                 @error('sumber_informasi')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
 
                                 <input wire:model="sumber_informasi_lainnya" x-on:input="sumber_informasi = 'lainnya'"
@@ -251,7 +251,7 @@
                                         href="/terms-and-conditions" class="text-[#66C1A7]"
                                         target="_blank">peraturan</a> yang berlaku nantinya</label>
                                 @error('agree')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -263,7 +263,7 @@
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Nama
                                     Lengkap <span class="text-[#FF1F00]">*</span>
                                 </label>
-                                <input type="text" name="nama_ketua" id="nama_ketua" 
+                                <input type="text" name="nama_ketua" id="nama_ketua"
                                     value="{{ auth()->user()->full_name }}"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama lengkap kamu" disabled />
@@ -279,7 +279,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama lengkap kamu" required />
                                 @error('nama_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
@@ -293,7 +293,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama lengkap kamu" required />
                                 @error('nama_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -323,7 +323,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama institusi kamu" required />
                                 @error('univ_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
@@ -338,7 +338,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama institusi kamu" required />
                                 @error('univ_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -355,7 +355,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama jurusan kamu" required />
                                 @error('jurusan_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
@@ -369,7 +369,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama jurusan kamu" required />
                                 @error('jurusan_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
@@ -383,7 +383,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nama jurusan kamu" required />
                                 @error('jurusan_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -410,7 +410,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan email aktif kamu" required />
                                 @error('email_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
@@ -424,7 +424,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan email aktif kamu" required />
                                 @error('email_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -452,7 +452,7 @@
                                     class="block py-0 px-0 w-full lg:w-[780px] text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nomor whatsapp aktif kamu" required />
                                 @error('wasap_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
@@ -466,7 +466,7 @@
                                     class="block py-0 px-0 w-full lg:w-[780px] text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan nomor whatsapp aktif kamu" required />
                                 @error('wasap_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -482,7 +482,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan link Instagram kamu" required />
                                 @error('insta_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
@@ -496,7 +496,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan link Instagram kamu" required />
                                 @error('insta_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
@@ -510,7 +510,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan link Instagram kamu" required />
                                 @error('insta_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -527,7 +527,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan link postingan twibbon kamu" required />
                                 @error('twib_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[30px] group"
@@ -542,7 +542,7 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan link postingan twibbon kamu" required />
                                 @error('twib_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[30px] group"
@@ -557,13 +557,13 @@
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
                                     placeholder="Masukkan link postingan twibbon kamu" required />
                                 @error('twib_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
 
 
-                            <div class="relative z-0 w-full mb-5 group cursor-pointer"
+                            <div class="relative z-0 w-full mb-5 cursor-pointer group"
                                 x-bind:class="step == 2 ? '' : 'hidden'">
                                 <label for="cv_ketua"
                                     class="block leading-normal text-[12px] lg:text-[19px] font-medium text-white">
@@ -572,24 +572,18 @@
                                 <label
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#348BB6] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">
-                                        <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
+                                        <x-heroicon-s-cloud-arrow-up class="w-4 h-4 text-slate-100 lg:w-8 lg:h-8" />
                                         <input type='file'
-                                            class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
-                                            file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2
-                                            file:rounded-md file:border-0
-                                            file:text-xs lg:file:text-sm file:font-semibold
-                                            file:bg-transparent file:text-white
-                                            file:cursor-pointer cursor-pointer
-                                          "
+                                            class="block text-xs text-gray-500 cursor-pointer w-44 lg:w-56 lg:text-sm file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2 file:rounded-md file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-transparent file:text-white file:cursor-pointer "
                                             wire:model="cv_ketua" id="cv_ketua" name="cv_ketua" required />
                                     </div>
                                 </label>
                                 <div class="text-slate-300 text-xs lg:text-sm mt-0.5">Max size 1mb (.pdf)</div>
                                 @error('cv_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="relative z-0 w-full mb-5 group cursor-pointer"
+                            <div class="relative z-0 w-full mb-5 cursor-pointer group"
                                 x-bind:class="step == 3 ? '' : 'hidden'">
                                 <label for="cv_anggota1"
                                     class="block leading-normal text-[12px] lg:text-[19px] font-medium text-white">
@@ -598,24 +592,18 @@
                                 <label
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#348BB6] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">
-                                        <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
+                                        <x-heroicon-s-cloud-arrow-up class="w-4 h-4 text-slate-100 lg:w-8 lg:h-8" />
                                         <input type='file'
-                                            class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
-                                            file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2
-                                            file:rounded-md file:border-0
-                                            file:text-xs lg:file:text-sm file:font-semibold
-                                            file:bg-transparent file:text-white
-                                            file:cursor-pointer cursor-pointer
-                                          "
+                                            class="block text-xs text-gray-500 cursor-pointer w-44 lg:w-56 lg:text-sm file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2 file:rounded-md file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-transparent file:text-white file:cursor-pointer "
                                             wire:model="cv_anggota1" id="cv_anggota1" name="cv_anggota1" required />
                                     </div>
                                 </label>
                                 <div class="text-slate-300 text-xs lg:text-sm mt-0.5">Max size 1mb (.pdf)</div>
                                 @error('cv_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="relative z-0 w-full mb-5 group cursor-pointer"
+                            <div class="relative z-0 w-full mb-5 cursor-pointer group"
                                 x-bind:class="step == 4 ? '' : 'hidden'">
                                 <label for="cv_anggota2"
                                     class="block leading-normal text-[12px] lg:text-[19px] font-medium text-white">
@@ -624,28 +612,22 @@
                                 <label
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#348BB6] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">
-                                        <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
+                                        <x-heroicon-s-cloud-arrow-up class="w-4 h-4 text-slate-100 lg:w-8 lg:h-8" />
                                         <input type='file'
-                                            class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
-                                            file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2
-                                            file:rounded-md file:border-0
-                                            file:text-xs lg:file:text-sm file:font-semibold
-                                            file:bg-transparent file:text-white
-                                            file:cursor-pointer cursor-pointer
-                                          "
+                                            class="block text-xs text-gray-500 cursor-pointer w-44 lg:w-56 lg:text-sm file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2 file:rounded-md file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-transparent file:text-white file:cursor-pointer "
                                             wire:model="cv_anggota2" id="cv_anggota2" name="cv_anggota2" required />
                                     </div>
                                 </label>
                                 <div class="text-slate-300 text-xs lg:text-sm mt-0.5">Max size 1mb (.pdf)</div>
                                 @error('cv_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
 
 
 
-                            <div class="relative z-0 w-full mb-3 group cursor-pointer"
+                            <div class="relative z-0 w-full mb-3 cursor-pointer group"
                                 x-bind:class="step == 2 ? '' : 'hidden'">
                                 <label for="bukti_ketua"
                                     class="block leading-normal text-[12px] lg:text-[19px] font-medium text-white">
@@ -655,24 +637,18 @@
                                 <label
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#348BB6] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">
-                                        <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
+                                        <x-heroicon-s-cloud-arrow-up class="w-4 h-4 text-slate-100 lg:w-8 lg:h-8" />
                                         <input type='file'
-                                            class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
-                                            file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2
-                                            file:rounded-md file:border-0
-                                            file:text-xs lg:file:text-sm file:font-semibold
-                                            file:bg-transparent file:text-white
-                                            file:cursor-pointer cursor-pointer
-                                          "
+                                            class="block text-xs text-gray-500 cursor-pointer w-44 lg:w-56 lg:text-sm file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2 file:rounded-md file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-transparent file:text-white file:cursor-pointer "
                                             wire:model="bukti_ketua" id="bukti_ketua" name="bukti_ketua" required />
                                     </div>
                                 </label>
                                 <div class="text-slate-300 text-xs lg:text-sm mt-0.5">Max size 1mb (.jpg, .jpeg, .png)</div>
                                 @error('bukti_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="relative z-0 w-full mb-3 group cursor-pointer"
+                            <div class="relative z-0 w-full mb-3 cursor-pointer group"
                                 x-bind:class="step == 3 ? '' : 'hidden'">
                                 <label for="bukti_anggota1"
                                     class="block leading-normal text-[12px] lg:text-[19px] font-medium text-white">
@@ -682,25 +658,19 @@
                                 <label
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#348BB6] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">
-                                        <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
+                                        <x-heroicon-s-cloud-arrow-up class="w-4 h-4 text-slate-100 lg:w-8 lg:h-8" />
                                         <input type='file'
-                                            class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
-                                            file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2
-                                            file:rounded-md file:border-0
-                                            file:text-xs lg:file:text-sm file:font-semibold
-                                            file:bg-transparent file:text-white
-                                            file:cursor-pointer cursor-pointer
-                                          "
+                                            class="block text-xs text-gray-500 cursor-pointer w-44 lg:w-56 lg:text-sm file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2 file:rounded-md file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-transparent file:text-white file:cursor-pointer "
                                             wire:model="bukti_anggota1" id="bukti_anggota1" name="bukti_anggota1"
                                             required />
                                     </div>
                                 </label>
                                 <div class="text-slate-300 text-xs lg:text-sm mt-0.5">Max size 1mb (.jpg, .jpeg, .png)</div>
                                 @error('bukti_anggota1')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="relative z-0 w-full mb-3 group cursor-pointer"
+                            <div class="relative z-0 w-full mb-3 cursor-pointer group"
                                 x-bind:class="step == 4 ? '' : 'hidden'">
                                 <label for="bukti_anggota2"
                                     class="block leading-normal text-[12px] lg:text-[19px] font-medium text-white">
@@ -710,22 +680,16 @@
                                 <label
                                     class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#348BB6] cursor-pointer">
                                     <div class="flex flex-row items-center gap-1 hover:brightness-75">
-                                        <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
+                                        <x-heroicon-s-cloud-arrow-up class="w-4 h-4 text-slate-100 lg:w-8 lg:h-8" />
                                         <input type='file'
-                                            class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
-                                            file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2
-                                            file:rounded-md file:border-0
-                                            file:text-xs lg:file:text-sm file:font-semibold
-                                            file:bg-transparent file:text-white
-                                            file:cursor-pointer cursor-pointer
-                                          "
+                                            class="block text-xs text-gray-500 cursor-pointer w-44 lg:w-56 lg:text-sm file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2 file:rounded-md file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-transparent file:text-white file:cursor-pointer "
                                             wire:model="bukti_anggota2" id="bukti_anggota2" name="bukti_anggota2"
                                             required />
                                     </div>
                                 </label>
                                 <div class="text-slate-300 text-xs lg:text-sm mt-0.5">Max size 1mb (.jpg, .jpeg, .png)</div>
                                 @error('bukti_anggota2')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                    <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
                             </div>
 
@@ -739,7 +703,7 @@
                                     <div>Format transfer (tulis di keterangan transfer):<br>nama acara_nama orang/tim
                                     </div>
                                     <div>
-                                        <div class="relative z-0 w-full mb-3 group cursor-pointer"
+                                        <div class="relative z-0 w-full mb-3 cursor-pointer group"
                                             x-bind:class="step == 5 ? '' : 'hidden'">
                                             <label for="bukti_pembayaran"
                                                 class="block leading-normal text-[12px] lg:text-[19px] font-medium text-white">
@@ -749,15 +713,9 @@
                                                 class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#348BB6] cursor-pointer">
                                                 <div class="flex flex-row items-center gap-1 hover:brightness-75">
                                                     <x-heroicon-s-cloud-arrow-up
-                                                        class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
+                                                        class="w-4 h-4 text-slate-100 lg:w-8 lg:h-8" />
                                                     <input type='file'
-                                                        class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500
-                                            file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2
-                                            file:rounded-md file:border-0
-                                            file:text-xs lg:file:text-sm file:font-semibold
-                                            file:bg-transparent file:text-white
-                                            file:cursor-pointer cursor-pointer
-                                          "
+                                                        class="block text-xs text-gray-500 cursor-pointer w-44 lg:w-56 lg:text-sm file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2 file:rounded-md file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-transparent file:text-white file:cursor-pointer "
                                                         wire:model="bukti_pembayaran" id="bukti_pembayaran"
                                                         name="bukti_pembayaran" required />
                                                 </div>
@@ -765,7 +723,7 @@
                                             <div class="text-slate-300 text-xs lg:text-sm mt-0.5">Max size 1mb (.jpg, .jpeg, .png)
                                             </div>
                                             @error('bukti_pembayaran')
-                                                <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
+                                                <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                             @enderror
                                         </div>
                                     </div>
@@ -778,13 +736,29 @@
 
 
                             <div class="flex flex-row gap-x-5">
-                                <button x-show="step >= 2" type="button" @click=" step-- "
-                                    class="text-white border-2 border-blue-300 hover:brightness-90 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[16px] w-full h-[42px] lg:h-[48px] px-5 py-2 lg:py-2.5 text-center hover:opacity-80">Back</button>
-                                <button x-bind:class="step <= 4 ? '' : 'hidden'" type="button" @click=" step++ "
-                                    class="text-white bg-gradient-blue-r hover:brightness-90 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[16px] w-full h-[42px] lg:h-[48px] px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#348BB6] hover:opacity-80">Next</button>
-                                <button x-bind:class="step == 5 ? '' : 'hidden'" type="submit"
-                                    class="text-white bg-gradient-blue-r hover:brightness-90 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md text-[16px] w-full h-[42px] lg:h-[48px] px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#348BB6] hover:opacity-80">Submit</button>
-                            </div>
+                                <button x-show="step >= 2" @click.prevent=" step-- "
+                                    class="text-white border-2 border-blue-300 hover:brightness-90 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md h-10 sm:h-12 lg:h-14 w-full px-5 py-2 lg:py-2.5 text-center hover:opacity-80">Back</button>
+                                <button x-bind:class="step <= 4 ? '' : 'hidden'" @click.prevent=" step++ "
+                                    class="text-white bg-gradient-blue-r hover:brightness-90 focus:ring-4 focus:outline-none font-semibold font-Inter rounded-md h-10 sm:h-12 lg:h-14 w-full px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-200 dark:focus:ring-[#348BB6] hover:opacity-80">Next</button>
+                                    <button
+                                    type="submit"
+                                    x-bind:class="step == 5 ? '' : 'hidden'"
+                                    wire:click="submit"
+                                    class="rounded-md text-white font-semibold py-2.5 w-full text-xs sm:text-base lg:text-xl bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:brightness-75 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
+                                  >
+                                    <span wire:loading.remove>Submit</span>
+                                    <div
+                                      wire:loading
+                                      class="inline-block h-6 w-6 animate-spin rounded-full mt-1 brightness-90 border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                                      role="status"
+                                    >
+                                      <span
+                                        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+                                        >Loading...</span
+                                      >
+                                    </div>
+                                  </button>
+                                </div>
                         </div>
                     </form>
 
@@ -795,15 +769,15 @@
                             <img class="w-[45   px] h-[40px] lg:w-[55px] lg:h-[50px]  align-top hover:opacity-60"
                                 src="{{ asset('/images/whatsapp.png ') }}">
                         </a>
-                        <div class="flex flex-row gap-2 md:gap-3 items-center text-slate-300">
+                        <div class="flex flex-row items-center gap-2 md:gap-3 text-slate-300">
                             <a href="ttps://www.instagram.com/is_expo/">
-                                <x-bi-instagram class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                                <x-bi-instagram class="w-4 h-4 hover:text-slate-400 md:w-5 md:h-5" />
                             </a>
                             <a href="https://tiktok.com">
-                                <x-bi-tiktok class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                                <x-bi-tiktok class="w-4 h-4 hover:text-slate-400 md:w-5 md:h-5" />
                             </a>
                             <a href="https://www.linkedin.com/company/ise-information-systems-expo-2023/">
-                                <x-bi-linkedin class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                                <x-bi-linkedin class="w-4 h-4 hover:text-slate-400 md:w-5 md:h-5" />
                             </a>
                         </div>
 
