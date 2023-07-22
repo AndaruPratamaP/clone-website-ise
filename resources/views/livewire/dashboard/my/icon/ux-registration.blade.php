@@ -1,6 +1,6 @@
 @section('title', 'UX Academy Registration')
 <div x-data="{step:1}" class="bg-[#121316]">
-    <div class="relative min-h-screen overflow-hidden mx-auto">
+    <div class="relative min-h-screen mx-auto overflow-hidden">
       <div class="">
         <div class="fixed left-0 top-[470px] opacity-10 blur-[150px] h-[545px] w-[545px] bg-[#00D0FF] rounded-full"></div>
         <div class="fixed left-0 top-[870px] opacity-10 blur-[150px] h-[545px] w-[545px] bg-[#00D0FF] rounded-full"></div>
@@ -22,7 +22,7 @@
           </p>
           {{-- progress bar start --}}
         <div>
-          <div class="flex flex-col w-full justify-center">
+          <div class="flex flex-col justify-center w-full">
             <div class="bg-transparent w-[15%] xs:w-[10%] aspect-square"></div>
             <div class="absolute z-20 w-full">
               <div class="flex justify-center">
@@ -49,7 +49,7 @@
                     class="w-[18%] xs:w-[12%] md:w-[10%] xl:w-[8%] 2xl:w-[7%] flex flex-col items-center mt-5 xs:mt-6 md:mt-7 lg:mt-12 box-border"
                     x-show="step<=1"
                   >
-                    <div class="flex items-center justify-center bg-white w-full aspect-square rounded-full">
+                    <div class="flex items-center justify-center w-full bg-white rounded-full aspect-square">
                       <img class="w-2/3" src="{{asset('images/ux-registration/motivasi.png')}}" alt="" />
                     </div>
                     <p
@@ -79,7 +79,7 @@
                     class="w-[18%] xs:w-[12%] md:w-[10%] xl:w-[8%] 2xl:w-[7%] flex flex-col items-center mt-5 xs:mt-6 md:mt-7 lg:mt-12 box-border"
                     x-show="step<=2"
                   >
-                    <div class="flex items-center justify-center bg-white w-full aspect-square rounded-full">
+                    <div class="flex items-center justify-center w-full bg-white rounded-full aspect-square">
                       <img class="w-2/3" src="{{asset('images/ux-registration/pembayaran.png')}}" alt="" />
                     </div>
                     <p
@@ -109,7 +109,7 @@
                 {{-- progress rounded end --}}
               </div>
             </div>
-            <div class="bg-gray-400 w-full h-1 absolute"></div>
+            <div class="absolute w-full h-1 bg-gray-400"></div>
             <div class="bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] w-[20%] h-1 absolute z-10" x-show="step==1"></div>
             <div class="bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] w-[50%] h-1 absolute z-10" x-show="step==2"></div>
             <div class="bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] w-[80%] h-1 absolute z-10" x-show="step==3"></div>
@@ -123,7 +123,7 @@
             <div class="px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 2xl:px-36 font-['Montserrat']">
               <div x-show="step==1">
                 <div class="flex flex-col">
-                  <label for="full_name" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="full_name" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Nama Lengkap<span class="text-[#FF1F00] ml-1">*</span></label
                   >
                   <input
@@ -136,7 +136,7 @@
                   />
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="institution" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="institution" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Asal Institusi<span class="text-[#FF1F00] ml-1">*</span></label
                   >
                   <input
@@ -149,7 +149,7 @@
                   />
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="email" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="email" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Email<span class="text-[#FF1F00] ml-1">*</span></label
                   >
                   <input
@@ -162,7 +162,7 @@
                   />
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="whatsapp" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="whatsapp" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Whatsapp<span class="text-[#FF1F00] ml-1">*</span></label
                   >
                   <input
@@ -175,7 +175,7 @@
                   />
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="department" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="department" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Jurusan<span class="text-[#FF1F00] ml-1">*</span></label
                   >
                   <input
@@ -187,11 +187,11 @@
                     required
                   />
                   @error('department')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="instagram" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="instagram" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Instagram<span class="text-[#FF1F00] ml-1">*</span></label
                   >
                   <input
@@ -203,11 +203,11 @@
                     required
                   />
                   @error('instagram')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="link_upload_twibbon" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="link_upload_twibbon" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Link Twibbon<span class="text-[#FF1F00] ml-1">*</span></label
                   >
                   <input
@@ -219,11 +219,11 @@
                     required
                   />
                   @error('link_upload_twibbon')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="cv" class="font-semibold text-xs lg:text-base 2xl:text-xl mb-4"
+                  <label for="cv" class="mb-4 text-xs font-semibold lg:text-base 2xl:text-xl"
                     >CV<span class="text-[#FF1F00] ml-1">*</span>
                   </label>
                   <label
@@ -245,12 +245,12 @@
                     </div>
                   </label>
                   @error('cv')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                   <label class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]">Max size 1mb (*.Pdf)</label>
                 </div>
                 <div class="mb-16">
-                  <label for="share_proof_file" class="font-semibold text-xs lg:text-base 2xl:text-xl mb-4"
+                  <label for="share_proof_file" class="mb-4 text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Bukti Mahasiswa S1/Sederajat (KTM/FRS/Transkrip Terbaru)<span class="text-[#FF1F00] ml-1">*</span>
                   </label>
                   <label
@@ -270,7 +270,7 @@
                     </div>
                   </label>
                   @error('share_proof_file')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                   <label class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
                     >Max size 1mb (*.jpg, *.jpeg, *.png)</label
@@ -289,7 +289,7 @@
               {{-- step 2 --}}
               <div x-show="step==2">
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="reason" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="reason" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Apa alasan anda mengikuti ISE! User Experience Academy?<span class="text-[#FF1F00] ml-1"
                       >*</span
                     ></label
@@ -303,11 +303,11 @@
                     required
                   />
                   @error('reason')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="hope" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="hope" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Apa yang anda harapkan dari ISE! User Experience Academy?<span class="text-[#FF1F00] ml-1"
                       >*</span
                     ></label
@@ -321,11 +321,11 @@
                     required
                   />
                   @error('hope')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="after_ise" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="after_ise" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Apa yang dapat kamu lakukan dengan ilmu yang diperoleh pasca ISE! User Experience Academy?
                     <span class="text-[#FF1F00] ml-1">*</span></label
                   >
@@ -338,12 +338,12 @@
                     required
                   />
                   @error('after_ise')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                 </div>
 
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="referral" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                  <label for="referral" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Darimana Anda mendapatkan informasi terkait ISE! User Experience Academy?<span
                       class="text-[#FF1F00] ml-1"
                       >*</span
@@ -384,7 +384,7 @@
                       wire:model.defer="agreement_1"
                       type="checkbox"
                       name="agreement_1"
-                      class="w-3 lg:w-4 h-3 lg:h-4 mt-1"
+                      class="w-3 h-3 mt-1 lg:w-4 lg:h-4"
                       required
                     />
                     <label class="text-xs lg:text-base 2xl:text-xl" for="agreement_1"
@@ -393,7 +393,7 @@
                     >
                   </div>
                   @error('agreement_1')
-                  <span class="text-red-500 text-sm">{{ $message }}</span>
+                  <span class="text-sm text-red-500">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="mb-16">
@@ -403,7 +403,7 @@
                       wire:model.defer="agreement_2"
                       type="checkbox"
                       name="agreement_2"
-                      class="w-3 lg:w-4 h-3 lg:h-4 mt-1"
+                      class="w-3 h-3 mt-1 lg:w-4 lg:h-4"
                       required
                     />
                     <label class="text-xs lg:text-base 2xl:text-xl" for="agreement_2"
@@ -411,13 +411,13 @@
                     >
                   </div>
                   @error('agreement_2')
-                  <span class="text-red-500 text-sm">{{ $message }}</span>
+                  <span class="text-sm text-red-500">{{ $message }}</span>
                   @enderror
                 </div>
                 {{-- checkbox end --}}
               </div>
               {{-- button step 2 start --}}
-              <div x-show="step==2" class="flex w-full flex-row items-center gap-4">
+              <div x-show="step==2" class="flex flex-row items-center w-full gap-4">
                 <button
                   class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                   @click.prevent="step=1">
@@ -438,12 +438,12 @@
                   <div class="text-white flex flex-col gap-y-10 font-montserrat text-xs leading-5 lg:text-[19px] font-medium w-full">
                     <div>Harap lakukan transfer ke rekening berikut:</div>
                     <div>BNI<br>1295633675 <br>a.n DEWI ANGELINE</div>
-                    <div>Jumlah yang harus dibayarkan: <br>Rp 30.000,00</div>
+                    <div>Jumlah yang harus dibayarkan: <br>Rp 10.000,00</div>
                     <div>Format transfer (tulis di keterangan transfer):<br>nama acara_nama orang/tim</div>
                   </div>
                 </div>
                 <div class="mb-16">
-                  <label for="payment_proof" class="font-semibold text-xs lg:text-base 2xl:text-xl mb-4"
+                  <label for="payment_proof" class="mb-4 text-xs font-semibold lg:text-base 2xl:text-xl"
                     >Bukti Pembayaran<span class="text-[#FF1F00] ml-1">*</span>
                   </label>
                   <label
@@ -463,14 +463,14 @@
                     </div>
                   </label>
                   @error('payment_proof')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
+                  <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                   @enderror
                   <label class="block text-xs lg:text-base 2xl:text-xl text-[#7C7C7C]"
                     >Max size 1mb (*.jpg, *.jpeg, *.png)</label
                   >
                 </div>
                 {{-- button step 3 start --}}
-                <div class="flex w-full flex-row">
+                <div class="flex flex-row w-full">
                   <button
                     class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none mr-4 hover:py-3.5 h-10 sm:h-12 lg:h-14 flex justify-center items-center"
                     @click.prevent="step=2"
@@ -498,22 +498,22 @@
                 {{-- button step 3 end --}}
               </div>
               {{-- step 3 end --}}
-              <div class="mt-10 sm:mt-24 pb-10 sm:pb-14 flex justify-between flex-row items-center">
+              <div class="flex flex-row items-center justify-between pb-10 mt-10 sm:mt-24 sm:pb-14">
                   <a href="https://wa.me/+6281332049750" class="items-center hover:brightness-90">
                     <img
                       class="w-[45 px] h-[40px] lg:w-[55px] lg:h-[50px] align-top hover:opacity-60"
                       src="{{ asset('/images/whatsapp.png ') }}"
                     />
                   </a>
-                  <div class="flex flex-row gap-2 md:gap-3 items-center text-slate-300">
+                  <div class="flex flex-row items-center gap-2 md:gap-3 text-slate-300">
                     <a href="https://www.instagram.com/is_expo/" target="blank">
-                      <x-bi-instagram class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                      <x-bi-instagram class="w-4 h-4 hover:text-slate-400 md:w-5 md:h-5" />
                     </a>
                     <a href="https://tiktok.com" target="blank">
-                      <x-bi-tiktok class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                      <x-bi-tiktok class="w-4 h-4 hover:text-slate-400 md:w-5 md:h-5" />
                     </a>
                     <a href="https://www.linkedin.com/company/ise-information-systems-expo-2023/" target="blank">
-                      <x-bi-linkedin class="hover:text-slate-400 w-4 h-4 md:w-5 md:h-5" />
+                      <x-bi-linkedin class="w-4 h-4 hover:text-slate-400 md:w-5 md:h-5" />
                     </a>
                   </div>
               </div>

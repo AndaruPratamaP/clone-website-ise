@@ -23,7 +23,7 @@
         class="flex flex-col justify-between bg-[#191A1E] text-[#5C5C5C] px-[25px] py-[19px] text-[10.2px] space-y-4 h-screen"
         :class="{ 'absolute w-full min-h-screen top-0 left-0': isOpen, ' hidden': !isOpen }">
         <div class="flex flex-col gap-6">
-            <div class="md:hidden w-screen flex flex-row justify-between mb-2">
+            <div class="flex flex-row justify-between w-screen mb-2 md:hidden">
                 <div class="relative left-0">
                     <a href="/">
                         <img src="{{ asset('images/LogoISE.png') }}" alt="logo" />
@@ -38,7 +38,7 @@
 
             <div x-data="{ BionixOpen: false }">
                 <div class="flex gap-2">
-                    <a href="/coming-soon"
+                    <a href="/bionix"
                         class="text-[0.875rem] sm:text-base order-first bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent font-semibold whitespace-nowrap">BIONIX</a>
                     <button @click="BionixOpen = !BionixOpen" class="w-full">
                         <x-bi-chevron-down class="w-4 h-4 transition duration-150"
@@ -49,12 +49,12 @@
                     <div class="bg-[#191A1E] rounded-[10px] px-[9px] py-[1rem]">
                         <div class="grid gap-[1rem]">
                             <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24]">
-                                <a href="/coming-soon"
+                                <a href="/bionix"
                                     class="bg bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent font-semibold text-[12px]">IS
                                     CLASS</a>
                             </div>
                             <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24]">
-                                <a href="/coming-soon"
+                                <a href="/bionix"
                                     class="bg bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent font-semibold text-[12px]">Bionix
                                     Competition</a>
                             </div>
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div x-data="{ IconOpen: false }">
-                <div class="flex gap-2 items-center">
+                <div class="flex items-center gap-2">
                     <a href="/icon"
                         class="text-[0.875rem] sm:text-base bg-clip-text bg-gradient-blue-r hover:text-transparent focus:text-transparent font-semibold whitespace-nowrap">IT
                         Convention</a>
@@ -126,8 +126,8 @@
         <a href="/"
             class="xl:text-[16px] py-[18px] bg-clip-text bg-gradient-to-r from-[#006C56] to-[#afd196] hover:text-transparent focus:text-transparent">Home</a>
         <div x-data="{ BionixOpen: false }" @mouseleave="BionixOpen = false" @mouseover="BionixOpen = true">
-            <div class="flex gap-2 items-center group cursor-pointer">
-                <a href="/coming-soon"
+            <div class="flex items-center gap-2 cursor-pointer group">
+                <a href="/bionix"
                     class="order-first py-[18px] bg-clip-text bg-gradient-green-r group-hover:text-transparent focus:text-transparent">BIONIX</a>
                 <x-bi-chevron-down
                     class="w-4 h-4 transition duration-150 group-hover:rotate-180 group-hover:text-green-200" />
@@ -137,17 +137,17 @@
                 <div class="bg-[#191A1E] rounded-[10px] px-[9px] py-[12px]">
                     <div class="grid gap-[15px]">
                         <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24] my-[5px]">
-                            <a href="coming-soon">
+                            <a href="/bionix">
                                 <div
-                                    class="bg bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent cursor-pointer">
+                                    class="cursor-pointer bg bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent">
                                     IS CLASS
                                 </div>
                             </a>
                         </div>
                         <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24] my-[5px]">
-                            <a href="coming-soon">
+                            <a href="/bionix">
                                 <div
-                                    class="bg bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent cursor-pointer">
+                                    class="cursor-pointer bg bg-clip-text bg-gradient-green-r hover:text-transparent focus:text-transparent">
                                     Bionix Competition
                                 </div>
                             </a>
@@ -157,7 +157,7 @@
             </div>
         </div>
         <div x-data="{ IconOpen: false }" @mouseover="IconOpen = true" @mouseleave="IconOpen = false">
-            <div class="flex gap-2 items-center group cursor-pointer">
+            <div class="flex items-center gap-2 cursor-pointer group">
                 <a href="/icon"
                     class="py-[18px] bg-clip-text bg-gradient-blue-r group-hover:text-transparent focus:text-transparent">IT
                     Convention</a>
