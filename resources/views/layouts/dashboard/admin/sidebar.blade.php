@@ -5,7 +5,7 @@
 </style>
 <div x-data="{ open: false }">
     {{-- Mobile Start --}}
-    <div class="flex h-20 items-center ml-6 lg:hidden fixed top-0 left-0 z-30" @click="open = !open">
+    <div class="fixed top-0 left-0 z-30 flex items-center h-20 ml-6 lg:hidden" @click="open = !open">
         <x-heroicon-s-bars-3 class="w-8 h-8 text-white cursor-pointer" />
     </div>
     <div x-bind:class="open == true ? 'bg-black/70 min-h-screen w-full fixed inset-0 z-50' : ''" @click="open=!open">
@@ -23,7 +23,7 @@
                     <button class="flex flex-row items-center gap-3 group hover:brightness-75">
                         <x-heroicon-s-link class="w-6 h-6 text-[#B5B3BC]" />URL Shortener
                     </button>
-                    <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
+                    <div x-show="open" class="mt-2 ml-12 space-y-2 text-base" x-transition>
                         <a href="{{ route('admin.shortener.create') }}"
                             class="flex flex-row items-center gap-3 group hover:brightness-75">New Shortener</a>
                         <a href="{{ route('admin.shortener.table') }}"
@@ -34,7 +34,7 @@
                     <button class="flex flex-row items-center gap-3 group hover:brightness-75">
                         <x-heroicon-s-link class="w-6 h-6 text-[#B5B3BC]" />Coupon
                     </button>
-                    <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
+                    <div x-show="open" class="mt-2 ml-12 space-y-2 text-base" x-transition>
                         <a href="{{ route('admin.coupon.create') }}"
                             class="flex flex-row items-center gap-3 group hover:brightness-75">New Coupon</a>
                         <a href="{{ route('admin.coupon.table') }}"
@@ -45,7 +45,7 @@
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
                 <p href="/coming-soon"
-                    class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-green-br">BIONIX</p>
+                    class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">BIONIX</p>
                 <a href="/coming-soon"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
                 <a href="/coming-soon"
@@ -57,11 +57,11 @@
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
                 <p href="/coming-soon"
-                    class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-blue-r">ICON</p>
-                <a href="/coming-soon"
+                    class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-blue-r">ICON</p>
+                <a href="/admin/ds"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS
                     Academy</a>
-                <a href="/coming-soon"
+                <a href="/admin/ux"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX
                     Academy</a>
                 <a href="/admin/gts"
@@ -71,7 +71,7 @@
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
                 <p href="/coming-soon"
-                    class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-orange-r">RISE</p>
+                    class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-orange-r">RISE</p>
                 <a href="/coming-soon"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'admin.bc' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business
                     Case</a>
@@ -79,7 +79,7 @@
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
                 <p href="/coming-soon"
-                    class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-purple-r">Paradigm</p>
+                    class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-purple-r">Paradigm</p>
                 <a href="/coming-soon"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'admin.hoi' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Hall
                     of ISE!</a>
@@ -118,7 +118,7 @@
                     <x-heroicon-s-chevron-down class="w-6 h-4 text-[#B5B3BC] ml-auto pr-1 mt-1"
                         x-bind:class="open == true ? 'rotate-180' : 'rotate-0'" />
                 </button>
-                <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
+                <div x-show="open" class="mt-2 ml-12 space-y-2 text-base" x-transition>
                     <a href="{{ route('admin.shortener.create') }}"
                         class="flex flex-row items-center gap-3 group hover:brightness-75">New
                         Shortener</a>
@@ -132,7 +132,7 @@
                     <x-heroicon-s-chevron-down class="w-6 h-4 text-[#B5B3BC] ml-auto pr-1 mt-1"
                         x-bind:class="open == true ? 'rotate-180' : 'rotate-0'" />
                 </button>
-                <div x-show="open" class="space-y-2 mt-2 ml-12 text-base" x-transition>
+                <div x-show="open" class="mt-2 ml-12 space-y-2 text-base" x-transition>
                     <a href="{{ route('admin.coupon.create') }}"
                         class="flex flex-row items-center gap-3 group hover:brightness-75">New
                         Coupon</a>
@@ -143,7 +143,7 @@
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
-            <p href="/coming-soon" class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-green-br">
+            <p href="/coming-soon" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">
                 BIONIX</p>
             <a href="/coming-soon"
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
@@ -155,12 +155,12 @@
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
-            <p href="/coming-soon" class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-blue-r">
+            <p href="/coming-soon" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-blue-r">
                 ICON</p>
-            <a href="/coming-soon"
+            <a href="/admin/ds"
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS
                 Academy</a>
-            <a href="/coming-soon"
+            <a href="/admin/ux"
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'admin.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX
                 Academy</a>
             <a href="/admin/gts"
@@ -170,7 +170,7 @@
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
             <p href="/coming-soon"
-                class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-orange-r">RISE</p>
+                class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-orange-r">RISE</p>
             <a href="/coming-soon"
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'admin.bc' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business
                 Case</a>
@@ -178,7 +178,7 @@
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
             <p href="/coming-soon"
-                class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-purple-r">Paradigm</p>
+                class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-purple-r">Paradigm</p>
             <a href="/coming-soon"
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-purple-r {{ Route::currentRouteName() == 'admin.hoi' ? 'bg-gradient-purple-r' : 'bg-[#1C1C1C]' }}">Hall
                 of ISE!</a>
