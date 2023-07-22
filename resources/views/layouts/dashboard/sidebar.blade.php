@@ -15,14 +15,13 @@
             </div>
             <div class="flex flex-col space-y-2 mt-7 text-[#B5B3BC]">
                 <a href="/my" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-home class="w-6 h-6 text-[#B5B3BC] {{ Route::currentRouteName() == 'my' ? 'brightness-75' : 'brightness-100' }}" />Beranda</a>
-                <a href="/coming-soon" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-credit-card class="w-6 h-6 text-[#B5B3BC]" />Pembayaran</a>
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
                 <p href="/coming-soon" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">BIONIX</p>
                 <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
                 <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>
-                <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS Class</a>
+                <a href="/my/isclass" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS Class</a>
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
@@ -58,14 +57,13 @@
         </div>
         <div class="flex flex-col space-y-2 mt-7 text-[#B5B3BC]">
             <a href="/my" class="flex flex-row items-center gap-3 group hover:brightness-75   {{ Route::currentRouteName() == 'my' ? 'brightness-50' : 'brightness-100' }}" ><x-heroicon-s-home class="w-6 h-6 text-[#B5B3BC]"/>Beranda</a>
-            <a href="/coming-soon" class="flex flex-row items-center gap-3 group hover:brightness-75"><x-heroicon-s-credit-card class="w-6 h-6 text-[#B5B3BC]" />Pembayaran</a>
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
             <p href="/coming-soon" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">BIONIX</p>
             <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
             <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>
-            <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS Class</a>
+            <a href="/my/isclass" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS Class</a>
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">

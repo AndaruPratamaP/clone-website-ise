@@ -68,7 +68,7 @@
       xl:h-[18rem] top-[2rem] lg:top-[4rem] xl:top-[4rem]" src= {{ asset('images/icon/IconLP_Sect2_Decor.png') }}
       alt="">
     </div>
-    <div class="flex justify-center content-center flex-col">
+    <div class="flex flex-col content-center justify-center">
       <h2
         style="line-height: 80%"
         class="left-0 top-5 z-30 mt-32 sm:mt-40 lg:mt-44 xl:mt-56 font-montserrat text-[26px] xs:text-[30px] sm:text-[34px] md:text-[38px] lg:text-[48px] xl:text-[72px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.1)] text-center"
@@ -93,7 +93,7 @@
       xl:left-[2.75rem] lg:top-[37rem] xl:top-[47rem] lg:h-[387px] xl:h-[586px]" src= {{
       asset('images/icon/IconLP_Sect3_Decor2.png') }} alt="">
     </div>
-    <div class="relative mt-10 xs:mt-2 lg:mt-4 xl:mt-0 h-6 lg:h-24">
+    <div class="relative h-6 mt-10 xs:mt-2 lg:mt-4 xl:mt-0 lg:h-24">
       <img class=" absolute left-[2rem] xs:left-[3rem] sm:left-[4rem] lg:left-[9rem] xl:left-[9rem] lg:top-3 xl:top-2
       w-[16px] xs:w-[18px] sm:w-[24px] md:w-[30px] lg:w-[41px] xl:w-[61px] h-[20px] xs:h-[25px] sm:h-[32px] md:h-[40px]
       lg:h-[50px] xl:h-[75px]" src= {{ asset('images/bionix/BionixLP_Sect3_TitleDecor1.png') }} alt="">
@@ -108,7 +108,7 @@
       lg:w-[83px] xl:w-[125px] h-[8px] sm:h-[12px] md:h-[16px] lg:h-[20px] xl:h-[30px]" src= {{
       asset('images/bionix/BionixLP_Sect3_TitleDecor2.png') }} alt="">
     </div>
-    <div class="hidden lg:block mt-10">
+    <div class="hidden mt-10 lg:block">
       <div
         class="swiper w-[310px] xs:w-[390px] sm:w-[550px] md:w-[650px] lg:w-[800px] xl:w-[1100px] h-[400px] xs:h-[500px] sm:h-[600px] lg:h-[720px] xl:h-[1100px]"
       >
@@ -141,7 +141,7 @@
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
-                class="mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8"
+                class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8"
               >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
@@ -228,7 +228,7 @@
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="mb-4 bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-[#FFA969] font-montserrat">Course Material</h5>
@@ -300,7 +300,7 @@
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="mb-4 bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-black font-montserrat">Consumption</h5>
@@ -321,16 +321,16 @@
           </div>
         </div>
         <div
-          class="swiper-button-prev hidden lg:block rounded-full p-10"
+          class="hidden p-10 rounded-full swiper-button-prev lg:block"
           style="color: white; background-color: #173f52; left: 0"
         ></div>
         <div
-          class="swiper-button-next rounded-full p-10"
+          class="p-10 rounded-full swiper-button-next"
           style="color: white; background-color: #173f52; right: 0"
         ></div>
       </div>
     </div>
-    <div class="block lg:hidden mt-10">
+    <div class="block mt-10 lg:hidden">
       <div
         class="swiper w-[310px] xs:w-[390px] sm:w-[550px] md:w-[650px] lg:w-[800px] xl:w-[1100px] h-[400px] xs:h-[500px] sm:h-[600px] lg:h-[720px] xl:h-[1085px]"
       >
@@ -363,7 +363,7 @@
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
-                class="mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8"
+                class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8"
               >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
@@ -454,7 +454,7 @@
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-white py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-12 xs:pr-16 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="py-1 pl-2 pr-12 mb-4 bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 xs:pr-16 lg:pr-20 xl:pr-24 w-fit"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5
@@ -545,7 +545,7 @@
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-white py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-6 xs:pr-8 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="py-1 pl-2 pr-6 mb-4 bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 xs:pr-8 lg:pr-20 xl:pr-24 w-fit"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5
@@ -572,11 +572,11 @@
           </div>
         </div>
         <div
-          class="swiper-button-prev hidden lg:block rounded-full p-10"
+          class="hidden p-10 rounded-full swiper-button-prev lg:block"
           style="color: white; background-color: #173f52; left: 0"
         ></div>
         <div
-          class="swiper-button-next rounded-full p-10"
+          class="p-10 rounded-full swiper-button-next"
           style="color: white; background-color: #173f52; right: 0"
         ></div>
       </div>
@@ -591,7 +591,7 @@
       xl:h-[440px] lg:top-[51rem] xl:top-[70rem] lg:right-[3rem] xl:right-[3rem]" src= {{
       asset('images/icon/IconLP_Sect4_Decor.png') }} alt="">
     </div>
-    <div class="relative mt-12 lg:mt-24 xl:mt-32 h-4 lg:h-24">
+    <div class="relative h-4 mt-12 lg:mt-24 xl:mt-32 lg:h-24">
       <img class=" absolute right-[2rem] lg:right-[9rem] xl:right-[10rem] lg:top-3 xl:top-3 w-[16px] xs:w-[18px]
       sm:w-[24px] md:w-[30px] lg:w-[41px] xl:w-[61px] h-[20px] xs:h-[25px] sm:h-[32px] md:h-[40px] lg:h-[50px]
       xl:h-[75px]" src= {{ asset('images/icon/IconLP_Sect4_TitleDecor.png') }} alt="">
@@ -606,7 +606,7 @@
       lg:w-[83px] xl:w-[125px] h-[8px] sm:h-[12px] md:h-[16px] lg:h-[20px] xl:h-[30px] rotate-180" src= {{
       asset('images/icon/IconLP_Sect3_TitleDecor2.png') }} alt="">
     </div>
-    <div class="hidden lg:block mt-10 sm:mt-14 xl:mt-20">
+    <div class="hidden mt-10 lg:block sm:mt-14 xl:mt-20">
       <div
         class="swiper w-[310px] xs:w-[390px] sm:w-[550px] md:w-[650px] lg:w-[800px] xl:w-[1100px] h-[400px] xs:h-[500px] sm:h-[600px] lg:h-[720px] xl:h-[1085px]"
       >
@@ -639,7 +639,7 @@
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
-                class="mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8"
+                class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8"
               >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
@@ -779,7 +779,7 @@
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="mb-4 bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-blackfont-montserrat">Try Out Pack</h5>
@@ -803,7 +803,7 @@
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="mb-4 bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 lg:pr-20 xl:pr-24 w-fit"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5 class="font-bold lg:text-[24px] xl:text-[36px] text-[#FFA969] font-montserrat">Accommodation</h5>
@@ -824,16 +824,16 @@
           </div>
         </div>
         <div
-          class="swiper-button-prev hidden lg:block rounded-full p-10"
+          class="hidden p-10 rounded-full swiper-button-prev lg:block"
           style="color: white; background-color: #173f52; left: 0"
         ></div>
         <div
-          class="swiper-button-next rounded-full p-10"
+          class="p-10 rounded-full swiper-button-next"
           style="color: white; background-color: #173f52; right: 0"
         ></div>
       </div>
     </div>
-    <div class="block lg:hidden mt-10 sm:mt-14 xl:mt-20">
+    <div class="block mt-10 lg:hidden sm:mt-14 xl:mt-20">
       <div
         class="swiper w-[310px] xs:w-[390px] sm:w-[550px] md:w-[650px] lg:w-[800px] xl:w-[1100px] h-[400px] xs:h-[500px] sm:h-[600px] lg:h-[720px] xl:h-[1085px]"
       >
@@ -847,11 +847,7 @@
               <p
                 class="font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-4 xl:px-8 mt-[-0.5rem] xl:mt-[-1rem] lg:mt-[-1rem]"
               >
-                Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang terbagi dalam beberapa region di
-                Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi informasi, pemrograman,
-                logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, Final
-                hnPresentasi Bisnis, dan terakhir Awarding Night.
-              </p>
+              BIONIX COMPETITION merupakan rangkaian kompetisi berupa seleksi olimpiade tingkat nasional untuk siswa SMA/SMK/sederajat di seluruh Indonesia berdasarkan bidang keilmuan Sistem Informasi yang akan dibagi kedalam tiga tahap dimana keseluruhan rangkaian acara akan ditutup dengan adanya Awarding beserta Gala Dinner dengan para peserta finalis.              </p>
               <a
                 class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
                 href="/login"
@@ -866,7 +862,7 @@
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
-                class="mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-8"
+                class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8"
               >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
@@ -1018,7 +1014,7 @@
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-white py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-6 xs:pr-8 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="py-1 pl-2 pr-6 mb-4 bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 xs:pr-8 lg:pr-20 xl:pr-24 w-fit"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5
@@ -1049,7 +1045,7 @@
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
             >
               <div
-                class="bg-white py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-6 xs:pr-8 lg:pr-20 xl:pr-24 w-fit mb-4"
+                class="py-1 pl-2 pr-6 mb-4 bg-white lg:py-1 xl:py-2 lg:pl-2 xl:pl-4 xs:pr-8 lg:pr-20 xl:pr-24 w-fit"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
               >
                 <h5
@@ -1075,11 +1071,11 @@
           </div>
         </div>
         <div
-          class="swiper-button-prev hidden lg:block rounded-full p-10"
+          class="hidden p-10 rounded-full swiper-button-prev lg:block"
           style="color: white; background-color: #173f52; left: 0"
         ></div>
         <div
-          class="swiper-button-next rounded-full p-10"
+          class="p-10 rounded-full swiper-button-next"
           style="color: white; background-color: #173f52; right: 0"
         ></div>
       </div>
@@ -1092,21 +1088,21 @@
       lg:left-[0rem] xl:left-[0rem] lg:top-[-15rem] xl:top-[-20rem]" src= {{
       asset('images/icon/IconLP_Sect3_Background.png') }} alt="">
     </div>
-    <div class="lg:mt-16 xl:mt-12 flex justify-center content-center flex-col">
-      <div class="flex justify-center content-center">
+    <div class="flex flex-col content-center justify-center lg:mt-16 xl:mt-12">
+      <div class="flex content-center justify-center">
         <div class="flex justify-center content-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] mt-14">
           <div>
             <img class=" self-center w-[28px] xs:w-[30px] md:w-[40px] lg:w-[84px] xl:w-[104px] h-[38px] xs:h-[40px]
             md:h-[50px] lg:h-[112px] xl:h-[141px]" src= {{ asset('images/icon/IconLP_Sect5_TitleDecor1.png') }} alt="">
           </div>
-          <div class="mx-2 sm:mx-4 lg:mx-5 flex justify-center content-center flex-col">
+          <div class="flex flex-col content-center justify-center mx-2 sm:mx-4 lg:mx-5">
             <h2
               style="line-height: 80%"
               class="z-30 font-montserrat text-[28px] xs:text-[32px] sm:text-[38px] md:text-[42px] lg:text-[48px] xl:text-[72px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)] text-center"
             >
               TESTIMONIALS
             </h2>
-            <div class="self-center relative xs:top-2 lg:top-4">
+            <div class="relative self-center xs:top-2 lg:top-4">
               <h4
                 class="inline-block self-center text-white font-montserrat font-semibold text-[9px] sm:text-[12px] lg:text-[16px] xl:text-[36px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
               >
@@ -1155,7 +1151,7 @@
                 xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
                 {{ asset('images/bionix/testi-1.png') }} alt="">
               </div>
-              <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+              <div style="text-" class="flex flex-col px-5 pt-10 xs:px-7 lg:px-0 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                 <div class="inline-block">
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -1226,7 +1222,7 @@
                 xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
                 {{ asset('images/bionix/testi-2.png') }} alt="">
               </div>
-              <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+              <div style="text-" class="flex flex-col px-5 pt-10 xs:px-7 lg:px-0 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                 <div class="inline-block">
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -1297,7 +1293,7 @@
                 xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
                 {{ asset('images/bionix/testi-3.png') }} alt="">
               </div>
-              <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+              <div style="text-" class="flex flex-col px-5 pt-10 xs:px-7 lg:px-0 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                 <div class="inline-block">
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -1359,13 +1355,13 @@
       <img class=" z-0 absolute w-full h-[58rem] md:h-[65rem] lg:h-[70rem] xl:h-[90rem] lg:left-[0rem] xl:left-[0rem]
       top-[-10rem] lg:top-[-15rem] xl:top-[-10rem]" src= {{ asset('images/bionix/BionixLP_Sect6_Bg1.png') }} alt="">
     </div>
-    <div class="z-30 flex justify-center content-center flex-col">
+    <div class="z-30 flex flex-col content-center justify-center">
       <div class="flex justify-center content-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
         <div>
           <img class=" self-center w-[50px] sm:w-[75px] md:w-[130px] lg:w-[172px] h-[10px] sm:h-[20px] md:h-[30px]
           lg:h-[40px] mt-4" src= {{ asset('images/rise-landing/Sect5-Title-Left-Img.png') }} alt="">
         </div>
-        <div class="mx-2 sm:mx-4 lg:mx-5 flex justify-center content-center flex-col">
+        <div class="flex flex-col content-center justify-center mx-2 sm:mx-4 lg:mx-5">
           <h2
             style="line-height: 80%"
             class="z-30 font-montserrat text-[30px] xs:text-[32px] sm:text-[42px] md:text-[50px] lg:text-[60px] xl:text-[72px] font-extrabold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)] text-center"
@@ -1378,7 +1374,7 @@
           lg:h-[40px] mt-4" src= {{ asset('images/rise-landing/Sect5-Title-Right-Img.png') }} alt="">
         </div>
       </div>
-      <div class="self-center relative xs:top-2 lg:top-4">
+      <div class="relative self-center xs:top-2 lg:top-4">
         <h4
           class="inline-block self-center text-white font-montserrat font-bold text-[12px] xs:text-[16px] sm:text-[20px] md:text-[25px] lg:text-[50px] xl:text-[64px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
         >
@@ -1395,14 +1391,14 @@
         </h4>
       </div>
       <div
-        class="flex flex-col lg:flex-row justify-center content-center lg:mt-20 xl:mt-32 z-30 gap-10 lg:gap-28 xl:gap-32"
+        class="z-30 flex flex-col content-center justify-center gap-10 lg:flex-row lg:mt-20 xl:mt-32 lg:gap-28 xl:gap-32"
       >
         <div
           class="w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px] xl:w-[480px] h-[180px] sm:h-[220px] md:h-[280px] lg:h-[320px] xl:h-[476px] self-center mt-10 md:mt-14 lg:mt-0"
         >
           <img src="{{ asset('images/rise-landing/Sect5-Trophy-Img.png') }}" alt="" />
         </div>
-        <div class="relative flex flex-col lg:right-10 lg:top-2 xl:top-24 gap-4 sm:gap-8 lg:gap-10 xl:gap-16">
+        <div class="relative flex flex-col gap-4 lg:right-10 lg:top-2 xl:top-24 sm:gap-8 lg:gap-10 xl:gap-16">
           <div
             class="rounded-[30px] p-6 lg:p-6 xl:p-8 w-[270px] sm:w-[300px] lg:w-[21rem] xl:w-[26rem] self-center"
             style="background: rgba(18, 19, 22, 0.8); box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5)"
@@ -1455,13 +1451,13 @@
       xs:w-[40rem] md:w-[60rem] lg:w-full h-[15rem] md:h-[20rem] lg:h-[33rem] xl:w-[80rem] xl:h-[41rem] lg:top-[27rem]
       xl:top-[37rem] lg:left-[0rem] xl:left-[0rem] " src= {{ asset('images/icon/IconLP_Sect3_Background.png') }} alt="">
     </div>
-    <div class="z-30 flex justify-center content-center flex-col">
+    <div class="z-30 flex flex-col content-center justify-center">
       <h2
         class="mt-[20px] md:mt-[50px] z-30 font-montserrat text-[30px] xs:text-[34px] sm:text-[38px] md:text-[44px] lg:text-[53px] xl:text-[80px] font-bold from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-center self-center"
       >
         Timeline
       </h2>
-      <div class="inline-block self-center">
+      <div class="self-center inline-block">
         <div class="relative z-0">
           <img
             class="absolute w-[100px] xs:w-[120px] sm:w-[160px] lg:w-[375px] xl:w-[400px] left-[-3.5rem] xs:left-[-5rem] sm:left-[-6rem] lg:left-[-18rem] xl:left-[-17rem] bottom-[-1.5rem] xs:bottom-[-1.75rem] sm:bottom-[-2.5rem] lg:bottom-[-8rem] xl:bottom-[-7rem]"
@@ -1495,8 +1491,8 @@
       >
         TIMELINE IS CLASS
       </div>
-      <div class="mt-8 md:mt-12 lg:mt-12 grid grid-cols-2 gap-3 sm:gap-6 md:gap-7 lg:gap-10 self-center">
-        <div class="flex justify-center content-center flex-col">
+      <div class="grid self-center grid-cols-2 gap-3 mt-8 md:mt-12 lg:mt-12 sm:gap-6 md:gap-7 lg:gap-10">
+        <div class="flex flex-col content-center justify-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1521,7 +1517,7 @@
             asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex justify-center content-center flex-col translate-x-3">
+        <div class="flex flex-col content-center justify-center translate-x-3">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1551,12 +1547,12 @@
       >
         TIMELINE BIONIX COMPETITION
       </div>
-      <div class="mt-8 md:mt-12 lg:mt-12 grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-6 md:gap-7 lg:gap-10 self-center justify-center">
-        <div class="flex justify-center content-center flex-col">
+      <div class="grid self-center justify-center grid-cols-3 gap-3 mt-8 md:mt-12 lg:mt-12 sm:grid-cols-5 sm:gap-6 md:gap-7 lg:gap-10">
+        <div class="flex flex-col content-center justify-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
-            23 Jul - 10 Sep
+            28 Jul - 17 Sep
           </p>
           <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px]
           md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/bionix/BionixLP_Sect6_Circle.png') }} alt="">
@@ -1577,7 +1573,7 @@
             asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex justify-center content-center flex-col">
+        <div class="flex flex-col content-center justify-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1602,7 +1598,7 @@
             asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex justify-center content-center flex-col">
+        <div class="flex flex-col content-center justify-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1627,7 +1623,7 @@
             asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex justify-center content-center flex-col">
+        <div class="flex flex-col content-center justify-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1652,7 +1648,7 @@
             asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex justify-center content-center flex-col">
+        <div class="flex flex-col content-center justify-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1680,13 +1676,13 @@
       <img class=" z-10 absolute hidden lg:block w-full xl:w-[80rem] lg:h-[43rem] xl:h-[60rem] lg:top-[0rem]" src= {{
       asset('images/bionix/BionixLP_Sect8_background.png') }} alt="">
     </div>
-    <div class="flex justify-center flex-col">
+    <div class="flex flex-col justify-center">
       <h3
         class="mt-[30px] md:mt-[0px] xl:mt-[100px] z-30 font-montserrat text-[17px] xs:text-[20px] sm:text-[28px] md:text-[32px] lg:text-[42px] xl:text-[64px] font-bold from-[#006C56] to-[#AFD196] bg-gradient-to-r bg-clip-text text-transparent text-center lg:leading-[84px]"
       >
         Frequently Asked Questions
       </h3>
-      <div class="mt-4 lg:mt-10 xl:mt-16 lg:mb-10 xl:mb-14 self-center">
+      <div class="self-center mt-4 lg:mt-10 xl:mt-16 lg:mb-10 xl:mb-14">
         {{-- Accordion --}}
         <div
           x-data="{open:false}"
@@ -1703,8 +1699,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Apa itu BIONIX?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1720,7 +1716,7 @@
             >
               Apa itu BIONIX?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>
@@ -1747,8 +1743,8 @@
               >Berapa harga pendaftaran BIONIX?
 </span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1765,7 +1761,7 @@
               Berapa harga pendaftaran BIONIX?
 
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>
@@ -1791,8 +1787,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Apakah peserta boleh mendaftarkan diri lebih dari satu tim di BIONIX?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1808,7 +1804,7 @@
             >
               Apakah peserta boleh mendaftarkan diri lebih dari satu tim di BIONIX?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>
@@ -1834,8 +1830,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Apakah tim BIONIX boleh terdiri atas lintas tahun angkatan ataupun berbeda jenis kelamin?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1851,7 +1847,7 @@
             >
               Apakah tim BIONIX boleh terdiri atas lintas tahun angkatan ataupun berbeda jenis kelamin?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>
@@ -1877,8 +1873,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Di mana pelaksanaan tahap Penyisihan BIONIX?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1894,7 +1890,7 @@
             >
               Di mana pelaksanaan tahap Penyisihan BIONIX?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>
@@ -1920,8 +1916,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Bagaimana bentuk soal BIONIX?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1937,7 +1933,7 @@
             >
               Bagaimana bentuk soal BIONIX?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>

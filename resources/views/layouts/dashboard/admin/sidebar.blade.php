@@ -50,7 +50,7 @@
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
                 <a href="/coming-soon"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>
-                <a href="/coming-soon"
+                <a href="/admin/isclass"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS
                     Class</a>
             </div>
@@ -149,7 +149,7 @@
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
             <a href="/coming-soon"
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>
-            <a href="/coming-soon"
+            <a href="/admin/isclass"
                 class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS
                 Class</a>
         </div>
