@@ -10,9 +10,25 @@
     {
         "id": "7e3352a8-5b8b-426f-be00-6f7b1ad50345",
         "name": "IS Class",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl vitae nisl. Donec euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl vitae nisl.",
+        "description": "",
         "quota": 60,
         "start_date": "2023-07-23 00:00:00",
-        "end_date": "2023-08-21 00:00:00"
+        "end_date": "2023-08-21 23:59:59"
+    },
+    {
+        "id": "89b3f9c0-b63b-4497-85d6-c7812c7bb0da",
+        "name": "UX Academy",
+        "description": "",
+        "quota": 100,
+        "start_date": "2023-07-23 00:00:00",
+        "end_date": "2023-08-21 23:59:59"
+    },
+    {
+        "id": "3f99d663-7d8c-4afd-99eb-2f97e1eed585",
+        "name": "DS Academy",
+        "description": "",
+        "quota": 100,
+        "start_date": "2023-07-23 00:00:00",
+        "end_date": "2023-08-21 23:59:59"
     }
 ]

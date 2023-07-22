@@ -86,8 +86,8 @@ class FileUpload
             IseException::throw("Upload {$this->name} Gagal", 2003);
         }
 
-        $this->file_name = $file_front . "_" . $encrypted_seed;
-        return $this->path . '/' . $file_front . "_" . $encrypted_seed;
+        $this->file_name = $file_front . "_" . $encrypted_seed . "." . $this->uploaded_file->getClientOriginalExtension();
+        return $this->path . '/' . $this->file_name;
     }
 
     public function getUrl()

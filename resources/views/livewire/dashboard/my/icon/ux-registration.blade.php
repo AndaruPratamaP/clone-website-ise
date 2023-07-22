@@ -128,16 +128,12 @@
                   >
                   <input
                     id="full_name"
-                    wire:model="full_name"
+                    value="{{ auth()->user()->full_name }}"
                     class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] focus:text-[#349BB6] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('full_name') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                     type="text"
                     placeholder="Masukkan nama lengkap kamu"
-                    required
+                    disabled
                   />
-                  @error('full_name')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
-
-                  @enderror
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
                   <label for="institution" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
@@ -145,15 +141,38 @@
                   >
                   <input
                     id="institution"
-                    wire:model="institution"
+                    value="{{ auth()->user()->institution }}"
                     class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#00668F] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('institution') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                     type="text"
                     placeholder="Masukkan nama institusi kamu"
-                    required
+                    disabled
                   />
-                  @error('institution')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
-                  @enderror
+                </div>
+                <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
+                  <label for="email" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                    >Email<span class="text-[#FF1F00] ml-1">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    value="{{ auth()->user()->email }}"
+                    class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#00668F] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('whatsapp') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
+                    placeholder="Masukkan email aktif kamu"
+                    disabled
+                  />
+                </div>
+                <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
+                  <label for="whatsapp" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
+                    >Whatsapp<span class="text-[#FF1F00] ml-1">*</span></label
+                  >
+                  <input
+                    id="whatsapp"
+                    value="{{ auth()->user()->handphone }}"
+                    class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#00668F] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('full_name') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
+                    type="text"
+                    placeholder="Masukkan nomor whatsapp aktif kamu"
+                    disabled
+                  />
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
                   <label for="department" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
@@ -168,38 +187,6 @@
                     required
                   />
                   @error('department')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
-                  @enderror
-                </div>
-                <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="email" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
-                    >Email<span class="text-[#FF1F00] ml-1">*</span></label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    wire:model="email"
-                    class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#00668F] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('whatsapp') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
-                    placeholder="Masukkan email aktif kamu"
-                    required
-                  />
-                  @error('email')
-                  <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
-                  @enderror
-                </div>
-                <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
-                  <label for="whatsapp" class="inline font-semibold text-xs lg:text-base 2xl:text-xl"
-                    >Whatsapp<span class="text-[#FF1F00] ml-1">*</span></label
-                  >
-                  <input
-                    id="whatsapp"
-                    wire:model="whatsapp"
-                    class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#00668F] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('full_name') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
-                    type="text"
-                    placeholder="Masukkan nomor whatsapp aktif kamu"
-                    required
-                  />
-                  @error('whatsapp')
                   <span class="text-red-500 pt-2 text-xs lg:text-base">{{ $message }}</span>
                   @enderror
                 </div>

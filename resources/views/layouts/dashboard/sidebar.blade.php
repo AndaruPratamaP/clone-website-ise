@@ -27,7 +27,7 @@
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
                 <p href="/coming-soon" class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-blue-r">ICON</p>
-                <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS Academy</a>
+                <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.ds' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS Academy</a>
                 <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX Academy</a>
                 <a href="/my/gts" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.gts' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">Grand Talkshow</a>
             </div>
@@ -70,7 +70,7 @@
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
             <p href="/coming-soon" class="text-2xl font-bold bg-clip-text text-transparent w-max bg-gradient-blue-r">ICON</p>
-            <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.dsacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS Academy</a>
+            <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.ds' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">DS Academy</a>
             <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.uxacademy' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">UX Academy</a>
             <a href="/my/gts" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-blue-r {{ Route::currentRouteName() == 'my.gts' ? 'bg-gradient-blue-r' : 'bg-[#1C1C1C]' }}">Grand Talkshow</a>
         </div>

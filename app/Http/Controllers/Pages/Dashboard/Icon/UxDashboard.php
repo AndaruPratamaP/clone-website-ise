@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
-use App\Http\Controllers\Presentation\Dashboard\GrandTalkshowDashboardController;
+use App\Http\Controllers\Presentation\Dashboard\UX\UXAcademyDashboardController;
 
-class UxDashboard extends GrandTalkshowDashboardController
+class UxDashboard extends UXAcademyDashboardController
 {
     public function render()
     {

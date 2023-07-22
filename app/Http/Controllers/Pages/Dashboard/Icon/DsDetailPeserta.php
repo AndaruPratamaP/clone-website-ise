@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
-use Livewire\Component;
+use App\Http\Controllers\Presentation\Dashboard\DS\DSAcademyDetailPesertaController;
 
-class DsDetailPeserta extends Component
+class DsDetailPeserta extends DSAcademyDetailPesertaController
 {
     public function render()
     {

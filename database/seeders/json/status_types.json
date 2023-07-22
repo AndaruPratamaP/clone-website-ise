@@ -10,5 +10,61 @@
     {
         "id": "3",
         "name": "Verified"
+    },
+    {
+        "id": "4",
+        "name": "UX.Registered"
+    },
+    {
+        "id": "5",
+        "name": "UX.LolosBerkas"
+    },
+    {
+        "id": "6",
+        "name": "UX.RevisiBerkas"
+    },
+    {
+        "id": "7",
+        "name": "UX.GagalBerkas"
+    },
+    {
+        "id": "8",
+        "name": "UX.LolosSeleksi"
+    },
+    {
+        "id": "9",
+        "name": "UX.RevisiSeleksi"
+    },
+    {
+        "id": "10",
+        "name": "UX.GagalSeleksi"
+    },
+    {
+        "id": "11",
+        "name": "DS.Registered"
+    },
+    {
+        "id": "12",
+        "name": "DS.LolosBerkas"
+    },
+    {
+        "id": "13",
+        "name": "DS.RevisiBerkas"
+    },
+    {
+        "id": "14",
+        "name": "DS.GagalBerkas"
+    },
+    {
+        "id": "15",
+        "name": "DS.LolosSeleksi"
+    },
+    {
+        "id": "16",
+        "name": "DS.RevisiSeleksi"
+    },
+    {
+        "id": "17",
+        "name": "DS.GagalSeleksi"
     }
 ]

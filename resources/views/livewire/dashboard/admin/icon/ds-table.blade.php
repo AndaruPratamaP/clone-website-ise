@@ -29,8 +29,8 @@
         <div class="flex flex-row items-center gap-2">
             <p class="text-white">Order By</p>
             <select name="orderby" wire:model="orderby" id="orderby" class="px-3 py-2 rounded-lg">
-                <option value="grand_talkshow.created_at" selected>Time</option>
-                <option value="full_name">Full Name</option>
+                <option value="ds_academy.created_at" selected>Time</option>
+                <option value="ds_academy.team_name">Team Name</option>
                 <option value="status_type_id">Status</option>
             </select>
         </div>
@@ -47,25 +47,25 @@
         <table class="table-auto text-start w-full text-white">
             <thead class="font-bold text-2xl border-b-2 border-white h-12">
                 <th class="pr-8 text-start">#</th>
-                <th class="pr-40 whitespace-nowrap text-start">Nama</th>
-                <th class="pr-32 text-start">Referral</th>
+                <th class="pr-40 whitespace-nowrap text-start">Nama Tim</th>
+                <th class="pr-40 whitespace-nowrap text-start">Nama Ketua</th>
                 <th class="pr-14 text-start">Status</th>
                 <th class="pr-4 text-center">Detail</th>
             </thead>
             <tbody>
-                @foreach ($gtss as $gts)
+                @foreach ($pesertas as $peserta)
                     <tr class="font-medium text-lg h-16 border-b-[1px] border-white">
                         <td class="pr-8 ">
-                            {{ $loop->iteration + ($gtss->currentPage() - 1) * $entries }}
+                            {{ $loop->iteration + ($pesertas->currentPage() - 1) * $entries }}
                         </td>
-                        <td class="pr-40 whitespace-nowrap ">{{ $gts->user->full_name }}</td>
-                        <td class="pr-32 ">{{ $gts->referral }}</td>
+                        <td class="pr-40 whitespace-nowrap ">{{ $peserta->team_name }}</td>
+                        <td class="pr-40 whitespace-nowrap ">{{ $peserta->ketua->full_name }}</td>
                         <td
-                            class="pr-14 font-semibold @if ($gts->status_type->name == 'Verified') bg-gradient-blue-r bg-clip-text text-transparent @else text-[#B5B3BC] @endif">
-                            {{ $gts->status_type->name }}</td>
+                            class="pr-14 font-semibold @if ($peserta->status_type->name == 'Verified') bg-gradient-blue-r bg-clip-text text-transparent @else text-[#B5B3BC] @endif">
+                            {{ $peserta->status_type->name }}</td>
                         <td class="pr-4 text-center font-semibold"><a
                                 class="py-2 px-4 bg-gradient-orange-r rounded-2xl hover:brightness-75"
-                                href=" /admin/gts/{{ $gts->user->id }}">Action</a></td>
+                                href=" /admin/ds/{{ $peserta->ketua->id }}">Action</a></td>
                     </tr>
                 @endforeach
             </tbody>
@@ -74,7 +74,7 @@
     </div>
 
     <div class="mt-12 bg-transparent rounded-lg px-4 py-2 w-full">
-        {{ $gtss->links() }}
+        {{ $pesertas->links() }}
     </div>
 
 

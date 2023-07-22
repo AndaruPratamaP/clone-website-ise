@@ -9,20 +9,33 @@ class PermissionSeeder extends Seeder
 {
     public function run()
     {
+        $this->checkIfSeeded();
         $this->seedPermission();
         $this->seedRoleHasPermission();
+    }
+
+    public function checkIfSeeded()
+    {
+        $permission = count(json_decode(file_get_contents(database_path('seeders/json/permissions.json')), true));
+        $rolehaspermission = count(json_decode(file_get_contents(database_path('seeders/json/role_has_permission.json')), true));
+        if($this->checkIfRoleHasPermissionSeeded($rolehaspermission) && $this->checkIfPermissionSeeded($permission)) 
+        {
+            return;
+        }
     }
 
     public function seedPermission()
     {
         $json = file_get_contents(database_path('seeders/json/permissions.json'));
         $permissions = json_decode($json, true);
-        if ($this->checkIfPermissionSeeded(count($permissions))) {
-            return;
-        }
 
         $payload = [];
         foreach ($permissions as $permission) {
+            $exists = DB::table('permissions')->where('id', $permission['id'])->first();
+            if ($exists) {
+                continue;
+            }
+
             $payload[] = [
                 'id' => $permission['id'],
                 'route' => $permission['route'],
@@ -35,12 +48,14 @@ class PermissionSeeder extends Seeder
     {
         $json = file_get_contents(database_path('seeders/json/role_has_permission.json'));
         $permissions = json_decode($json, true);
-        if ($this->checkIfRoleHasPermissionSeeded(count($permissions))) {
-            return;
-        }
 
         $payload = [];
         foreach ($permissions as $permission) {
+            $exists = DB::table('role_has_permission')->where('role_id', $permission['role_id'])->first();
+            if ($exists) {
+                continue;
+            }
+
             $payload[] = [
                 'role_id' => $permission['role_id'],
                 'permission_id' => $permission['permission_id'],
@@ -53,10 +68,7 @@ class PermissionSeeder extends Seeder
     {
         $table_rows = DB::table('permissions')->count();
 
-        if ($table_rows === 0) {
-            return false;
-        } elseif ($table_rows !== $rows) {
-            $this->wipePermission();
+        if ($table_rows < $rows) {
             return false;
         } else {
             return true;
@@ -67,10 +79,7 @@ class PermissionSeeder extends Seeder
     {
         $table_rows = DB::table('role_has_permission')->count();
 
-        if ($table_rows === 0) {
-            return false;
-        } elseif ($table_rows !== $rows) {
-            $this->wipeRoleHasPermission();
+        if ($table_rows < $rows) {
             return false;
         } else {
             return true;

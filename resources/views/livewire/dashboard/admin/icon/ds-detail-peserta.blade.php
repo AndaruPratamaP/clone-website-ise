@@ -3,59 +3,252 @@
     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div class="flex flex-col items-start gap-2">
             <h1 class="text-4xl sm:text-5xl bg-gradient-blue-r bg-clip-text text-transparent font-bold">Detail Peserta DS Academy</h1>
-            <p class="text-base text-white font-semibold">{{ $user_data['user_id'] }}</p>
-            <p class="bg-[#191A1E] px-4 py-1.5 rounded-2xl text-base text-[#B5B3BC] font-semibold">Status: <span class="text-white {{ $user_data['status'] == 'Verified' ? 'text-blue-500' : '' }}">{{ $user_data['status'] }}</span></p>
+            <p class="text-base text-white font-semibold">{{ $peserta->ketua->id }}</p>
+            <p class="bg-[#191A1E] px-4 py-1.5 rounded-2xl text-base text-[#B5B3BC] font-semibold">Status: <span class="text-white">{{ $peserta->status_type->name }}</span></p>
         </div>
         <div class="flex flex-row justify-between items-center gap-4 text-white text-xl font-semibold" x-data="{openReject: false}">
-            <a href="{{ $user_data['user_id'] }}/accept"
-                class="bg-gradient-green-r px-6 py-2 rounded-xl hover:brightness-75">Accept</a>
-            <div
-                class="relative z-0" >
-                <button @click="openReject = !openReject" class="bg-red-600 px-6 py-2 rounded-xl active:bg-red-800 hover:brightness-75">
-                    Reject
-                </button>
-                <form class="absolute z-50 flex flex-col justify-center items-center gap-3 w-72 h-auto sm:w-96 sm:h-auto bg-black rounded-lg top-16 -right-10 sm:right-4 p-4" x-show="openReject" action="{{ $user_data['user_id'] }}/reject" method="GET">
-                    <div class="flex flex-row justify-between items-center w-full">
-                        <label for="reason" class="text-xl font-bold text-white tracking-wider">Reason</label>
-                        <p class="text-sm font-light text-white cursor-pointer" @click="openReject = false">Close</p>
-                    </div>
-                    <textarea required type="text" placeholder="Place your reason for rejecting here.. (max: 255)." name="reason" id="reason" class="px-4 py-3 outline-none select-none text-white border-[1px] border-white rounded-lg w-full h-36 bg-transparent text-base" maxlength="255" ></textarea>
-                    <button type="submit" class="bg-red-600 py-1.5 text-base rounded-xl hover:brightness-75 w-full">Send</button>
-                </form>
-            </div>
+            @if($peserta->status_type->id >= 11 && $peserta->status_type->id <= 14 && $peserta->status_type->id != 12)
+            <a href="{{ $peserta->ketua->id }}/accept-berkas"
+                class="bg-gradient-green-r px-6 py-2 rounded-xl hover:brightness-75">Accept Berkas</a>
+            @endif
+            @if(($peserta->status_type->id >= 11 && $peserta->status_type->id <= 14 && $peserta->status_type->id != 14) || $peserta->status_type->id == 17)
+            <a href="{{ $peserta->ketua->id }}/reject-berkas"
+                class="bg-red-600 px-6 py-2 rounded-xl hover:brightness-75">Reject Berkas</a>
+            @endif
+            @if($peserta->status_type->id >= 12 && $peserta->status_type->id <= 17 && $peserta->status_type->id != 15 && $peserta->status_type->id != 14)
+            <a href="{{ $peserta->ketua->id }}/accept-seleksi-soal"
+                class="bg-gradient-green-r px-6 py-2 rounded-xl hover:brightness-75">Accept Seleksi Soal</a>
+            @endif
+            @if($peserta->status_type->id >= 15 && $peserta->status_type->id <= 17 && $peserta->status_type->id != 17)
+            <a href="{{ $peserta->ketua->id }}/reject-seleksi-soal"
+                class="bg-red-600 px-6 py-2 rounded-xl hover:brightness-75">Reject Seleksi Soal</a>
+            @endif
         </div>
     </div>
-    <div class="flex flex-col gap-y-1 bg-[#191A1E] p-6 rounded-xl mt-12 text-base sm:text-lg">
-        <p class="flex text-[#B5B3BC] font-normal ">Nama Lengkap</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-    </div>
-    <div class="flex flex-col gap-y-1 bg-[#191A1E] p-6 rounded-xl mt-12 text-base sm:text-lg">
-        <p class="flex text-[#B5B3BC] font-normal ">Nama Lengkap</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-            {{ $user_data['full_name'] }}</p>
-        <p class="flex text-[#B5B3BC] font-normal">Asal Instansi</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-        <p class="flex text-[#B5B3BC] font-normal">Asal Instansi</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-            {{ $user_data['institution'] }}</p>
-        <p class="flex text-[#B5B3BC] font-normal">Email</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-        <p class="flex text-[#B5B3BC] font-normal">Email</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-            {{ $user_data['email'] }}</p>
-        <p class="flex text-[#B5B3BC] font-normal">Handphone</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-        <p class="flex text-[#B5B3BC] font-normal">Handphone</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-            {{ $user_data['handphone'] }}</p>
-        <p class="flex text-[#B5B3BC] font-normal">Tahu Grand Talkshow Darimana
-        <p class="flex text-[#B5B3BC] font-normal">Tahu Grand Talkshow Darimana
-            ?</p>
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-        <p class="flex text-white font-lg font-medium tracking-wider mb-3 break-all">
-            {{ $user_data['referral'] }}</p>
-        <p class="flex text-[#B5B3BC] font-normal">Bukti Follow</p>
-        <p class="flex text-[#B5B3BC] font-normal">Bukti Follow</p>
-        <img src="{{ url($user_data['share_proof_file']) }}" />
+    <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-5 mb-3.5">Biodata Tim Kamu</div>
+      <div
+        class="flex max-w-[580px] xl:max-w-full w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center"
+      >
+        <div class="flex flex-col items-left justify-center space-y-6 w-full">
+          {{-- Data Tim Start--}}
+          <div class="flex-col items-left justify-center w-full">
+            <div class="flex flex-row items-center mb-3 w-full gap-2">
+              <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Data Tim</h3>
+              <hr class="w-full h-[2px] bg-[#171717] opacity-30" />
+            </div>
+            <div class="flex flex-col gap-y-1">
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Tim</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->team_name }}
+              </p>
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa alasan tim Anda mengikuti ISE! Data Science Academy?</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->motive_1 }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa yang tim Anda harapkan dari ISE! Data Science Academy?
+              </p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->motive_2 }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa yang dapat kamu lakukan dengan ilmu yang diperoleh pasca ISE! Data Science Academy?</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->motive_3 }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Darimana tim Anda mendapatkan informasi terkait ISE! User Experience Academy?</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->motive_4 }}
+              </p>
+            </div>
+          </div>
+          {{-- Data Tim End--}} {{-- Ketua Tim Start--}}
+          <div class="flex-col items-left justify-center w-full">
+            <div class="flex flex-row items-center mb-3 w-full gap-2">
+              <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Ketua Tim</h3>
+              <hr class="w-full h-[2px] bg-[#171717] opacity-30" />
+            </div>
+            <div class="flex flex-col gap-y-1">
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->ketua->full_name }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Institusi</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->ketua->institution }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jurusan</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->ketua_major }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->ketua->email }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">No WA Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->ketua->handphone }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a
+                  href="{{ $peserta->ketua_instagram_link }}"
+                  target="_blank"
+                  class="text-blue-400"
+                  >Lihat Instagram Ketua</a
+                >
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ $peserta->ketua_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ url($peserta->ketua_cv_file) }}" target="_blank" class="text-blue-400">Lihat CV</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Mahasiswa Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <img
+                  src="{{ url($peserta->ketua_student_card) }}"
+                  alt="Bukti Mahasiswa Aktif"
+                />
+              </p>
+
+            </div>
+          </div>
+          {{-- Ketua Tim End--}} {{-- Anggota 1 Start--}}
+          <div class="flex-col items-left justify-center w-full">
+            <div class="flex flex-row items-center mb-3 w-full gap-2">
+              <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Anggota 1</h3>
+              <hr class="w-full h-[2px] bg-[#171717] opacity-30" />
+            </div>
+            <div class="flex flex-col gap-y-1">
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->first_full_name }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Institusi</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->first_institution }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jurusan</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->first_major }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->first_email }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">No WA Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->first_wa }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a
+                  href="{{ $peserta->first_instagram_link }}"
+                  target="_blank"
+                  class="text-blue-400"
+                  >Lihat Instagram Ketua</a
+                >
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ $peserta->first_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ url($peserta->first_cv_file) }}" target="_blank" class="text-blue-400">Lihat CV</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Mahasiswa Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <img
+                  src="{{ url($peserta->first_student_card) }}"
+                  alt="Bukti Mahasiswa Aktif"
+                />
+              </p>
+            </div>
+          </div>
+          {{-- Anggota 1 End--}} {{-- Anggota 2 Start--}}
+          <div class="flex-col items-left justify-center w-full">
+            <div class="flex flex-row items-center mb-3 w-full gap-2">
+              <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Anggota 2</h3>
+              <hr class="w-full h-[2px] bg-[#171717] opacity-30" />
+            </div>
+            <div class="flex flex-col gap-y-1">
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->second_full_name }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Institusi</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->second_institution }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jurusan</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->second_major }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->second_email }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">No WA Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->second_wa }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a
+                  href="{{ $peserta->second_instagram_link }}"
+                  target="_blank"
+                  class="text-blue-400"
+                  >Lihat Instagram Ketua</a
+                >
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ $peserta->second_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ url($peserta->second_cv_file) }}" target="_blank" class="text-blue-400">Lihat CV</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Mahasiswa Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <img
+                  src="{{ url($peserta->second_student_card) }}"
+                  alt="Bukti Mahasiswa Aktif"
+                />
+              </p>
+            </div>
+          </div>
+          {{-- Anggota 2 End--}}
+        </div>
+      </div>
     </div>
 </div>

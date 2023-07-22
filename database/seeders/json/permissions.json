@@ -12,6 +12,18 @@
         "route": "my.gts"
     },
     {
+        "id": 4,
+        "route": "my.ux"
+    },
+    {
+        "id": 5,
+        "route": "my.ds"
+    },
+    {
+        "id": 6,
+        "route": "my.is"
+    },
+    {
         "id": 100,
         "route": "admin"
     },

@@ -17,6 +17,12 @@ class EventSeeder extends Seeder
 
         $payload = [];
         foreach ($events as $event) {
+            
+            $exists = DB::table('events')->where('id', $event['id'])->first();
+            if ($exists) {
+                continue;
+            }
+
             $payload[] = [
                 'id' => $event['id'],
                 'name' => $event['name'],
@@ -33,10 +39,7 @@ class EventSeeder extends Seeder
     {
         $table_rows = DB::table('events')->count();
 
-        if ($table_rows === 0) {
-            return false;
-        } elseif ($table_rows !== $rows) {
-            $this->wipe();
+        if ($table_rows < $rows) {
             return false;
         } else {
             return true;

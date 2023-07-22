@@ -257,20 +257,16 @@
 
 
 
-
-
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
                                 x-bind:class="step == 2 ? '' : 'hidden'">
                                 <label for="nama_ketua"
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Nama
                                     Lengkap <span class="text-[#FF1F00]">*</span>
                                 </label>
-                                <input type="text" name="nama_ketua" id="nama_ketua" wire:model="nama_ketua"
+                                <input type="text" name="nama_ketua" id="nama_ketua" 
+                                    value="{{ auth()->user()->full_name }}"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Masukkan nama lengkap kamu" required />
-                                @error('nama_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
-                                @enderror
+                                    placeholder="Masukkan nama lengkap kamu" disabled />
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
                                 x-bind:class="step == 3 ? '' : 'hidden'">
@@ -311,12 +307,9 @@
                                     Institusi
                                     <span class="text-[#FF1F00]">*</span>
                                 </label>
-                                <input type="text" name="univ_ketua" id="univ_ketua" wire:model="univ_ketua"
+                                <input type="text" name="univ_ketua" id="univ_ketua" value="{{ auth()->user()->institution }}"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Masukkan nama institusi kamu" required />
-                                @error('univ_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
-                                @enderror
+                                    placeholder="Masukkan nama institusi kamu" disabled />
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
                                 x-bind:class="step == 3 ? '' : 'hidden'">
@@ -402,12 +395,9 @@
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Email
                                     <span class="text-[#FF1F00]">*</span>
                                 </label>
-                                <input type="email" name="email_ketua" id="email_ketua" wire:model="email_ketua"
+                                <input type="email" name="email_ketua" id="email_ketua" value="{{ auth()->user()->email }}"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Masukkan email aktif kamu" required />
-                                @error('email_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
-                                @enderror
+                                    placeholder="Masukkan email aktif kamu" disabled />
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
                                 x-bind:class="step == 3 ? '' : 'hidden'">
@@ -447,12 +437,9 @@
                                     class="block leading-normal text-[12px] lg:text-[20px] font-medium text-white">Whatsapp
                                     <span class="text-[#FF1F00]">*</span>
                                 </label>
-                                <input type="text" name="wasap_ketua" id="wasap_ketua" wire:model="wasap_ketua"
+                                <input type="text" name="wasap_ketua" id="wasap_ketua" value="{{ auth()->user()->handphone }}"
                                     class="block py-0 px-0 w-full lg:w-[780px] text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Masukkan nomor whatsapp aktif kamu" required />
-                                @error('wasap_ketua')
-                                    <span class="text-red-500 text-sm font-thin">{{ $message }}</span>
-                                @enderror
+                                    placeholder="Masukkan nomor whatsapp aktif kamu" disabled />
                             </div>
                             <div class="relative z-0 w-full mb-[15px] lg:mb-[45px] group"
                                 x-bind:class="step == 3 ? '' : 'hidden'">

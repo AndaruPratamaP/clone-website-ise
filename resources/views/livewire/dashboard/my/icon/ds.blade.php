@@ -270,7 +270,7 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Pendaftaran</p>
             <p class="text-2xl bg-gradient-blue-r font-bold bg-clip-text text-transparent">
-              {{ $user_data['status'] }}
+              {{ $isRegistered ? 'Sudah Terdaftar' : 'Belum Terdaftar' }}
             </p>
           </div>
         </div>
@@ -279,7 +279,7 @@
         class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
       >
         <div class="flex flex-row gap-x-6 items-center w-full">
-          @if ($user_data['status_id'] == '3')
+          @if ($peserta->status_type->id != '11' && $peserta->status_type->id != '14')
           <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-blue-400" />
           @else
           <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
@@ -288,10 +288,15 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Berkas</p>
             <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
+              class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
             >
-              @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
-              Terverifikasi @endif
+              @if($peserta->status_type->id == '11')
+                Sedang Diperiksa Admin
+              @elseif($peserta->status_type->id == '14')
+                Ditolak Admin
+              @else
+                Terverifikasi
+              @endif
             </p>
           </div>
         </div>
@@ -300,28 +305,7 @@
         class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
       >
         <div class="flex flex-row gap-x-6 items-center w-full">
-          @if ($user_data['status_id'] == '3')
-          <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-blue-400" />
-          @else
-          <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
-          @endif
-
-          <div class="flex flex-col">
-            <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Administrasi</p>
-            <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
-            >
-              @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
-              Terverifikasi @endif
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
-      >
-        <div class="flex flex-row gap-x-6 items-center w-full">
-          @if ($user_data['status_id'] == '3')
+          @if ($peserta->status_type->id >= 14)
           <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-blue-400" />
           @else
           <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
@@ -330,10 +314,19 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Seleksi</p>
             <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
+              class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '3') bg-gradient-blue-r bg-clip-text text-transparent @endif"
             >
-              @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
-              Terverifikasi @endif
+              @if($peserta->status_type->id == '12' && $peserta->answer_file == null)
+                Silahkan Upload Jawaban
+              @elseif($peserta->status_type->id == '12' && $peserta->answer_file !== null)
+                Sedang Diperiksa Admin
+              @elseif($peserta->status_type->id == '15')
+                Lolos Seleksi
+              @elseif($peserta->status_type->id == '17')
+                Tidak Lolos Seleksi
+              @else 
+                Menunggu seleksi berkas
+              @endif
             </p>
           </div>
         </div>
@@ -344,7 +337,40 @@
         class="flex max-w-[580px] xl:max-w-full w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 px-9 justify-start items-center"
       >
         <div class="flex flex-col items-left justify-center space-y-6 w-full">
-          {{-- Ketua Tim Start--}}
+          {{-- Data Tim Start--}}
+          <div class="flex-col items-left justify-center w-full">
+            <div class="flex flex-row items-center mb-3 w-full gap-2">
+              <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Data Tim</h3>
+              <hr class="w-full h-[2px] bg-[#171717] opacity-30" />
+            </div>
+            <div class="flex flex-col gap-y-1">
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Tim</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->team_name }}
+              </p>
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa alasan tim Anda mengikuti ISE! Data Science Academy?</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->motive_1 }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa yang tim Anda harapkan dari ISE! Data Science Academy?
+              </p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->motive_2 }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa yang dapat kamu lakukan dengan ilmu yang diperoleh pasca ISE! Data Science Academy?</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->motive_3 }}
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Darimana tim Anda mendapatkan informasi terkait ISE! User Experience Academy?</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->motive_4 }}
+              </p>
+            </div>
+          </div>
+          {{-- Data Tim End--}} {{-- Ketua Tim Start--}}
           <div class="flex-col items-left justify-center w-full">
             <div class="flex flex-row items-center mb-3 w-full gap-2">
               <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Ketua Tim</h3>
@@ -353,26 +379,57 @@
             <div class="flex flex-col gap-y-1">
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['full_name'] }}
+                {{ $peserta->ketua->full_name }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Institusi</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['institution'] }}
+                {{ $peserta->ketua->institution }}
               </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jurusan</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->ketua_major }}
+              </p>
+
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['email'] }}
+                {{ $peserta->ketua->email }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Handphone</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">No WA Aktif</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['handphone'] }}
+                {{ $peserta->ketua->handphone }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Data Science Academy Darimana ?</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['referral'] }}
+                <a
+                  href="{{ $peserta->ketua_instagram_link }}"
+                  target="_blank"
+                  class="text-blue-400"
+                  >Lihat Instagram Ketua</a
+                >
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow</p>
-              <img src="{{ url($user_data['share_proof_file']) }}" />
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ $peserta->ketua_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ url($peserta->ketua_cv_file) }}" target="_blank" class="text-blue-400">Lihat CV</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Mahasiswa Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <img
+                  src="{{ url($peserta->ketua_student_card) }}"
+                  alt="Bukti Mahasiswa Aktif"
+                />
+              </p>
+
             </div>
           </div>
           {{-- Ketua Tim End--}} {{-- Anggota 1 Start--}}
@@ -384,26 +441,56 @@
             <div class="flex flex-col gap-y-1">
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['full_name'] }}
+                {{ $peserta->first_full_name }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Institusi</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['institution'] }}
+                {{ $peserta->first_institution }}
               </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jurusan</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->first_major }}
+              </p>
+
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['email'] }}
+                {{ $peserta->first_email }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Handphone</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">No WA Aktif</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['handphone'] }}
+                {{ $peserta->first_wa }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Data Science Academy Darimana ?</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['referral'] }}
+                <a
+                  href="{{ $peserta->first_instagram_link }}"
+                  target="_blank"
+                  class="text-blue-400"
+                  >Lihat Instagram Ketua</a
+                >
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow</p>
-              <img src="{{ url($user_data['share_proof_file']) }}" />
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ $peserta->first_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ url($peserta->first_cv_file) }}" target="_blank" class="text-blue-400">Lihat CV</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Mahasiswa Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <img
+                  src="{{ url($peserta->first_student_card) }}"
+                  alt="Bukti Mahasiswa Aktif"
+                />
+              </p>
             </div>
           </div>
           {{-- Anggota 1 End--}} {{-- Anggota 2 Start--}}
@@ -415,26 +502,56 @@
             <div class="flex flex-col gap-y-1">
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['full_name'] }}
+                {{ $peserta->second_full_name }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Institusi</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['institution'] }}
+                {{ $peserta->second_institution }}
               </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jurusan</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                {{ $peserta->second_major }}
+              </p>
+
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['email'] }}
+                {{ $peserta->second_email }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Handphone</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">No WA Aktif</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['handphone'] }}
+                {{ $peserta->second_wa }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Data Science Academy Darimana ?</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['referral'] }}
+                <a
+                  href="{{ $peserta->second_instagram_link }}"
+                  target="_blank"
+                  class="text-blue-400"
+                  >Lihat Instagram Ketua</a
+                >
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow</p>
-              <img src="{{ url($user_data['share_proof_file']) }}" />
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ $peserta->second_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <a href="{{ url($peserta->second_cv_file) }}" target="_blank" class="text-blue-400">Lihat CV</a>
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Mahasiswa Aktif</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <img
+                  src="{{ url($peserta->second_student_card) }}"
+                  alt="Bukti Mahasiswa Aktif"
+                />
+              </p>
             </div>
           </div>
           {{-- Anggota 2 End--}}
@@ -491,7 +608,10 @@
       </div>
       <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
       <div class="flex flex-col space-y-4">
-        {{-- Seleksi Pengunguman Card Start --}}
+      {{-- Seleksi Pengunguman Card Start --}}
+        <!-- Tambahin pengumuman sudah terdaftar -->
+        @if($peserta->status_type->id == '12' && $peserta->answer_file == null) 
+        <!-- Lolos Berkas -->
         <div
           class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 pb-8 justify-start items-center"
         >
@@ -500,7 +620,7 @@
               class="flex flex-row justify-between gap-2 bg-gradient-blue-r px-4 sm:px-9 rounded-t-xl items-center py-4"
             >
               <p class="flex text-white font-lg text-xl sm:text-2xl font-poppins font-bold tracking-wider">
-                Seleksi Data<br />Science Academy
+                Seleksi Data <br /> Science Academy
               </p>
               <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 sm:w-20 h-12 sm:h-16" />
             </div>
@@ -513,7 +633,7 @@
               </p>
               <p class="bg-gradient-blue-br text-transparent bg-clip-text font-semibold">GoodLuck!</p>
               <a
-                href="/my/ds/selection"
+                href="{{ route('my.dsacademy.selection') }}"
                 class="bg-gradient-blue-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
                 >Find out more</a
               >
@@ -521,7 +641,16 @@
           </div>
         </div>
         {{-- Seleksi Pengunguman Card End --}} {{-- Congratz Pengunguman Card Start --}}
-        <div
+        @elseif($peserta->status_type->id == '15')
+          <!-- Gagal Berkas -->
+          <p>Gagal Berkas</p>
+        @elseif($peserta->status_type->id == '16')
+          <!-- Lolos Seleksi -->
+          <p>Lolos Seleksi</p>
+        @elseif($peserta->status_type->id == '17')
+          <p>Gagal Seleksi</p>
+        @endif
+        <!-- <div
           class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
         >
           <div class="flex flex-col gap-y-3">
@@ -567,7 +696,7 @@
               <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 sm:w-20 h-12 sm:h-16" />
             </div>
             <div class="flex flex-col items-left justify-center text-left space-y-4 px-4 sm:px-9 text-white">
-              <h3 class="font-bold text-xl">Tim kamu berhasil lolos tahap seleksi Data Science Academy ISE! 2023</h3>
+              <h3 class="font-bold text-xl">Tim kamu berhasil lolos tahap seleksi User Experience Academy ISE! 2023</h3>
               <p class="text-base font-light">Lakukan pembayaran commitment fee agar dapat mengikuti rangkaian acara</p>
               <p class="text-xl font-bold">
                 Jumlah yang harus dibayar: <br />
@@ -575,14 +704,14 @@
               </p>
 
               <a
-                href="/my/ds/commitment"
+                href="/my/ux/commitment"
                 class="bg-gradient-blue-r w-full py-3 rounded-md text-center font-semibold hover:brightness-75"
                 >Bayar</a
               >
             </div>
           </div>
         </div>
-        {{-- Commitment Fee Pengunguman Card End --}}
+        {{-- Commitment Fee Pengunguman Card End --}} -->
       </div>
     </div>
   </section>

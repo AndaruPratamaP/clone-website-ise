@@ -18,6 +18,11 @@ class StatusType extends Seeder
 
         $payload = [];
         foreach ($status_types as $status_type) {
+            $exists = DB::table('status_types')->where('id', $status_type['id'])->first();
+            if ($exists) {
+                continue;
+            }
+
             $payload[] = [
                 'id' => $status_type['id'],
                 'name' => $status_type['name']
@@ -30,10 +35,7 @@ class StatusType extends Seeder
     {
         $table_rows = DB::table('status_types')->count();
 
-        if ($table_rows === 0) {
-            return false;
-        } elseif ($table_rows !== $rows) {
-            $this->wipe();
+        if ($table_rows < $rows) {
             return false;
         } else {
             return true;

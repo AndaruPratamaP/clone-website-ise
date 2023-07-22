@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
             PermissionSeeder::class,
             AdminSeeder::class,
             ShortenerSeeder::class,
+            BankListSeeder::class,
+            PaymentStatusSeeder::class,
         ],
         'production' => [
             ProvinsiSeeder::class,
@@ -34,6 +36,8 @@ class DatabaseSeeder extends Seeder
             PermissionSeeder::class,
             AdminSeeder::class,
             ShortenerSeeder::class,
+            BankListSeeder::class,
+            PaymentStatusSeeder::class,
         ],
     ];
     /**

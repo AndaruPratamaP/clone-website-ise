@@ -48,7 +48,7 @@
                         @enderror
                     </div>
                     <div class="flex w-full flex-row">
-                        <a href="{{route('my.uxacademy')}}"
+                        <a href="{{route('my.ux')}}"
                             class="rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none mr-4 hover:py-3.5 h-12 lg:h-14 flex justify-center items-center">
                             Close
                         </a>
@@ -107,7 +107,7 @@
             </header>
             <div class="font-medium px-5 sm:px-6 md:px-12 lg:px-20 xl:px-24 2xl:px-30 font-['Montserrat']">
                 <p class="text-sm sm:text-lg lg:text-2xl my-4 sm:my-8">Terima kasih telah membayar commitment fee Data Science Academy! Selamat dan semangat mengikuti rangkaian acara.</p>
-                <a href="{{route('my.uxacademy')}}">
+                <a href="{{route('my.ux')}}">
                 <button
                     class="mt-8 rounded-md py-3 w-full text-xs sm:text-base lg:text-xl border-solid border-2 border-[#6BB9E7] hover:bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] hover:border-none hover:py-3.5">
                     Back to dashboard

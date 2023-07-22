@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
-use Livewire\Component;
+use App\Http\Controllers\Presentation\Dashboard\UX\UXAcademyRegistrationController;
 use Livewire\WithFileUploads;
 
-class UxRegistration extends Component
+class UxRegistration extends UXAcademyRegistrationController
 {
   use WithFileUploads;
-  public string $full_name = '';
-  public string $email = '';
-  public string $institution = '';
   public string $department = '';
   public string $instagram = '';
   public string $whatsapp = '';
@@ -35,11 +32,7 @@ class UxRegistration extends Component
   public array $referrals = ['Media Sosial ISE!', 'Media Partner ISE!', 'Sekolah', 'Teman/Keluarga', 'Lainnya'];
 
   protected $rules = [
-    'full_name' => 'required|max:255',
-    'email' => 'required|email',
-    'institution' => 'required|max:255',
     'department' => 'required|max:255',
-    'whatsapp' => 'required|max:255',
     'instagram' => 'required|max:255',
     'link_upload_twibbon' => 'required|max:255',
     'share_proof_file' => 'required|image|max:1024',
@@ -52,6 +45,25 @@ class UxRegistration extends Component
     'agreement_2' => 'required',
     'payment_proof' => 'required|image|max:1024',
   ];
+
+  public function mount()
+  {
+    if (!$this->isOpen) {
+        return redirect()->route('my.ux')->with('toastr-toast', [
+            'type' => 'info',
+            'title' => 'Pendaftaran telah ditutup',
+            'text' => 'Pendaftaran sudah ditutup karena telah melewati masa pendaftaran.',
+        ]);
+    }
+
+    if ($this->isRegistered) {
+        return redirect()->route('my.ux')->with('toastr-toast', [
+            'type' => 'info',
+            'title' => 'Telah terdaftar',
+            'text' => 'Kamu telah terdaftar...',
+        ]);
+    }
+  }
 
   public function updatedOtherRef()
   {
@@ -68,6 +80,6 @@ class UxRegistration extends Component
   public function submit()
   {
     $this->validate($this->rules);
-    dd($this);
+    $this->register();
   }
 }
