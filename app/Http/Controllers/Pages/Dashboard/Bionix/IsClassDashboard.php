@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Bionix;
 
-use App\Http\Controllers\Presentation\Dashboard\GrandTalkshowDashboardController;
+use App\Http\Controllers\Presentation\Dashboard\ISClass\ISClassDashboardController;
 
-class IsClassDashboard extends GrandTalkshowDashboardController
+class IsClassDashboard extends ISClassDashboardController
 {
     public function render()
     {

@@ -75,13 +75,13 @@ class UXAcademyService
 
         $friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $user->full_name);
 
-        $cv = FileUpload::create($request->getCvFile(), "uxacademy", auth()->user()->id . Carbon::now(), "CV_" . $friendly_name);
+        $cv = FileUpload::create($request->getCvFile(), "uxacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "CV_" . $friendly_name);
         $cv->upload();
 
-        $student_card = FileUpload::create($request->getStudentCard(), "uxacademy", auth()->user()->id . Carbon::now(), "Student_Card" . $friendly_name);
+        $student_card = FileUpload::create($request->getStudentCard(), "uxacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "Student_Card" . $friendly_name);
         $student_card->upload();
 
-        $payment_proof = FileUpload::create($request->getPaymentProofFile(), "uxacademy", auth()->user()->id . Carbon::now(), "Payment_Proof" . $friendly_name);
+        $payment_proof = FileUpload::create($request->getPaymentProofFile(), "uxacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "Payment_Proof" . $friendly_name);
         $payment_proof->upload();
 
         $payment_request = new CreatePaymentRequest(
@@ -89,7 +89,7 @@ class UXAcademyService
             $this->event_id,
             15000,
             $payment_proof->getUrl(),
-            Carbon::now()->addDays(1),
+            Carbon::now()->timezone('Asia/Jakarta')->addDays(1),
             1,
             1
         );

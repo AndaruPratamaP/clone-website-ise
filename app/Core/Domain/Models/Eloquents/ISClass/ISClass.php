@@ -2,6 +2,9 @@
 
 namespace App\Core\Domain\Models\Eloquents\ISClass;
 
+use App\Core\Domain\Models\Eloquents\Payment\Payment;
+use App\Core\Domain\Models\Eloquents\StatusType\StatusType;
+use App\Core\Domain\Models\Eloquents\User\User;
 use Illuminate\Database\Eloquent\Model;
 
 class ISClass extends model
@@ -15,7 +18,9 @@ class ISClass extends model
         "referral",
         "user_id",
         "payment_id",
-        "status_type_id"
+        "status_type_id",
+        "upload_poster_file",
+        "follow_proof_file",
     ];
     protected $hidden = ['created_at', 'updated_at'];
 
@@ -29,6 +34,8 @@ class ISClass extends model
         'user_id' => 'string',
         'payment_id' => 'string',
         'status_type_id' => 'integer',
+        'upload_poster_file' => 'string',
+        'follow_proof_file' => 'string',
     ];
 
     public function user()

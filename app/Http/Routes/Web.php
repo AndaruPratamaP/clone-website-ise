@@ -125,10 +125,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', BionixRdDashboard::class)->name('bionixroadshow');
       });
 
-        Route::prefix('isclass')->group(function () {
-            Route::get('/', IsClassDashboard::class)->name('isclass');
-            Route::get('/registration', IsClassRegistration::class)->name('isclass.registration');
-        });
+      Route::prefix('isclass')
+        ->middleware(['permission:my.is'])
+        ->group(function () {
+          Route::get('/', IsClassDashboard::class)->name('isclass');
+          Route::get('/registration', IsClassRegistration::class)->name('isclass.registration');
+      });
     });
 
   Route::name('admin.')
@@ -173,7 +175,7 @@ Route::middleware(['auth'])->group(function () {
           Route::get('/{user_id}/{action}', DsAdminAction::class)->name('dsacademy.action');
         });
       Route::prefix('isclass')
-        ->middleware(['permission:admin.gts'])
+        ->middleware(['permission:admin.is'])
         ->group(function () {
           Route::get('/', IsClassTable::class)->name('isclass.table');
           Route::get('/export', [IsClassTable::class, 'export'])->name('isclass.export');

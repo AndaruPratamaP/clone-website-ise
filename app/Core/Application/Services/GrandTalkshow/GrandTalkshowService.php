@@ -119,7 +119,7 @@ class GrandTalkshowService
 
         $user = User::find(auth()->user()->id);
 
-        $file_path = FileUpload::create($request->getShareProofFile(), "gts", auth()->user()->id . Carbon::now(), "Bukti_Follow_GTS");
+        $file_path = FileUpload::create($request->getShareProofFile(), "gts", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "Bukti_Follow_GTS");
 
         $file_path->upload();
 

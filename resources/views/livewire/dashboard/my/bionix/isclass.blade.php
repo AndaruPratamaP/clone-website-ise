@@ -227,7 +227,7 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Pendaftaran</p>
             <p class="text-2xl bg-gradient-green-r font-bold bg-clip-text text-transparent">
-              {{ $user_data['status'] }}
+              {{ $isRegistered ? 'Sudah Terdaftar' : 'Belum Terdaftar' }}
             </p>
           </div>
         </div>
@@ -236,7 +236,7 @@
         class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
       >
         <div class="flex flex-row gap-x-6 items-center w-full">
-          @if ($user_data['status_id'] == '3')
+          @if ($peserta->status_type->id == '19')
           <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-green-500" />
           @else
           <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
@@ -245,51 +245,9 @@
           <div class="flex flex-col">
             <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Berkas</p>
             <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-green-r bg-clip-text text-transparent @endif"
+              class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '19') bg-gradient-green-r bg-clip-text text-transparent @endif"
             >
-              @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
-              Terverifikasi @endif
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
-      >
-        <div class="flex flex-row gap-x-6 items-center w-full">
-          @if ($user_data['status_id'] == '3')
-          <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-green-500" />
-          @else
-          <x-heroicon-s-clipboard-document-check class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
-          @endif
-
-          <div class="flex flex-col">
-            <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Administrasi</p>
-            <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-green-r bg-clip-text text-transparent @endif"
-            >
-              @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
-              Terverifikasi @endif
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
-      >
-        <div class="flex flex-row gap-x-6 items-center w-full">
-          @if ($user_data['status_id'] == '3')
-          <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-green-500" />
-          @else
-          <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
-          @endif
-
-          <div class="flex flex-col">
-            <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Seleksi</p>
-            <p
-              class="text-2xl font-bold text-[#B5B3BC] @if ($user_data['status_id'] == '3') bg-gradient-green-r bg-clip-text text-transparent @endif"
-            >
-              @if ($user_data['status_id'] == '2') Belum Terverifikasi @elseif ($user_data['status_id'] == '3')
+              @if ($peserta->status_type->id == '18') Belum Terverifikasi @elseif ($peserta->status_type->id == '19')
               Terverifikasi @endif
             </p>
           </div>
@@ -306,26 +264,38 @@
             <div class="flex flex-col gap-y-1">
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['full_name'] }}
+                {{ $peserta->user->full_name }}
               </p>
+
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['institution'] }}
+                {{ $peserta->user->institution }}
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Kartu Pelajar</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['email'] }}
+                <img src="{{ url($peserta->student_card_file) }}" />
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Handphone</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Twibbon</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['handphone'] }}
+                <img src="{{ url($peserta->twibbon_link) }}" />
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Tahu Information Systems Class Darimana ?</p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Pembayaran</p>
               <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
-                {{ $user_data['referral'] }}
+                <img src="{{ url($peserta->payment->payment_proof_file) }}" />
               </p>
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow</p>
-              <img src="{{ url($user_data['share_proof_file']) }}" />
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Upload Poster</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <img src="{{ url($peserta->upload_poster_file) }}" />
+              </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow Instagram</p>
+              <p class="flex text-white font-lg text-base font-poppins font-medium tracking-wider mb-3">
+                <img src="{{ url($peserta->follow_proof_file) }}" />
+              </p>
             </div>
           </div>
           {{-- Ketua Tim End--}}
@@ -380,7 +350,7 @@
           </div>
         </div>
       </div>
-      {{-- Penyisihan Card Start --}}
+      <!-- {{-- Penyisihan Card Start --}}
       <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full mt-4">
         <div class="flex flex-col text-white items-center space-y-4 text-center">
           <p class="text-xl font-medium">
@@ -489,7 +459,7 @@
             </div>
           </div>
         </div>
-        {{-- Commitment Fee Pengunguman Card End --}}
+        {{-- Commitment Fee Pengunguman Card End --}} -->
       </div>
     </div>
   </section>

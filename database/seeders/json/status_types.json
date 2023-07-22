@@ -66,5 +66,17 @@
     {
         "id": "17",
         "name": "DS.GagalSeleksi"
+    },
+    {
+        "id": "18",
+        "name": "ISClass.Registered"
+    },
+    {
+        "id": "19",
+        "name": "ISClass.Verified"
+    },
+    {
+        "id": "20",
+        "name": "ISClass.Rejected"
     }
 ]

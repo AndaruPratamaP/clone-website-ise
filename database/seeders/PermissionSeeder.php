@@ -51,7 +51,7 @@ class PermissionSeeder extends Seeder
 
         $payload = [];
         foreach ($permissions as $permission) {
-            $exists = DB::table('role_has_permission')->where('role_id', $permission['role_id'])->first();
+            $exists = DB::table('role_has_permission')->where('role_id', $permission['role_id'])->where('permission_id', $permission['permission_id'])->first();
             if ($exists) {
                 continue;
             }

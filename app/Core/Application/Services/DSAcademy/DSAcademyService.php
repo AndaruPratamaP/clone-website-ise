@@ -78,25 +78,25 @@ class DSAcademyService
         $second_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $request->getSecondFullName());
         $team_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $request->getTeamName());
 
-        $ketua_cv = FileUpload::create($request->getKetuaCvFile(), "dsacademy", auth()->user()->id . Carbon::now(), "CV_" . $ketua_friendly_name);
+        $ketua_cv = FileUpload::create($request->getKetuaCvFile(), "dsacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "CV_" . $ketua_friendly_name);
         $ketua_cv->upload();
 
-        $ketua_student_card = FileUpload::create($request->getKetuaStudentCard(), "dsacademy", auth()->user()->id . Carbon::now(), "StudentCard_" . $ketua_friendly_name);
+        $ketua_student_card = FileUpload::create($request->getKetuaStudentCard(), "dsacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "StudentCard_" . $ketua_friendly_name);
         $ketua_student_card->upload();
 
-        $first_cv = FileUpload::create($request->getFirstCvFile(), "dsacademy", auth()->user()->id . Carbon::now(), "CV_" . $first_friendly_name);
+        $first_cv = FileUpload::create($request->getFirstCvFile(), "dsacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "CV_" . $first_friendly_name);
         $first_cv->upload();
 
-        $first_student_card = FileUpload::create($request->getFirstStudentCard(), "dsacademy", auth()->user()->id . Carbon::now(), "StudentCard_" . $first_friendly_name);
+        $first_student_card = FileUpload::create($request->getFirstStudentCard(), "dsacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "StudentCard_" . $first_friendly_name);
         $first_student_card->upload();
 
-        $second_cv = FileUpload::create($request->getSecondCvFile(), "dsacademy", auth()->user()->id . Carbon::now(), "CV_" . $second_friendly_name);
+        $second_cv = FileUpload::create($request->getSecondCvFile(), "dsacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "CV_" . $second_friendly_name);
         $second_cv->upload();
 
-        $second_student_card = FileUpload::create($request->getSecondStudentCard(), "dsacademy", auth()->user()->id . Carbon::now(), "StudentCard_" . $second_friendly_name);
+        $second_student_card = FileUpload::create($request->getSecondStudentCard(), "dsacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "StudentCard_" . $second_friendly_name);
         $second_student_card->upload();
 
-        $payment_proof = FileUpload::create($request->getPaymentFile(), "dsacademy", auth()->user()->id . Carbon::now(), "Payment_" . $team_friendly_name);
+        $payment_proof = FileUpload::create($request->getPaymentFile(), "dsacademy", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "Payment_" . $team_friendly_name);
         $payment_proof->upload();
 
         $payment_request = new CreatePaymentRequest(
@@ -104,7 +104,7 @@ class DSAcademyService
             $this->event_id,
             30000,
             $payment_proof->getUrl(),
-            Carbon::now()->addDays(1),
+            Carbon::now()->timezone('Asia/Jakarta')->addDays(1),
             1,
             1
         );

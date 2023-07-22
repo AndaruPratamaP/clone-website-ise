@@ -64,12 +64,13 @@
                 >Nama <span class="text-[#FF1F00]">*</span></label
               >
               <input
-                wire:model="nama"
                 id="nama"
                 name="nama"
                 type="text"
                 placeholder="Masukan nama lengkap kamu"
                 class="w-full bg-transparent border-b-[1.4px] p-2 outline-none text-[11px] md:text-sm xl:text-lg border-[#C5C5C5]"
+                disabled
+                value="{{ auth()->user()->full_name }}"
               />
               @error('nama')
               <span class="block text-red-500 text-sm font-thin">{{ $message }}</span>
@@ -81,12 +82,13 @@
                 >Asal Sekolah <span class="text-[#FF1F00]">*</span></label
               >
               <input
-                wire:model="asal_sekolah"
                 id="asal_sekolah"
                 name="asal_sekolah"
                 type="text"
                 placeholder="Masukkan asal sekolah kamu"
                 class="w-full bg-transparent border-b-[1.4px] p-2 outline-none text-[11px] md:text-sm xl:text-lg border-[#C5C5C5]"
+                disabled
+                value="{{ auth()->user()->institution }}"
               />
               @error('asal_sekolah')
               <span class="block text-red-500 text-sm font-thin">{{ $message }}</span>
@@ -117,6 +119,34 @@
                 Max size 1mb (.jpg, .jpeg, png)
               </label>
               @error('kartu_pelajar')
+              <span class="block text-red-500 text-sm font-thin">{{ $message }}</span>
+              @enderror
+            </div>
+
+            <div class="relative z-0 w-full mb-6 group cursor-pointer">
+              <label
+                for="follow_proof_file"
+                class="block leading-normal text-xs md:text-base xl:text-xl font-medium text-white"
+                >Foto Bukti Follow Instagram <span class="text-[#FF1F00]">*</span>
+              </label>
+              <label
+                class="mt-[13px] w-max px-2 py-1 lg:py-[4px] flex flex-col items-center bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border border-[#66C1A7] cursor-pointer"
+              >
+                <div class="flex flex-row items-center gap-1 hover:brightness-75">
+                  <x-heroicon-s-cloud-arrow-up class="text-slate-100 w-4 lg:w-8 h-4 lg:h-8" />
+                  <input
+                    type="file"
+                    class="block w-44 lg:w-56 text-xs lg:text-sm text-gray-500 file:mr-0 lg:file:mr-4 file:py-1 lg:file:py-2 file:rounded-md file:border-0 file:text-xs lg:file:text-sm file:font-semibold file:bg-transparent file:text-white file:cursor-pointer cursor-pointer"
+                    wire:model="follow_proof_file"
+                    id="follow_proof_file"
+                    name="follow_proof_file"
+                  />
+                </div>
+              </label>
+              <label class="text-white text-xs md:text-sm xl:text-base font-thin opacity-80">
+                Max size 1mb (.jpg, .jpeg, png)
+              </label>
+              @error('follow_proof_file')
               <span class="block text-red-500 text-sm font-thin">{{ $message }}</span>
               @enderror
             </div>
@@ -192,7 +222,7 @@
                 >
                   <option class="bg-[#1C1C1C] text-[#348BB6]" value="" selected>Pilih metode pembayaran kamu</option>
                   @foreach ($payment_methods as $payment_method)
-                  <option class="bg-[#1C1C1C] text-[#348BB6]" value="{{ $payment_method }}">{{ $payment_method }}</option>
+                  <option class="bg-[#1C1C1C] text-[#348BB6]" value="{{ $payment_method }}">{{ $bank_list->where('id', $payment_method)->first()->account_number }} @if($bank_list->where('id', $payment_method)->first()->name !== "") a/n {{ $bank_list->where('id', $payment_method)->first()->name }} @endif</option>
                   @endforeach
                 </select>
               </div>
