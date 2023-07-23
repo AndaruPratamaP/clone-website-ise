@@ -77,16 +77,16 @@ class FileUpload
     {
         $file_front = str_replace(" ", "_", strtolower($this->name));
         $encrypted_seed = base64_encode($this->seed);
+        $this->file_name = $file_front . "_" . $encrypted_seed . "." . $this->uploaded_file->getClientOriginalExtension();
         $uploaded = Storage::putFileAs(
             $this->path,
             $this->uploaded_file,
-            $file_front . "_" . $encrypted_seed
+            $this->file_name
         );
         if (!$uploaded) {
             IseException::throw("Upload {$this->name} Gagal", 2003);
         }
 
-        $this->file_name = $file_front . "_" . $encrypted_seed . "." . $this->uploaded_file->getClientOriginalExtension();
         return $this->path . '/' . $this->file_name;
     }
 

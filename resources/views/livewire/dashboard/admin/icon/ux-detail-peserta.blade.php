@@ -47,14 +47,14 @@
         {{ $peserta->user->handphone }}
         </p>
 
-        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Instagram</p>
+        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Instagram</p>
         <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-        {{ $peserta->instagram_link }}
+          <a href="{{ url($peserta->instagram_link) }}" target="_blank" class="text-blue-400">Lihat Instagram</a>
         </p>
 
-        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Twibbon</p>
+        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
         <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-        {{ $peserta->twibbon_link }}
+          <a href="{{ url($peserta->twibbon_link) }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
         </p>
 
         <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">CV</p>
@@ -65,6 +65,14 @@
         <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Kartu Pelajar</p>
         <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
         <img src="{{ url($peserta->student_card) }}" />
+        </p>
+
+        <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Pembayaran</p>
+        <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+          <img
+            src="{{ url($peserta->payment->payment_proof_file) }}"
+            alt="Bukti Pembayaran"
+          />
         </p>
 
         <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Apa alasan anda mengikuti ISE! User Experience Academy?</p>

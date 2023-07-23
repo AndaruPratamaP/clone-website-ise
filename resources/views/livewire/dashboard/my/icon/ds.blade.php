@@ -379,6 +379,14 @@
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->motive_4 }}
               </p>
+
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Pembayaran</p>
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                <img
+                  src="{{ url($peserta->payment->payment_proof_file) }}"
+                  alt="Bukti Pembayaran"
+                />
+              </p>
             </div>
           </div>
           {{-- Data Tim End--}} {{-- Ketua Tim Start--}}
@@ -416,7 +424,7 @@
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <a
-                  href="{{ $peserta->ketua_instagram_link }}"
+                  href="{{ url($peserta->ketua_instagram_link) }}"
                   target="_blank"
                   class="text-blue-400"
                   >Lihat Instagram Ketua</a
@@ -425,7 +433,7 @@
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ $peserta->ketua_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+                <a href="{{ url($peserta->ketua_twibbon_link) }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
@@ -478,7 +486,7 @@
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <a
-                  href="{{ $peserta->first_instagram_link }}"
+                  href="{{ url($peserta->first_instagram_link) }}"
                   target="_blank"
                   class="text-blue-400"
                   >Lihat Instagram Anggota 1</a
@@ -487,7 +495,7 @@
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ $peserta->first_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+                <a href="{{ url($peserta->first_twibbon_link) }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
@@ -539,7 +547,7 @@
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <a
-                  href="{{ $peserta->second_instagram_link }}"
+                  href="{{ url($peserta->second_instagram_link) }}"
                   target="_blank"
                   class="text-blue-400"
                   >Lihat Instagram Anggota 2</a
@@ -548,7 +556,7 @@
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ $peserta->second_twibbon_link }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+                <a href="{{ url($peserta->second_twibbon_link) }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>

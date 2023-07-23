@@ -275,7 +275,9 @@
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Twibbon</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <img src="{{ url($peserta->twibbon_link) }}" />
+                <a href="{{ url($peserta->twibbon_link) }}" target="_blank" >
+                    Lihat Twibbon
+                </a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Pembayaran</p>
@@ -388,7 +390,7 @@
             </div>
           </div>
         </div> --}}
-        {{-- After Verification End --}}
+        {{-- Gagal Pengunguman Card End --}}
       </div>
     </div>
   </section>
