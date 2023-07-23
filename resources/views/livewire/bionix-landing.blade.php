@@ -620,10 +620,7 @@
               <p
                 class="font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-4 xl:px-8 mt-[-0.5rem] xl:mt-[-1rem] lg:mt-[-1rem]"
               >
-                Rangkaian kompetisi berupa seleksi olimpiade tingkat nasional yang terbagi dalam beberapa region di
-                Indonesia berdasarkan empat bidang keilmuan sistem informasi yaitu teknologi informasi, pemrograman,
-                logika matematika, dan manajemen bisnis serta Semifinal Proposal dan Video Business Plan, Final
-                Presentasi Bisnis, dan terakhir Awarding Night.
+              BIONIX COMPETITION merupakan rangkaian kompetisi berupa seleksi olimpiade tingkat nasional untuk siswa SMA/SMK/sederajat di seluruh Indonesia berdasarkan bidang keilmuan Sistem Informasi yang akan dibagi kedalam tiga tahap dimana keseluruhan rangkaian acara akan ditutup dengan adanya Awarding beserta Gala Dinner dengan para peserta finalis.
               </p>
               <a
                 class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"

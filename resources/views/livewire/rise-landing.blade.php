@@ -95,7 +95,7 @@
       lg:h-[14rem] xl:h-[18rem] top-[2rem] lg:top-[4rem] xl:top-[4rem]" src= {{
       asset('images/icon/IconLP_Sect2_Decor.png') }} alt="">
     </div>
-    <div class="flex justify-center content-center flex-col">
+    <div class="flex flex-col content-center justify-center">
       <h2
         style="line-height: 80%"
         class="left-0 top-5 z-30 mt-32 sm:mt-40 lg:mt-44 xl:mt-56 font-montserrat text-[26px] xs:text-[30px] sm:text-[34px] md:text-[38px] lg:text-[48px] xl:text-[72px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.1)] text-center"
@@ -122,7 +122,7 @@
       xs:top-[29rem] sm:top-[30rem] md:top-[34.5rem] lg:top-[39rem] xl:top-[58rem] right-[2rem] sm:right-[4rem]
       lg:right-[3rem] xl:right-[3rem]" src= {{ asset('images/rise-landing/Sect3-Decor-Right.png') }} alt="">
     </div>
-    <div class="hidden lg:block mt-10 sm:mt-14 xl:mt-20">
+    <div class="hidden mt-10 lg:block sm:mt-14 xl:mt-20">
       <div
         class="hidden lg:block swiper w-[310px] xs:w-[390px] sm:w-[550px] md:w-[650px] lg:w-[880px] xl:w-[1150px] h-[400px] xs:h-[500px] sm:h-[600px] lg:h-[720px] xl:h-[1085px]"
       >
@@ -141,7 +141,7 @@
                 terkait business case yang diperuntukkan untuk mahasiswa aktif jenjang D3, D4, atau S1 di Indonesia yang
                 dapat diikuti secara berkelompok atau tim yang dilaksanakan secara online.
               </p>
-              <div class="flex flex-col lg:flex-row justify-center content-center lg:gap-6">
+              <div class="flex flex-col content-center justify-center lg:flex-row lg:gap-6">
                 <a
                   href="/login"
                   class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r text-transparent rounded-[24px] hover:brightness-75 self-center"
@@ -177,7 +177,7 @@
                 Pendaftaran&nbsp;<span id="regist_status"></span>&nbsp; dalam waktu:
               </h5>
               <div
-                class="mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-4"
+                class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-4"
               >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]"
@@ -353,16 +353,16 @@
           --}}
         </div>
         <div
-          class="swiper-button-prev hidden lg:block rounded-full p-10"
+          class="hidden p-10 rounded-full swiper-button-prev lg:block"
           style="color: white; background-color: #173f52; left: 0"
         ></div>
         <div
-          class="swiper-button-next hidden lg:block rounded-full p-10"
+          class="hidden p-10 rounded-full swiper-button-next lg:block"
           style="color: white; background-color: #173f52; right: 0"
         ></div>
       </div>
     </div>
-    <div class="block lg:hidden mt-10 sm:mt-14 xl:mt-20">
+    <div class="block mt-10 lg:hidden sm:mt-14 xl:mt-20">
       <div
         class="hidden lg:block swiper w-[310px] xs:w-[390px] sm:w-[550px] md:w-[650px] lg:w-[880px] xl:w-[1150px] h-[400px] xs:h-[500px] sm:h-[600px] lg:h-[720px] xl:h-[1085px]"
       >
@@ -381,7 +381,7 @@
                 terkait business case yang diperuntukkan untuk mahasiswa aktif jenjang D3, D4, atau S1 di Indonesia yang
                 dapat diikuti secara berkelompok atau tim yang dilaksanakan secara online.
               </p>
-              <div class="flex flex-col lg:flex-row justify-center content-center lg:gap-6">
+              <div class="flex flex-col content-center justify-center lg:flex-row lg:gap-6">
                 <a
                   href="/login"
                   class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r text-transparent rounded-[24px] self-center"
@@ -415,7 +415,7 @@
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
-                class="mt-2 lg:mt-2 xl:mt-4 mb-4 lg:mb-12 xl:mb-12 flex justify-center content-center gap-2 lg:gap-4"
+                class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-4"
               >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]"
@@ -565,11 +565,11 @@
           </div>
         </div>
         <div
-          class="swiper-button-prev hidden lg:block rounded-full p-10"
+          class="hidden p-10 rounded-full swiper-button-prev lg:block"
           style="color: white; background-color: #173f52; left: 0"
         ></div>
         <div
-          class="swiper-button-next hidden lg:block rounded-full p-10"
+          class="hidden p-10 rounded-full swiper-button-next lg:block"
           style="color: white; background-color: #173f52; right: 0"
         ></div>
       </div>
@@ -589,21 +589,21 @@
         alt=""
       />
     </div>
-    <div class="lg:mt-16 xl:mt-12 flex justify-center content-center flex-col">
-      <div class="flex justify-center content-center">
+    <div class="flex flex-col content-center justify-center lg:mt-16 xl:mt-12">
+      <div class="flex content-center justify-center">
         <div class="flex justify-center content-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
           <div>
             <img class=" self-center w-[28px] xs:w-[30px] md:w-[40px] lg:w-[84px] xl:w-[104px] h-[38px] xs:h-[40px]
             md:h-[50px] lg:h-[112px] xl:h-[141px]" src= {{ asset('images/rise-landing/Sect4-Decor-Left.png') }} alt="">
           </div>
-          <div class="mx-2 sm:mx-4 lg:mx-5 flex justify-center content-center flex-col">
+          <div class="flex flex-col content-center justify-center mx-2 sm:mx-4 lg:mx-5">
             <h2
               style="line-height: 80%"
               class="z-30 font-montserrat text-[28px] xs:text-[32px] sm:text-[38px] md:text-[42px] lg:text-[52px] xl:text-[72px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)] text-center"
             >
               TESTIMONIALS
             </h2>
-            <div class="self-center relative xs:top-2 lg:top-4">
+            <div class="relative self-center xs:top-2 lg:top-4">
               <h4
                 class="inline-block self-center text-white font-montserrat font-bold text-[12px] xs:text-[16px] sm:text-[20px] lg:text-[26px] xl:text-[36px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
               >
@@ -657,7 +657,7 @@
                 xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
                 {{ asset('images/rise-landing/testi-1.png') }} alt="">
               </div>
-              <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+              <div style="text-" class="flex flex-col px-5 pt-10 xs:px-7 lg:px-0 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                 <div class="inline-block">
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -732,7 +732,7 @@
                 xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
                 {{ asset('images/rise-landing/testi-3.png') }} alt="">
               </div>
-              <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+              <div style="text-" class="flex flex-col px-5 pt-10 xs:px-7 lg:px-0 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                 <div class="inline-block">
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -807,7 +807,7 @@
                 xs:h-[230px] md:h-[245px] lg:h-[251px] xl:h-[381px] mt-14 md:mt-[3.75rem] lg:mt-14 xl:mt-10 z-20" src=
                 {{ asset('images/rise-landing/testi-2.png') }} alt="">
               </div>
-              <div style="text-" class="flex flex-col px-5 xs:px-7 lg:px-0 pt-10 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
+              <div style="text-" class="flex flex-col px-5 pt-10 xs:px-7 lg:px-0 lg:pt-10 xl:pt-14 lg:pr-12 xl:pr-16">
                 <div class="inline-block">
                   <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
@@ -868,13 +868,13 @@
       <img class=" z-0 absolute w-full h-[58rem] md:h-[65rem] lg:h-[70rem] xl:h-[90rem] lg:left-[0rem] xl:left-[0rem]
       top-[-10rem] lg:top-[-15rem] xl:top-[-10rem]" src= {{ asset('images/rise-landing/Sect5-Bg.png') }} alt="">
     </div>
-    <div class="z-30 flex justify-center content-center flex-col">
+    <div class="z-30 flex flex-col content-center justify-center">
       <div class="flex justify-center content-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
         <div>
           <img class=" self-center w-[50px] sm:w-[75px] md:w-[130px] lg:w-[172px] h-[10px] sm:h-[20px] md:h-[30px]
           lg:h-[40px] mt-4" src= {{ asset('images/rise-landing/Sect5-Title-Left-Img.png') }} alt="">
         </div>
-        <div class="mx-2 sm:mx-4 lg:mx-5 flex justify-center content-center flex-col">
+        <div class="flex flex-col content-center justify-center mx-2 sm:mx-4 lg:mx-5">
           <h2
             style="line-height: 80%"
             class="z-30 font-montserrat text-[30px] xs:text-[32px] sm:text-[42px] md:text-[50px] lg:text-[60px] xl:text-[72px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)] text-center"
@@ -887,7 +887,7 @@
           lg:h-[40px] mt-4" src= {{ asset('images/rise-landing/Sect5-Title-Right-Img.png') }} alt="">
         </div>
       </div>
-      <div class="self-center relative xs:top-2 lg:top-4">
+      <div class="relative self-center xs:top-2 lg:top-4">
         <h4
           class="inline-block self-center text-white font-montserrat font-bold text-[12px] xs:text-[16px] sm:text-[20px] md:text-[25px] lg:text-[50px] xl:text-[64px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
         >
@@ -904,14 +904,14 @@
         </h4>
       </div>
       <div
-        class="flex flex-col lg:flex-row justify-center content-center lg:mt-20 xl:mt-32 z-30 gap-10 lg:gap-28 xl:gap-32"
+        class="z-30 flex flex-col content-center justify-center gap-10 lg:flex-row lg:mt-20 xl:mt-32 lg:gap-28 xl:gap-32"
       >
         <div
           class="w-[180px] sm:w-[220px] md:w-[280px] lg:w-[320px] xl:w-[480px] h-[180px] sm:h-[220px] md:h-[280px] lg:h-[320px] xl:h-[476px] self-center mt-10 md:mt-14 lg:mt-0"
         >
           <img src="{{ asset('images/rise-landing/Sect5-Trophy-Img.png') }}" alt="" />
         </div>
-        <div class="relative flex flex-col lg:right-10 lg:top-2 xl:top-24 gap-4 sm:gap-8 lg:gap-10 xl:gap-16">
+        <div class="relative flex flex-col gap-4 lg:right-10 lg:top-2 xl:top-24 sm:gap-8 lg:gap-10 xl:gap-16">
           <div
             class="rounded-[30px] p-6 lg:p-6 xl:p-8 w-[270px] sm:w-[300px] lg:w-[21rem] xl:w-[26rem] self-center"
             style="background: rgba(18, 19, 22, 0.8); box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5)"
@@ -965,13 +965,13 @@
       alt=""> <img class=" absolute hidden lg:block left-0 top-16 lg:w-[105px] xl:w-[159px] lg:h-[271px] xl:h-[410px]"
       src= {{ asset('images/icon/IconLP_Sect6_Decor2.png') }} alt="">
     </div>
-    <div class="z-30 flex justify-center content-center flex-col md:mt-12 lg:mt-20 xl:mt-32">
+    <div class="z-30 flex flex-col content-center justify-center md:mt-12 lg:mt-20 xl:mt-32">
       <h2
         class="z-30 font-montserrat text-[30px] xs:text-[34px] sm:text-[40px] md:text-[44px] lg:text-[52px] xl:text-[72px] font-extrabold from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] text-center self-center leading-8 sm:leading-normal"
       >
         Timeline
       </h2>
-      <div class="inline-block self-center">
+      <div class="self-center inline-block">
         <div class="relative z-0">
           <img
             class="absolute lg:hidden w-[80px] sm:w-[110px] h-[55px] sm:h-[70px] left-[-5rem] sm:left-[-6rem] bottom-[-2rem] sm:bottom-[-3rem]"
@@ -996,9 +996,9 @@
         </h4>
       </div>
       <div
-        class="z-30 mt-8 sm:mt-14 md:mt-12 lg:mt-16 grid grid-cols-5 gap-3 sm:gap-6 md:gap-7 lg:gap-10 xl:gap-16 self-center"
+        class="z-30 grid self-center grid-cols-5 gap-3 mt-8 sm:mt-14 md:mt-12 lg:mt-16 sm:gap-6 md:gap-7 lg:gap-10 xl:gap-16"
       >
-        <div class="flex justify-center content-center flex-col">
+        <div class="flex flex-col content-center justify-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1023,11 +1023,11 @@
             asset('images/rise-landing/Sect6-Long-Rectangle.png') }} alt="">
           </div>
         </div>
-        <div class="flex content-center flex-col">
+        <div class="flex flex-col content-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
-            03 - 10 Sep
+            1Ag - 10Sep
           </p>
           <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px]
           md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/rise-landing/Sect6-Circle-Orange.png') }} alt="">
@@ -1043,7 +1043,7 @@
             src= {{ asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex content-center flex-col">
+        <div class="flex flex-col content-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1063,7 +1063,7 @@
             src= {{ asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex content-center flex-col">
+        <div class="flex flex-col content-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1083,7 +1083,7 @@
             src= {{ asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex content-center flex-col">
+        <div class="flex flex-col content-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1098,8 +1098,8 @@
           </p>
         </div>
       </div>
-      <div class="z-30 mt-8 lg:mt-10 grid grid-cols-2 gap-3 sm:gap-6 md:gap-7 lg:gap-10 xl:gap-16 self-center">
-        <div class="flex content-center flex-col">
+      <div class="z-30 grid self-center grid-cols-2 gap-3 mt-8 lg:mt-10 sm:gap-6 md:gap-7 lg:gap-10 xl:gap-16">
+        <div class="flex flex-col content-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1119,7 +1119,7 @@
             src= {{ asset('images/icon/IconLP_Sect6_Line.png') }} alt="">
           </div>
         </div>
-        <div class="flex content-center flex-col">
+        <div class="flex flex-col content-center">
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
@@ -1158,7 +1158,7 @@
       >
         Frequently Asked Questions
       </h3>
-      <div class="lg:mt-12 xl:mt-24 lg:mb-10 xl:mb-40 self-center">
+      <div class="self-center lg:mt-12 xl:mt-24 lg:mb-10 xl:mb-40">
         <div
           x-data="{open:false}"
           class="z-30 w-[280px] xs:w-[350px] sm:w-[470px] md:w-[540px] lg:w-[50rem] xl:w-[68rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col"
@@ -1174,8 +1174,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Apa beda RISE! dengan BIONIX College Level 2022?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1191,7 +1191,7 @@
             >
               Apa beda RISE! dengan BIONIX College Level 2022?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>
@@ -1218,8 +1218,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Apa konsep kompetisi RISE!?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1235,7 +1235,7 @@
             >
               Apa konsep kompetisi RISE!?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>
@@ -1262,8 +1262,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Apa yang spesial di RISE!?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1279,7 +1279,7 @@
             >
               Apa yang spesial di RISE!?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>
@@ -1306,8 +1306,8 @@
               class="z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]"
               >Benefit ikut RISE! apa aja?</span
             >
-            <div class="z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-              <img class=" absolute" src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
+            <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+              <img class="absolute " src= {{ asset('images/icon/IconLP_Sect7_NavButton.png') }} alt="">
             </div>
           </button>
           <button
@@ -1323,7 +1323,7 @@
             >
               Benefit ikut RISE! apa aja?
             </h4>
-            <div class="z-30 relative w-full">
+            <div class="relative z-30 w-full">
               <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px]
               h-[22px] lg:h-[42px]" src= {{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
             </div>

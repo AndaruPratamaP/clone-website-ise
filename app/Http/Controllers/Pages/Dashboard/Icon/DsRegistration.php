@@ -69,10 +69,10 @@ class DsRegistration extends DSAcademyRegistrationController
         'harapan_tim' => 'required|string|max:255',
         'sumber_informasi' => 'required',
         'sumber_informasi_lainnya' => 'string|max:255',
-        'bukti_ketua' => 'required|image:max:1024',
-        'bukti_anggota1' => 'required|image:max:1024',
-        'bukti_anggota2' => 'required|image:max:1024',
-        'bukti_pembayaran' => 'required|image:max:1024',
+        'bukti_ketua' => 'required|image|max:1024',
+        'bukti_anggota1' => 'required|image|max:1024',
+        'bukti_anggota2' => 'required|image|max:1024',
+        'bukti_pembayaran' => 'required|image|max:1024',
     ];
 
     public function mount()
@@ -84,7 +84,7 @@ class DsRegistration extends DSAcademyRegistrationController
               'text' => 'Pendaftaran sudah ditutup karena telah melewati masa pendaftaran.',
           ]);
       }
-  
+
       if ($this->isRegistered) {
           return redirect()->route('my.ds')->with('toastr-toast', [
               'type' => 'info',
