@@ -75,7 +75,8 @@
               >Daftar Sekarang!</a
             >
             <a
-              href="/"
+              href="https://drive.google.com/file/d/1-liBwyDS_FUtt9D0wzE1gHa_DfH8aipl/view"
+              target="blank"
               class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75"
               >Lihat Guidebook</a
             >
@@ -467,7 +468,8 @@
             </div>
           </div>
           <a
-          href="/"
+          href="https://drive.google.com/file/d/1-liBwyDS_FUtt9D0wzE1gHa_DfH8aipl/view"
+          target="blank"
           class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75"
           >Lihat Guidebook</a
         >

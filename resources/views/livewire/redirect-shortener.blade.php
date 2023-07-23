@@ -8,14 +8,14 @@
                 <img class="lg:w-52 w-28" src="{{ asset('images/logo-ise-color.png') }}">
             </div>
             <div class="text-[#ffffff]">
-                <div class="lg:font-bold lg:flex-none lg:text-6xl lg:block hidden ">ISE! 2023</div>
+                <div class="hidden lg:font-bold lg:flex-none lg:text-6xl lg:block ">ISE! 2023</div>
                 <div class="lg:hidden text-center text-3xl mt-[4px] font-bold">ISE! 2023</div>
-                <div class="lg:font-medium lg:text-2xl lg:flex-none lg:block hidden">Information Systems Expo 2023</div>
+                <div class="hidden lg:font-medium lg:text-2xl lg:flex-none lg:block">Information Systems Expo 2023</div>
                 <div class="lg:hidden font-medium text-base text-center mt-[8px]">Information Systems Expo 2023</div>
             </div>
         </div>
         <div
-            class="flex justify-center mt-[20px] text-[#ffffff] font-semibold text-base pl-[24px] pr-[24px] lg:pl-[75px] lg:pr-[75px] lg:text-4xl text-center">
+            class="flex justify-center mt-[20px] text-[#ffffff] font-semibold text-base pl-[24px] pr-[24px] lg:pl-[75px] lg:pr-[75px] text-center">
             You are being redirected to &ThinSpace;<span
                 class="underline hover:brightness-75">{{ $long_url }}</span>&ThinSpace;...</div>
     </div>
