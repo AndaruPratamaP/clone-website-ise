@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Bionix;
 
+use App\Http\Controllers\Presentation\Dashboard\BionixRoadshow\BionixRdRegistrationController;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class BionixRdPelunasanForm extends Component
+class BionixRdPelunasanForm extends BionixRdRegistrationController
 {
   use WithFileUploads;
   public string $team_name = '';
@@ -27,6 +28,6 @@ class BionixRdPelunasanForm extends Component
   public function submit()
   {
     $this->validate($this->rules);
-    dd($this);
+    $this->registerPelunasan();
   }
 }

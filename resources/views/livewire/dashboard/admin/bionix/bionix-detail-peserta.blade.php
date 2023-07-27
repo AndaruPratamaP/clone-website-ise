@@ -2,7 +2,7 @@
 <div class="flex flex-col w-11/12 min-h-screen mx-auto font-poppins">
     <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <div class="flex flex-col items-start gap-2">
-            <h1 class="text-4xl font-bold text-transparent sm:text-5xl bg-gradient-blue-r bg-clip-text">Detail Peserta Bionix</h1>
+            <h1 class="text-4xl font-bold text-transparent sm:text-5xl bg-gradient-green-r bg-clip-text">Detail Peserta Bionix</h1>
             <p class="text-base font-semibold text-white">{{ $peserta->user->id }}</p>
             <p class="bg-[#191A1E] px-4 py-1.5 rounded-2xl text-base text-[#B5B3BC] font-semibold">Status: <span class="text-white">{{ $peserta->status_type->name }}</span></p>
         </div>
@@ -72,7 +72,7 @@
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ url($peserta->ketua_twibbon) }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+                <a href="{{ url($peserta->ketua_twibbon) }}" target="_blank" class="text-green-400">Lihat Twibbon</a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Kartu Mahasiswa</p>
@@ -125,7 +125,7 @@
                 <a
                   href="{{ url($peserta->anggota_twibbon) }}"
                   target="_blank"
-                  class="text-blue-400"
+                  class="text-green-400"
                   >Lihat Instagram Anggota 1</a
                 >
               </p>
@@ -184,19 +184,19 @@
                 <a
                   href="{{ url($peserta->second_instagram_link) }}"
                   target="_blank"
-                  class="text-blue-400"
+                  class="text-green-400"
                   >Lihat Instagram Anggota 2</a
                 >
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ url($peserta->second_twibbon_link) }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+                <a href="{{ url($peserta->second_twibbon_link) }}" target="_blank" class="text-green-400">Lihat Twibbon</a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ url($peserta->second_cv_file) }}" target="_blank" class="text-blue-400">Lihat CV</a>
+                <a href="{{ url($peserta->second_cv_file) }}" target="_blank" class="text-green-400">Lihat CV</a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Mahasiswa Aktif</p>

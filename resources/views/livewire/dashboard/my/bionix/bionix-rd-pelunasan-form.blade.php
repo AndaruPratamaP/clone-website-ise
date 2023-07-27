@@ -28,6 +28,11 @@
                         <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
                         @enderror
                     </div>
+                    <div class="flex flex-col items-start justify-center my-4 mt-10 text-sm text-white sm:text-xl">
+                        <h3 class="font-medium">Sisa tagihan:</h3>
+                        {{-- Harga dynamic here --}}
+                        <p class="text-base font-bold sm:text-2xl">Rp.70.000</p>
+                    </div>
                     <div class="my-6 md:my-8 lg:my-10 xl:my-12">
                         <label for="bukti" class="mb-4 text-xs font-semibold lg:text-base 2xl:text-xl"
                         >Bukti Pelunasan Pembayaran<span class="text-[#FF1F00] ml-1">*</span>

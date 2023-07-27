@@ -44,9 +44,9 @@
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
-                <p href="/admin/bionix"
+                <p
                     class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">BIONIX</p>
-                <a href="/coming-soon"
+                <a href="/admin/bionix"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
                 <a href="/admin/bionix-rd"
                     class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'admin.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>

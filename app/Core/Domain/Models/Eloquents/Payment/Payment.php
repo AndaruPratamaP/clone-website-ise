@@ -2,6 +2,7 @@
 
 namespace App\Core\Domain\Models\Eloquents\Payment;
 
+use App\Core\Domain\Models\Eloquents\User\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Payment extends model
@@ -32,4 +33,9 @@ class Payment extends model
         'bank_list_id' => 'integer',
         'payment_status_id' => 'integer',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

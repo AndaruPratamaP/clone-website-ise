@@ -32,11 +32,22 @@
         "end_date": "2023-08-21 23:59:59"
     },
     {
+        "id": "3e003d84-884c-4762-aa7a-66f8a7458e88",
+        "name": "BionixRoadshow",
+        "description": "",
+        "quota": 9999,
+        "start_date": "2023-07-28 00:00:00",
+        "end_date": "2023-09-17 23:59:59"
+    },
+    {
         "id": "c5ae4f6e-22e8-11ee-be56-0242ac120002",
         "name": "Bionix",
         "description": "BIONIX (Business and IT Olympiad in Information Systems Expo) merupakan olimpiade di bidang teknologi informasi dan bisnis tingkat nasional untuk siswa SMA/SMK sederajat di seluruh Indonesia berdasarkan bidang keilmuan Sistem Informasi yang akan meningkatkan kompetensi serta kreativitas dalam memanfaatkan perkembangan teknologi",
         "quota": 9999,
-        "start_date": "2023-07-25 00:00:00",
+        "start_date": "2023-07-28 00:00:00",
         "end_date": "2023-11-30 23:59:59"
     }
+
+
+
 ]
