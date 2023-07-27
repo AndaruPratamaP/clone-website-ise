@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Bionix;
 
+use App\Core\Application\Services\Bionix\BionixService;
+use App\Http\Controllers\Presentation\Dashboard\Bionix\BionixRegistrationController;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class BionixRegistration extends Component
+class BionixRegistration extends BionixRegistrationController
 {
   use WithFileUploads;
   public string $team_name = '';
@@ -53,6 +55,25 @@ class BionixRegistration extends Component
     'payment_proof' => 'required|image|max:1024',
   ];
 
+  public function mount()
+  {
+    if (!$this->isOpen) {
+        return redirect()->route('my.bionix')->with('toastr-toast', [
+            'type' => 'info',
+            'title' => 'Pendaftaran telah ditutup',
+            'text' => 'Pendaftaran sudah ditutup karena telah melewati masa pendaftaran.',
+        ]);
+    }
+
+    if ($this->isRegistered) {
+        return redirect()->route('my.bionix')->with('toastr-toast', [
+            'type' => 'info',
+            'title' => 'Telah terdaftar',
+            'text' => 'Kamu telah terdaftar...',
+        ]);
+    }
+  }
+
   public function updated($propertyName)
   {
     $this->validateOnly($propertyName);
@@ -61,6 +82,6 @@ class BionixRegistration extends Component
   public function submit()
   {
     $this->validate($this->rules);
-    dd($this);
+    $this->register();
   }
 }

@@ -18,8 +18,8 @@
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
-                <p href="/coming-soon" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">BIONIX</p>
-                <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
+                <p href="/my/bionix" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">BIONIX</p>
+                <a href="/my/bionix-rd" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
                 <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>
                 <a href="/my/isclass" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS Class</a>
             </div>
@@ -60,8 +60,8 @@
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
-            <p href="/coming-soon" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">BIONIX</p>
-            <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
+            <p href="/my/bionix" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-green-br">BIONIX</p>
+            <a href="/my/bionix-rd" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionix' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX</a>
             <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.bionixroadshow' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">BIONIX Roadshow</a>
             <a href="/my/isclass" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-green-br {{ Route::currentRouteName() == 'my.isclass' ? 'bg-gradient-green-br' : 'bg-[#1C1C1C]' }}">IS Class</a>
         </div>

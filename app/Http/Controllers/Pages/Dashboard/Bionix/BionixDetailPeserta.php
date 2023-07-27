@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Bionix;
 
-use Livewire\Component;
+use App\Http\Controllers\Presentation\Dashboard\Bionix\BionixDetailPesertaController;
 
-class BionixDetailPeserta extends Component
+class BionixDetailPeserta extends BionixDetailPesertaController
 {
     public function render()
     {

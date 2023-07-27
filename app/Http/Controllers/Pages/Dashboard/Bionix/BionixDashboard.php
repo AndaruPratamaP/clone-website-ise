@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Bionix;
 
-use App\Http\Controllers\Presentation\Dashboard\GrandTalkshowDashboardController;
+use App\Http\Controllers\Presentation\Dashboard\Bionix\BionixDashboardController;
 
-class BionixDashboard extends GrandTalkshowDashboardController
+class BionixDashboard extends BionixDashboardController
 {
     public function render()
     {

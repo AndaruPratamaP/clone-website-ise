@@ -2,15 +2,15 @@
     {
         "id": "a4a6c7cf-0208-11ee-a848-346f24386225",
         "name": "Grand Talkshow",
-        "description": "Grand TalkShow ISE! 2023 merupakan acara opening ISE! 2023  yang akan akan dihadiri oleh pembicara profesional dan akan membahas trend IT terkini. Grand Talkshow ISE! 2023 dikemas dengan konsep talkshow interaktif yang diadakan secara online.",
+        "description": "Grand TalkShow ISE! 2023 merupakan acara opening ISE! 2023  yang akan akan dihadiri oleh pembicara profesional dan akan membahas trend IT terkini. Grand Talkshow ISE!",
         "quota": 9999,
         "start_date": "2023-06-12 00:00:00",
-        "end_date": "2023-07-16 00:00:00"
+        "end_date": "2023-07-16 23:59:59"
     },
     {
         "id": "7e3352a8-5b8b-426f-be00-6f7b1ad50345",
         "name": "IS Class",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae ",
         "quota": 60,
         "start_date": "2023-07-23 00:00:00",
         "end_date": "2023-08-21 23:59:59"
@@ -30,5 +30,13 @@
         "quota": 100,
         "start_date": "2023-07-23 00:00:00",
         "end_date": "2023-08-21 23:59:59"
+    },
+    {
+        "id": "c5ae4f6e-22e8-11ee-be56-0242ac120002",
+        "name": "Bionix",
+        "description": "BIONIX (Business and IT Olympiad in Information Systems Expo) merupakan olimpiade di bidang teknologi informasi dan bisnis tingkat nasional untuk siswa SMA/SMK sederajat di seluruh Indonesia berdasarkan bidang keilmuan Sistem Informasi yang akan meningkatkan kompetensi serta kreativitas dalam memanfaatkan perkembangan teknologi",
+        "quota": 9999,
+        "start_date": "2023-07-25 00:00:00",
+        "end_date": "2023-11-30 23:59:59"
     }
 ]

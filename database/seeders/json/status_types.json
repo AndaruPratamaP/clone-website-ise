@@ -78,5 +78,54 @@
     {
         "id": "20",
         "name": "ISClass.Rejected"
+    },
+    {
+        "id": "21",
+        "name": "BionixRd.Registered"
+    },
+    {
+        "id": "22",
+        "name": "BionixRd.VerifiedDp"
+    },
+    {
+        "id": "23",
+        "name": "BionixRd.RejectedDp"
+    },
+    {
+        "id": "24",
+        "name": "BionixRd.RegisteredPelunasan"
+    },
+    {
+        "id": "25",
+        "name": "BionixRd.VerifiedPelunasan"
+    },
+    {
+        "id": "26",
+        "name": "BionixRd.RejectedPelunasan"
+    },
+    {
+        "id": "27",
+        "name": "BionixRd.RegisteredBerkas"
+    },
+    {
+        "id": "28",
+        "name": "BionixRd.VerifiedBerkas"
+    },
+    {
+        "id": "29",
+        "name": "BionixRd.RejectedBerkas"
+    },
+    {
+        "id": "30",
+        "name": "Bionix.Registered"
+    },
+    {
+        "id": "31",
+        "name": "Bionix.VerifiedBerkas"
+    },
+    {
+        "id": "32",
+        "name": "Bionix.RejectedBerkas"
     }
+
 ]
