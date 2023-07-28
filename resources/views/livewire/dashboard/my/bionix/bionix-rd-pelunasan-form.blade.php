@@ -26,8 +26,11 @@
                         />
                     </div>
                     <div class="flex flex-col items-start justify-center my-4 mt-10 text-sm text-white sm:text-xl">
-                        <h3 class="font-medium">Sisa tagihan:</h3>
-                        {{-- Harga dynamic here --}}
+                        <div>Harap lakukan transfer ke rekening berikut:</div>
+                        <div>BNI<br>1295633675 <br>a.n DEWI ANGELINE</div>
+                        <div>Format transfer (tulis di keterangan transfer):<br>nama acara_nama orang/tim
+                        </div>
+                        <h3 class="mt-4 font-medium">Sisa tagihan:</h3>
                         <p class="text-base font-bold sm:text-2xl">Rp. {{ $tagihan }}</p>
                     </div>
                     <div class="my-6 md:my-8 lg:my-10 xl:my-12">
