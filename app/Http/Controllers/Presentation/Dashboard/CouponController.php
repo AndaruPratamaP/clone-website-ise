@@ -25,7 +25,7 @@ class CouponController extends Component
 
     public function getAllCoupons($search, $entries, $orderby, $order)
     {
-        $columns = ['code', 'sekolah'];
+        $columns = ['code', 'coupon', 'sekolah'];
 
         $paginate = BionixCoupon::select('*')
             ->where(function ($q) use ($search, $columns) {
@@ -45,7 +45,7 @@ class CouponController extends Component
 
     protected function sanitizeOrderBy($orderby)
     {
-        $allowedColumns = ['created_at', 'code', 'school'];
+        $allowedColumns = ['created_at', 'code', 'coupon', 'sekolah'];
         return in_array($orderby, $allowedColumns) ? $orderby : 'created_at';
     }
 

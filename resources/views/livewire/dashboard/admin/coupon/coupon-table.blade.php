@@ -55,7 +55,7 @@
                 @foreach ($coupons as $coupon)
                     <tr class="font-medium text-lg h-16 border-b-[1px] border-white">
                         <td class="pr-8 ">{{ $loop->iteration }}</td>
-                        <td class="pr-40 whitespace-nowrap ">{{ $coupon->code }}</td>
+                        <td class="pr-40 whitespace-nowrap ">{{ $coupon->coupon }}</td>
                         <td class="pr-32 ">{{ $coupon->sekolah }}</td>
                         <td class="pr-32 ">{{ $coupon->used }}</td>
                         <td class="pr-32 ">{{ $coupon->createdBy->full_name }}</td>

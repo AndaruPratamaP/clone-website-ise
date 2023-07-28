@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Pages\Dashboard\Coupon;
 use App\Core\Domain\Models\Eloquents\BionixCoupon\BionixCoupon;
 use Illuminate\Support\Facades\Date;
 use Livewire\Component;
+use Ramsey\Uuid\Uuid;
 
 class CreateCoupon extends Component
 {
@@ -34,7 +35,8 @@ class CreateCoupon extends Component
         $this->validate($this->rules);
 
         BionixCoupon::create([
-            'code' => $this->coupon_code,
+            'code' => Uuid::uuid4()->toString(),
+            'coupon' => $this->coupon_code,
             'sekolah' => $this->school_name,
             'deadline' => $this->end_date . " 23:59:59",
             'discount' => 20000,

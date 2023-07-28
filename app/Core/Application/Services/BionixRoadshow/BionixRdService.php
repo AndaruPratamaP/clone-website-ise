@@ -148,7 +148,7 @@ class BionixRdService
     $payment_proof_pelunasan->upload();
 
     $kode_promo = BionixRoadshow::where('ketua_id', auth()->user()->id)->pluck('promo_code');
-    $promo = BionixCoupon::where('code', $kode_promo)->first();
+    $promo = BionixCoupon::where('coupon', $kode_promo)->first();
     $jumlah_dp = Payment::where('user_id', auth()->user()->id)->first()->bill;
     //check deadline promo
     if (Carbon::now()->timezone('Asia/Jakarta') > $promo->deadline) {
@@ -317,7 +317,7 @@ class BionixRdService
 
   public function isValidCoupon($sekolah, $promo_code): bool
   {
-    $coupon = BionixCoupon::where('code', $promo_code)->first();
+    $coupon = BionixCoupon::where('coupon', $promo_code)->first();
 
     if (!$coupon) {
       IseException::throw('Kode Promo tidak ditemukan', 3100);
@@ -351,7 +351,7 @@ class BionixRdService
     $user = User::find(auth()->user()->id);
     $timroadshow = BionixRoadshow::where('ketua_id', $user->id)->first();
 
-    $bionix_coupon = BionixCoupon::where('code', $timroadshow->promo_code)->first();
+    $bionix_coupon = BionixCoupon::where('coupon', $timroadshow->promo_code)->first();
     $date = $bionix_coupon->deadline;
     $discount = $bionix_coupon->discount;
 

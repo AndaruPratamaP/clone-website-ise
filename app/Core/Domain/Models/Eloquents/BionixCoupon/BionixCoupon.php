@@ -10,10 +10,11 @@ class BionixCoupon extends model
 {
   // Specify the table name
   protected $table = 'bionix_coupon';
-  protected $fillable = ['code', 'sekolah', 'discount', 'deadline', 'created_by'];
+  protected $fillable = ['code', 'coupon', 'sekolah', 'discount', 'deadline', 'created_by'];
   protected $hidden = ['created_at', 'updated_at'];
   protected $casts = [
     'code' => 'string',
+    'coupon' => 'string',
     'sekolah' => 'string',
     'discount' => 'string',
     'deadline' => 'string',
