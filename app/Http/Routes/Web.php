@@ -125,12 +125,16 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/selection', UxSelection::class)->name('uxacademy.selection');
         });
 
-      Route::prefix('bionix')->group(function () {
+      Route::prefix('bionix')
+        ->middleware(['permission:my.is'])
+        ->group(function () {
         Route::get('/', BionixDashboard::class)->name('bionix');
         Route::get('/registration', BionixRegistration::class)->name('bionix.registration');
       });
 
-      Route::prefix('bionix-rd')->group(function () {
+      Route::prefix('bionix-rd')
+        ->middleware(['permission:my.is'])
+        ->group(function () {
         Route::get('/', BionixRdDashboard::class)->name('bionixroadshow');
         Route::get('/dp', BionixRdDpForm::class)->name('bionixroadshow.dp');
         Route::get('/pelunasan', BionixRdPelunasanForm::class)->name('bionixroadshow.pelunasan');
