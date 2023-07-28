@@ -7,6 +7,7 @@ use App\Core\Application\Services\BionixRoadshow\BionixRdDpRequest;
 use App\Core\Application\Services\BionixRoadshow\BionixRdPelunasanRequest;
 use App\Core\Application\Services\Event\EventService;
 use App\Core\Application\Services\BionixRoadshow\BionixRdService;
+use App\Exceptions\IseException;
 use App\Http\Controllers\Pages\BaseController;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
@@ -31,6 +32,8 @@ class BionixRdRegistrationController extends Component
     'email' => '',
   ];
 
+  public $peserta;
+
   public array $msg = [
     'error' => '',
     'success' => '',
@@ -52,6 +55,8 @@ class BionixRdRegistrationController extends Component
       'full_name' => auth()->user()->full_name,
       'email' => auth()->user()->email,
     ];
+    
+    $this->peserta = $this->service->getPeserta(auth()->user()->id);
   }
 
   public function registerDp()
@@ -158,5 +163,38 @@ class BionixRdRegistrationController extends Component
         'title' => 'Berhasil mendaftar',
         'text' => 'Anda telah terdaftar pada Bionix Roadshow',
       ]);
+  }
+
+  public function isValidPromoCode(): bool
+  {
+    try
+    {
+      $validCode = $this->service->isValidCoupon($this->school, $this->promo_code);
+      return $validCode;
+    } catch(IseException $e)
+    {
+      $this->msg['error'] = $e->getMessage();
+      $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+      return false;
+    }
+  }
+
+  public function getDaftarSekolah()
+  {
+    try
+    {
+      $daftarSekolah = $this->service->getDaftarSekolah();
+      return $daftarSekolah;
+    } catch(IseException $e)
+    {
+      $this->msg['error'] = $e->getMessage();
+      $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+      return [];
+    }
+  }
+
+  public function getTagihan()
+  {
+    return $this->service->getHargaPelunasan();
   }
 }

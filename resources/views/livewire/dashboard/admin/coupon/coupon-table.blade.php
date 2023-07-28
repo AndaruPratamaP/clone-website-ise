@@ -52,17 +52,16 @@
                 <th class="pr-4 text-center">Action</th>
             </thead>
             <tbody>
-                @foreach ($shorteners as $shortener)
+                @foreach ($coupons as $coupon)
                     <tr class="font-medium text-lg h-16 border-b-[1px] border-white">
                         <td class="pr-8 ">{{ $loop->iteration }}</td>
-                        <td class="pr-40 whitespace-nowrap ">
-                            {{ config('app.url') . '/go/' . $shortener->short_url }}</td>
-                        <td class="pr-32 ">{{ $shortener->long_url }}</td>
-                        <td class="pr-32 ">{{ $shortener->visitor }}</td>
-                        <td class="pr-32 ">{{ $shortener->user->full_name }}</td>
+                        <td class="pr-40 whitespace-nowrap ">{{ $coupon->code }}</td>
+                        <td class="pr-32 ">{{ $coupon->sekolah }}</td>
+                        <td class="pr-32 ">{{ $coupon->used }}</td>
+                        <td class="pr-32 ">{{ $coupon->createdBy->full_name }}</td>
                         <td class="pr-4 text-center font-semibold"><a
                                 class="py-2 px-4 bg-red-500 rounded-2xl hover:brightness-75"
-                                href="{{ route('admin.shortener.delete', ['short' => $shortener->short_url]) }}">Delete</a>
+                                href="{{ route('admin.coupon.delete', ['code' => $coupon->code]) }}">Delete</a>
                         </td>
                     </tr>
                 @endforeach
@@ -71,6 +70,6 @@
     </div>
 
     <div class="mt-12 bg-transparent rounded-lg px-4 py-2 w-full">
-        {{ $shorteners->links() }}
+        {{ $coupons->links() }}
     </div>
 </div>

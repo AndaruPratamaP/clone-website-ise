@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Coupon;
 
+use App\Core\Domain\Models\Eloquents\BionixCoupon\BionixCoupon;
 use Illuminate\Support\Facades\Date;
 use Livewire\Component;
 
@@ -30,7 +31,22 @@ class CreateCoupon extends Component
     public function submit()
     {
         $this->validate($this->rules);
-        dd($this);
+        BionixCoupon::create([
+            'code' => $this->coupon_code,
+            'sekolah' => $this->school_name,
+            'end_date' => $this->end_date,
+            'discount' => 20000,
+            'created_by' => auth()->user()->id,
+        ]);
+
+        return redirect()
+            ->route('admin.coupon.table')
+            ->with('toastr-toast', [
+                'type' => 'success',
+                'title' => 'Berhasil menambahkan',
+                'text' => 'Kupon berhasil ditambahkan',
+            ]);
+
         // $response = $this->store();
         // if (!$response) {
         //     if ($this->msg["error"] == "")

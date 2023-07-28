@@ -23,7 +23,7 @@ class BionixRdDpForm extends BionixRdRegistrationController
   public string $payment_method;
   public $payment_proof;
   //public
-  public array $schools = ['its', 'itb', 'itc'];
+  public array $schools = [''];
   public array $payment_methods = [
     'Cash',
     '1295633675 BNI
@@ -41,6 +41,11 @@ class BionixRdDpForm extends BionixRdRegistrationController
     'payment_proof' => 'required|image|max:1024',
   ];
 
+  public function mount()
+  {
+    $this->schools = $this->getDaftarSekolah();
+  }
+
   public function updated($propertyName)
   {
     $this->validateOnly($propertyName);
@@ -50,6 +55,13 @@ class BionixRdDpForm extends BionixRdRegistrationController
   public function submit()
   {
     $this->validate($this->rules);
+
+    $validCode = $this->isValidPromoCode();
+
+    if (!$validCode) {
+      return;
+    }
+
     $this->registerDp();
   }
 }
