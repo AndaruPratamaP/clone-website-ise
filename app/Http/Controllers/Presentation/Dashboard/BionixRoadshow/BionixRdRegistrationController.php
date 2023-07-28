@@ -55,8 +55,11 @@ class BionixRdRegistrationController extends Component
       'full_name' => auth()->user()->full_name,
       'email' => auth()->user()->email,
     ];
-    
-    $this->peserta = $this->service->getPeserta(auth()->user()->id);
+
+    if($this->isRegistered)
+    {
+      $this->peserta = $this->service->getPeserta(auth()->user()->id);
+    }
   }
 
   public function registerDp()
