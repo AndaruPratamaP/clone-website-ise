@@ -30,11 +30,13 @@ class CreateCoupon extends Component
 
     public function submit()
     {
+
         $this->validate($this->rules);
+
         BionixCoupon::create([
             'code' => $this->coupon_code,
             'sekolah' => $this->school_name,
-            'end_date' => $this->end_date,
+            'deadline' => $this->end_date . " 23:59:59",
             'discount' => 20000,
             'created_by' => auth()->user()->id,
         ]);
