@@ -234,6 +234,8 @@
         <div class="flex flex-row items-center w-full gap-x-6">
           @if ($peserta->status_type->id == '19')
           <x-heroicon-s-folder-open class="relative z-0 text-green-500 w-14 h-14" />
+          @elseif($peserta->status_type->id == '20')
+            <x-heroicon-s-folder-open class="relative z-0 text-red-500 w-14 h-14" />
           @else
           <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
           @endif
@@ -244,7 +246,9 @@
               class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '19') bg-gradient-green-r bg-clip-text text-transparent @endif"
             >
               @if ($peserta->status_type->id == '18') Belum Terverifikasi @elseif ($peserta->status_type->id == '19')
-              Terverifikasi @endif
+              <span class="text-transparent bg-gradient-green-r bg-clip-text">Terverifikasi</span> @elseif($peserta->status_type->id == '20')    <span class="text-red-800">
+                Ditolak Admin
+              </span> @else Menunggu Verifikasi @endif
             </p>
           </div>
         </div>
@@ -356,6 +360,7 @@
       </div>
       <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
       <div class="flex flex-col space-y-4">
+        @if($peserta->status_type->id == '18')
         {{-- After Registration Start --}}
         <div
           class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
@@ -371,9 +376,10 @@
             </div>
           </div>
         </div>
+        @elseif($peserta->status_type->id == '19')
         {{-- After Registration End --}}
         {{-- After Verification Start --}}
-        {{-- <div
+        <div
           id="after_regist_announcement"
           class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
         >
@@ -385,12 +391,34 @@
             </p>
             <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
               <p class="text-base font-light">
-                Berkas kamu berhasil diverifikasi, untuk informasi lebih lanjutnya silahkan ikuti Whatsapp Group <a href="https://chat.whatsapp.com/F4hQL7ZXVp9It2wFQf2rJb" class="text-green-500 hover:underline decoration-green-500">ini</a>
+                Berkas kamu berhasil diverifikasi, untuk informasi lebih lanjutnya silahkan ikuti Whatsapp Group kami <a href="https://chat.whatsapp.com/F4hQL7ZXVp9It2wFQf2rJb" class="font-semibold text-green-500 hover:underline decoration-green-500">disini</a>
               </p>
             </div>
           </div>
-        </div> --}}
+        </div>
         {{-- Gagal Pengunguman Card End --}}
+        @elseif($peserta->status_type->id == '20')
+        <div
+        class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+      >
+        <div class="flex flex-col gap-y-3">
+          <p
+            class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
+          >
+            Jangan Putus Asa
+          </p>
+          <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+            <p class="text-base font-light">
+              Kamu dinyatakan gagal dalam verifikasi berkas IS Class 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+              Tetap semangat dan terus berjuang!
+              <div class="my-1"></div>
+              Hubungi kami apabila ada pertanyaaan lebih lanjut.
+              <a href="https://wa.me/+6281332049750" target="blank" class="text-green-400 hover:underline decoration-green-400 ">Contact Us</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      @endif
       </div>
     </div>
   </section>

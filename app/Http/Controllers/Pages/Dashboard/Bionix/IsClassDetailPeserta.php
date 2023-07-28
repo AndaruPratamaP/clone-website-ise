@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Pages\Dashboard\Bionix;
+
+use App\Http\Controllers\Presentation\Dashboard\ISClass\ISClassDetailPesertaController;
 use Livewire\Component;
 
-class IsClassDetailPeserta extends Component
+class IsClassDetailPeserta extends ISClassDetailPesertaController
 {
     public function render()
     {

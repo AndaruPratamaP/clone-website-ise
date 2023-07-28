@@ -2,7 +2,7 @@
 <div class="flex flex-col items-center w-[95%] mx-auto p-4 min-h-screen oveflow-hidden font-montserrat">
     <h1 class="self-start mb-10 text-4xl font-bold text-transparent sm:text-5xl bg-gradient-green-r bg-clip-text">Data
         Pendaftar IS Class</h1>
-    <a href=" {{ route('admin.gts.export') }} "
+    <a href=" {{ route('admin.isclass.export') }} "
         class="px-6 py-2 mb-4 mr-auto bg-gradient-green-r rounded-xl hover:brightness-75">Export</a>
     <div
         class="flex flex-col items-start justify-between w-full gap-4 text-sm font-semibold sm:flex-row sm:items-center sm:font-bold sm:text-xl">
@@ -47,8 +47,7 @@
         <table class="w-full text-white table-auto text-start">
             <thead class="h-12 text-2xl font-bold border-b-2 border-white">
                 <th class="pr-8 text-start">#</th>
-                <th class="pr-40 whitespace-nowrap text-start">Nama Tim</th>
-                <th class="pr-40 whitespace-nowrap text-start">Nama Ketua</th>
+                <th class="pr-40 whitespace-nowrap text-start">Nama Pelajar</th>
                 <th class="pr-14 text-start">Status</th>
                 <th class="pr-4 text-center">Detail</th>
             </thead>
@@ -58,14 +57,13 @@
                         <td class="pr-8 ">
                             {{ $loop->iteration + ($pesertas->currentPage() - 1) * $entries }}
                         </td>
-                        <td class="pr-40 whitespace-nowrap ">{{ $peserta->team_name }}</td>
-                        <td class="pr-40 whitespace-nowrap ">{{ $peserta->ketua->full_name }}</td>
+                        <td class="pr-40 whitespace-nowrap ">{{ $peserta->user->full_name }}</td>
                         <td
                             class="pr-14 font-semibold @if ($peserta->status_type->name == 'Verified') bg-gradient-green-r bg-clip-text text-transparent @else text-[#B5B3BC] @endif">
                             {{ $peserta->status_type->name }}</td>
                         <td class="pr-4 font-semibold text-center"><a
                                 class="px-4 py-2 bg-gradient-orange-r rounded-2xl hover:brightness-75"
-                                href=" /admin/isclass/{{ $peserta->ketua->id }}">Action</a></td>
+                                href=" /admin/isclass/{{ $peserta->user->id }}">Action</a></td>
                     </tr>
                 @endforeach
             </tbody>
