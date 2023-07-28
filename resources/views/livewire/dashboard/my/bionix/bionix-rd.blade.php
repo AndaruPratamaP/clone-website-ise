@@ -75,7 +75,7 @@
               >Daftar Sekarang!</a
             >
             <a
-              href="https://ise-its.com/go/GuidebookBIONIX Roadshow"
+              href="https://ise-its.com/go/GuidebookBIONIX"
               target="blank"
               class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
               >Lihat Guidebook</a
@@ -140,7 +140,7 @@
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Penyisihan <br />
-              BIONIX Roadshow
+              BIONIX
             </p>
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
@@ -152,7 +152,7 @@
             </div>
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins text-center">
               Semifinal <br />
-              BIONIX Roadshow
+              BIONIX
             </p>
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3 sm:translate-x-10">
@@ -576,7 +576,7 @@
               </div>
             </div>
             <a
-            href="https://ise-its.com/go/GuidebookBIONIX Roadshow"
+            href="https://ise-its.com/go/GuidebookBIONIX"
             target="_blank"
             class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
             >Lihat Guidebook</a
