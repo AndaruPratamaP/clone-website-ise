@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Coupon;
 
-use App\Http\Controllers\Presentation\ShortenerController;
+use App\Http\Controllers\Presentation\Dashboard\CouponController;
 
-class CouponTable extends ShortenerController
+class CouponTable extends CouponController
 {
     public string $search = '';
     public string $orderby = '';
@@ -14,7 +14,7 @@ class CouponTable extends ShortenerController
     public function render()
     {
         return view('livewire.dashboard.admin.coupon.coupon-table',[
-            'shorteners' => $this->index($this->search, $this->entries, $this->orderby, $this->order),
+            'coupons' => $this->index($this->search, $this->entries, $this->orderby, $this->order),
         ])->layout('layouts.dashboard.admin.base');
     }
 }

@@ -19,6 +19,7 @@ class BionixCoupon extends model
     'deadline' => 'string',
     'created_by' => 'string',
   ];
+  protected $primaryKey = 'code';
   public function createdBy()
   {
     return $this->belongsTo(User::class, 'created_by');

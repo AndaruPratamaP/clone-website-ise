@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('bionix_coupon', function (Blueprint $table) {
             $table->string('code', 20)->primary();
-            $table->string('sekolah');
+            $table->string('quota');
             $table->double('discount');
             $table->timestamp('deadline');
             $table->uuid('created_by');

@@ -314,4 +314,53 @@ class BionixRdService
   {
     $this->updateStatus($user_id, 29);
   }
+
+  public function isValidCoupon($sekolah, $promo_code): bool
+  {
+    $coupon = BionixCoupon::where('code', $promo_code)->first();
+
+    if (!$coupon) {
+      IseException::throw('Kode Promo tidak ditemukan', 3100);
+      return false;
+    }
+
+    if($coupon->sekolah != $sekolah){
+      IseException::throw('Kode Promo tidak valid', 3101);
+      return false;
+    }
+
+    if (Carbon::now()->timezone('Asia/Jakarta') > $coupon->deadline) {
+      IseException::throw('Kode Promo sudah tidak berlaku', 3102);
+      return false;
+    }
+
+    return true;
+  }
+
+  public function getDaftarSekolah()
+  {
+    $sekolahs = BionixCoupon::pluck('sekolah')->toArray();
+
+    // dd($sekolahs);
+
+    return $sekolahs;
+  }
+
+  public function getHargaPelunasan()
+  {
+    $user = User::find(auth()->user()->id);
+    $timroadshow = BionixRoadshow::where('ketua_id', $user->id)->first();
+
+    $bionix_coupon = BionixCoupon::where('code', $timroadshow->promo_code)->first();
+    $date = $bionix_coupon->deadline;
+    $discount = $bionix_coupon->discount;
+
+    if(Carbon::now()->timezone('Asia/Jakarta') > $date){
+      return 100000 - $timroadshow->dp_amount;
+    } else {
+      return (100000 - $discount) - $timroadshow->dp_amount;
+    }
+
+    return true;
+  }
 }

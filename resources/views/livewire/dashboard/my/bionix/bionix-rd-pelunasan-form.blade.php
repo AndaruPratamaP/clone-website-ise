@@ -18,20 +18,20 @@
                         <label for="team_name" class="inline text-xs font-semibold lg:text-base 2xl:text-xl">Nama Tim<span class="text-[#FF1F00] ml-1">*</span></label>
                         <input
                             id="team_name"
-                            wire:model="team_name"
                             class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] focus:text-[##7DD7BD] focus:placeholder:text-[##7DD7BD] focus:border-b-[##7DD7BD] lg:focus:text-xl lg:placeholder:text-xl @error('team_name') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                             type="text"
                             placeholder="Masukkan nama tim kamu"
-                            required
+                            disabled
+                            value="{{ $peserta->team_name }}"
                         />
-                        @error('team_name')
-                        <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
-                        @enderror
                     </div>
                     <div class="flex flex-col items-start justify-center my-4 mt-10 text-sm text-white sm:text-xl">
-                        <h3 class="font-medium">Sisa tagihan:</h3>
-                        {{-- Harga dynamic here --}}
-                        <p class="text-base font-bold sm:text-2xl">Rp.70.000</p>
+                        <div>Harap lakukan transfer ke rekening berikut:</div>
+                        <div>BNI<br>1295633675 <br>a.n DEWI ANGELINE</div>
+                        <div>Format transfer (tulis di keterangan transfer):<br>nama acara_nama orang/tim
+                        </div>
+                        <h3 class="mt-4 font-medium">Sisa tagihan:</h3>
+                        <p class="text-base font-bold sm:text-2xl">Rp. {{ $tagihan }}</p>
                     </div>
                     <div class="my-6 md:my-8 lg:my-10 xl:my-12">
                         <label for="bukti" class="mb-4 text-xs font-semibold lg:text-base 2xl:text-xl"

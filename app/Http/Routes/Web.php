@@ -72,6 +72,7 @@ use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdDetailPeserta;
 use App\Http\Controllers\Pages\Dashboard\Bionix\BionixRdPelunasanForm;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
+use App\Http\Controllers\Presentation\Dashboard\CouponController;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
@@ -164,6 +165,7 @@ Route::middleware(['auth'])->group(function () {
       Route::prefix('coupon')->group(function () {
         Route::get('/', CouponTable::class)->name('coupon.table');
         Route::get('/create', CreateCoupon::class)->name('coupon.create');
+        Route::get('/delete/{code}', [CouponController::class, "delete"])->name('coupon.delete');
       });
 
       Route::prefix('gts')
