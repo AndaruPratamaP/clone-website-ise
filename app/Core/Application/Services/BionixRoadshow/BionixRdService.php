@@ -101,6 +101,7 @@ class BionixRdService
     );
 
     $payment = $this->paymentService->create_payment($payment_request);
+    $coupon = BionixCoupon::where('coupon', $request->getPromoCode())->where('sekolah', $request->getSchool())->first();
     /////////////////////////////////////////
     $bionixrd_peserta = BionixRoadshow::create([
       'id' => Uuid::uuid4()->toString(),
@@ -112,7 +113,7 @@ class BionixRdService
       'school' => $request->getSchool(),
       'bank_account' => $request->getRekName(),
       'dp_amount' => $request->getNominalDp(),
-      'promo_code' => $request->getPromoCode(),
+      'promo_code' => $coupon->code,
       'payment_method' => $request->getPaymentMethod(),
       'payment_proof_dp' => $payment_proof->getUrl(),
     ]);
@@ -317,7 +318,8 @@ class BionixRdService
 
   public function isValidCoupon($sekolah, $promo_code): bool
   {
-    $coupon = BionixCoupon::where('coupon', $promo_code)->first();
+    // $coupon = BionixCoupon::where('coupon', $promo_code)->first();
+    $coupon = BionixCoupon::where('coupon', $promo_code)->where('sekolah', $sekolah)->first();
 
     if (!$coupon) {
       IseException::throw('Kode Promo tidak ditemukan', 3100);
@@ -351,7 +353,7 @@ class BionixRdService
     $user = User::find(auth()->user()->id);
     $timroadshow = BionixRoadshow::where('ketua_id', $user->id)->first();
 
-    $bionix_coupon = BionixCoupon::where('coupon', $timroadshow->promo_code)->first();
+    $bionix_coupon = BionixCoupon::where('code', $timroadshow->promo_code)->first();
     $date = $bionix_coupon->deadline;
     $discount = $bionix_coupon->discount;
 
