@@ -93,5 +93,5 @@ class FileUpload
     public function getUrl()
     {
         return Storage::url($this->path . '/' . $this->file_name);
-    }
+    }   
 }

@@ -95,8 +95,6 @@ class GrandTalkshowService
         $gtspeserta->delete();
 
         $userHasEvent = UserHasEvent::where('user_id', $user_id)->where('event_id', 'a4a6c7cf-0208-11ee-a848-346f24386225');
-
-
         $userHasEvent->delete();
     }
 
@@ -160,7 +158,7 @@ class GrandTalkshowService
             foreach ($emails as $recipientEmail) {
                 SendNotifyGTSD5Job::dispatch($recipientEmail);
             }
-    
+
             return true;
         } catch (Exception $e) {
             IseException::throw(Mail:: failures(), 1603);

@@ -126,6 +126,18 @@
     {
         "id": "32",
         "name": "Bionix.RejectedBerkas"
+    },
+    {
+        "id": "33",
+        "name": "Rise.Registered"
+    },
+    {
+        "id": "34",
+        "name": "Rise.Verified"
+    },
+    {
+        "id": "35",
+        "name": "Rise.Rejected"
     }
 
 ]

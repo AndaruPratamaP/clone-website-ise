@@ -103,6 +103,22 @@
           >
         </div>
       </div>
+      {{-- RISE --}}
+      <div class="flex flex-col items-start bg-[#191A1E] rounded-3xl w-full px-7 pt-4 pb-6 justify-between">
+        <h2 class="mt-3 text-xl font-bold text-transparent bg-gradient-orange-br bg-clip-text md:text-2xl sm:mt-4">
+          RISE
+        </h2>
+        <p class="mt-1 text-sm font-medium tracking-wide md:text-base sm:mt-2">
+          Pendaftaran RISE telah dibuka. Ikuti lomba business case dan dapatkan hadiah dengan total 10 juta rupiah.
+        </p>
+        <div class="flex flex-row items-center justify-center w-full gap-4 mt-4 sm:mt-6">
+          <a
+            href="/my/rise"
+            class="text-sm md:text-base font-medium rounded-md px-4 sm:px-6 py-1.5 sm:py-2 bg-gradient-orange-r hover:brightness-75"
+            >Continue</a
+          >
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Rise;
 
+use App\Http\Controllers\Presentation\Dashboard\Rise\RiseDashboardController;
 use Livewire\Component;
 
-class RiseDashboard extends Component
+class RiseDashboard extends RiseDashboardController
 {
     public function render()
     {

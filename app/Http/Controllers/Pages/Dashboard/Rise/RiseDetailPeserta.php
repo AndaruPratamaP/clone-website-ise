@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Rise;
 
-use Livewire\Component;
+use App\Http\Controllers\Presentation\Dashboard\Rise\RiseDetailPesertaController;
 
-class RiseDetailPeserta extends Component
+class RiseDetailPeserta extends RiseDetailPesertaController
 {
     public function render()
     {

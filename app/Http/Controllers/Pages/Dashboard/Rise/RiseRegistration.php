@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Rise;
 
+use App\Http\Controllers\Presentation\Dashboard\Rise\RiseRegistrationController;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Throwable;
 
-class RiseRegistration extends Component
+class RiseRegistration extends RiseRegistrationController
 {
   public function render()
   {
@@ -84,9 +85,8 @@ class RiseRegistration extends Component
     $this->validateOnly($propertyName);
 
   }
-  public function submit()
-  {
+  public function submit() {
     $this->validate($this->rules);
-    dd($this);
-  }
+    $this->register();
+}
 }

@@ -32,8 +32,8 @@
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
-                <p href="/coming-soon" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-orange-r">RISE</p>
-                <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'my.bc' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business Case</a>
+                <p class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-orange-r">RISE</p>
+                <a href="/my/rise" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'my.rise' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business Case</a>
             </div>
             <hr class="my-4 brightness-75" />
             <div class="flex flex-col space-y-2">
@@ -74,8 +74,8 @@
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
-            <p href="/coming-soon" class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-orange-r">RISE</p>
-            <a href="/coming-soon" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'my.bc' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business Case</a>
+            <p class="text-2xl font-bold text-transparent bg-clip-text w-max bg-gradient-orange-r">RISE</p>
+            <a href="/my/rise" class="flex items-center justify-between px-[10px] py-[6px] rounded-[10px] hover:bg-gradient-orange-r {{ Route::currentRouteName() == 'my.rise' ? 'bg-gradient-orange-r' : 'bg-[#1C1C1C]' }}">Business Case</a>
         </div>
         <hr class="my-4 brightness-75" />
         <div class="flex flex-col space-y-2">
