@@ -41,12 +41,16 @@ class RiseRegistrationController extends Component
 
         $this->isOpen = $this->event_service->isEventOpen('78ec95d2-92c8-4ad2-9bc4-b32bcf049668');
 
-        $this->user_data = [
-            "full_name" => auth()->user()->full_name,
-            "email" => auth()->user()->email,
-            "handphone" => auth()->user()->handphone,
-            "institution" => auth()->user()->institution,
-        ];
+        if($this->isRegistered)
+        {
+            $this->user_data = [
+                "full_name" => auth()->user()->full_name,
+                "email" => auth()->user()->email,
+                "handphone" => auth()->user()->handphone,
+                "institution" => auth()->user()->institution,
+            ];
+        }
+
     }
 
     public function register()
