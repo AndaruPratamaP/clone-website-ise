@@ -1,4 +1,4 @@
-@section('title', 'Bionix Registration')
+@section('title', 'RISE Registration')
 <div x-data="{step:1}" class="bg-[#121316]">
   <div class="relative min-h-screen mx-auto overflow-hidden">
     <div class="">
@@ -650,7 +650,7 @@
                         class="text-transparent bg-gradient-orange-br bg-clip-text hover:underline decoration-orange-500"
                         >ISE</a
                       >
-                      
+
                     </label>
                     <label
                       class="mt-3 mb-1 px-3 py-2 lg:py-3 flex h-full bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border cursor-pointer w-fit xs:pr-28 @error('member2_ig_follow') border-red-500 @else border-[#ffa672] @enderror"

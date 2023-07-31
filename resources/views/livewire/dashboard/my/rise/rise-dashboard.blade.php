@@ -535,9 +535,9 @@
                     <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                       <img src="{{ url($peserta->member2_poster) }}" alt="Bukti follow" />
                     </p>
-                    @endif
-                  </div>
                 </div>
+            </div>
+            @endif
               </div>
             </div>
           </div>
