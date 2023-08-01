@@ -76,6 +76,7 @@ use App\Http\Controllers\Pages\Dashboard\Rise\RisePenyisihanForm;
 use App\Http\Controllers\Pages\Dashboard\Rise\RiseSemifinalForm;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
+use App\Http\Controllers\Pages\Error403;
 use App\Http\Controllers\Presentation\Dashboard\CouponController;
 
 Route::get('go/{short}', RedirectShortener::class);
@@ -90,6 +91,7 @@ Route::get('icon/gts', GtsLanding::class)->name('landing.gts');
 Route::get('coming-soon', ComingSoon::class)->name('comming-soon');
 Route::get('terms-and-conditions', TermsAndConditions::class)->name('terms-and-conditions');
 //  Error Pages
+Route::get('unauthorized', Error403::class)->name('403');
 Route::get('not-found', Error404::class)->name('404');
 Route::get('error', Error500::class)->name('500');
 Route::get('maintenance', Maintenance::class)->name('maintenance');
@@ -152,7 +154,7 @@ Route::middleware(['auth'])->group(function () {
           Route::get('/registration', IsClassRegistration::class)->name('isclass.registration');
       });
 
-      Route::prefix('rise')->group(function () {
+      Route::prefix('rise')->middleware(['permission:my.ux'])->group(function () {
         Route::get('/', RiseDashboard::class)->name('rise');
         Route::get('/registration', RiseRegistration::class)->name('rise.registration');
         Route::get('/penyisihan', RisePenyisihanForm::class)->name('rise.penyisihan');

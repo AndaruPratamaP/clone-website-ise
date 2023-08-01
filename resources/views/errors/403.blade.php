@@ -1,0 +1,1 @@
+{{ redirect()->intended('/unauthorized')->send() }}

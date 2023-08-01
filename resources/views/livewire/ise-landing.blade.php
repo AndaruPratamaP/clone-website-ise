@@ -66,7 +66,7 @@
             Coming up
         </h1>
         <div class="relative">
-            <div class="relative  ">
+            <div class="relative ">
                 <img class="object-fill hidden md:block mx-auto h-[490px] md:h-[460.78px] lg:h-[540.78px] xl:h-[540.78px] w-[310px] md:min-w-[660px] lg:min-w-[900px] xl:min-w-[1018.14px] "
                     src="{{ asset('/images/landing/coming-up.png') }}">
                 <img class="object-fill block md:hidden mx-auto h-[462px] md:h-[460.78px] lg:h-[540.78px] xl:h-[540.78px] w-[360px] md:min-w-[660px] lg:min-w-[900px] xl:min-w-[1018.14px] "
@@ -82,14 +82,13 @@
                         <div class="md:text-start">
                             <h1
                                 class="font-semibold md:mt-[30px] lg:mt-[140px] xl:mt-0 md:font-bold text-[14px] md:text-[18px] lg:text-[22px] xl:text-[24px] text-white mb-[4px] md:mb-[6px] lg:mb-[20px]">
-                                Grand Talkshow</h1>
+                                RISE</h1>
                             <p
                                 class="font-medium text-justify text-[12px] md:text-[13px] lg:text-[16px] xl:text-[18px] text-white w-[206px] md:w-[290.5px] lg:w-[387.5px] xl:w-[447.5px] lg:leading-[24px] xl:leading-[28px]">
-                                Grand Talkshow merupakan kegiatan talkshow interaktif dan rangkaian acara pembuka untuk
-                                kegiatan ISE! 2023. Secara umum, Grand Talkshow akan membahas mengenai isu teknologi
-                                terkini dan potensinya di kalangan masyarakat luas.
+                                Salah satu acara ISE! 2023 yang mengangkat konsep lomba tingkat nasional terkait business case yang diperuntukkan untuk mahasiswa aktif jenjang D3, D4, atau S1 di Indonesia yang dapat diikuti secara berkelompok atau tim yang dilaksanakan secara online.
+
                             </p>
-                            <a href="/login">
+                            <a href="/my/rise">
                                 <button
                                     class="mt-[4px] md:mt-[12px] lg:mt-[20px] bg-gradient-to-r from-[#D1692D] to-[#FFBF7E] text-white rounded-3xl w-[70px] md:w-[102px] lg:w-[172px] h-[20px] md:h-[30px] lg:h-[39px] text-center font-semibold  text-[8px] md:text-[12px] lg:text-[16px] transform transition duration-300 hover:scale-105">Register
                                     Now</button>
@@ -146,7 +145,7 @@
         <div class="relative">
             <img src="{{ asset('/images/landing/discover.png') }}" class="w-full lg:h-[620px] xl:h-[805px]"
                 alt="">
-            <div class="absolute inset-0 flex flex-col justify-center items-center">
+            <div class="absolute inset-0 flex flex-col items-center justify-center">
                 <blockquote
                     class="text-center text-white text-[20px] sm:text-[38px] md:text-[45px] lg:text-[60px] xl:text-[80px] font-bold ml-[-120px] sm:ml-[-180px] md:ml-[-230px] lg:ml-[-300px] xl:ml-[-400px]">
                     Discover Yourself<br>
@@ -231,7 +230,7 @@
                     <img class="block object-contain md:hidden relative h-[255px] md:h-[165px] lg:h-[195px] xl:h-[295px] w-[235px] lg:w-[300px] xl:w-[400px] mx-auto md:mx-0 "
                         src="{{ asset('/images/landing/icon-image.png ') }}">
                 </div>
-                <div class="mx-auto md:mx-0 relative">
+                <div class="relative mx-auto md:mx-0">
                     {{-- <h1 class="font-bold text-[16px] lg:text-[22px] xl:text-[24px] text-white">Nostrud culpa</h1> --}}
                     <p
                         class="font-medium text-[14px] lg:text-[14px] xl:text-[18px] text-white w-[285px] xl:w-[447.5px] text-justify my-[20px]">
@@ -347,14 +346,14 @@
 
     {{-- Date section --}}
     {{-- <section class="relative mt-[-2px] bg-[#121316] pt-5 xl:pt-10 w-full h-[270px] md:h-[440px] lg:h-[530px] xl:h-[600px]">
-        <div class=" z-30 flex justify-center content-center flex-col">
+        <div class="z-30 flex flex-col content-center justify-center ">
             <h1 class=" text-center font-bold text-[24px] md:text-[52px] lg:text-[63px] xl:text-[80px] text-white">Be
                 Ready, <br>
                 Save <span
                     class="bg-gradient-to-r from-[#348BB6] to-[#CCE1F0] inline-block text-transparent bg-clip-text">The
                     Dates</span></h1>
-            <div class=" mt-8 md:mt-12 lg:mt-16 grid grid-cols-6 gap-3 sm:gap-6 md:gap-7 lg:gap-10 self-center">
-                <div class=" flex justify-center content-center flex-col">
+            <div class="grid self-center grid-cols-6 gap-3 mt-8 md:mt-12 lg:mt-16 sm:gap-6 md:gap-7 lg:gap-10">
+                <div class="flex flex-col content-center justify-center ">
                     <p
                         class=" z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[16px] font-bold text-white text-center">
                         Jun 2022</p>
@@ -366,12 +365,12 @@
                     <p
                         class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-semibold text-white text-center">
                         Talkshow</p>
-                    <div class=" relative">
+                    <div class="relative ">
                         <img class=" absolute w-[75px] sm:w-[95px] md:w-[140px] lg:w-[140px] h-[2px2px] md:h-[4px] lg:h-[6px] bottom-[3rem] sm:bottom-[3.5rem] md:bottom-[3.75rem] lg:bottom-[4.25rem] xl:bottom-[70px] left-[0.1rem] sm:left-[4rem] md:left-[4.5rem] lg:left-[5.5rem] xl:left-[85px]"
                             src={{ asset('images/landing/ellipse.png') }} alt="">
                     </div>
                 </div>
-                <div class=" flex justify-center content-center flex-col">
+                <div class="flex flex-col content-center justify-center ">
                     <p
                         class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-bold text-white text-center">
                         Jun 2022</p>
@@ -384,12 +383,12 @@
                     <p
                         class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-semibold text-white text-center">
                         Academy</p>
-                    <div class=" relative">
+                    <div class="relative ">
                         <img class=" absolute w-[75px] sm:w-[95px] md:w-[140px] lg:w-[210px] h-[2px] md:h-[4px] lg:h-[6px] bottom-[3rem] sm:bottom-[3.5rem] md:bottom-[3.75rem] lg:bottom-[4.25rem] xl:bottom-[70px] left-[3.25rem] sm:left-[4rem] md:left-[4.5rem] lg:left-[5.5rem] xl:left-[85px]"
                             src={{ asset('images/landing/ellipse.png') }} alt="">
                     </div>
                 </div>
-                <div class=" flex justify-center content-center flex-col">
+                <div class="flex flex-col content-center justify-center ">
                     <p
                         class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-bold text-white text-center">
                         Jul 2022</p>
@@ -402,12 +401,12 @@
                     <p
                         class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-semibold text-white text-center">
                         Academy</p>
-                    <div class=" relative">
+                    <div class="relative ">
                         <img class=" absolute w-[75px] sm:w-[95px] md:w-[140px] lg:w-[210px] h-[2px] md:h-[4px] lg:h-[6px] bottom-[3rem] sm:bottom-[3.5rem] md:bottom-[3.75rem] lg:bottom-[4.25rem] xl:bottom-[70px] left-[3.25rem] sm:left-[4rem] md:left-[4.5rem] lg:left-[5.5rem] xl:left-[85px]"
                             src={{ asset('images/landing/ellipse.png') }} alt="">
                     </div>
                 </div>
-                <div class=" flex justify-center content-center flex-col">
+                <div class="flex flex-col content-center justify-center ">
                     <p
                         class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-bold text-white text-center">
                         Sep 2022</p>
@@ -420,12 +419,12 @@
                     <p
                         class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-semibold text-white text-center">
                         Academy</p>
-                    <div class=" relative">
+                    <div class="relative ">
                         <img class=" absolute w-[75px] sm:w-[95px] md:w-[140px] lg:w-[210px] h-[2px] md:h-[4px] lg:h-[6px] bottom-[3rem] sm:bottom-[3.5rem] md:bottom-[3.75rem] lg:bottom-[4.25rem] xl:bottom-[70px] left-[3.25rem] sm:left-[4rem] md:left-[4.5rem] lg:left-[5.5rem] xl:left-[85px]"
                             src={{ asset('images/landing/ellipse.png') }} alt="">
                     </div>
                 </div>
-                <div class=" flex justify-center content-center flex-col">
+                <div class="flex flex-col content-center justify-center ">
                     <p
                         class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-bold text-white text-center">
                         Sep 2022</p>
@@ -438,12 +437,12 @@
                     <p
                         class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-semibold text-white text-center">
                         Academy</p>
-                    <div class=" relative">
+                    <div class="relative ">
                         <img class=" absolute w-[75px] sm:w-[95px] md:w-[140px] lg:w-[210px] h-[2px] md:h-[4px] lg:h-[6px] bottom-[3rem] sm:bottom-[3.5rem] md:bottom-[3.75rem] lg:bottom-[4.25rem] xl:bottom-[70px] left-[3.25rem] sm:left-[4rem] md:left-[4.5rem] lg:left-[5.5rem] xl:left-[85px]"
                             src={{ asset('images/landing/ellipse.png') }} alt="">
                     </div>
                 </div>
-                <div class=" flex justify-center content-center flex-col">
+                <div class="flex flex-col content-center justify-center ">
                     <p
                         class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-bold text-white text-center">
                         Nov 2022</p>
@@ -472,21 +471,21 @@
             <div class="relative w-2/3">
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
-                    <div class="swiper-wrapper space-x-4">
+                    <div class="space-x-4 swiper-wrapper">
                         <div
-                            class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
+                            class="flex flex-col items-center justify-center object-contain swiper-slide h-28 md:h-56 lg:h-80 xl:h-96">
                             <img src="{{ asset('images/landing/carousel-1.png') }}" alt="">
                         </div>
                         <div
-                            class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
+                            class="flex flex-col items-center justify-center object-contain swiper-slide h-28 md:h-56 lg:h-80 xl:h-96">
                             <img src="{{ asset('images/landing/carousel-2.png') }}" alt="">
                         </div>
                         <div
-                            class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
+                            class="flex flex-col items-center justify-center object-contain swiper-slide h-28 md:h-56 lg:h-80 xl:h-96">
                             <img src="{{ asset('images/landing/carousel-3.png') }}" alt="">
                         </div>
                         <div
-                            class="swiper-slide h-28 md:h-56 lg:h-80 xl:h-96 flex flex-col items-center justify-center object-contain">
+                            class="flex flex-col items-center justify-center object-contain swiper-slide h-28 md:h-56 lg:h-80 xl:h-96">
                             <img src="{{ asset('images/landing/carousel-4.png') }}" alt="">
                         </div>
                     </div>
@@ -494,7 +493,7 @@
             </div>
             <div class="w-1/3">
                 <div
-                    class="flex flex-col gap-4 items-center justify-center rotate-90 text-2xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-white text-center tracking-wider whitespace-nowrap uppercase">
+                    class="flex flex-col items-center justify-center gap-4 text-2xl font-bold tracking-wider text-center text-white uppercase rotate-90 sm:text-4xl md:text-5xl xl:text-7xl whitespace-nowrap">
                     <h2>Throwback</h2>
                     <h2>ISE! 2022</h2>
                 </div>
@@ -511,7 +510,7 @@
             class="font-bold text-[19.36px] md:text-[45px] lg:text-[58px] xl:text-[72px] text-white text-center pt-[88px] md:pt-[60px] lg:pt-[90px] xl:pt-[130px]">
             Meet our
             sponsor<br>
-            <div class="flex justify-center items-center">
+            <div class="flex items-center justify-center">
                 <div
                     class="grid grid-cols-12 w-[317.2px] md:w-[610px] lg:w-[900px] xl:w-[1180px] mt-[26.5px] md:mt-[75px] lg:mt-[100px] gap-[5.3px] md:gap-[16px] lg:gap-[18px] xl:gap-[20px] ">
                     <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-12 h-[94.1px] sm:h-[170px] md:h-[200px] lg:h-[300px] xl:h-[350px]">
@@ -535,11 +534,11 @@
     {{-- FAQ section --}}
     {{-- <section
         class="mt-[-2px] relative pt-8 sm:pt-20 md:pt-16 lg:pt-12 w-full min-h-[300px] xs:min-h-[350px] lg:min-h-[770px] bg-[#121316]">
-        <div class=" flex justify-center flex-col">
+        <div class="flex flex-col justify-center ">
             <h3 style=" line-height: 84px"
                 class=" z-30 font-montserrat text-[17px] xs:text-[20px] sm:text-[28px] md:text-[32px] lg:text-[42px] xl:text-[64px] font-bold text-white text-center">
                 Frequently Asked Questions</h3>
-            <div class=" mt-2  lg:mt-12 xl:mt-24 mb-7 md:mb-12 lg:mb-10 xl:mb-14 self-center">
+            <div class="self-center mt-2 lg:mt-12 xl:mt-24 mb-7 md:mb-12 lg:mb-10 xl:mb-14">
 
                 <div x-data="{ open: false }"
                     class=" z-30 w-[212px] xs:w-[275px] sm:w-[370px] md:w-[440px] lg:w-[34rem] xl:w-[50rem] mb-4 mx-auto bg-transparent flex justify-center content-center flex-col">
@@ -548,8 +547,8 @@
                         <span
                             class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Is
                             there a refund if I cancel?</span>
-                        <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-                            <img class=" absolute" src={{ asset('images/icon/IconLP_Sect7_NavButton.png') }}
+                        <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+                            <img class="absolute " src={{ asset('images/icon/IconLP_Sect7_NavButton.png') }}
                                 alt="">
                         </div>
                     </button>
@@ -563,7 +562,7 @@
                             class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
                             Is there a refund if I cancel?
                         </h4>
-                        <div class=" z-30 relative w-full">
+                        <div class="relative z-30 w-full ">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]"
                                 src={{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
@@ -582,8 +581,8 @@
                         <span
                             class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Will
                             this travel documentary be uploaded on YouTube?</span>
-                        <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-                            <img class=" absolute" src={{ asset('images/icon/IconLP_Sect7_NavButton.png') }}
+                        <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+                            <img class="absolute " src={{ asset('images/icon/IconLP_Sect7_NavButton.png') }}
                                 alt="">
                         </div>
                     </button>
@@ -597,7 +596,7 @@
                             class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
                             Will this travel documentary be uploaded on YouTube?
                         </h4>
-                        <div class=" z-30 relative w-full">
+                        <div class="relative z-30 w-full ">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]"
                                 src={{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
@@ -616,8 +615,8 @@
                         <span
                             class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Is
                             there a ticket purchase limit?</span>
-                        <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-                            <img class=" absolute" src={{ asset('images/icon/IconLP_Sect7_NavButton.png') }}
+                        <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+                            <img class="absolute " src={{ asset('images/icon/IconLP_Sect7_NavButton.png') }}
                                 alt="">
                         </div>
                     </button>
@@ -631,7 +630,7 @@
                             class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
                             Is there a ticket purchase limit?
                         </h4>
-                        <div class=" z-30 relative w-full">
+                        <div class="relative z-30 w-full ">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]"
                                 src={{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
@@ -650,8 +649,8 @@
                         <span
                             class=" z-30 px-2 lg:px-6 py-2 lg:py-4 font-montserrat text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">Where
                             is the meeting place?</span>
-                        <div class=" z-30 relative mr-4 lg:mr-6 h-1 lg:h-2 w-1 lg:w-2">
-                            <img class=" absolute" src={{ asset('images/icon/IconLP_Sect7_NavButton.png') }}
+                        <div class="relative z-30 w-1 h-1 mr-4 lg:mr-6 lg:h-2 lg:w-2">
+                            <img class="absolute " src={{ asset('images/icon/IconLP_Sect7_NavButton.png') }}
                                 alt="">
                         </div>
                     </button>
@@ -665,7 +664,7 @@
                             class=" z-30 font-montserrat font-semibold text-white text-left text-[9px] sm:text-[12px] md:text-[14px] lg:text-[16.5px] xl:text-[25px]">
                             Where is the meeting place?
                         </h4>
-                        <div class=" z-30 relative w-full">
+                        <div class="relative z-30 w-full ">
                             <img class=" absolute right-[-0.5rem] lg:right-0 top-[-1rem] lg:top-[-2.5rem] w-[22px] lg:w-[42px] h-[22px] lg:h-[42px]"
                                 src={{ asset('images/icon/IconLP_Sect7_MinusBtn.png') }} alt="">
                         </div>
