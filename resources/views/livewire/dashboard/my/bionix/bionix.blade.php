@@ -386,7 +386,7 @@
                   {{ $peserta->user->handphone }}
                 </p>
 
-                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Kartu Pelajar</p>
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Kartu Mahasiswa</p>
                 <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                   <img
                     src="{{ url($peserta->ketua_student_card) }}"
@@ -394,19 +394,19 @@
                   />
                 </p>
 
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Instagram</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                  <img
+                    src="{{ url($peserta->ketua_bukti_insta) }}"
+                    alt="Bukti Instagram"
+                  />
+                </p>
+
                 <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Poster</p>
                 <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                   <img
                     src="{{ url($peserta->ketua_poster) }}"
-                    alt="Bukti Mahasiswa Aktif"
-                  />
-                </p>
-
-                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Follow IG ISE</p>
-                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                  <img
-                    src="{{ url($peserta->ketua_twibbon) }}"
-                    alt="Bukti Mahasiswa Aktif"
+                    alt="Bukti Poster"
                   />
                 </p>
 
@@ -440,11 +440,19 @@
                     {{ $peserta->anggota_email }}
                   </p>
 
-                  <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Kartu Pelajar</p>
+                  <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Kartu Mahasiswa</p>
                   <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                     <img
-                      src="{{ url($peserta->anggota_student_card) }}"
+                    src="{{ url($peserta->anggota_student_card) }}"
                       alt="Bukti Mahasiswa Aktif"
+                    />
+                  </p>
+
+                  <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow Instagram</p>
+                  <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                    <img
+                    src="{{ url($peserta->anggota_bukti_insta) }}"
+                      alt="Bukti Follow Instagram"
                     />
                   </p>
 
@@ -452,21 +460,18 @@
                   <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                     <img
                       src="{{ url($peserta->anggota_poster) }}"
-                      alt="Bukti Mahasiswa Aktif"
+                      alt="Foto Poster"
                     />
                   </p>
 
-                  <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Follow IG ISE</p>
+                  <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon Anggota</p>
                   <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                    <img
-                      src="{{ url($peserta->anggota_poster) }}"
-                      alt="Bukti Mahasiswa Aktif"
-                    />
-                  </p>
-
-                  <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
-                  <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                    <a href="{{ url($peserta->anggota_poster) }}" target="_blank" class="text-green-400">Lihat Twibbon</a>
+                    <a
+                      href="{{ url($peserta->anggota_twibbon) }}"
+                      target="_blank"
+                      class="text-green-400"
+                      >Lihat Twibbon</a
+                    >
                   </p>
 
                 </div>

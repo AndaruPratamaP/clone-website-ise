@@ -91,6 +91,14 @@
                 />
               </p>
 
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Poster</p>
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                <img
+                  src="{{ url($peserta->ketua_poster) }}"
+                  alt="Bukti Poster"
+                />
+              </p>
+
             </div>
           </div>
           {{-- Ketua Tim End--}} {{-- Anggota 1 Start--}}
@@ -126,7 +134,7 @@
                   href="{{ url($peserta->anggota_twibbon) }}"
                   target="_blank"
                   class="text-green-400"
-                  >Lihat Instagram Anggota 1</a
+                  >Lihat Twibbon</a
                 >
               </p>
 
@@ -138,77 +146,23 @@
                 />
               </p>
 
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Instagram</p>
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Follow Instagram</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <img
                 src="{{ url($peserta->anggota_bukti_insta) }}"
-                  alt="Bukti Mahasiswa Aktif"
+                  alt="Bukti Follow Instagram"
                 />
               </p>
-            </div>
-          </div>
-          {{-- Anggota 1 End--}} {{-- Anggota 2 Start
-          <div class="flex-col justify-center w-full items-left">
-            <div class="flex flex-row items-center w-full gap-2 mb-3">
-              <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Anggota 2</h3>
-              <hr class="w-full h-[2px] bg-[#171717] opacity-30" />
-            </div>
-            <div class="flex flex-col gap-y-1">
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Lengkap</p>
-              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                {{ $peserta->second_full_name }}
-              </p>
 
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Institusi</p>
-              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                {{ $peserta->second_institution }}
-              </p>
-
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jurusan</p>
-              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                {{ $peserta->second_major }}
-              </p>
-
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>
-              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                {{ $peserta->second_email }}
-              </p>
-
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">No WA Aktif</p>
-              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                {{ $peserta->second_wa }}
-              </p>
-
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Akun Instagram</p>
-              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a
-                  href="{{ url($peserta->second_instagram_link) }}"
-                  target="_blank"
-                  class="text-green-400"
-                  >Lihat Instagram Anggota 2</a
-                >
-              </p>
-
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
-              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ url($peserta->second_twibbon_link) }}" target="_blank" class="text-green-400">Lihat Twibbon</a>
-              </p>
-
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File CV</p>
-              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ url($peserta->second_cv_file) }}" target="_blank" class="text-green-400">Lihat CV</a>
-              </p>
-
-              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Mahasiswa Aktif</p>
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Poster</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <img
-                  src="{{ url($peserta->second_student_card) }}"
-                  alt="Bukti Mahasiswa Aktif"
+                  src="{{ url($peserta->anggota_poster) }}"
+                  alt="Foto Poster"
                 />
               </p>
             </div>
           </div>
-          --}}
         </div>
       </div>
     </div>
