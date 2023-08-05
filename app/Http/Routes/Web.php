@@ -231,7 +231,7 @@ Route::middleware(['auth'])->group(function () {
           Route::get('/{user_id}/{action}', BionixRdAdminAction::class)->name('bionixroadshow.action');
         });
       Route::prefix('rise')
-        ->middleware(['permission:admin.is'])
+        ->middleware(['permission:admin.rise'])
         ->group(function () {
           Route::get('/', RiseTable::class)->name('rise.table');
           Route::get('/export', [RiseTable::class, 'export'])->name('rise.export');

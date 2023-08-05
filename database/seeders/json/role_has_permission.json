@@ -102,5 +102,17 @@
     {
         "role_id": 10,
         "permission_id": 102
+    },
+    {
+        "role_id": 6,
+        "permission_id": 103
+    },
+    {
+        "role_id": 10,
+        "permission_id": 103
+    },
+    {
+        "role_id": 9,
+        "permission_id": 103
     }
 ]
