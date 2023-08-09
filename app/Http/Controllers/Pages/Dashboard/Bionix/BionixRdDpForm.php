@@ -35,7 +35,7 @@ class BionixRdDpForm extends BionixRdRegistrationController
     'school' => 'required',
     'leader_name' => 'required|max:255',
     'rek_name' => 'required|max:255',
-    'nominal_dp' => 'required|max:255',
+    'nominal_dp' => 'required|max:5',
     'promo_code' => 'required|max:255',
     'payment_method' => 'required',
     'payment_proof' => 'required|image|max:1024',

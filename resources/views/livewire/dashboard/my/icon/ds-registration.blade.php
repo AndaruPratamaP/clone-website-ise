@@ -173,7 +173,7 @@
                                 </label>
                                 <input type="text" name="alasan_tim" id="alasan_tim" wire:model="alasan_tim"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Masukkan alasan kamu" required />
+                                    placeholder="Masukkan alasan kamu (Max:255 Character)" required />
                                 @error('alasan_tim')
                                     <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
@@ -188,7 +188,7 @@
                                 </label>
                                 <input type="text" name="harapan_tim" id="harapan_tim" wire:model="harapan_tim"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Masukkan harapan kamu" required />
+                                    placeholder="Masukkan harapan kamu (Max:255 Character)" required />
                                 @error('harapan_tim')
                                     <span class="text-sm font-thin text-red-500">{{ $message }}</span>
                                 @enderror
@@ -203,7 +203,7 @@
                                 </label>
                                 <input type="text" name="tujuan_tim" id="tujuan_tim" wire:model="tujuan_tim"
                                     class="block py-0 px-0 w-full text-[11px] lg:text-[18px] font-medium text-[#7C7C7C] bg-transparent border-0 border-b border-white appearance-none dark:text-white dark:border-white dark:focus:border-[#66C1A7] focus:outline-none focus:ring-0 peer"
-                                    placeholder="Jelaskan untuk apa ilmu yang kamu dapatkan dari kegiatan ini"
+                                    placeholder="Jelaskan untuk apa ilmu yang kamu dapatkan dari kegiatan ini (Max:255 Character)"
                                     required />
                                 @error('tujuan_tim')
                                     <span class="text-sm font-thin text-red-500">{{ $message }}</span>

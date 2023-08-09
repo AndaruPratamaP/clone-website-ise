@@ -299,7 +299,7 @@
                     id="reason"
                     wire:model="reason"
                     class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#00668F] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('reason') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
-                    placeholder="Masukkan alasan kamu"
+                    placeholder="Masukkan alasan kamu (Max:255 Character)"
                     required
                   />
                   @error('reason')
@@ -308,7 +308,7 @@
                 </div>
                 <div class="flex flex-col my-6 md:my-8 lg:my-10 xl:my-12">
                   <label for="hope" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
-                    >Apa yang anda harapkan dari ISE! User Experience Academy?<span class="text-[#FF1F00] ml-1"
+                    >Apa yang anda harapkan dari ISE! User Experience Academy? <span class="text-[#FF1F00] ml-1"
                       >*</span
                     ></label
                   >
@@ -317,7 +317,7 @@
                     wire:model="hope"
                     class="w-full bg-[#1C1C1C] border-solid] border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#00668F] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('hope') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                     type="text"
-                    placeholder="Masukkan alasan kamu"
+                    placeholder="Masukkan alasan kamu (Max:255 Character)"
                     required
                   />
                   @error('hope')
@@ -334,7 +334,7 @@
                     wire:model="after_ise"
                     class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#00668F] focus:placeholder:text-[#348BB6] focus:border-b-[#348BB6] lg:focus:text-xl lg:placeholder:text-xl @error('after_ise') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                     type="text"
-                    placeholder="Masukkan alasan kamu"
+                    placeholder="Masukkan alasan kamu (Max:255 Character)"
                     required
                   />
                   @error('after_ise')

@@ -76,12 +76,12 @@
                     <div class="bg-[#191A1E] rounded-[10px] px-[9px] py-[12px]">
                         <div class="grid gap-[1rem]">
                             <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24]">
-                                <a href="/coming-soon"
+                                <a href="/icon/ds-academy"
                                     class="bg bg-clip-text bg-gradient-blue-r hover:text-transparent focus:text-transparent font-semibold text-[12px]">DS
                                     Academy</a>
                             </div>
                             <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24]">
-                                <a href="/coming-soon"
+                                <a href="/icon/ux-academy"
                                     class="bg bg-clip-text bg-gradient-blue-r hover:text-transparent focus:text-transparent font-semibold text-[12px]">
                                     UX Academy</a>
                             </div>
@@ -171,13 +171,13 @@
                         <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24] my-[5px]">
                             <div
                                 class="bg bg-clip-text bg-gradient-blue-r hover:text-transparent focus:text-transparent">
-                                <a href="/coming-soon">DS Academy</a>
+                                <a href="/icon/ds-academy">DS Academy</a>
                             </div>
                         </div>
                         <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24] my-[5px]">
                             <div
                                 class="bg bg-clip-text bg-gradient-blue-r hover:text-transparent focus:text-transparent">
-                                <a href="/coming-soon">UX Academy</a>
+                                <a href="/icon/ux-academy">UX Academy</a>
                             </div>
                         </div>
                         <div class="px-[10px] py-[5px] rounded-[5px] hover:bg-[#1C1E24] my-[5px]">

@@ -193,12 +193,14 @@
                 <label for="nominal_dp" class="inline text-xs font-semibold lg:text-base 2xl:text-xl"
                   >Nominal DP<span class="text-[#FF1F00] ml-1">*</span></label
                 >
+                <p class="text-sm text-[#7C7C7C] sm:text-base">Contoh: 80000</p>
                 <input
                   id="nominal_dp"
                   wire:model="nominal_dp"
                   class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#66C1A7] focus:placeholder:text-[#66C1A7] focus:border-b-[#66C1A7] lg:focus:text-xl lg:placeholder:text-xl @error('nominal_dp') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                   type="number"
                   placeholder="Masukkan nominal DP"
+                  maxlength="1"
                   required
                 />
                 @error('nominal_dp')

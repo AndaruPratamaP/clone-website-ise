@@ -385,6 +385,14 @@
                 <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                   {{ $peserta->school }}
                 </p>
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Rekening Bank</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                  {{ $peserta->bank_account }}
+                </p>
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nominal DP</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                  {{ $peserta->dp_amount }}
+                </p>
                 <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti DP</p>
                 <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                   <img

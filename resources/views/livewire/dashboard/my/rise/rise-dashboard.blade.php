@@ -404,7 +404,7 @@
 
                 <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Sekolah</p>
                 <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                  {{ $peserta->asal_sekolah }}
+                  {{ $peserta->leader->institution }}
                 </p>
 
                 <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Email</p>

@@ -437,7 +437,7 @@
 
                   <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">No WA Aktif</p>
                   <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                    {{ $peserta->anggota_email }}
+                    {{ $peserta->anggota_hp }}
                   </p>
 
                   <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Kartu Mahasiswa</p>
