@@ -6,6 +6,7 @@ use App\Core\Application\FileUpload\FileUpload;
 use App\Core\Application\Services\Event\EventService;
 use App\Core\Application\Services\Payment\CreatePaymentRequest;
 use App\Core\Application\Services\Payment\PaymentService;
+use App\Core\Domain\Models\Eloquents\UserHasEvent\UserHasEvent;
 use App\Core\Application\Services\BionixRoadshow\BionixRdRegistrationRequest;
 use App\Core\Application\Services\BionixRoadshow\BionixRdDpRequest;
 use App\Core\Application\Services\BionixRoadshow\BionixRdPelunasanRequest;
@@ -294,8 +295,12 @@ class BionixRdService
 
   public function rejectDp($user_id)
   {
-    $this->updateStatus($user_id, 23);
+    $bionixrdpeserta = BionixRoadshow::where('ketua_id', $user_id);
+    $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id','3e003d84-884c-4762-aa7a-66f8a7458e88');
+    $bionixrdpeserta->delete();
+    $userHasEvent->delete();
   }
+
   public function acceptPelunasan($user_id)
   {
     $this->updateStatus($user_id, 25);
