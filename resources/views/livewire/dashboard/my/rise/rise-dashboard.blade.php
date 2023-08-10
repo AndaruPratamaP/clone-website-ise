@@ -653,7 +653,7 @@
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
                 Selamat berkas pendaftaran kamu telah berhasil kami verifikasi, silahkan unduh soal berikut untuk tahap penyisihan            </p>
-            <a href="https://drive.google.com/file/d/1s0RAyff5HJyidLVhMabOaqlGOCTltN1-/view?usp=sharing" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Unduh Soal</a>
+            <a href="https://drive.google.com/file/d/1HKcnfETvTOFItAC844Gb2-4i3mifbirG/view?usp=sharing" target="blank" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Unduh Soal</a>
           </div>
         </div>
       </div>

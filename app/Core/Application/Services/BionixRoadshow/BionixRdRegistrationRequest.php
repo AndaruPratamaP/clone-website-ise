@@ -6,7 +6,7 @@ use Illuminate\Http\UploadedFile;
 
 class BionixRdRegistrationRequest
 {
-    protected string $leader_name;
+
     protected UploadedFile $leader_student_card;
     protected UploadedFile $leader_poster_file;
     protected UploadedFile $leader_follow_ig_proof;
@@ -21,7 +21,7 @@ class BionixRdRegistrationRequest
 
     // constructor
     public function __construct(
-        string $leader_name,
+
         UploadedFile $leader_student_card,
         UploadedFile $leader_poster_file,
         UploadedFile $leader_follow_ig_proof,
@@ -35,7 +35,7 @@ class BionixRdRegistrationRequest
         string $member_twibbon_link
 
     ) {
-        $this->leader_name = $leader_name;
+
         $this->leader_student_card = $leader_student_card;
         $this->leader_poster_file = $leader_poster_file;
         $this->leader_follow_ig_proof = $leader_follow_ig_proof;
@@ -50,10 +50,7 @@ class BionixRdRegistrationRequest
     }
 
     // getters
-    public function getLeadName(): string
-    {
-        return $this->leader_name;
-    }
+
 
     public function getLeadStudentCard(): UploadedFile
     {
@@ -108,5 +105,4 @@ class BionixRdRegistrationRequest
     {
         return $this->member_twibbon_link;
     }
-    
 }

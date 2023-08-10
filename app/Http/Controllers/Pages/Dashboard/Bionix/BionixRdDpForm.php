@@ -16,7 +16,6 @@ class BionixRdDpForm extends BionixRdRegistrationController
 
   public string $team_name = '';
   public string $school;
-  public string $leader_name = '';
   public string $rek_name = '';
   public string $nominal_dp = '';
   public string $promo_code = '';
@@ -33,7 +32,6 @@ class BionixRdDpForm extends BionixRdRegistrationController
   protected $rules = [
     'team_name' => 'required|max:255',
     'school' => 'required',
-    'leader_name' => 'required|max:255',
     'rek_name' => 'required|max:255',
     'nominal_dp' => 'required|max:5',
     'promo_code' => 'required|max:255',

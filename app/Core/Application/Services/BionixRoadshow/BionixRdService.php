@@ -110,7 +110,6 @@ class BionixRdService
       'payment_id' => $payment,
       'status_type_id' => '21', // BionixRegistered
       'team_name' => $request->getTeamName(),
-      'ketua_id' => $user->id,
       'school' => $request->getSchool(),
       'bank_account' => $request->getRekName(),
       'dp_amount' => $request->getNominalDp(),
@@ -207,7 +206,7 @@ class BionixRdService
     $user = User::find(auth()->user()->id);
 
     $ketua_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $user->full_name);
-    $member_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $request->getLeadName());
+    $member_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $user->full_name);
     $team_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $timroadshow->team_name);
 
     $ketua_student_card = FileUpload::create(
@@ -260,8 +259,6 @@ class BionixRdService
 
     $bionixrd_peserta = BionixRoadshow::where('ketua_id', $user->id)->update([
       'status_type_id' => '27', // Registered Berkas
-      'team_name' => $request->getLeadName(),
-      'ketua_id' => $user->id,
       'ketua_twibbon_link' => $request->geLeadTwibbon(),
       'anggota_full_name' => $request->getMemberName(),
       'anggota_email' => $request->getMemberEmail(),

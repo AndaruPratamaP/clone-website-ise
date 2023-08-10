@@ -54,7 +54,7 @@ class RiseRegistration extends RiseRegistrationController
     'leader_phone' => 'required|string|max:255',
     'leader_email' => 'required|string|max:255|email',
     'leader_twibbon' => 'required|string|max:255',
-    'referral_code' => 'string|max:255',
+    'referral_code' => 'string|max:255|nullable',
     'leader_student_card' => 'required|image|max:1024',
     'leader_poster' => 'required|image|max:1024',
     'leader_ig_follow' => 'required|image|max:1024',

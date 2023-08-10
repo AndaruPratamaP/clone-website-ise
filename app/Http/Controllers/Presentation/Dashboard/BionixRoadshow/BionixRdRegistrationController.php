@@ -129,7 +129,6 @@ class BionixRdRegistrationController extends Component
   public function registerBerkas()
   {
     $this->requestBerkas = new BionixRdRegistrationRequest(
-      $this->leader_name,
       $this->leader_student_card,
       $this->leader_poster_file,
       $this->leader_follow_ig_proof,

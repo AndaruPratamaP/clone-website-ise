@@ -125,11 +125,12 @@
                 >
                 <input
                   id="leader_name"
-                  wire:model="leader_name"
+                  name="leader_name"
                   class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#66C1A7] focus:placeholder:text-[#66C1A7] focus:border-b-[#66C1A7] lg:focus:text-xl lg:placeholder:text-xl @error('leader_name') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                   type="text"
                   placeholder="Masukkan nama lengkap ketua tim kamu"
-                  required
+                  disabled
+                  value="{{ auth()->user()->full_name }}"
                 />
                 @error('leader_name')
                 <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
