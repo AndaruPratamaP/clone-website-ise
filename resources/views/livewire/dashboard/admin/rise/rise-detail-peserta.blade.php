@@ -25,6 +25,51 @@
         >Reject Berkas</a
       >
       @endif
+      @if($peserta->status_type->id == 36 || $peserta->status_type->id == 38)
+      <a
+        href="{{ $peserta->leader->id }}/accept-penyisihan"
+        class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75"
+        >Accept Penyisihan</a
+      >
+      @endif @if($peserta->status_type->id == 36 || $peserta->status_type->id == 37)
+      <a href="{{ $peserta->leader->id }}/reject-penyisihan" class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75"
+        >Reject Penyisihan</a
+      >
+      @endif
+      @if($peserta->status_type->id == 39 || $peserta->status_type->id == 41)
+      <a
+        href="{{ $peserta->leader->id }}/accept-pembayaran"
+        class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75"
+        >Accept Pembayaran</a
+      >
+      @endif @if($peserta->status_type->id == 39 || $peserta->status_type->id == 40)
+      <a href="{{ $peserta->leader->id }}/reject-pembayaran" class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75"
+        >Reject Pembayaran</a
+      >
+      @endif
+      @if($peserta->status_type->id == 42 || $peserta->status_type->id == 44)
+      <a
+        href="{{ $peserta->leader->id }}/accept-semifinal"
+        class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75"
+        >Accept Semifinal</a
+      >
+      @endif @if($peserta->status_type->id == 42 || $peserta->status_type->id == 43)
+      <a href="{{ $peserta->leader->id }}/reject-semifinal" class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75"
+        >Reject Semifinal</a
+      >
+      @endif
+      @if($peserta->status_type->id == 45 || $peserta->status_type->id == 47)
+      <a
+        href="{{ $peserta->leader->id }}/accept-final"
+        class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75"
+        >Accept Final</a
+      >
+      @endif @if($peserta->status_type->id == 45 || $peserta->status_type->id == 46)
+      <a href="{{ $peserta->leader->id }}/reject-final" class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75"
+        >Reject Final</a
+      >
+      @endif
+
     </div>
   </div>
   <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-5 mb-3.5">Biodata Tim Kamu</div>
@@ -43,6 +88,54 @@
           <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
             {{ $peserta->team_name }}
           </p>
+          @if($peserta->answer_file_penyisihan !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jawaban Penyisihan</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                        <a href="{{ url($peserta->answer_file_penyisihan) }}" target="_blank" class="text-orange-400">Lihat Jawaban</a>
+                    </p>
+                @endif
+                @if($peserta->poster_file_penyisihan !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Poster Penyisihan</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                      <img src="{{ url($peserta->poster_file_penyisihan) }}" alt="Bukti Pembayaran" />
+                    </p>
+                @endif
+                @if($peserta->account_owner !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Rekening Atas Nama</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                  {{ $peserta->account_owner }}
+                </p>
+                @endif
+                @if($peserta->bank_name !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Bank</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                  {{ $peserta->bank_name }}
+                </p>
+                @endif
+                @if($peserta->payment_file !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Pembayaran</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                        <a href="{{ url($peserta->payment_file) }}" target="_blank" class="text-orange-400">Lihat File</a>
+                    </p>
+                @endif
+                @if($peserta->youtube_link !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Youtube Semifinal</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                <a href="{{ url($peserta->youtube_link) }}" target="_blank" class="text-orange-400">Lihat Youtube</a>
+                </p>
+                @endif
+                @if($peserta->answer_file_semifinal !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jawaban Semifinal</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                        <a href="{{ url($peserta->answer_file_semifinal) }}" target="_blank" class="text-orange-400">Lihat Jawaban</a>
+                    </p>
+                @endif
+                @if($peserta->answer_file_final !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jawaban final</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                        <a href="{{ url($peserta->answer_file_final) }}" target="_blank" class="text-orange-400">Lihat Jawaban</a>
+                    </p>
+                @endif
         </div>
       </div>
       {{-- Data Tim End--}} {{-- Ketua Tim Start--}}

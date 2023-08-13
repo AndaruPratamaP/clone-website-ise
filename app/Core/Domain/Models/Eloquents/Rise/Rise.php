@@ -10,11 +10,11 @@ class Rise extends model
 {
     protected $table = 'rise';
     protected $fillable = [
-        'id', 
+        'id',
         'status_type_id',
-        'team_name', 
-        'leader_id', 
-        // 'leader_agency', 
+        'team_name',
+        'leader_id',
+        // 'leader_agency',
         // 'leader_name',
         // 'leader_phone',
         // 'leader_email',
@@ -23,7 +23,7 @@ class Rise extends model
         'leader_student_card',
         'leader_poster',
         'leader_ig_follow',
-        
+
         'member1_name',
         'member1_agency',
         'member1_phone',
@@ -41,6 +41,26 @@ class Rise extends model
         'member2_student_card',
         'member2_poster',
         'member2_ig_follow',
+
+        /// form penyisihan
+
+        'answer_file_penyisihan',
+        'poster_file_penyisihan',
+
+        /// form pembayaran
+
+        'account_owner',
+        'bank_name',
+        'payment_file',
+
+        /// form semifinal
+
+        'youtube_link',
+        'answer_file_semifinal',
+
+        /// final
+
+        'answer_file_final'
 
     ];
     protected $hidden = ['created_at', 'updated_at'];
@@ -80,6 +100,27 @@ class Rise extends model
         'member2_student_card' => 'string',
         'member2_poster' => 'string',
         'member2_ig_follow' => 'string',
+
+
+        /// form penyisihan
+
+        'answer_file_penyisihan'=> 'string',
+        'poster_file_penyisihan'=> 'string',
+
+        /// form pembayaran
+
+        'account_owner'=> 'string',
+        'bank_name'=> 'string',
+        'payment_file'=> 'string',
+
+        /// form semifinal
+
+        'youtube_link'=> 'string',
+        'answer_file_semifinal'=> 'string',
+
+        /// final
+
+        'answer_file_final'=> 'string'
 
     ];
 

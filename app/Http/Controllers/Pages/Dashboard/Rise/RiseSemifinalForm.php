@@ -2,23 +2,18 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Rise;
 
+use App\Http\Controllers\Presentation\Dashboard\Rise\RiseRegistrationController;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class RiseSemifinalForm extends Component
+class RiseSemifinalForm extends RiseRegistrationController
 {
     use WithFileUploads;
 
-    public string $team_name;
-    public string $leader_agency;
-    public string $leader_name;
     public string $youtube_link;
     public $answer_file;
 
     protected $rules = [
-        'team_name' => 'required|string|max:255',
-        'leader_agency' => 'required|string|max:255',
-        'leader_name' => 'required|string|max:255',
         'youtube_link' => 'required|url|max:255',
         'answer_file' => 'required|file|mimes:pdf|max:3072',
     ];
@@ -35,6 +30,6 @@ class RiseSemifinalForm extends Component
     }
     public function submit() {
       $this->validate($this->rules);
-      dd($this); //Temporary
+      $this->registerSemifinal();
   }
 }

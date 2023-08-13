@@ -17,10 +17,6 @@ class RiseRegistration extends RiseRegistrationController
   use WithFileUploads;
   // step 1
   public string $team_name;
-  public string $leader_agency;
-  public string $leader_name;
-  public string $leader_phone;
-  public string $leader_email;
   public string $leader_twibbon;
   public string $referral_code;
   public $leader_student_card;
@@ -49,10 +45,6 @@ class RiseRegistration extends RiseRegistrationController
   protected $rules = [
     // step 1
     'team_name' => 'required|string|max:255',
-    'leader_agency' => 'required|string|max:255',
-    'leader_name' => 'required|string|max:255',
-    'leader_phone' => 'required|string|max:255',
-    'leader_email' => 'required|string|max:255|email',
     'leader_twibbon' => 'required|string|max:255',
     'referral_code' => 'string|max:255|nullable',
     'leader_student_card' => 'required|image|max:1024',

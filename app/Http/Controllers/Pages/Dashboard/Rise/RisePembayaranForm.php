@@ -2,22 +2,19 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Rise;
 
+use App\Http\Controllers\Presentation\Dashboard\Rise\RiseRegistrationController;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class RisePembayaranForm extends Component
+class RisePembayaranForm extends RiseRegistrationController
 {
     use WithFileUploads;
 
-    public string $team_name;
-    public string $leader_name;
     public string $account_owner;
     public string $bank_name;
     public $payment_file;
 
     protected $rules = [
-        'team_name' => 'required|string|max:255',
-        'leader_name' => 'required|string|max:255',
         'account_owner' => 'required|string|max:255',
         'bank_name' => 'required|string|max:255',
         'payment_file' => 'required|image|max:1024',
@@ -36,6 +33,6 @@ class RisePembayaranForm extends Component
     }
     public function submit() {
       $this->validate($this->rules);
-      dd($this); //Temporary
+      $this->registerPembayaran();
   }
 }

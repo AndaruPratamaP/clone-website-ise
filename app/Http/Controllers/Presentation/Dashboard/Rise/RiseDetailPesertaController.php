@@ -29,7 +29,7 @@ class RiseDetailPesertaController extends Component
 
         $this->peserta = $rise_peserta;
     }
-
+    //registrasi
     public function acceptRegistration()
     {
         $this->service->acceptRegistration(request()->route('user_id'));
@@ -39,19 +39,44 @@ class RiseDetailPesertaController extends Component
     {
         $this->service->rejectRegistration(request()->route('user_id'));
     }
+    //penyisihan
+    public function acceptPenyisihan()
+    {
+        $this->service->acceptPenyisihan(request()->route('user_id'));
+    }
 
-    // public function acceptAnswer()
-    // {
-    //     $this->service->acceptAnswer(request()->route('leader_id'));
-    // }
+    public function rejectPenyisihan()
+    {
+        $this->service->rejectPenyisihan(request()->route('user_id'));
+    }
+    //pembayaran
+    public function acceptPembayaran()
+    {
+        $this->service->acceptPembayaran(request()->route('user_id'));
+    }
 
-    // public function reviseAnswer()
-    // {
-    //     $this->service->reviseAnswer(request()->route('leader_id'));
-    // }
+    public function rejectPembayaran()
+    {
+        $this->service->rejectPembayaran(request()->route('user_id'));
+    }
+    //semifinal
+    public function acceptSemifinal()
+    {
+        $this->service->acceptSemifinal(request()->route('user_id'));
+    }
 
-    // public function rejectAnswer()
-    // {
-    //     $this->service->rejectAnswer(request()->route('leader_id'));
-    // }
+    public function rejectSemifinal()
+    {
+        $this->service->rejectSemifinal(request()->route('user_id'));
+    }
+    //final
+    public function acceptFinal()
+    {
+        $this->service->acceptFinal(request()->route('user_id'));
+    }
+
+    public function rejectFinal()
+    {
+        $this->service->rejectFinal(request()->route('user_id'));
+    }
 }

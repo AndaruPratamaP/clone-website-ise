@@ -154,7 +154,9 @@ Route::middleware(['auth'])->group(function () {
           Route::get('/registration', IsClassRegistration::class)->name('isclass.registration');
       });
 
-      Route::prefix('rise')->middleware(['permission:my.ux'])->group(function () {
+      Route::prefix('rise')
+      ->middleware(['permission:my.ux'])
+      ->group(function () {
         Route::get('/', RiseDashboard::class)->name('rise');
         Route::get('/registration', RiseRegistration::class)->name('rise.registration');
         Route::get('/penyisihan', RisePenyisihanForm::class)->name('rise.penyisihan');

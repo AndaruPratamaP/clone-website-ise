@@ -206,7 +206,10 @@ class BionixService
 
     public function rejectRegistration($user_id)
     {
-        $this->updateStatus($user_id, 32);
+        $bionixPeserta = Bionix::where('ketua_id', $user_id);
+        $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
+        $bionixPeserta->delete();
+        $userHasEvent->delete();
     }
 
 }

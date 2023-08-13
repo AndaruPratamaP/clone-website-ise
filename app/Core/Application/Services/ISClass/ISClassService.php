@@ -4,6 +4,7 @@ namespace App\Core\Application\Services\ISClass;
 
 use App\Core\Application\FileUpload\FileUpload;
 use App\Core\Application\Services\Event\EventService;
+use App\Core\Domain\Models\Eloquents\UserHasEvent\UserHasEvent;
 use App\Core\Application\Services\ISClass\ISClassRegistrationRequest;
 use App\Core\Application\Services\Payment\CreatePaymentRequest;
 use App\Core\Application\Services\Payment\PaymentService;
@@ -134,6 +135,9 @@ class ISClassService
 
     public function reject($user_id)
     {
-        $this->updateStatus($user_id, 20);
+        $isPeserta = ISClass::where('user_id', $user_id);
+        $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
+        $isPeserta->delete();
+        $userHasEvent->delete();
     }
 }

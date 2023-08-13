@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Presentation\Dashboard\Rise;
 
 use App\Core\Application\Services\Rise\RiseRegistrationRequest;
+use App\Core\Application\Services\Rise\RisePenyisihanRequest;
+use App\Core\Application\Services\Rise\RisePembayaranRequest;
+use App\Core\Application\Services\Rise\RiseSemifinalRequest;
+use App\Core\Application\Services\Rise\RiseFinalRequest;
 use App\Core\Application\Services\Event\EventService;
 use App\Core\Application\Services\Rise\RiseService;
 use App\Http\Controllers\Pages\BaseController;
@@ -17,14 +21,21 @@ class RiseRegistrationController extends Component
     private EventService $event_service;
     private RiseService $service;
     private RiseRegistrationRequest $request;
+    private RisePenyisihanRequest $request_penyisihan;
+    private RisePembayaranRequest $request_pembayaran;
+    private RiseSemifinalRequest $request_semifinal;
+    private RiseFinalRequest $request_final;
 
     public bool $isOpen = false;
     public bool $isRegistered = false;
     public $date;
+    public $peserta;
 
     public array $user_data = [
         "full_name" => "",
-        "email" => ""
+        "email" => "",
+        "handphone" => "",
+        "institution" => "",
     ];
 
     public array $msg = [
@@ -41,14 +52,15 @@ class RiseRegistrationController extends Component
 
         $this->isOpen = $this->event_service->isEventOpen('78ec95d2-92c8-4ad2-9bc4-b32bcf049668');
 
+        $this->user_data = [
+            "full_name" => auth()->user()->full_name,
+            "email" => auth()->user()->email,
+            "handphone" => auth()->user()->handphone,
+            "institution" => auth()->user()->institution,
+        ];
         if($this->isRegistered)
         {
-            $this->user_data = [
-                "full_name" => auth()->user()->full_name,
-                "email" => auth()->user()->email,
-                "handphone" => auth()->user()->handphone,
-                "institution" => auth()->user()->institution,
-            ];
+            $this->peserta = $this->service->getPeserta(auth()->user()->id);
         }
 
     }
@@ -100,6 +112,122 @@ class RiseRegistrationController extends Component
             'type' => 'success',
             'title' => 'Berhasil mendaftar',
             'text' => 'Anda telah terdaftar pada RISE',
+        ]);
+    }
+    public function registerPenyisihan()
+    {
+        $this->request_penyisihan = new RisePenyisihanRequest(
+            $this->answer_file,
+            $this->poster_file,
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->dispatchToast('info', 'Menguplod form...', 'Mohon tunggu sebentar');
+            $this->service->registerPenyisihan($this->request_penyisihan);
+            $this->dispatchToast('success', 'Berhasil Terdaftar', 'Anda telah terdaftar pada Babak Penyisihan RISE');
+
+            // redirect
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+            return;
+        }
+        DB::commit();
+
+        return redirect()->route('my.rise')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Berhasil mendaftar',
+            'text' => 'Anda telah terdaftar pada Babak Penyisihan RISE',
+        ]);
+    }
+    public function registerPembayaran()
+    {
+        $this->request_pembayaran = new RisePembayaranRequest(
+            $this->account_owner,
+            $this->bank_name,
+            $this->payment_file,
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->dispatchToast('info', 'Menguplod form...', 'Mohon tunggu sebentar');
+            $this->service->registerPembayaran($this->request_pembayaran);
+            $this->dispatchToast('success', 'Berhasil Terdaftar', 'Anda telah terdaftar pada Pembayaran RISE');
+
+            // redirect
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+            return;
+        }
+        DB::commit();
+
+        return redirect()->route('my.rise')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Berhasil mendaftar',
+            'text' => 'Anda telah terdaftar pada Pembayaran RISE',
+        ]);
+    }
+    public function registerSemifinal()
+    {
+        $this->request_semifinal = new RiseSemifinalRequest(
+            $this->youtube_link,
+            $this->answer_file,
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->dispatchToast('info', 'Menguplod form...', 'Mohon tunggu sebentar');
+            $this->service->registerSemifinal($this->request_semifinal);
+            $this->dispatchToast('success', 'Berhasil Terdaftar', 'Anda telah terdaftar pada Semifinal RISE');
+
+            // redirect
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+            return;
+        }
+        DB::commit();
+
+        return redirect()->route('my.rise')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Berhasil mendaftar',
+            'text' => 'Anda telah terdaftar pada Semifinal RISE',
+        ]);
+    }
+    public function registerFinal()
+    {
+        $this->request_final = new RiseFinalRequest(
+            $this->answer_file,
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->dispatchToast('info', 'Menguplod form...', 'Mohon tunggu sebentar');
+            $this->service->registerFinal($this->request_final);
+            $this->dispatchToast('success', 'Berhasil Terdaftar', 'Anda telah terdaftar pada Final RISE');
+
+            // redirect
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+            return;
+        }
+        DB::commit();
+
+        return redirect()->route('my.rise')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Berhasil mendaftar',
+            'text' => 'Anda telah terdaftar pada Final RISE',
         ]);
     }
 }

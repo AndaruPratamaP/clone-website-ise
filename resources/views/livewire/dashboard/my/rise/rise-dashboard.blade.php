@@ -310,60 +310,27 @@
           class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
         >
           <div class="flex flex-row items-center w-full gap-x-6">
-            @if($peserta->status_type->id == '26')
-            <x-heroicon-s-clipboard class="relative z-0 text-red-800 w-14 h-14" />
-            @elseif ($peserta->status_type->id >= '25')
-            <x-heroicon-s-clipboard class="relative z-0 text-orange-400 w-14 h-14" />
-            @elseif($peserta->status_type->id <= '24')
-            <x-heroicon-s-clipboard class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
+            @if($peserta->status_type->id == '38')
+            <x-heroicon-s-pencil class="relative z-0 text-red-800 w-14 h-14" />
+            @elseif ($peserta->status_type->id >= '37')
+            <x-heroicon-s-pencil class="relative z-0 text-orange-400 w-14 h-14" />
+            @elseif($peserta->status_type->id <= '36')
+            <x-heroicon-s-pencil class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
             @endif
 
             <div class="flex flex-col">
-              <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Pelunasan</p>
+              <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Penyisian</p>
               <p
                 class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '31') bg-gradient-orange-r bg-clip-text text-transparent @endif"
               >
-                @if($peserta->status_type->id == '24')
+                @if($peserta->status_type->id == '36')
                   Sedang Diperiksa Admin
-                @elseif($peserta->status_type->id == '26')
+                @elseif($peserta->status_type->id == '38')
                 <span class="text-red-800">
-                  Ditolak Admin
+                  Tidak Lolos
                 </span>
-                @elseif($peserta->status_type->id >= '25')
-                <span class="text-transparent bg-gradient-orange-r bg-clip-text">Terverifikasi</span>
-                @else
-                  Menunggu berkas
-                @endif
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
-          <div class="flex flex-row items-center w-full gap-x-6">
-            @if($peserta->status_type->id == 29)
-              <x-heroicon-s-arrow-trending-up class="relative z-0 text-red-800 w-14 h-14" />
-            @elseif ($peserta->status_type->id >= 28)
-                <x-heroicon-s-arrow-trending-up class="relative z-0 text-orange-400 w-14 h-14" />
-            @else
-                <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
-            @endif
-
-            <div class="flex flex-col">
-              <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Berkas</p>
-              <p
-                class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '3') bg-gradient-orange-r bg-clip-text text-transparent @endif"
-              >
-                @if($peserta->status_type->id == '27')
-                  Sedang Diperiksa Admin
-                @elseif($peserta->status_type->id == '29')
-                <span class="text-red-800">
-                  Tidak Terverifikasi
-                </span>
-                @elseif($peserta->status_type->id >= '28')
-                <span class="text-transparent bg-gradient-orange-r bg-clip-text">
-                    Terverifikasi
-                </span>
+                @elseif($peserta->status_type->id >= '37')
+                <span class="text-transparent bg-gradient-orange-r bg-clip-text">Lolos</span>
                 @else
                   Menunggu berkas
                 @endif
@@ -371,6 +338,108 @@
             </div>
           </div>
         </div> --}}
+        {{-- <div
+          class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
+          <div class="flex flex-row items-center w-full gap-x-6">
+            @if($peserta->status_type->id == 41)
+              <x-heroicon-s-credit-card class="relative z-0 text-red-800 w-14 h-14" />
+            @elseif ($peserta->status_type->id >= 40)
+                <x-heroicon-s-credit-card class="relative z-0 text-orange-400 w-14 h-14" />
+            @else
+                <x-heroicon-s-credit-card class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
+            @endif
+
+            <div class="flex flex-col">
+              <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Pembayaran</p>
+              <p
+                class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '3') bg-gradient-orange-r bg-clip-text text-transparent @endif"
+              >
+                @if($peserta->status_type->id == '39')
+                  Sedang Diperiksa Admin
+                @elseif($peserta->status_type->id == '41')
+                <span class="text-red-800">
+                  Pembayaran Ditolak
+                </span>
+                @elseif($peserta->status_type->id >= '40')
+                <span class="text-transparent bg-gradient-orange-r bg-clip-text">
+                    Lunas
+                </span>
+                @else
+                  Menunggu Pembayaran
+                @endif
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
+          <div class="flex flex-row items-center w-full gap-x-6">
+            @if($peserta->status_type->id == 44)
+              <x-heroicon-s-user-group class="relative z-0 text-red-800 w-14 h-14" />
+            @elseif ($peserta->status_type->id >= 43)
+                <x-heroicon-s-user-group class="relative z-0 text-orange-400 w-14 h-14" />
+            @else
+                <x-heroicon-s-user-group class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
+            @endif
+
+            <div class="flex flex-col">
+              <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Semifinal</p>
+              <p
+                class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '3') bg-gradient-orange-r bg-clip-text text-transparent @endif"
+              >
+                @if($peserta->status_type->id == '42')
+                  Sedang Diperiksa Admin
+                @elseif($peserta->status_type->id == '44')
+                <span class="text-red-800">
+                  Tidak Lolos
+                </span>
+                @elseif($peserta->status_type->id >= '43')
+                <span class="text-transparent bg-gradient-orange-r bg-clip-text">
+                    Lolos
+                </span>
+                @else
+                  Menunggu Berkas
+                @endif
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
+          <div class="flex flex-row items-center w-full gap-x-6">
+            @if($peserta->status_type->id == 47)
+              <x-heroicon-m-trophy class="relative z-0 text-red-800 w-14 h-14" />
+            @elseif ($peserta->status_type->id >= 46)
+                <x-heroicon-m-trophy class="relative z-0 text-orange-400 w-14 h-14" />
+            @else
+                <x-heroicon-m-trophy class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
+            @endif
+
+            <div class="flex flex-col">
+              <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Final    </p>
+              <p
+                class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '3') bg-gradient-orange-r bg-clip-text text-transparent @endif"
+              >
+                @if($peserta->status_type->id == '45')
+                  Sedang Diperiksa Admin
+                @elseif($peserta->status_type->id == '47')
+                <span class="text-red-800">
+                    Tidak Lolos
+                </span>
+                @elseif($peserta->status_type->id >= '46')
+                <span class="text-transparent bg-gradient-orange-r bg-clip-text">
+                    Congratulation !!!
+                </span>
+                @else
+                  Menunggu Berkas
+                @endif
+              </p>
+            </div>
+          </div>
+        </div> --}}
+
 
         <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-5 mb-3.5">Biodata Tim Kamu</div>
         <div
@@ -388,6 +457,54 @@
                 <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                   {{ $peserta->team_name }}
                 </p>
+                @if($peserta->answer_file_penyisihan !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jawaban Penyisihan</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                        <a href="{{ url($peserta->answer_file_penyisihan) }}" target="_blank" class="text-orange-400">Lihat Jawaban</a>
+                    </p>
+                @endif
+                @if($peserta->poster_file_penyisihan !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Poster Penyisihan</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                      <img src="{{ url($peserta->poster_file_penyisihan) }}" alt="Bukti Pembayaran" />
+                    </p>
+                @endif
+                @if($peserta->account_owner !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Rekening Atas Nama</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                  {{ $peserta->account_owner }}
+                </p>
+                @endif
+                @if($peserta->bank_name !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Nama Bank</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                  {{ $peserta->bank_name }}
+                </p>
+                @endif
+                @if($peserta->payment_file !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Pembayaran</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                        <a href="{{ url($peserta->payment_file) }}" target="_blank" class="text-orange-400">Lihat File</a>
+                    </p>
+                @endif
+                @if($peserta->youtube_link !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Youtube Semifinal</p>
+                <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                <a href="{{ url($peserta->youtube_link) }}" target="_blank" class="text-orange-400">Lihat Youtube</a>
+                </p>
+                @endif
+                @if($peserta->answer_file_semifinal !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jawaban Semifinal</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                        <a href="{{ url($peserta->answer_file_semifinal) }}" target="_blank" class="text-orange-400">Lihat Jawaban</a>
+                    </p>
+                @endif
+                @if($peserta->answer_file_final !== NULL)
+                <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Jawaban final</p>
+                    <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                        <a href="{{ url($peserta->answer_file_final) }}" target="_blank" class="text-orange-400">Lihat Jawaban</a>
+                    </p>
+                @endif
               </div>
             </div>
             {{-- Data Tim End--}} {{-- Ketua Tim Start--}}
@@ -654,34 +771,53 @@
             <p class="text-base font-light">
                 Selamat berkas pendaftaran kamu telah berhasil kami verifikasi, silahkan unduh soal berikut untuk tahap penyisihan            </p>
             <a href="https://drive.google.com/file/d/1HKcnfETvTOFItAC844Gb2-4i3mifbirG/view?usp=sharing" target="blank" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Unduh Soal</a>
+            {{-- <a href="/my/rise/penyisihan" class="text-lg font-semibold text-center text-white hover:bg-gradient-orange-r rounded-md py-1.5 border border-orange-400">Penyisihan</a> --}}
           </div>
         </div>
       </div>
     </div>
-    {{-- @elseif($peserta->status_type->id == '26')
-    <!-- Gagal DP -->
+    @elseif($peserta->status_type->id == '36')
+    <!-- After Penyisihan -->
     <div
-      class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
-    >
-      <div class="flex flex-col gap-y-3">
+    class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+  >
+    <div class="flex flex-col gap-y-3">
         <p
-          class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
-        >
-          Jangan Putus Asa
+        class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
+      >
+        Terimakasih Telah Mengirimkan Berkas Penyisihan.
+      </p>
+      <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+        <p class="text-base font-light">
+            Silahkan tunggu seleksi berkas penyisihan kamu ya.
         </p>
-        <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
-          <p class="text-base font-light">
-            Kamu dinyatakan gagal dalam verifikasi Pelunasa RISE Roadshow Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
-            Tetap semangat dan terus berjuang!
-            <div class="my-1"></div>
-            Hubungi kami apabila ada pertanyaaan lebih lanjut.
-            <a href="https://wa.me/+6281332049750" target="blank" class="text-orange-400 hover:underline decoration-orange-400 ">Contact Us</a>
-          </p>
-        </div>
       </div>
-    </div> --}}
-          {{-- @elseif($peserta->status_type->id == '28')
-            <!-- Verif DP Success -->
+    </div>
+  </div>
+    @elseif($peserta->status_type->id == '38')
+    <!-- Gagal Penyisihan -->
+    <div
+    class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+  >
+    <div class="flex flex-col gap-y-3">
+      <p
+        class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
+      >
+        Gagal Penyisihan
+      </p>
+      <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+        <p class="text-base font-light">
+          Kamu dinyatakan gagal dalam Penyisihan RISE 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+          Tetap semangat dan terus berjuang!
+          <div class="my-1"></div>
+          Hubungi kami apabila ada pertanyaaan lebih lanjut.
+          <a href="https://wa.me/+6281332049750" target="blank" class="text-orange-400 hover:underline decoration-orange-400 ">Contact Us</a>
+        </p>
+      </div>
+    </div>
+  </div>
+          @elseif($peserta->status_type->id == '37')
+            <!-- Berhasil Penyisihan -->
             <div
         class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
       >
@@ -693,52 +829,149 @@
           </p>
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
-                Silahkan persiapkan penyisihan dan tunggu informasi lebih lanjut dari kami.
+                Kamu lolos tahap penyisihan RISE 2023. Silahkan lakukan pembayaran untuk melanjutkan ke tahap selanjutnya
+            </p>
+            <a href="/my/rise/pembayaran" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Bayar</a>
+          </div>
+        </div>
+      </div>
+      @elseif($peserta->status_type->id == '39')
+      <!-- After Pembayaran -->
+      <div
+      class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+    >
+      <div class="flex flex-col gap-y-3">
+          <p
+          class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
+        >
+          Terimakasih Mengirimkan Bukti Pembayaran.
+        </p>
+        <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+          <p class="text-base font-light">
+              Silahkan tunggu verifikasi pembayaran kamu ya.
+          </p>
+        </div>
+      </div>
+    </div>
+      @elseif($peserta->status_type->id == '41')
+      <!-- Gagal Pembayaran -->
+      <div
+      class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+    >
+      <div class="flex flex-col gap-y-3">
+        <p
+          class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
+        >
+          Pembayaran Gagal Diverifikasi
+        </p>
+        <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+          <p class="text-base font-light">
+            Pembayaran kamu gagal kami verifikasi.
+            <div class="my-1"></div>
+            Mohon hubungi kami apabila ada pertanyaaan lebih lanjut.
+            <a href="https://wa.me/+6281332049750" target="blank" class="text-orange-400 hover:underline decoration-orange-400 ">Contact Us</a>
+          </p>
+        </div>
+      </div>
+    </div>
+            @elseif($peserta->status_type->id == '40')
+              <!-- Berhasil Pembayaran -->
+              <div
+          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+        >
+          <div class="flex flex-col gap-y-3">
+            <p
+              class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
+            >
+              Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+            <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+              <p class="text-base font-light">
+                  Pembayaran kamu berhasil diverifikasi. Silahkan lanjutkan Business Case kamu dan kirimkan hasilnya sebelum deadline.
+              </p>
+              <a href="/my/rise/semifinal" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Semifinal</a>
+            </div>
+          </div>
+        </div>
+        @elseif($peserta->status_type->id == '42')
+        <!-- After Semifinal -->
+        <div
+        class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+      >
+        <div class="flex flex-col gap-y-3">
+            <p
+            class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
+          >
+            Terimakasih Telah Mengirimkan Berkas Semifinal.
+          </p>
+          <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+            <p class="text-base font-light">
+                Silahkan tunggu verifikasi Berkas Semifinal kamu ya.
             </p>
           </div>
         </div>
-      </div> --}}
-      {{-- @elseif($peserta->status_type->id == '29')
-      <!-- Gagal DP -->
-      <div
+      </div>
+        @elseif($peserta->status_type->id == '44')
+        <!-- Gagal Semifinal -->
+        <div
         class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
       >
         <div class="flex flex-col gap-y-3">
           <p
             class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
           >
-            Jangan Putus Asa
+            Gagal Lolos Semifinal
           </p>
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
-              Kamu dinyatakan gagal dalam verifikasi Berkas RISE Roadshow Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
-              Tetap semangat dan terus berjuang!
+                Kamu dinyatakan gagal dalam Semifinal RISE 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                Tetap semangat dan terus berjuang!
               <div class="my-1"></div>
-              Hubungi kami apabila ada pertanyaaan lebih lanjut.
+              Mohon hubungi kami apabila ada pertanyaaan lebih lanjut.
               <a href="https://wa.me/+6281332049750" target="blank" class="text-orange-400 hover:underline decoration-orange-400 ">Contact Us</a>
             </p>
           </div>
         </div>
-      </div> --}}
-          {{-- @elseif($peserta->status_type->id == '15')
-            <!-- Lolos Seleksi -->
-            <div
+      </div>
+              @elseif($peserta->status_type->id == '43')
+                <!-- Berhasil Semifinal -->
+                <div
             class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
           >
             <div class="flex flex-col gap-y-3">
               <p
                 class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
               >
-                Congratulations <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+                Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
               </p>
               <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
                 <p class="text-base font-light">
-                  Selamat, kamu telah lolos seleksi UX Academy 2023, tidak lama lagi kamu akan dihubungi oleh panitia kami melalui Whatasapp untuk proses selanjutnya.
+                    Kamu lolos semifinal RISE 2023. Silahkan lanjutkan Business Case kamu dan kirimkan hasilnya sebelum deadline.
                 </p>
+                <a href="/my/rise/final" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Final</a>
               </div>
             </div>
           </div>
-          @elseif($peserta->status_type->id == '17')
+          @elseif($peserta->status_type->id == '45')
+          <!-- After Final -->
+          <div
+          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+        >
+          <div class="flex flex-col gap-y-3">
+              <p
+              class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
+            >
+              Terimakasih Telah Mengirimkan Berkas Final.
+            </p>
+            <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+              <p class="text-base font-light">
+                  Silahkan tunggu verifikasi Berkas Final kamu ya.
+              </p>
+            </div>
+          </div>
+        </div>
+          @elseif($peserta->status_type->id == '47')
+          <!-- Gagal Final -->
           <div
           class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
         >
@@ -746,33 +979,41 @@
             <p
               class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
             >
-              Jangan Putus Asa
+              Gagal Lolos Final
             </p>
             <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
               <p class="text-base font-light">
-                Kamu dinyatakan gagal dalam seleksi UX Academy 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
-                Tetap semangat dan terus berjuang!
+                  Kamu dinyatakan gagal dalam Final RISE 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                  Tetap semangat dan terus berjuang!
+                <div class="my-1"></div>
+                Mohon hubungi kami apabila ada pertanyaaan lebih lanjut.
+                <a href="https://wa.me/+6281332049750" target="blank" class="text-orange-400 hover:underline decoration-orange-400 ">Contact Us</a>
               </p>
             </div>
           </div>
-        </div> --}}
-        {{-- @elseif($peserta->status_type->id == '21' || $peserta->status_type->id == '24' || $peserta->status_type->id == '27')
-        <div
-        class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
-      >
-        <div class="flex flex-col gap-y-3">
-          <p
-            class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
-          >
-            Terimakasih sudah mendaftar.
-          </p>
-          <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
-            <p class="text-base font-light">
-              Silahkan tunggu informasi lebih lanjut dari kami.
-            </p>
-          </div>
         </div>
-      </div> --}}
+                @elseif($peserta->status_type->id == '46')
+                  <!-- Berhasil Final -->
+                  <div
+              class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+            >
+              <div class="flex flex-col gap-y-3">
+                <p
+                  class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
+                >
+                  Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+                </p>
+                <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+                  <p class="text-base font-light">
+                      Kamu lolos Final RISE 2023.
+                      <div class="my-1"></div>
+                      Mohon hubungi kami apabila ada pertanyaaan lebih lanjut.
+                      <a href="https://wa.me/+6281332049750" target="blank" class="text-orange-400 hover:underline decoration-orange-400 ">Contact Us</a>
+                      </div>
+                  </p>
+              </div>
+            </div>
+
 
           @endif
 

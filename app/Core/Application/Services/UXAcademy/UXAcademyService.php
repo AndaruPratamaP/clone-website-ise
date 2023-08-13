@@ -7,6 +7,7 @@ use App\Core\Application\Services\Event\EventService;
 use App\Core\Application\Services\Payment\CreatePaymentRequest;
 use App\Core\Application\Services\Payment\PaymentService;
 use App\Core\Application\Services\UXAcademy\UXAcademyRegistrationRequest;
+use App\Core\Domain\Models\Eloquents\UserHasEvent\UserHasEvent;
 use App\Core\Domain\Models\Eloquents\User\User;
 use App\Core\Domain\Models\Eloquents\UXAcademy\UXAcademy;
 use App\Exceptions\IseException;
@@ -157,7 +158,10 @@ class UXAcademyService
 
     public function rejectRegistration($user_id)
     {
-        $this->updateStatus($user_id, 7);
+        $uxPeserta = UXAcademy::where('user_id', $user_id);
+        $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
+        $uxPeserta->delete();
+        $userHasEvent->delete();
     }
 
     public function acceptAnswer($user_id)

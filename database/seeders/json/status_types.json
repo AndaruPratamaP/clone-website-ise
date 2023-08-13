@@ -138,6 +138,54 @@
     {
         "id": "35",
         "name": "Rise.Rejected"
+    },
+    {
+        "id": "36",
+        "name": "Rise.Registered.Penyisihan"
+    },
+    {
+        "id": "37",
+        "name": "Rise.Verified.Penyisihan"
+    },
+    {
+        "id": "38",
+        "name": "Rise.Rejected.Penyisihan"
+    },
+    {
+        "id": "39",
+        "name": "Rise.Registered.Pembayaran"
+    },
+    {
+        "id": "40",
+        "name": "Rise.Verified.Pembayaran"
+    },
+    {
+        "id": "41",
+        "name": "Rise.Rejected.Pembayaran"
+    },
+    {
+        "id": "42",
+        "name": "Rise.Registered.Semifinal"
+    },
+    {
+        "id": "43",
+        "name": "Rise.Verified.Semifinal"
+    },
+    {
+        "id": "44",
+        "name": "Rise.Rejected.Semifinal"
+    },
+    {
+        "id": "45",
+        "name": "Rise.Registered.Final"
+    },
+    {
+        "id": "46",
+        "name": "Rise.Verified.Final"
+    },
+    {
+        "id": "47",
+        "name": "Rise.Rejected.Final"
     }
 
 ]

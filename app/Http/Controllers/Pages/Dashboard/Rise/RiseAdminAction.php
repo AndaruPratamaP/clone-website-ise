@@ -21,12 +21,30 @@ class RiseAdminAction extends RiseDetailPesertaController
             case "reject-berkas":
                 $this->rejectRegistration();
                 break;
-            // case "accept-seleksi-soal":
-            //     $this->acceptAnswer();
-            //     break;
-            // case "reject-seleksi-soal":
-            //     $this->rejectAnswer();
-            //     break;
+            case "accept-penyisihan":
+                $this->acceptPenyisihan();
+                break;
+            case "reject-penyisihan":
+                $this->rejectPenyisihan();
+                break;
+            case "accept-pembayaran":
+                $this->acceptPembayaran();
+                break;
+            case "reject-pembayaran":
+                $this->rejectPembayaran();
+                break;
+            case "accept-semifinal":
+                $this->acceptSemifinal();
+                break;
+            case "reject-semifinal":
+                $this->rejectSemifinal();
+                break;
+            case "accept-final":
+                $this->acceptFinal();
+                break;
+            case "reject-final":
+                $this->rejectFinal();
+                break;
             default:
                 break;
         }

@@ -4,9 +4,14 @@ namespace App\Core\Application\Services\Rise;
 
 use App\Core\Application\FileUpload\FileUpload;
 use App\Core\Application\Services\Event\EventService;
-// use App\Core\Application\Services\Payment\CreatePaymentRequest;
-// use App\Core\Application\Services\Payment\PaymentService;
+use App\Core\Application\Services\Payment\CreatePaymentRequest;
+use App\Core\Domain\Models\Eloquents\UserHasEvent\UserHasEvent;
+use App\Core\Application\Services\Payment\PaymentService;
 use App\Core\Application\Services\Rise\RiseRegistrationRequest;
+use App\Core\Application\Services\Rise\RisePenyisihanRequest;
+use App\Core\Application\Services\Rise\RisePembayaranRequest;
+use App\Core\Application\Services\Rise\RiseSemifinalRequest;
+use App\Core\Application\Services\Rise\RiseFinalRequest;
 use App\Core\Domain\Models\Eloquents\User\User;
 use App\Core\Domain\Models\Eloquents\Rise\Rise;
 use App\Exceptions\IseException;
@@ -19,18 +24,13 @@ use Illuminate\Http\Request;
 class RiseService
 {
     private EventService $eventService;
-    // private PaymentService $paymentService;
+    private PaymentService $paymentService;
     private $event_id = "78ec95d2-92c8-4ad2-9bc4-b32bcf049668";
 
-    // public function __construct(EventService $eventService, PaymentService $paymentService)
-    // {
-    //     $this->eventService = $eventService;
-    //     $this->paymentService = $paymentService;
-    // }
-
-    public function __construct(EventService $eventService)
+    public function __construct(EventService $eventService, PaymentService $paymentService)
     {
         $this->eventService = $eventService;
+        $this->paymentService = $paymentService;
     }
 
     public function getPeserta($user_id)
@@ -56,6 +56,7 @@ class RiseService
 
         return $paginate;
     }
+
 
     protected function sanitizeOrderBy($orderby)
     {
@@ -173,22 +174,140 @@ class RiseService
         return $rise_peserta;
     }
 
-    // public function turnInAnswer(UploadedFile $answer_file)
-    // {
-    //     $user = User::find(auth()->user()->id);
+    public function registerPenyisihan(RisePenyisihanRequest $request)
+    {
+        // check if user already registered
+        $user = User::find(auth()->user()->id);
+        $tim_rise = Rise::where('leader_id', $user->id)->first();
+        $status_type = (int) $tim_rise->status_type_id;
 
-    //     $friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $user->full_name);
+        if ($status_type > 38 || $status_type == 37 || $status_type == 36) {
+          IseException::throw('Anda sudah Mengisi Form Penyisihan', 3100);
+        } elseif ($status_type == 33) {
+          IseException::throw('Harap tunggu admin untuk mengkonfirmasi form sebelumnya', 3200);
+        } elseif ($status_type != 34 && $status_type != 38) {
+          IseException::throw('Mohon lakukan pendaftaran RISE dahulu', 3300);
+        }
 
-    //     $answer = FileUpload::create($answer_file, "uxacademy", auth()->user()->id . Carbon::now(), "Answer_" . $friendly_name);
-    //     $answer->upload();
+        $user = User::find(auth()->user()->id);
+        $team_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $tim_rise->team_name);
 
-    //     $dsacademy_peserta = DSAcademy::where('ketua_id', auth()->user()->id)->first();
+        $answer_file_penyisihan = FileUpload::create($request->getAnswerFilePenyisihan(), "rise", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "AnswerPenyisihan_" . $team_friendly_name);
+        $answer_file_penyisihan->upload();
 
-    //     $dsacademy_peserta->answer_file = $answer->getUrl();
-    //     $dsacademy_peserta->save();
+        $poster_file_penyisihan = FileUpload::create($request->getPosterFilePenyisihan(), "rise", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "PosterPenyisihan_" . $team_friendly_name);
+        $poster_file_penyisihan->upload();
 
-    //     return $dsacademy_peserta;
-    // }
+        $rise_peserta = Rise::where('leader_id', $user->id)->update([
+            'status_type_id' => '36', // Registered Penyisihan
+            'answer_file_penyisihan' => $answer_file_penyisihan->getUrl(),
+            'poster_file_penyisihan' => $poster_file_penyisihan->getUrl(),
+        ]);
+
+        return $rise_peserta;
+    }
+
+    public function registerPembayaran(RisePembayaranRequest $request)
+    {
+        // check if user already registered
+        $user = User::find(auth()->user()->id);
+        $tim_rise = Rise::where('leader_id', $user->id)->first();
+        $status_type = (int) $tim_rise->status_type_id;
+
+        if ($status_type > 41 || $status_type == 40 || $status_type == 39) {
+          IseException::throw('Anda sudah Mengisi Form Pembayaran', 3100);
+        } elseif ($status_type == 36) {
+          IseException::throw('Harap tunggu admin untuk mengkonfirmasi form Penyisihan', 3200);
+        } elseif ($status_type != 37 && $status_type != 41) {
+          IseException::throw('Mohon lakukan pendaftaran Penyisihan dahulu', 3300);
+        }
+
+        $user = User::find(auth()->user()->id);
+        $team_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $tim_rise->team_name);
+
+        $payment_file = FileUpload::create($request->getPaymentFile(), "rise", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "PaymentFile_" . $team_friendly_name);
+        $payment_file->upload();
+
+        $payment_request = new CreatePaymentRequest(
+            auth()->user()->id,
+            $this->event_id,
+            89000,
+            $payment_file->getUrl(),
+            Carbon::now()->timezone('Asia/Jakarta')->addDays(1),
+            1,
+            1
+        );
+
+        $payment = $this->paymentService->create_payment($payment_request);
+        $rise_peserta = Rise::where('leader_id', $user->id)->update([
+            'status_type_id' => '39', // Registered Pembayaran
+            'payment_id' => $payment,
+            'account_owner' => $request->getAccountOwner(),
+            'bank_name' => $request->getBankName(),
+            'payment_file' => $payment_file->getUrl(),
+        ]);
+
+        return $rise_peserta;
+    }
+
+    public function registerSemifinal(RiseSemifinalRequest $request)
+    {
+        // check if user already registered
+        $user = User::find(auth()->user()->id);
+        $tim_rise = Rise::where('leader_id', $user->id)->first();
+        $status_type = (int) $tim_rise->status_type_id;
+
+        if ($status_type > 44 || $status_type == 43 || $status_type == 42) {
+          IseException::throw('Anda sudah Mengisi Form Semifinal', 3100);
+        } elseif ($status_type == 39) {
+          IseException::throw('Harap tunggu admin untuk mengkonfirmasi form Pembayaran', 3200);
+        } elseif ($status_type != 40 && $status_type != 44) {
+          IseException::throw('Mohon isi Form Pembayaran dahulu', 3300);
+        }
+
+        $user = User::find(auth()->user()->id);
+        $team_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $tim_rise->team_name);
+
+        $answer_file_semifinal = FileUpload::create($request->getAnswerFileSemifinal(), "rise", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "AnswerSemifinal_" . $team_friendly_name);
+        $answer_file_semifinal->upload();
+
+        $rise_peserta = Rise::where('leader_id', $user->id)->update([
+            'status_type_id' => '42', // Registered Semifinal
+            'youtube_link' => $request->getYoutubeLink(),
+            'answer_file_semifinal' => $answer_file_semifinal->getUrl(),
+        ]);
+
+        return $rise_peserta;
+    }
+
+    public function registerFinal(RiseFinalRequest $request)
+    {
+        // check if user already registered
+        $user = User::find(auth()->user()->id);
+        $tim_rise = Rise::where('leader_id', $user->id)->first();
+        $status_type = (int) $tim_rise->status_type_id;
+
+        if ($status_type > 47 || $status_type == 46 || $status_type == 45) {
+          IseException::throw('Anda sudah Mengisi Form Final', 3100);
+        } elseif ($status_type == 42) {
+          IseException::throw('Harap tunggu admin untuk mengkonfirmasi form Semifinal', 3200);
+        } elseif ($status_type != 43 && $status_type != 47) {
+          IseException::throw('Mohon isi Form Semifinal dahulu', 3300);
+        }
+
+        $user = User::find(auth()->user()->id);
+        $team_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $tim_rise->team_name);
+
+        $answer_file_final = FileUpload::create($request->getAnswerFileFinal(), "rise", auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'), "AnswerFinal_" . $team_friendly_name);
+        $answer_file_final->upload();
+
+        $rise_peserta = Rise::where('leader_id', $user->id)->update([
+            'status_type_id' => '45', // Registered Semifinal
+            'answer_file_final' => $answer_file_final->getUrl(),
+        ]);
+
+        return $rise_peserta;
+    }
 
     public function updateStatus($user_id, $status_type_id)
     {
@@ -205,28 +324,49 @@ class RiseService
         $this->updateStatus($user_id, 34);
     }
 
-    // public function reviseRegistration($user_id)
-    // {
-    //     $this->updateStatus($user_id, 13);
-    // }
-
     public function rejectRegistration($user_id)
     {
-        $this->updateStatus($user_id, 35);
+        $risePeserta = Rise::where('leader_id', $user_id);
+        $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
+        $risePeserta->delete();
+        $userHasEvent->delete();
     }
 
-    // public function acceptAnswer($user_id)
-    // {
-    //     $this->updateStatus($user_id, 15);
-    // }
+    public function acceptPenyisihan($user_id)
+    {
+        $this->updateStatus($user_id, 37);
+    }
 
-    // public function reviseAnswer($user_id)
-    // {
-    //     $this->updateStatus($user_id, 16);
-    // }
+    public function rejectPenyisihan($user_id)
+    {
+        $this->updateStatus($user_id, 38);
+    }
 
-    // public function rejectAnswer($user_id)
-    // {
-    //     $this->updateStatus($user_id, 17);
-    // }
+    public function acceptPembayaran($user_id)
+    {
+        $this->updateStatus($user_id, 40);
+    }
+
+    public function rejectPembayaran($user_id)
+    {
+        $this->updateStatus($user_id, 41);
+    }
+    public function acceptSemifinal($user_id)
+    {
+        $this->updateStatus($user_id, 43);
+    }
+
+    public function rejectSemifinal($user_id)
+    {
+        $this->updateStatus($user_id, 44);
+    }
+    public function acceptFinal($user_id)
+    {
+        $this->updateStatus($user_id, 46);
+    }
+
+    public function rejectFinal($user_id)
+    {
+        $this->updateStatus($user_id, 47);
+    }
 }

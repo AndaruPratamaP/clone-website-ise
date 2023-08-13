@@ -31,11 +31,12 @@
                     >
                     <input
                       id="team_name"
-                      wire:model="team_name"
+                      name="team_name"
                       class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#ffa672] focus:placeholder:text-[#ffa672] focus:border-b-[#ffa672] lg:focus:text-xl lg:placeholder:text-xl @error('team_name') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                       type="text"
                       placeholder="Masukkan Nama Tim kamu"
-                      required
+                      disabled
+                      value="{{ $peserta->team_name}}"
                     />
                     @error('team_name')
                     <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
@@ -47,11 +48,12 @@
                     >
                     <input
                       id="leader_name"
-                      wire:model="leader_name"
+                      name="leader_name"
                       class="w-full bg-[#1C1C1C] border-solid border-b-2 p-1 mt-2 font-[500] focus:outline-none text-xs lg:text-xl placeholder:text-[#7C7C7C] hover:placeholder:text-[#6B6B6B] hover:text-[#6B6B6B] hover:border-b-[#6B6B6B] hover:bg-transparent focus:text-[#ffa672] focus:placeholder:text-[#ffa672] focus:border-b-[#ffa672] lg:focus:text-xl lg:placeholder:text-xl @error('leader_name') border-b-red-500 text-red-500 @else border-b-gray-300 text-[#7C7C7C] @enderror"
                       type="text"
                       placeholder="Masukkan Nama Ketua kamu"
-                      required
+                      disabled
+                      value="{{ auth()->user()->full_name}}"
                     />
                     @error('leader_name')
                     <span class="pt-2 text-xs text-red-500 lg:text-base">{{ $message }}</span>
