@@ -62,6 +62,20 @@ class UXAcademyService
         return in_array(strtolower($order), ['asc', 'desc']) ? strtolower($order) : 'asc';
     }
 
+    public function countRegistered()
+    {
+        $count = UXAcademy::count();
+
+        return $count;
+    }
+
+    public function countVerified()
+    {
+        $count = UXAcademy::whereBetween('status_type_id', [5, 10])->count();
+
+        return $count;
+    }
+
     public function register(UXAcademyRegistrationRequest $request)
     {
         // check if user already registered

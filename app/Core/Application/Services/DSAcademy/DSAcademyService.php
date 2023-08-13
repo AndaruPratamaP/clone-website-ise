@@ -62,6 +62,21 @@ class DSAcademyService
         return in_array(strtolower($order), ['asc', 'desc']) ? strtolower($order) : 'asc';
     }
 
+    public function countRegistered()
+    {
+        $count = DSAcademy::count();
+
+        return $count;
+    }
+
+    public function countVerified()
+    {
+        $count = DSAcademy::whereBetween('status_type_id', [12, 17])->count();
+
+        return $count;
+    }
+
+
     public function register(DSAcademyRegistrationRequest $request)
     {
         // check if user already registered

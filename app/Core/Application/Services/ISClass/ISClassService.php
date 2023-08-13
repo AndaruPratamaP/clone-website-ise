@@ -62,6 +62,20 @@ class ISClassService
         return in_array(strtolower($order), ['asc', 'desc']) ? strtolower($order) : 'asc';
     }
 
+    public function countRegistered()
+    {
+        $count = ISClass::count();
+
+        return $count;
+    }
+
+    public function countVerified()
+    {
+        $count = ISClass::where('status_type_id', 19)->count();
+
+        return $count;
+    }
+
     public function register(ISClassRegistrationRequest $request)
     {
         // check if user already registered

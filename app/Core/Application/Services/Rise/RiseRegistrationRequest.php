@@ -44,7 +44,7 @@ class RiseRegistrationRequest
 //  string $leader_phone;
 //  string $leader_email;
     string $leader_twibbon,
-    string $referral_code,
+    ?string $referral_code = null,
     UploadedFile $leader_student_card,
     UploadedFile $leader_poster,
     UploadedFile $leader_ig_follow,
@@ -124,7 +124,7 @@ class RiseRegistrationRequest
     return $this->leader_twibbon;
   }
 
-  public function getReferralCode(): string
+  public function getReferralCode(): ?string
   {
     return $this->referral_code;
   }

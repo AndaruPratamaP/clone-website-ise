@@ -66,6 +66,20 @@ class BionixRdService
     return in_array(strtolower($order), ['asc', 'desc']) ? strtolower($order) : 'asc';
   }
 
+  public function countRegistered()
+    {
+        $count = BionixRoadshow::count();
+
+        return $count;
+    }
+
+    public function countVerified()
+    {
+        $count = BionixRoadshow::whereBetween('status_type_id', [22, 29])->count();
+
+        return $count;
+    }
+
   public function registerDp(BionixRdDpRequest $request)
   {
     // check if user already registered

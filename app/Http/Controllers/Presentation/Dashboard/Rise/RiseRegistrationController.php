@@ -70,7 +70,7 @@ class RiseRegistrationController extends Component
         $this->request = new RiseRegistrationRequest(
             $this->team_name,
             $this->leader_twibbon,
-            $this->referral_code,
+            $this->referral_code ?? null,
             $this->leader_student_card,
             $this->leader_poster,
             $this->leader_ig_follow,

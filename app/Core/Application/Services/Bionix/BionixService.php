@@ -195,7 +195,7 @@ class BionixService
 
     public function countVerified()
     {
-        $count = Bionix::where('status_type_id', 29)->count();
+        $count = Bionix::where('status_type_id', 31)->count();
 
         return $count;
     }

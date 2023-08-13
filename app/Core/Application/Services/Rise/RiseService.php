@@ -69,6 +69,21 @@ class RiseService
         return in_array(strtolower($order), ['asc', 'desc']) ? strtolower($order) : 'asc';
     }
 
+    public function countRegistered()
+    {
+        $count = Rise::count();
+
+        return $count;
+    }
+
+    public function countVerified()
+    {
+        $count = Rise::whereBetween('status_type_id', [34, 47])->count();
+
+        return $count;
+    }
+
+
     public function register(RiseRegistrationRequest $request)
     {
         // check if user already registered
@@ -145,7 +160,7 @@ class RiseService
             // 'leader_phone' => $request->getLeaderPhone(),
             // 'leader_email' => $request->getLeaderEmail(),
             'leader_twibbon' => $request->getLeaderTwibbon(),
-            'referral_code' => $request->getReferralCode(),
+            'referral_code' => $request->getReferralCode() ?? null,
             'leader_student_card' => $leader_student_card->getUrl(),
             'leader_poster' => $leader_poster->getUrl(),
             'leader_ig_follow' => $leader_ig_follow->getUrl(),
