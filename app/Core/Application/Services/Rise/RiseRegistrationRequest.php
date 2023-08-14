@@ -14,7 +14,7 @@ class RiseRegistrationRequest
 //   protected string $leader_phone;
 //   protected string $leader_email;
   protected string $leader_twibbon;
-  protected string $referral_code;
+  protected ?string $referral_code;
   protected UploadedFile $leader_student_card;
   protected UploadedFile $leader_poster;
   protected UploadedFile $leader_ig_follow;
