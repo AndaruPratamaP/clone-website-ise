@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
 use App\Http\Controllers\Presentation\Dashboard\DS\DSAcademyController;
 use Livewire\WithPagination;
+use App\Core\Application\Exports\DSAcademyExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DsTable extends DSAcademyController
 {
@@ -12,7 +14,7 @@ class DsTable extends DSAcademyController
     public string $orderby = '';
     public string $order = '';
     public int $entries = 10;
-    
+
     public function render()
     {
         return view('livewire.dashboard.admin.icon.ds-table', [
@@ -38,5 +40,9 @@ class DsTable extends DSAcademyController
     public function updatingOrder()
     {
         $this->resetPage();
+    }
+    public function export()
+    {
+        return Excel::download(new DSAcademyExport, 'DSAcademy.xlsx');
     }
 }

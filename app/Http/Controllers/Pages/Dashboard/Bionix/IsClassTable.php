@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Pages\Dashboard\Bionix;
 
 use App\Core\Domain\Models\Eloquents\ISClass\ISClass;
+use App\Core\Application\Exports\ISClassExport;
 use App\Http\Controllers\Presentation\Dashboard\ISClass\ISClassController;
 use Livewire\WithPagination;
+use Maatwebsite\Excel\Facades\Excel;
 
 class IsClassTable extends ISClassController
 {
@@ -39,6 +41,10 @@ class IsClassTable extends ISClassController
     public function updatingOrder()
     {
         $this->resetPage();
+    }
+    public function export()
+    {
+        return Excel::download(new ISClassExport, 'ISClass.xlsx');
     }
 }
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Pages\Dashboard\Rise;
 
 use App\Http\Controllers\Presentation\Dashboard\Rise\RiseController;
 use Livewire\WithPagination;
+use App\Core\Application\Exports\RiseExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class RiseTable extends RiseController
 {
@@ -38,6 +40,10 @@ class RiseTable extends RiseController
     public function updatingOrder()
     {
         $this->resetPage();
+    }
+    public function export()
+    {
+        return Excel::download(new RiseExport, 'Rise.xlsx');
     }
 }
 

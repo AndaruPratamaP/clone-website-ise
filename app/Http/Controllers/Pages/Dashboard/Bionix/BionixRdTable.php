@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Pages\Dashboard\Bionix;
 
 use App\Http\Controllers\Presentation\Dashboard\BionixRoadshow\BionixRdController;
 use Livewire\WithPagination;
+use App\Core\Application\Exports\BionixRdExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BionixRdTable extends BionixRdController
 {
@@ -38,5 +40,9 @@ class BionixRdTable extends BionixRdController
   public function updatingOrder()
   {
     $this->resetPage();
+  }
+  public function export()
+  {
+      return Excel::download(new BionixRdExport, 'BionixRoadshow.xlsx');
   }
 }

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
+use App\Core\Domain\Models\Eloquents\UXAcademy\UXAcademy;
 use App\Http\Controllers\Presentation\Dashboard\UX\UXAcademyController;
 use Livewire\WithPagination;
+use App\Core\Application\Exports\UXAcademyExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class UxTable extends UXAcademyController
 {
@@ -12,7 +16,7 @@ class UxTable extends UXAcademyController
     public string $orderby = '';
     public string $order = '';
     public int $entries = 10;
-    
+
     public function render()
     {
         return view('livewire.dashboard.admin.icon.ux-table', [
@@ -38,5 +42,9 @@ class UxTable extends UXAcademyController
     public function updatingOrder()
     {
         $this->resetPage();
+    }
+    public function export()
+    {
+        return Excel::download(new UXAcademyExport, 'UXAcademy.xlsx');
     }
 }

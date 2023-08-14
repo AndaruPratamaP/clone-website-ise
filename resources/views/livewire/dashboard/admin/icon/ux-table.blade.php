@@ -2,8 +2,8 @@
 <div class="flex flex-col items-center w-[95%] mx-auto p-4 min-h-screen oveflow-hidden font-montserrat">
     <h1 class="text-4xl sm:text-5xl bg-gradient-blue-r bg-clip-text text-transparent font-bold self-start mb-10">Data
         Pendaftar UX Academy</h1>
-    <!-- <a href=" {{ route('admin.gts.export') }} "
-        class="bg-gradient-green-r px-6 py-2 rounded-xl hover:brightness-75 mr-auto mb-4">Export</a> -->
+  <a href=" {{ route('admin.uxacademy.export') }} "
+        class="bg-gradient-blue-r px-6 py-2 rounded-xl hover:brightness-75 mr-auto mb-4">Export</a>
     <div
         class="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 font-semibold sm:font-bold text-sm sm:text-xl">
         <div class="flex flex-row items-center gap-2">

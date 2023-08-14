@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Pages\Dashboard\Bionix;
 use App\Core\Domain\Models\Eloquents\Bionix\Bionix;
 use App\Http\Controllers\Presentation\Dashboard\Bionix\BionixController;
 use Livewire\WithPagination;
+use App\Core\Application\Exports\BionixExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class BionixTable extends BionixController
 {
@@ -39,5 +41,9 @@ class BionixTable extends BionixController
     public function updatingOrder()
     {
         $this->resetPage();
+    }
+    public function export()
+    {
+        return Excel::download(new BionixExport, 'Bionix.xlsx');
     }
 }
