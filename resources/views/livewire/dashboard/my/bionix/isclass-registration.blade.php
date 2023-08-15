@@ -21,14 +21,14 @@
       <div class="relative">
         <img class="w-full h-auto" src="{{ asset('images/isclass/RISE.png') }}" />
         {{-- Form Content --}}
-        <div class="flex justify-center relative">
+        {{-- <div class="flex justify-center relative">
           <h1
             class="text-white text-center mt-[30px] mb-[30px] lg:mt-[62px] lg:mb-[50px] text-[16px] lg:text-[26px] font-bold px-4"
           >
             Form Pendaftaran IS CLASS
           </h1>
-        </div>
-        <div class="relative flex flex-row pb-6 w-full">
+        </div> --}}
+        {{-- <div class="relative flex flex-row pb-6 w-full">
           <div
             class="relative max-w-1/3 w-full h-[2px] bg-white flex self-center justify-self-center"
             x-bind:class="step >= 1 ? 'bg-gradient-green-r' : 'bg-white'"
@@ -299,7 +299,9 @@
             </div>
           </div>
         </form>
-      </div>
+      </div> --}}
+
+      <p class="text-white text-3xl font-semibold text-center my-20">Pendaftaran IS Class telah ditutup</p>
       <!-- footer icon -->
 
       <div class="mx-7 mt-[38px] flex justify-between flex-row items-center">
