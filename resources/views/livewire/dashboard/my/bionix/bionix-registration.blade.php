@@ -523,7 +523,7 @@
                         1295633675 <br>
                         a.n DEWI ANGELINE</p>
                     <p class="mt-8 text-xs sm:text-base lg:text-xl">Jumlah yang harus dibayarkan:
-                        <br> <span class="font-bold">Rp 100.000,00</span>
+                        <br> <span class="font-bold">Rp. 62.250,00 (<span class="font-bold text-red-500">Promo HUT <span class="text-white">RI</span></span>)</span>
                         </p>
                 </div>
                 <div class="my-6 md:my-8 lg:my-10 xl:my-12">
