@@ -109,7 +109,7 @@
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3 translate-x-0 sm:-translate-x-4">
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              18 Aug
+              21 Aug
             </p>
             <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
               <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
@@ -121,7 +121,7 @@
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              22-24 Sep
+              25-27 Aug
             </p>
             <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
               <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
@@ -493,7 +493,7 @@
         </p>
         <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
           <p class="text-base font-light">
-            Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 22 Agustus 2023 hingga 24 Agustus 2023.
+            Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 25 Agustus 2023 hingga 27 Agustus 2023.
           </p>
         </div>
       </div>
@@ -513,7 +513,7 @@
           </p>
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
-              Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 22 Agustus 2023 hingga 24 Agustus 2023.
+              Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 25 Agustus 2023 hingga 27 Agustus 2023.
             </p>
           </div>
         </div>
@@ -532,10 +532,10 @@
               <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 h-12 sm:w-20 sm:h-16" />
             </div>
             <div class="flex flex-col justify-center px-4 space-y-4 text-left text-white items-left sm:px-9">
-              <h3 class="text-lg font-semibold">Deadline 24 August 2023</h3>
+              <h3 class="text-lg font-semibold">Deadline 27 August 2023</h3>
               <p class="text-base font-light">
                 Hi Futurizen! Saat ini kamu dapat mengunduh soal seleksi User Experience Academy ISE! 2023 dengan batas
-                pengumpulan <span class="font-semibold">24 Agustus 2023 Pukul 23.59</span>. Jangan lupa untuk
+                pengumpulan <span class="font-semibold">27 Agustus 2023 Pukul 23.59</span>. Jangan lupa untuk
                 memperhatikan panduan pengumpulan ya!
               </p>
               <p class="font-semibold text-transparent bg-gradient-blue-br bg-clip-text">GoodLuck!</p>
@@ -614,7 +614,7 @@
 @endif
 
 <script type="text/javascript">
-  const datetime = "August 19, 2023 00:00:00";
+  const datetime = "August 21, 2023 23:59:59";
   const countdownDate = new Date(datetime).getTime();
 
   // Update the countdown every second
@@ -649,9 +649,9 @@
 
   // After Regist Countdown
   // Set the countdown date and time
-  const countdownDate_gts = new Date('August 22, 2023 00:00:00').getTime();
-  const countdownDate_seleksi = new Date('August 22, 2023 00:00:00').getTime();
-  const countdownDate_close_seleksi = new Date('August 24, 2023 00:00:00').getTime();
+  const countdownDate_gts = new Date('August 25, 2023 00:00:00').getTime();
+  const countdownDate_seleksi = new Date('August 25, 2023 00:00:00').getTime();
+  const countdownDate_close_seleksi = new Date('August 27, 2023 23:59:59').getTime();
 
   // Update the countdown every second
   const countdownTimer_gts = setInterval(() => {

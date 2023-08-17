@@ -64,16 +64,16 @@
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti DP</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <img
-                  src="{{ url($peserta->payment->payment_proof_file) }}"
-                  alt="Bukti Pembayaran"
+                  src="{{ url($peserta->payment_proof_dp) }}"
+                  alt="Bukti Pembayaran DP"
                 />
               </p>
               @if($peserta->payment_proof_pelunasan !== NULL)
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Bukti Pelunasan</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <img
-                  src="{{ url($peserta->payment->payment_proof_file) }}"
-                  alt="Bukti Pembayaran"
+                  src="{{ url($peserta->payment_proof_pelunasan) }}"
+                  alt="Bukti Pembayaran Pelunasan"
                 />
               </p>
               @endif
@@ -173,7 +173,7 @@
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                <a href="{{ url($peserta->anggota_poster_file) }}" target="_blank" class="text-green-400">Lihat Twibbon</a>
+                <a href="{{ url($peserta->anggota_twibbon_link) }}" target="_blank" class="text-green-400">Lihat Twibbon</a>
               </p>
 
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Kartu Pelajar</p>
@@ -195,7 +195,7 @@
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Follow IG</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 <img
-                  src="{{ url($peserta->anggota_poster_file) }}"
+                  src="{{ url($peserta->anggota_follow_ig_proof) }}"
                   alt="Foto Follow IG"
                 />
               </p>

@@ -373,7 +373,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col content-center justify-center ">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">18 Aug 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">21 Aug 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
                         Registration
@@ -452,7 +452,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col content-center justify-center ">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">18 Aug 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">21 Aug 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
                         Registration
@@ -463,7 +463,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col content-center justify-center ">
-                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">22 Sep 2022</p>
+                    <p class=" z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center">25 Aug 2022</p>
                     <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px] md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/ds-academy/timeline-2.png') }} alt="">
                     <p class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-semibold text-white text-center">
                         Pengerjaan
