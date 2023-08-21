@@ -211,7 +211,7 @@ class DSAcademyService
         $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
         $dsPeserta->delete();
         $userHasEvent->delete();
-    }
+    }   
 
     public function acceptAnswer($user_id)
     {

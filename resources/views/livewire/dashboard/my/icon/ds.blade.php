@@ -105,7 +105,7 @@
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3 translate-x-0 sm:-translate-x-4">
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              21 Aug
+              22 Aug
             </p>
             <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
               <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
@@ -764,7 +764,7 @@
 @endif
 
 <script type="text/javascript">
-    const datetime = "August 21, 2023 23:59:59";
+    const datetime = "August 22, 2023 23:59:59";
     const countdownDate = new Date(datetime).getTime();
 
     // Update the countdown every second
