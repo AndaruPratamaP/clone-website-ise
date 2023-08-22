@@ -119,7 +119,7 @@ Route::middleware(['auth'])->group(function () {
           ->middleware(['permission:my.ds'])
           ->group(function () {
             Route::get('/', DsDashboard::class)->name('ds');
-            Route::get('/registration', DsRegistration::class)->name('dsacademy.registration');
+            // Route::get('/registration', DsRegistration::class)->name('dsacademy.registration');
             Route::get('/selection', DsSelection::class)->name('dsacademy.selection');
         });
 
@@ -127,19 +127,19 @@ Route::middleware(['auth'])->group(function () {
           ->middleware(['permission:my.ux'])
           ->group(function () {
             Route::get('/', UxDashboard::class)->name('ux');
-            Route::get('/registration', UxRegistration::class)->name('uxacademy.registration');
+            // Route::get('/registration', UxRegistration::class)->name('uxacademy.registration');
             Route::get('/selection', UxSelection::class)->name('uxacademy.selection');
         });
 
       Route::prefix('bionix')
-        // ->middleware(['permission:my.is'])
+        ->middleware(['permission:my.is'])
         ->group(function () {
         Route::get('/', BionixDashboard::class)->name('bionix');
         Route::get('/registration', BionixRegistration::class)->name('bionix.registration');
       });
 
       Route::prefix('bionix-rd')
-        // ->middleware(['permission:my.is'])
+        ->middleware(['permission:my.is'])
         ->group(function () {
         Route::get('/', BionixRdDashboard::class)->name('bionixroadshow');
         Route::get('/dp', BionixRdDpForm::class)->name('bionixroadshow.dp');

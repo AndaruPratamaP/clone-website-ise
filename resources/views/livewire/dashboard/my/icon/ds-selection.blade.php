@@ -17,14 +17,14 @@
             <div class="px-5 sm:px-6 md:px-12 lg:px-20 xl:px-24 2xl:px-30 font-['Montserrat']">
                 <p class="text-xs sm:text-base lg:text-xl my-4 sm:my-8">Berikut adalah soal seleksi Data Science Academy ISE! 2023. Perhatikan panduan pengumpulan dan submit jawaban dalam format .pdf</p>
                 <p class="text-xs sm:text-base lg:text-xl">Batas Pengumpulan:</p>
-                <p class="text-xs sm:text-base lg:text-xl font-bold">24 Agustus 2023 Pukul 23.59</p>
+                <p class="text-xs sm:text-base lg:text-xl font-bold">27 Agustus 2023 Pukul 23.59</p>
             </div>
 
             <form wire:submit.prevent="submit" enctype="multipart/form-data">
                 <div class="px-5 sm:px-6 md:px-12 lg:px-20 xl:px-24 2xl:px-30 font-['Montserrat'] pt-5">
                     <div class="flex flex-col">
                         <label for="file_soal" class="inline font-semibold text-xs lg:text-base 2xl:text-xl">File Soal</label>
-                        <a href="#" class="mt-3 mb-4 px-3 py-2 lg:py-3 flex h-full bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border cursor-pointer w-fit border-[#6BB9E7]">
+                        <a href="https://drive.google.com/file/d/1jeWD8YxHjEW_kl8WIUsL12GM-4qKjnXQ/view?usp=sharing" target="blank" class="mt-3 mb-4 px-3 py-2 lg:py-3 flex h-full bg-[#1C1C1C] text-blue rounded-[6px] shadow-lg border cursor-pointer w-fit border-[#6BB9E7]">
                             <div class="flex flex-row items-center gap-1.5">
                                 <x-heroicon-s-cloud-arrow-down class="w-4 lg:w-8 h-4 lg:h-8 text-slate-100"/>
                                 <p class="font-semibold lg:text-sm mr-0 lg:mr-4 py-1 lg:py-2 rounded-md border-0 text-xs bg-transparent cursor-pointer">Unduh</p>

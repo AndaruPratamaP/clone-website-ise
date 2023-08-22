@@ -64,11 +64,11 @@
         </div>
       </div>
       {{-- UX Academy Card --}}
-      <div class="flex flex-col items-start bg-[#191A1E] rounded-3xl w-full px-7 pt-4 pb-6 justify-between">
+      {{-- <div class="flex flex-col items-start bg-[#191A1E] rounded-3xl w-full px-7 pt-4 pb-6 justify-between">
         <div>
         <h2 class="mt-3 text-xl font-bold text-blue-400 md:text-2xl sm:mt-4">User Experience Academy</h2>
         <p class="text-sm font-semibold text-gray-500">Untuk Mahasiswa Sederajat</p>
-    </div>
+            </div>
         <p class="mt-1 text-sm font-medium tracking-wide md:text-base sm:mt-2">
           Pendaftaran User Experience Academy telah dibuka. Segera daftarkan dirimu sekarang juga dan pelajari User
           Experience (UX) bersama kami.
@@ -80,13 +80,13 @@
             >Continue</a
           >
         </div>
-      </div>
+      </div> --}}
       {{-- DS Academy Card --}}
-      <div class="flex flex-col items-start bg-[#191A1E] rounded-3xl w-full px-7 pt-4 pb-6 justify-between">
+      {{-- <div class="flex flex-col items-start bg-[#191A1E] rounded-3xl w-full px-7 pt-4 pb-6 justify-between">
         <div>
         <h2 class="mt-3 text-xl font-bold text-blue-400 md:text-2xl sm:mt-4">Data Science Academy</h2>
         <p class="text-sm font-semibold text-gray-500">Untuk Mahasiswa Sederajat</p>
-    </div>
+            </div>
         <p class="mt-1 text-sm font-medium tracking-wide md:text-base sm:mt-2">
           Pendaftaran Data Science Academy telah dibuka. Segera daftarkan dirimu sekarang juga dan pelajari Data Science
           (DS) bersama kami.
@@ -98,7 +98,7 @@
             >Continue</a
           >
         </div>
-      </div>
+      </div> --}}
       {{-- IS Class Card --}}
       {{-- <div class="flex flex-col items-start bg-[#191A1E] rounded-3xl w-full px-7 pt-4 pb-6 justify-between">
         <div>

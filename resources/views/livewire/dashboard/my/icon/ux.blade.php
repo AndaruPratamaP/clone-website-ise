@@ -26,8 +26,8 @@
         class="flex rounded-xl bg-[#191A1E] p-5 max-w-4xl xl:max-w-[400px] w-full shrink-0 justify-center items-center"
       >
         <div class="flex flex-col items-center text-center text-white">
-          <p class="text-xl font-medium">Pendaftaran Ditutup Dalam</p>
-          <div class="flex flex-row gap-x-3 my-7">
+          <p class="text-xl font-medium">Pendaftaran Telah Ditutup</p>
+          {{-- <div class="flex flex-row gap-x-3 my-7">
             <div class="flex flex-col items-center justify-center">
               <div
                 id="days"
@@ -80,7 +80,7 @@
               class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75"
               >Lihat Guidebook</a
             >
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -430,7 +430,7 @@
     <div class="flex flex-col items-center md:items-start my-1.5 w-full">
       <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
         <div class="flex flex-col items-center text-center text-white">
-          <p class="text-xl font-medium">Seleksi UX Academy Dimulai</p>
+          <p class="text-xl font-medium">Seleksi UX Academy Selesai</p>
           <div class="flex flex-row gap-x-3 my-7">
             <div class="flex flex-col items-center justify-center">
               <div
@@ -540,7 +540,7 @@
               </p>
               <p class="font-semibold text-transparent bg-gradient-blue-br bg-clip-text">GoodLuck!</p>
               <a
-                href="{{ route('my.uxacademy.selection') }}"
+                href="/my/ux/selection"
                 class="w-full py-3 font-semibold text-center rounded-md bg-gradient-blue-r hover:brightness-75"
                 >Find out more</a
               >

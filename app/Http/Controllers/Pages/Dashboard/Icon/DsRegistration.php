@@ -77,13 +77,13 @@ class DsRegistration extends DSAcademyRegistrationController
 
     public function mount()
     {
-    //   if (!$this->isOpen) {
-    //       return redirect()->route('my.ds')->with('toastr-toast', [
-    //           'type' => 'info',
-    //           'title' => 'Pendaftaran telah ditutup',
-    //           'text' => 'Pendaftaran sudah ditutup karena telah melewati masa pendaftaran.',
-    //       ]);
-    //   }
+      if (!$this->isOpen) {
+          return redirect()->route('my.ds')->with('toastr-toast', [
+              'type' => 'info',
+              'title' => 'Pendaftaran telah ditutup',
+              'text' => 'Pendaftaran sudah ditutup karena telah melewati masa pendaftaran.',
+          ]);
+      }
 
       if ($this->isRegistered) {
           return redirect()->route('my.ds')->with('toastr-toast', [

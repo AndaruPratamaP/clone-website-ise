@@ -207,11 +207,12 @@ class DSAcademyService
 
     public function rejectRegistration($user_id)
     {
-        $dsPeserta = DSAcademy::where('ketua_id', $user_id);
-        $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
-        $dsPeserta->delete();
-        $userHasEvent->delete();
-    }   
+        // $dsPeserta = DSAcademy::where('ketua_id', $user_id);
+        // $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
+        // $dsPeserta->delete();
+        // $userHasEvent->delete();
+        $this->updateStatus($user_id, 14);
+    }
 
     public function acceptAnswer($user_id)
     {

@@ -172,10 +172,12 @@ class UXAcademyService
 
     public function rejectRegistration($user_id)
     {
-        $uxPeserta = UXAcademy::where('user_id', $user_id);
-        $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
-        $uxPeserta->delete();
-        $userHasEvent->delete();
+        // $uxPeserta = UXAcademy::where('user_id', $user_id);
+        // $userHasEvent = UserHasEvent::where('user_id', $user_id )->where('event_id',$this->event_id);
+        // $uxPeserta->delete();
+        // $userHasEvent->delete();
+        $this->updateStatus($user_id, 7);
+
     }
 
     public function acceptAnswer($user_id)
