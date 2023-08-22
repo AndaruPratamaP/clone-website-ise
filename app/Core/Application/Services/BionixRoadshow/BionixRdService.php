@@ -235,7 +235,7 @@ class BionixRdService
       $request->getLeadPoster(),
       'bionixroadshow',
       auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'),
-      'CV_' . $ketua_friendly_name
+      'Poster_' . $ketua_friendly_name
     );
     $ketua_poster->upload();
 
@@ -243,7 +243,7 @@ class BionixRdService
       $request->getLeadIgProof(),
       'bionixroadshow',
       auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'),
-      'CV_' . $ketua_friendly_name
+      'IgFollow_' . $ketua_friendly_name
     );
     $ketua_follow->upload();
 
@@ -251,7 +251,7 @@ class BionixRdService
       $request->getMemberStudentCard(),
       'bionixroadshow',
       auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'),
-      'StudentCard_' . $ketua_friendly_name
+      'StudentCard_' . $member_friendly_name
     );
     $member_student_card->upload();
 
@@ -259,7 +259,7 @@ class BionixRdService
       $request->getMemberPoster(),
       'bionixroadshow',
       auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'),
-      'CV_' . $ketua_friendly_name
+      'Poster_' . $member_friendly_name
     );
     $member_poster->upload();
 
@@ -267,7 +267,7 @@ class BionixRdService
       $request->getMemberIgProof(),
       'bionixroadshow',
       auth()->user()->id . Carbon::now()->timezone('Asia/Jakarta'),
-      'CV_' . $ketua_friendly_name
+      'IgFollow_' . $member_friendly_name
     );
     $member_follow->upload();
 

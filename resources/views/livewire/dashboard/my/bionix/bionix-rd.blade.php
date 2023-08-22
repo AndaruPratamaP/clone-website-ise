@@ -709,14 +709,15 @@
           <p
             class="flex items-center gap-1 text-xl font-bold tracking-wider text-red-700 font-lg sm:text-2xl font-poppins"
           >
-            Jangan Putus Asa
+            Sistem Error
           </p>
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
-              Kamu dinyatakan gagal dalam verifikasi Berkas BIONIX Roadshow Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
-              Tetap semangat dan terus berjuang!
-              <div class="my-1"></div>
-              Hubungi kami apabila ada pertanyaaan lebih lanjut.
+                Mohon maaf, sistem kami sempat terkena masalah dan beberapa data terakhir terkait registrasi ini hilang. Mohon untuk mengisi form registrasi kembali disini:
+                <div class="my-1"></div>
+                <a href="/my/bionix-rd/registration" class="text-lg font-semibold text-center text-white bg-gradient-green-r hover:brightness-75 rounded-md py-1.5">Registrasi Ulang</a>
+                <div class="my-1"></div>
+                Hubungi kami apabila ada pertanyaaan lebih lanjut.
               <a href="https://wa.me/+6281332049750" target="blank" class="text-green-400 hover:underline decoration-green-400 ">Contact Us</a>
             </p>
           </div>
