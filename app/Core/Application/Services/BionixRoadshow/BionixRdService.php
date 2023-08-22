@@ -220,7 +220,7 @@ class BionixRdService
     $user = User::find(auth()->user()->id);
 
     $ketua_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $user->full_name);
-    $member_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $user->full_name);
+    $member_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $request->getMemberName());
     $team_friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $timroadshow->team_name);
 
     $ketua_student_card = FileUpload::create(
