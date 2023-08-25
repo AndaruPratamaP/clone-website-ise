@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Presentation\Dashboard\UX;
 use App\Core\Application\Services\Event\EventService;
 use App\Core\Application\Services\UXAcademy\UXAcademyRegistrationRequest;
 use App\Core\Application\Services\UXAcademy\UXAcademyService;
+use App\Core\Application\Services\UXAcademy\UXAcademySelectionRequest;
 use App\Http\Controllers\Pages\BaseController;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
@@ -17,6 +18,7 @@ class UXAcademyRegistrationController extends Component
     private EventService $event_service;
     private UXAcademyService $service;
     private UXAcademyRegistrationRequest $request;
+    private UXAcademySelectionRequest $selection_request;
 
     public bool $isOpen = false;
     public bool $isRegistered = false;
@@ -87,4 +89,33 @@ class UXAcademyRegistrationController extends Component
             'text' => 'Anda telah terdaftar pada UX Academy',
         ]);
     }
+    public function turnInAnswer()
+    {
+        $this->selection_request = new UXAcademySelectionRequest(
+            $this->answer
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->dispatchToast('info', 'Menguplod form...', 'Mohon tunggu sebentar');
+            $this->service->turnInAnswer($this->selection_request);
+            $this->dispatchToast('success', 'Berhasil Dikirim', 'Anda telah mengirimkan jawaban pada UX Academy');
+
+            // redirect
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+            return;
+        }
+        DB::commit();
+
+        return redirect()->route('my.ux')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Berhasil Dikirim',
+            'text' => 'Anda telah mengirimkan jawaban pada UX Academy',
+        ]);
+    }
+
 }

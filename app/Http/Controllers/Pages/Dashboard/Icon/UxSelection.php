@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use App\Http\Controllers\Presentation\Dashboard\UX\UXAcademyRegistrationController;
 
-class UxSelection extends Component
+class UxSelection extends UXAcademyRegistrationController
 {
     use WithFileUploads;
     public $answer;
@@ -27,6 +28,6 @@ class UxSelection extends Component
     public function submit()
     {
         $this->validate($this->rules);
-        dd($this);
+        $this->turnInAnswer();
     }
 }

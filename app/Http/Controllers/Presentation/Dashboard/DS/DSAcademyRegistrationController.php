@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Presentation\Dashboard\DS;
 
 use App\Core\Application\Services\DSAcademy\DSAcademyRegistrationRequest;
+use App\Core\Application\Services\DSAcademy\DSAcademySelectionRequest;
 use App\Core\Application\Services\Event\EventService;
 use App\Core\Application\Services\DSAcademy\DSAcademyService;
 use App\Http\Controllers\Pages\BaseController;
@@ -17,6 +18,7 @@ class DSAcademyRegistrationController extends Component
     private EventService $event_service;
     private DSAcademyService $service;
     private DSAcademyRegistrationRequest $request;
+    private DSAcademySelectionRequest $selection_request;
 
     public bool $isOpen = false;
     public bool $isRegistered = false;
@@ -81,6 +83,8 @@ class DSAcademyRegistrationController extends Component
             $this->bukti_pembayaran
         );
 
+
+
         DB::beginTransaction();
         try {
             $this->dispatchToast('info', 'Menguplod form...', 'Mohon tunggu sebentar');
@@ -101,6 +105,34 @@ class DSAcademyRegistrationController extends Component
             'type' => 'success',
             'title' => 'Berhasil mendaftar',
             'text' => 'Anda telah terdaftar pada DS Academy',
+        ]);
+    }
+    public function turnInAnswer()
+    {
+        $this->selection_request = new DSAcademySelectionRequest(
+            $this->answer
+        );
+
+        DB::beginTransaction();
+        try {
+            $this->dispatchToast('info', 'Menguplod form...', 'Mohon tunggu sebentar');
+            $this->service->turnInAnswer($this->selection_request);
+            $this->dispatchToast('success', 'Berhasil Dikirim', 'Anda telah mengirimkan jawaban pada DS Academy');
+
+            // redirect
+        } catch (Throwable $e) {
+            DB::rollBack();
+            $this->msg['error'] = $e->getMessage();
+
+            $this->dispatchToast('error', 'Terjadi kegagalan', $e->getMessage());
+            return;
+        }
+        DB::commit();
+
+        return redirect()->route('my.ds')->with('toastr-toast', [
+            'type' => 'success',
+            'title' => 'Berhasil Dikirim',
+            'text' => 'Anda telah mengirimkan jawaban pada DS Academy',
         ]);
     }
 }

@@ -168,17 +168,31 @@ class DSAcademyService
         return $dsacademy_peserta;
     }
 
-    public function turnInAnswer(UploadedFile $answer_file)
+    public function turnInAnswer(DSAcademySelectionRequest $answer_file)
     {
+        $user = User::find(auth()->user()->id);
+    // check if user already registered
+        $ketua = DSAcademy::where('ketua_id', $user->id)->first();
+        $status_type = (int) $ketua->status_type_id;
+
+        if ($status_type > 17 || $status_type == 15 || $status_type == 16) {
+        IseException::throw('Anda sudah Mengisi Form Jawaban', 3100);
+        } elseif ($status_type == 11) {
+        IseException::throw('Harap tunggu admin memverifikasi akun', 3200);
+        } elseif ($status_type != 12 && $status_type != 17) {
+        IseException::throw('Mohon Daftar DS terlebih dahulu', 3300);
+        }
+
         $user = User::find(auth()->user()->id);
 
         $friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $user->full_name);
 
-        $answer = FileUpload::create($answer_file, "uxacademy", auth()->user()->id . Carbon::now(), "Answer_" . $friendly_name);
+        $answer = FileUpload::create($answer_file->getAnswerFile(), "dsacademy", auth()->user()->id . Carbon::now(), "Answer_" . $friendly_name);
         $answer->upload();
 
         $dsacademy_peserta = DSAcademy::where('ketua_id', auth()->user()->id)->first();
 
+        $dsacademy_peserta->status_type_id = 16;
         $dsacademy_peserta->answer_file = $answer->getUrl();
         $dsacademy_peserta->save();
 

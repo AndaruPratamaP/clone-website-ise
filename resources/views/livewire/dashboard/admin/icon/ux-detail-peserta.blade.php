@@ -4,22 +4,28 @@
         <div class="flex flex-col items-start gap-2">
             <h1 class="text-4xl font-bold text-transparent sm:text-5xl bg-gradient-blue-r bg-clip-text">Detail Peserta UX Academy</h1>
             <p class="text-base font-semibold text-white">{{ $peserta->user->id }}</p>
-            <p class="bg-[#191A1E] px-4 py-1.5 rounded-2xl text-base text-[#B5B3BC] font-semibold">Status: <span class="text-white">{{ $peserta->status_type->name }}</span></p>
+            <p class="bg-[#191A1E] px-4 py-1.5 rounded-2xl text-base text-[#B5B3BC] font-semibold">Status:
+                @if($peserta->status_type->name == 'UX.RevisiSeleksi')
+                <span class="text-white">UX.RegisteredSeleksi</span></p>
+                @else
+                <span class="text-white">{{ $peserta->status_type->name }}</span>
+                @endif
+            </p>
         </div>
         <div class="flex flex-row flex-wrap items-center justify-between gap-4 text-xl font-semibold text-center text-white sm:flex-nowrap" x-data="{openReject: false}">
-            @if($peserta->status_type->id >= 4 && $peserta->status_type->id <= 7 && $peserta->status_type->id != 5)
+            @if($peserta->status_type->id == 4 || $peserta->status_type->id == 7)
             <a href="{{ $peserta->user->id }}/accept-berkas"
                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Berkas</a>
             @endif
-            @if(($peserta->status_type->id >= 4 && $peserta->status_type->id <= 7 && $peserta->status_type->id != 7) || $peserta->status_type->id == 10)
+            @if($peserta->status_type->id == 4 || $peserta->status_type->id == 5)
             <a href="{{ $peserta->user->id }}/reject-berkas"
                 class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Berkas</a>
             @endif
-            @if($peserta->status_type->id >= 5 && $peserta->status_type->id <= 10 && $peserta->status_type->id != 8 && $peserta->status_type->id != 7)
+            @if($peserta->status_type->id == 9 || $peserta->status_type->id == 10)
             <a href="{{ $peserta->user->id }}/accept-seleksi-soal"
                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Seleksi Soal</a>
             @endif
-            @if($peserta->status_type->id >= 8 && $peserta->status_type->id <= 10 && $peserta->status_type->id != 10)
+            @if($peserta->status_type->id == 9 || $peserta->status_type->id == 8)
             <a href="{{ $peserta->user->id }}/reject-seleksi-soal"
                 class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Seleksi Soal</a>
             @endif
@@ -30,6 +36,12 @@
         <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
         {{ $peserta->user->full_name }}
         </p>
+        @if($peserta->answer_file !== NULL)
+            <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File Seleksi</p>
+            <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+            <a href="{{ url($peserta->answer_file) }}" target="_blank" class="text-blue-400">Lihat File Seleksi</a>
+            </p>
+        @endif
         <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
         <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
         {{ $peserta->user->institution }}

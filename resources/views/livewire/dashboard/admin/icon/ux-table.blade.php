@@ -60,9 +60,13 @@
                         </td>
                         <td class="pr-40 whitespace-nowrap ">{{ $peserta->user->full_name }}</td>
                         <td class="pr-32 ">{{ $peserta->institution }}</td>
-                        <td
-                            class="pr-14 font-semibold @if ($peserta->status_type->name == 'Verified') bg-gradient-blue-r bg-clip-text text-transparent @else text-[#B5B3BC] @endif">
+                        @if($peserta->status_type->name == 'UX.RevisiSeleksi')
+                        <td class="pr-14 font-semibold @if ($peserta->status_type->name == 'Verified') bg-gradient-blue-r bg-clip-text text-transparent @else text-[#B5B3BC] @endif">
+                            UX.RegisteredSeleksi</td>
+                        @else
+                        <td class="pr-14 font-semibold @if ($peserta->status_type->name == 'Verified') bg-gradient-blue-r bg-clip-text text-transparent @else text-[#B5B3BC] @endif">
                             {{ $peserta->status_type->name }}</td>
+                        @endif
                         <td class="pr-4 text-center font-semibold"><a
                                 class="py-2 px-4 bg-gradient-orange-r rounded-2xl hover:brightness-75"
                                 href=" /admin/ux/{{ $peserta->user->id }}">Action</a></td>

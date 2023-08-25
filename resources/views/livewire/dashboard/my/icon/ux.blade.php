@@ -316,7 +316,7 @@
         <div class="flex flex-row items-center w-full gap-x-6">
           @if($peserta->status_type->id == 10)
             <x-heroicon-s-arrow-trending-up class="relative z-0 text-red-800 w-14 h-14" />
-          @elseif ($peserta->status_type->id >= 8)
+          @elseif ($peserta->status_type->id == 8)
             <x-heroicon-s-arrow-trending-up class="relative z-0 text-blue-400 w-14 h-14" />
           @else
             <x-heroicon-s-arrow-trending-up class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
@@ -327,9 +327,9 @@
             <p
               class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '6') bg-gradient-blue-r bg-clip-text text-transparent @endif"
             >
-            @if($peserta->status_type->id == '5' && $peserta->answer_file == null)
+            @if($peserta->status_type->id == '9' && $peserta->answer_file == null)
             <span id="status_seleksi">Silahkan Upload Jawaban</span>
-            @elseif($peserta->status_type->id == '5' && $peserta->answer_file !== null)
+            @elseif($peserta->status_type->id == '9' && $peserta->answer_file !== null)
               Sedang Diperiksa Admin
             @elseif($peserta->status_type->id == '8')
             <span class="text-transparent bg-gradient-blue-r bg-clip-text">
@@ -359,6 +359,12 @@
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->user->full_name }}
               </p>
+              @if($peserta->answer_file !== NULL)
+              <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">File Seleksi</p>
+              <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
+                <a href="{{ url($peserta->answer_file) }}" target="_blank" class="text-blue-400">Lihat File Seleksi</a>
+              </p>
+              @endif
               <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Asal Instansi</p>
               <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
                 {{ $peserta->user->institution }}
@@ -499,10 +505,27 @@
       </div>
     </div>
       </div>
+        @elseif($peserta->status_type->id == '9')
+        {{-- After Register --}}
+         <div class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9">
+      <div class="flex flex-col gap-y-3">
+        <p
+          class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-blue-r bg-clip-text font-lg sm:text-2xl font-poppins"
+        >
+          Terimakasih Sudah Mengikuti Seleksi
+        </p>
+        <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+          <p class="text-base font-light">
+            Silahkan tunggu hasil seleksi dari kami.
+          </p>
+        </div>
+      </div>
+    </div>
+      </div>
 
         @elseif($peserta->status_type->id == '5' && $peserta->answer_file == null)
         <!-- Lolos Berkas -->
-        <div id="after_regist_announcement"
+        {{-- <div id="after_regist_announcement"
         class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
       >
         <div class="flex flex-col gap-y-3">
@@ -517,10 +540,9 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> --}}
         <div
-        id="selection_announcement"
-          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 pb-8 justify-start items-center hidden"
+          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 pb-8 justify-start items-center"
         >
           <div class="flex flex-col gap-y-3">
             <div

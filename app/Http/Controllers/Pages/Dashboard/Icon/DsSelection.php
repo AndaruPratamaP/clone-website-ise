@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Pages\Dashboard\Icon;
 
+use App\Http\Controllers\Presentation\Dashboard\DS\DSAcademyRegistrationController;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class DsSelection extends Component
+class DsSelection extends DSAcademyRegistrationController
 {
     use WithFileUploads;
     public $answer;
@@ -27,6 +28,6 @@ class DsSelection extends Component
     public function submit()
     {
         $this->validate($this->rules);
-        dd($this);
+        $this->turnInAnswer();
     }
 }

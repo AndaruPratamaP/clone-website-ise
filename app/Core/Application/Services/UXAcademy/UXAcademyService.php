@@ -133,17 +133,29 @@ class UXAcademyService
         return $uxacademy_peserta;
     }
 
-    public function turnInAnswer(UploadedFile $answer_file)
+    public function turnInAnswer(UXAcademySelectionRequest $answer_file)
     {
+        $user = User::find(auth()->user()->id);
+    // check if user already registered
+        $uxacademy_peserta = UXAcademy::where('user_id', $user->id)->first();
+        $status_type = (int) $uxacademy_peserta->status_type_id;
+
+        if ($status_type > 10 || $status_type == 8 || $status_type == 9) {
+        IseException::throw('Anda sudah Mengisi Form Jawaban', 3100);
+        } elseif ($status_type == 4) {
+        IseException::throw('Harap tunggu admin memverifikasi akun', 3200);
+        } elseif ($status_type != 5 && $status_type != 10) {
+        IseException::throw('Mohon Daftar UX terlebih dahulu', 3300);
+        }
+
         $user = User::find(auth()->user()->id);
 
         $friendly_name = preg_replace('/[^A-Za-z0-9\-]/', '', $user->full_name);
 
-        $answer = FileUpload::create($answer_file, "uxacademy", auth()->user()->id . Carbon::now(), "Answer_" . $friendly_name);
+        $answer = FileUpload::create($answer_file->getAnswerFile(), "uxacademy", auth()->user()->id . Carbon::now(), "Answer_" . $friendly_name);
         $answer->upload();
 
-        $uxacademy_peserta = UXAcademy::where('user_id', auth()->user()->id)->first();
-
+        $uxacademy_peserta->status_type_id = 9;
         $uxacademy_peserta->answer_file = $answer->getUrl();
         $uxacademy_peserta->save();
 
