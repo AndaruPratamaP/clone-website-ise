@@ -17,7 +17,7 @@
             <div class="px-5 sm:px-6 md:px-12 lg:px-20 xl:px-24 2xl:px-30 font-['Montserrat']">
                 <p class="text-xs sm:text-base lg:text-xl my-4 sm:my-8">Berikut adalah soal seleksi Data Science Academy ISE! 2023. Perhatikan panduan pengumpulan dan submit jawaban dalam format .pdf</p>
                 <p class="text-xs sm:text-base lg:text-xl">Batas Pengumpulan:</p>
-                <p class="text-xs sm:text-base lg:text-xl font-bold">27 Agustus 2023 Pukul 23.59</p>
+                <p class="text-xs sm:text-base lg:text-xl font-bold">29 Agustus 2023 Pukul 23.59</p>
             </div>
 
             <form wire:submit.prevent="submit" enctype="multipart/form-data">

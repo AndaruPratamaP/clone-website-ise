@@ -121,7 +121,7 @@
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              25-27 Aug
+              25-29 Aug
             </p>
             <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
               <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-blue-r"></div>
@@ -436,8 +436,8 @@
     <div class="flex flex-col items-center md:items-start my-1.5 w-full">
       <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
         <div class="flex flex-col items-center text-center text-white">
-          <p class="text-xl font-medium">Seleksi UX Academy Selesai</p>
-          <div class="flex flex-row gap-x-3 my-7">
+          <p class="text-xl font-medium">Seleksi User Experience Academy Telah Selesai</p>
+          {{-- <div class="flex flex-row gap-x-3 my-7">
             <div class="flex flex-col items-center justify-center">
               <div
                 id="days_gts"
@@ -477,11 +477,11 @@
               </div>
               <p class="flex text-base font-normal text-white">Detik</p>
             </div>
-          </div>
+          </div> --}}
           <a
           href="https://drive.google.com/file/d/1-liBwyDS_FUtt9D0wzE1gHa_DfH8aipl/view"
           target="blank"
-          class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75"
+          class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-blue-400 hover:bg-[#16171a] hover:brightness-75 mt-4"
           >Lihat Guidebook</a
         >
         </div>
@@ -499,7 +499,7 @@
         </p>
         <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
           <p class="text-base font-light">
-            Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 25 Agustus 2023 hingga 27 Agustus 2023.
+            Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 25 Agustus 2023 hingga 29 Agustus 2023.
           </p>
         </div>
       </div>
@@ -525,25 +525,25 @@
 
         @elseif($peserta->status_type->id == '5' && $peserta->answer_file == null)
         <!-- Lolos Berkas -->
-        {{-- <div id="after_regist_announcement"
+        <div id="after_regist_announcement"
         class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
       >
         <div class="flex flex-col gap-y-3">
           <p
             class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-blue-r bg-clip-text font-lg sm:text-2xl font-poppins"
           >
-            Berkas Berhasil Diverifikasi
+            Seleksi telah berakhir
           </p>
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
-              Silahkan persiapkan dirimu untuk mengikuti seleksi User Experience Academy 2023 yang akan dimulai pada tanggal 25 Agustus 2023 hingga 27 Agustus 2023.
+              Terimakasih atas antusiasmenya terhadap User Experience Academy.
             </p>
           </div>
         </div>
-      </div> --}}
-        <div
+      </div>
+        {{-- <div
           class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 pb-8 justify-start items-center"
-        >
+         >
           <div class="flex flex-col gap-y-3">
             <div
               class="flex flex-row items-center justify-between gap-2 px-4 py-4 bg-gradient-blue-r sm:px-9 rounded-t-xl"
@@ -554,10 +554,10 @@
               <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 h-12 sm:w-20 sm:h-16" />
             </div>
             <div class="flex flex-col justify-center px-4 space-y-4 text-left text-white items-left sm:px-9">
-              <h3 class="text-lg font-semibold">Deadline 27 August 2023</h3>
+              <h3 class="text-lg font-semibold">Deadline 29 August 2023</h3>
               <p class="text-base font-light">
                 Hi Futurizen! Saat ini kamu dapat mengunduh soal seleksi User Experience Academy ISE! 2023 dengan batas
-                pengumpulan <span class="font-semibold">27 Agustus 2023 Pukul 23.59</span>. Jangan lupa untuk
+                pengumpulan <span class="font-semibold">29 Agustus 2023 Pukul 23.59</span>. Jangan lupa untuk
                 memperhatikan panduan pengumpulan ya!
               </p>
               <p class="font-semibold text-transparent bg-gradient-blue-br bg-clip-text">GoodLuck!</p>
@@ -568,7 +568,7 @@
               >
             </div>
           </div>
-        </div>
+        </div> --}}
         {{-- Seleksi Pengunguman Card End --}} {{-- Congratz Pengunguman Card Start --}}
         @elseif($peserta->status_type->id == '7')
           <!-- Gagal Berkas -->
@@ -604,9 +604,9 @@
               Congratulations <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
             </p>
             <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
-              <p class="text-base font-light">
-                Selamat, kamu telah lolos seleksi UX Academy 2023, tidak lama lagi kamu akan dihubungi oleh panitia kami melalui Whatasapp untuk proses selanjutnya.
-              </p>
+                <p class="text-base font-light">
+                    Selamat, kamu telah lolos seleksi UX Academy 2023. Silahkan join grup Whatsapp Berikut untuk tahap selanjutnya <a href="https://chat.whatsapp.com/FZDtE0wI9QeEcAE9pkYvKG" target="blank" class="bg-gradient-blue-r text-transparent bg-clip-text font-bold hover:underline underline-offset-4 decoration-blue-500 decoration-2">join</a>
+                  </p>
             </div>
           </div>
         </div>
@@ -673,7 +673,7 @@
   // Set the countdown date and time
   const countdownDate_gts = new Date('August 25, 2023 00:00:00').getTime();
   const countdownDate_seleksi = new Date('August 25, 2023 00:00:00').getTime();
-  const countdownDate_close_seleksi = new Date('August 27, 2023 23:59:59').getTime();
+  const countdownDate_close_seleksi = new Date('August 29, 2023 23:59:59').getTime();
 
   // Update the countdown every second
   const countdownTimer_gts = setInterval(() => {

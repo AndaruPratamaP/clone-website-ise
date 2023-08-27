@@ -120,7 +120,7 @@ Route::middleware(['auth'])->group(function () {
           ->group(function () {
             Route::get('/', DsDashboard::class)->name('ds');
             // Route::get('/registration', DsRegistration::class)->name('dsacademy.registration');
-            Route::get('/selection', DsSelection::class)->name('dsacademy.selection');
+            // Route::get('/selection', DsSelection::class)->name('dsacademy.selection');
         });
 
         Route::prefix('ux')
@@ -128,7 +128,7 @@ Route::middleware(['auth'])->group(function () {
           ->group(function () {
             Route::get('/', UxDashboard::class)->name('ux');
             // Route::get('/registration', UxRegistration::class)->name('uxacademy.registration');
-            Route::get('/selection', UxSelection::class)->name('uxacademy.selection');
+            // Route::get('/selection', UxSelection::class)->name('uxacademy.selection');
         });
 
       Route::prefix('bionix')
