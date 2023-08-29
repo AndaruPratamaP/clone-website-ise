@@ -299,6 +299,10 @@ class BionixRdService
     return $bionixrd_peserta;
   }
 
+  public function acceptLunas($user_id)
+  {
+    $this->updateStatus($user_id, 25);
+  }
   public function acceptDp($user_id)
   {
     $this->updateStatus($user_id, 22);
@@ -329,6 +333,33 @@ class BionixRdService
   public function rejectBerkas($user_id)
   {
     $this->updateStatus($user_id, 29);
+  }
+  public function acceptPenyisihan($user_id)
+  {
+    $this->updateStatus($user_id, 49);
+  }
+
+  public function rejectPenyisihan($user_id)
+  {
+    $this->updateStatus($user_id, 50);
+  }
+  public function acceptSemifinal($user_id)
+  {
+    $this->updateStatus($user_id, 52);
+  }
+
+  public function rejectSemifinal($user_id)
+  {
+    $this->updateStatus($user_id, 53);
+  }
+  public function acceptFinal($user_id)
+  {
+    $this->updateStatus($user_id, 55);
+  }
+
+  public function rejectFinal($user_id)
+  {
+    $this->updateStatus($user_id, 56);
   }
 
   public function isValidCoupon($sekolah, $promo_code): bool

@@ -14,6 +14,9 @@ class BionixRdAdminAction extends BionixRdDetailPesertaController
   public function mount()
   {
     switch (request()->route('action')) {
+      case 'accept-lunas':
+        $this->acceptLunas();
+        break;
       case 'accept-dp':
         $this->acceptDp();
         break;
@@ -32,8 +35,26 @@ class BionixRdAdminAction extends BionixRdDetailPesertaController
       case 'reject-berkas':
         $this->rejectBerkas();
         break;
-      default:
-        break;
+      case 'accept-penyisihan':
+          $this->acceptPenyisihan();
+          break;
+          case 'reject-penyisihan':
+          $this->rejectPenyisihan();
+          break;
+      case 'accept-semifinal':
+          $this->acceptSemifinal();
+          break;
+          case 'reject-semifinal':
+          $this->rejectSemifinal();
+          break;
+      case 'accept-final':
+          $this->acceptFinal();
+          break;
+          case 'reject-final':
+          $this->rejectFinal();
+          break;
+        default:
+          break;
     }
     redirect()->route('admin.bionixroadshow.table');
   }
