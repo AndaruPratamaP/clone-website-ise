@@ -57,13 +57,13 @@
             <div class=" swiper w-[310px] xs:w-[390px] sm:w-[550px] md:w-[650px] lg:w-[800px] xl:w-[1100px] h-[400px] xs:h-[500px] sm:h-[600px] lg:h-[740px] xl:h-[1090px]">
                 <div class=" swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
+                        <div class="pb-10 flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>Grand Talkshow ISE! 2023 </strong> merupakan kegiatan talkshow interaktif yang diadakan secara online dan merupakan rangkaian acara pembuka untuk kegiatan ISE! 2023.  Pada ISE! 2023, Grand Talkshow akan membawakan tema, yaitu <strong>“Tech Innovators: Revolutionizing Industries with IT Solutions”</strong></p>
-                            <a href="/login" class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
-                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
-                            </a>
-                            <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
+                            <button href="/login" class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
+                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Ditutup</span>
+                            </button>
+                            {{-- <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran ditutup dalam waktu:
                             </h5>
                             <div class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8">
@@ -99,7 +99,7 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -121,13 +121,13 @@
             <div class=" swiper w-[310px] xs:w-[390px] sm:w-[550px] md:w-[650px] lg:w-[800px] xl:w-[1100px] h-[400px] xs:h-[500px] sm:h-[600px] lg:h-[720px] xl:h-[1085px]">
                 <div class=" swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
+                        <div class="pb-10 flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>UX Academy</strong> merupakan <strong>rangkaian IT pelatihan/workshop</strong> yang memfasilitasi pembelajaran mengenai kemampuan di bidang teknologi dengan menghadirkan pengajar serta mentor yang ahli dan berpengalaman di bidang keilmuan tersebut.</p>
-                            <a href="/login" class=" text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
-                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
-                            </a>
-                            <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
+                            <button href="/login" class=" text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
+                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Ditutup</span>
+                            </button>
+                            {{-- <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran ditutup dalam waktu:
                             </h5>
                             <div class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8">
@@ -163,17 +163,17 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class=" flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
+                        <div class="pb-10 flex justify-center content-center flex-col bg-[#141414] mx-12 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]">
                             <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src= {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
                             <p class=" font-montserrat text-[10px] xs:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] text-white text-center px-2 md:px-4 lg:px-16 xl:px-24"><strong>DS Academy</strong> merupakan <strong>rangkaian IT pelatihan/workshop</strong> yang memfasilitasi pembelajaran mengenai kemampuan di bidang teknologi dengan menghadirkan pengajar serta mentor yang ahli dan berpengalaman di bidang keilmuan tersebut.</p>
-                            <a href="/login" class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
-                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Sekarang</span>
-                            </a>
-                            <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
+                            <button href="/login" class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent hover:brightness-75 rounded-[24px] self-center" type="button">
+                                <span class=" font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]">Registrasi Ditutup</span>
+                            </button>
+                            {{-- <h5 class=" mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#398FBA] to-[#97FBFE] bg-gradient-to-r text-transparent bg-clip-text self-center">
                                 Pendaftaran ditutup dalam waktu:
                             </h5>
                             <div class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8">
@@ -209,7 +209,7 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
