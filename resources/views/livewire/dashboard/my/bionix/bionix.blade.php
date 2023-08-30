@@ -560,6 +560,25 @@
         </div>
       </div>
       </div>
+      @elseif($peserta->status_type->id == '31' && $peserta->team_name == "Mas mus")
+        <div
+        class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+        >
+        <div class="flex flex-col gap-y-3">
+          <p
+            class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-2xl font-poppins"
+          >
+          Competition Site Zone! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+          </p>
+          <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+            <p class="text-base font-light">
+                Terimakasih telah mengikuti BIONIX 2023. Untuk memulai tahap seleksi, maka tiap tim dipersilakan untuk masuk pada Competition Site menggunakan akun yang sudah tertera dibawah. Jangan lupa ikuti guide yang ada untuk meminimalisir kesalahan!
+            </p>
+            <a href="https://competition.ise-its.com" class="text-lg font-semibold text-center text-white bg-gradient-green-r hover:brightness-75 rounded-md py-1.5">Competition Site</a>
+            <a href="http://ise-its.com/go/TutorialMoodleBIONIX" class="text-lg font-semibold text-center text-white border border-green-500 hover:brightness-75 rounded-md py-1.5">Competition Guide</a>
+          </div>
+        </div>
+      </div>
           @elseif($peserta->status_type->id == '31')
           <!-- Lolos Berkas -->
           <div id="after_regist_announcement"
@@ -709,7 +728,7 @@
 
   // After Regist Countdown
   // Set the countdown date and time
-  const countdownDate_gts = new Date('September 25, 2023 00:00:00').getTime();
+  const countdownDate_gts = new Date('September 23, 2023 23:59:59').getTime();
 
   // Update the countdown every second
   const countdownTimer_gts = setInterval(() => {

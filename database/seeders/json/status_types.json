@@ -186,6 +186,44 @@
     {
         "id": "47",
         "name": "Rise.Rejected.Final"
+    },
+    {
+        "id": "48",
+        "name": "BionixRd.Registered.Penyisihan"
+    },
+    {
+        "id": "49",
+        "name": "BionixRd.Verified.Penyisihan"
+    },
+    {
+        "id": "50",
+        "name": "BionixRd.Rejected.Penyisihan"
+    },
+    {
+        "id": "51",
+        "name": "BionixRd.Registered.Semifinal"
+    },
+    {
+        "id": "52",
+        "name": "BionixRd.Verified.Semifinal"
+    },
+    {
+        "id": "53",
+        "name": "BionixRd.Rejected.Semifinal"
+    },
+    {
+        "id": "54",
+        "name": "BionixRd.Registered.Final"
+    },
+    {
+        "id": "55",
+        "name": "BionixRd.Verified.Final"
+    },
+    {
+        "id": "56",
+        "name": "BionixRd.Rejected.Final"
     }
+
+
 
 ]

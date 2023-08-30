@@ -786,7 +786,7 @@
 @endif
 
 <script type="text/javascript">
-  const datetime = 'September 18, 2023 23:59:59';
+  const datetime = 'September 17, 2023 23:59:59';
   const countdownDate = new Date(datetime).getTime();
 
   // Update the countdown every second
@@ -821,7 +821,7 @@
 
   // After Regist Countdown
   // Set the countdown date and time
-  const countdownDate_gts = new Date('September 24, 2023 00:00:00').getTime();
+  const countdownDate_gts = new Date('September 23, 2023 23:59:59').getTime();
 
   // Update the countdown every second
   const countdownTimer_gts = setInterval(() => {

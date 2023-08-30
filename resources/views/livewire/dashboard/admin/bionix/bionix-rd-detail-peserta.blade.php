@@ -7,6 +7,10 @@
             <p class="bg-[#191A1E] px-4 py-1.5 rounded-2xl text-base text-[#B5B3BC] font-semibold">Status: <span class="text-white">{{ $peserta->status_type->name }}</span></p>
         </div>
         <div class="flex flex-row flex-wrap items-center justify-between gap-4 text-xl font-semibold text-center text-white sm:flex-nowrap" x-data="{openReject: false}">
+            @if(($peserta->status_type->id == 21 || $peserta->status_type->id == 23) && $peserta->dp_amount >= 80000)
+            <a href="{{ $peserta->ketua->id }}/accept-lunas"
+                class="px-6 py-2 bg-gradient-purple-r rounded-xl hover:brightness-75">Lunas</a>
+            @endif
             @if($peserta->status_type->id >= 21 && $peserta->status_type->id <= 23 && $peserta->status_type->id != 22)
             <a href="{{ $peserta->ketua->id }}/accept-dp"
                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Dp</a>
@@ -30,6 +34,30 @@
             @if($peserta->status_type->id >= 27 && $peserta->status_type->id < 29)
             <a href="{{ $peserta->ketua->id }}/reject-berkas"
                 class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Berkas</a>
+            @endif
+            @if($peserta->status_type->id == 48 || $peserta->status_type->id == 50)
+            <a href="{{ $peserta->ketua->id }}/accept-penyisihan"
+                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Penyisihan</a>
+            @endif
+            @if($peserta->status_type->id == 48 || $peserta->status_type->id == 49)
+            <a href="{{ $peserta->ketua->id }}/reject-penyisihan"
+                class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Penyisihan</a>
+            @endif
+            @if($peserta->status_type->id == 51 || $peserta->status_type->id == 53 )
+            <a href="{{ $peserta->ketua->id }}/accept-semifinal"
+                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Semifinal</a>
+            @endif
+            @if($peserta->status_type->id == 51 || $peserta->status_type->id == 52)
+            <a href="{{ $peserta->ketua->id }}/reject-semifinal"
+                class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Semifinal</a>
+            @endif
+            @if($peserta->status_type->id == 54 || $peserta->status_type->id == 56)
+            <a href="{{ $peserta->ketua->id }}/accept-final"
+                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Final</a>
+            @endif
+            @if($peserta->status_type->id == 54 || $peserta->status_type->id == 55)
+            <a href="{{ $peserta->ketua->id }}/reject-final"
+                class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Final</a>
             @endif
         </div>
     </div>
