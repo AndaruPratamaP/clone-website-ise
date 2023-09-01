@@ -24,7 +24,7 @@
 
       <div
         class="flex rounded-xl bg-[#191A1E] p-5 max-w-4xl xl:max-w-[400px] w-full shrink-0 justify-center items-center"
-      >
+        >
         <div class="flex flex-col items-center text-center text-white">
           <p class="text-xl font-medium">Pendaftaran Ditutup Dalam</p>
           <div class="flex flex-row gap-x-3 my-7">
@@ -83,6 +83,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -121,7 +122,7 @@
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              03-10 Sep
+              03&10 Sep
             </p>
             <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
               <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-green-r"></div>
@@ -539,65 +540,78 @@
       </div>
 
       <div class="flex flex-col items-center md:items-start my-1.5 w-full">
-        <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
-          <div class="flex flex-col items-center text-center text-white">
-            <p class="text-xl font-medium">Penyisihan BIONIX Competition Dimulai</p>
-            <div class="flex flex-row gap-x-3 my-7">
-              <div class="flex flex-col items-center justify-center">
-                <div
-                  id="days_gts"
-                  class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
-                >
-                  00
+          <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
+            <div class="flex flex-col items-center text-center text-white">
+              <p class="text-xl font-medium">Penyisihan BIONIX Competition Dimulai</p>
+              <div class="flex flex-row gap-x-3 my-7">
+                <div class="flex flex-col items-center justify-center">
+                  <div
+                    id="days_gts"
+                    class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
+                  >
+                    00
+                  </div>
+                  <p class="flex text-base font-normal text-white">Hari</p>
                 </div>
-                <p class="flex text-base font-normal text-white">Hari</p>
-              </div>
-              <div class="flex items-center self-start pt-3 text-xl font-bold text-white">:</div>
-              <div class="flex flex-col items-center justify-center">
-                <div
-                  id="hours_gts"
-                  class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
-                >
-                  00
+                <div class="flex items-center self-start pt-3 text-xl font-bold text-white">:</div>
+                <div class="flex flex-col items-center justify-center">
+                  <div
+                    id="hours_gts"
+                    class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
+                  >
+                    00
+                  </div>
+                  <p class="flex text-base font-normal text-white">Jam</p>
                 </div>
-                <p class="flex text-base font-normal text-white">Jam</p>
-              </div>
-              <div class="flex items-center self-start pt-3 text-xl font-bold text-white">:</div>
-              <div class="flex flex-col items-center justify-center">
-                <div
-                  id="minutes_gts"
-                  class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
-                >
-                  00
+                <div class="flex items-center self-start pt-3 text-xl font-bold text-white">:</div>
+                <div class="flex flex-col items-center justify-center">
+                  <div
+                    id="minutes_gts"
+                    class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
+                  >
+                    00
+                  </div>
+                  <p class="flex text-base font-normal text-white">Menit</p>
                 </div>
-                <p class="flex text-base font-normal text-white">Menit</p>
-              </div>
-              <div class="items-center self-start hidden pt-3 text-xl font-bold text-white xs:flex">:</div>
-              <div class="flex-col items-center justify-center hidden xs:flex">
-                <div
-                  id="seconds_gts"
-                  class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
-                >
-                  00
+                <div class="items-center self-start hidden pt-3 text-xl font-bold text-white xs:flex">:</div>
+                <div class="flex-col items-center justify-center hidden xs:flex">
+                  <div
+                    id="seconds_gts"
+                    class="flex w-16 h-16 rounded-3xl bg-[#303030] items-center text-white font-bold text-xl justify-center"
+                  >
+                    00
+                  </div>
+                  <p class="flex text-base font-normal text-white">Detik</p>
                 </div>
-                <p class="flex text-base font-normal text-white">Detik</p>
               </div>
+              <a
+              href="https://ise-its.com/go/GuidebookBIONIX"
+              target="_blank"
+              class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
+              >Lihat Guidebook</a
+            >
+              <a
+              href="https://ise-its.com/go/GuidebookPenyisihanBIONIX"
+              target="_blank"
+              class="flex mt-2 max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
+              >Lihat Guidebook Penyisihan</a
+            >
             </div>
-            <a
-            href="https://ise-its.com/go/GuidebookBIONIX"
-            target="_blank"
-            class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
-            >Lihat Guidebook</a
-          >
-            <a
-            href="https://ise-its.com/go/GuidebookPenyisihanBIONIX"
-            target="_blank"
-            class="flex mt-2 max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
-            >Lihat Guidebook Penyisihan</a
-          >
           </div>
-        </div>
-        <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
+          <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full border border-green-500 mt-3">
+            <div class="flex flex-col items-center text-center text-white gap-4">
+              <p class="text-xl font-medium">You're currently in</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Tryout 1</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              {{-- <a
+              href="http://ise-its.com/go/TutorialMoodleBIONIX"
+              target="_blank"
+              class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
+              >Guidebook Tryout</a
+            > --}}
+            </div>
+          </div>
+          <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
         <div class="flex flex-col space-y-4">
           @if($peserta->status_type->id == '22')
         {{-- After regist --}}

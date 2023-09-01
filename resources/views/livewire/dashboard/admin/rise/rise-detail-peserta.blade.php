@@ -235,7 +235,7 @@
             <img src="{{ url($peserta->member1_poster) }}" alt="Bukti follow" />
           </p>
 
-          {{-- Anggota 1 End--}} {{-- Anggota 2 Start--}} @if($peserta->member2_name !== NULL)
+          {{-- Anggota 1 End--}} {{-- Anggota 2 Start--}} @if($peserta->member2_name !== NULL && !empty($peserta->member2_name))
           <div class="flex-col justify-center w-full items-left">
             <div class="flex flex-row items-center w-full gap-2 mb-3">
               <h3 class="flex text-[#B5B3BC] text-2xl font-semibold whitespace-nowrap">Anggota 2</h3>

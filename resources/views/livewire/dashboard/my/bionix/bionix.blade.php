@@ -121,7 +121,7 @@
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              03-10 Sep
+              03&10 Sep
             </p>
             <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
               <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-green-r"></div>
@@ -541,6 +541,19 @@
         >
           </div>
         </div>
+        <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full border border-green-500 mt-3">
+            <div class="flex flex-col items-center text-center text-white gap-4">
+              <p class="text-xl font-medium">You're currently in</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Tryout 1</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              {{-- <a
+              href="http://ise-its.com/go/TutorialMoodleBIONIX"
+              target="_blank"
+              class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
+              >Guidebook Tryout</a
+            > --}}
+            </div>
+          </div>
         <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
         <div class="flex flex-col space-y-4">
           @if($peserta->status_type->id == '30')
@@ -560,11 +573,11 @@
         </div>
       </div>
       </div>
-      @elseif($peserta->status_type->id == '31' && $peserta->team_name == "Mas mus")
-        <div
-        class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
-        >
-        <div class="flex flex-col gap-y-3">
+      @elseif($peserta->status_type->id == '31')
+        {{-- <div
+            class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+            >
+            <div class="flex flex-col gap-y-3">
           <p
             class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-2xl font-poppins"
           >
@@ -573,59 +586,23 @@
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
                 Terimakasih telah mengikuti BIONIX 2023. Untuk memulai tahap seleksi, maka tiap tim dipersilakan untuk masuk pada Competition Site menggunakan akun yang sudah tertera dibawah. Jangan lupa ikuti guide yang ada untuk meminimalisir kesalahan!
+                <br class="my-0.5">
+                Berikut merupakan akun yang dapat digunakan untuk tahap Tryout:
+                <br>
+                <ul class="font-medium text-lg">
+                    <li>
+                        Username: example
+                    </li>
+                    <li>
+                        Password: example
+                    </li>
+                </ul>
             </p>
             <a href="https://competition.ise-its.com" class="text-lg font-semibold text-center text-white bg-gradient-green-r hover:brightness-75 rounded-md py-1.5">Competition Site</a>
             <a href="http://ise-its.com/go/TutorialMoodleBIONIX" class="text-lg font-semibold text-center text-white border border-green-500 hover:brightness-75 rounded-md py-1.5">Competition Guide</a>
           </div>
         </div>
-      </div>
-          @elseif($peserta->status_type->id == '31')
-          <!-- Lolos Berkas -->
-          <div id="after_regist_announcement"
-          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
-        >
-          <div class="flex flex-col gap-y-3">
-            <p
-              class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-2xl font-poppins"
-            >
-              Berkas Berhasil Diverifikasi
-            </p>
-            <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
-              <p class="text-base font-light">
-                Silahkan persiapkan dirimu untuk mengikuti seleksi BIONIX Competition 2023 yang akan dimulai pada tanggal 24 September 2023.
-              </p>
-            </div>
-          </div>
-        </div>
-          {{-- <div
-          id="selection_announcement"
-            class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 pb-8 justify-start items-center hidden"
-          >
-            <div class="flex flex-col gap-y-3">
-              <div
-                class="flex flex-row items-center justify-between gap-2 px-4 py-4 bg-gradient-green-r sm:px-9 rounded-t-xl"
-              >
-                <p class="flex text-xl font-bold tracking-wider text-white font-lg sm:text-2xl font-poppins">
-                  Seleksi Data <br /> Science Academy
-                </p>
-                <img src="{{ asset('images/logo-ise-color.png') }}" alt="logo-ise" class="w-16 h-12 sm:w-20 sm:h-16" />
-              </div>
-              <div class="flex flex-col justify-center px-4 space-y-4 text-left text-white items-left sm:px-9">
-                <h3 class="text-lg font-semibold">Deadline 24 August 2023</h3>
-                <p class="text-base font-light">
-                  Hi Futurizen! Saat ini kamu dapat mengunduh soal seleksi BIONIX Competition ISE! 2023 dengan batas
-                  pengumpulan <span class="font-semibold">24 Agustus 2023 Pukul 23.59</span>. Jangan lupa untuk
-                  memperhatikan panduan pengumpulan ya!
-                </p>
-                <p class="font-semibold text-transparent bg-gradient-green-br bg-clip-text">GoodLuck!</p>
-                <a
-                  href="{{ route('my.uxacademy.selection') }}"
-                  class="w-full py-3 font-semibold text-center rounded-md bg-gradient-green-r hover:brightness-75"
-                  >Find out more</a
-                >
-              </div>
-            </div>
-          </div> --}}
+      </div> --}}
           @elseif($peserta->status_type->id == '32')
             <!-- Gagal Berkas -->
             <div
