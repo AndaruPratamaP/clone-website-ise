@@ -71,7 +71,7 @@
               >Daftar Sekarang!</a
             >
             <a
-              href="https://drive.google.com/file/d/1wMvypz73pRS4K_ZhJBOn2sRU2UorE1WJ/view?usp=sharing"
+              href="https://drive.google.com/file/d/1S3M0YwfzPA2VpCxlyOpAQs-OQL_aSUDB/view?usp=sharing"
               target="_blank"
               class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-orange-400 hover:bg-[#16171a] hover:brightness-75"
               >Lihat Guidebook</a
@@ -306,7 +306,7 @@
             </div>
           </div>
         </div>
-        {{-- <div
+        <div
           class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center"
         >
           <div class="flex flex-row items-center w-full gap-x-6">
@@ -337,8 +337,8 @@
               </p>
             </div>
           </div>
-        </div> --}}
-        {{-- <div
+        </div>
+        <div
           class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
           <div class="flex flex-row items-center w-full gap-x-6">
             @if($peserta->status_type->id == 41)
@@ -372,7 +372,7 @@
           </div>
         </div>
 
-        <div
+        {{-- <div
           class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
           <div class="flex flex-row items-center w-full gap-x-6">
             @if($peserta->status_type->id == 44)
@@ -664,7 +664,7 @@
       <div class="flex flex-col items-center md:items-start my-1.5 w-full">
         <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
           <div class="flex flex-col items-center text-center text-white">
-            <p class="text-xl font-medium">Penyisihan RISE Dimulai</p>
+            <p class="text-xl font-medium">Penyisihan RISE Ditutup</p>
             <div class="flex flex-row gap-x-3 my-7">
               <div class="flex flex-col items-center justify-center">
                 <div
@@ -707,7 +707,7 @@
               </div>
             </div>
             <a
-            href="https://drive.google.com/file/d/1wMvypz73pRS4K_ZhJBOn2sRU2UorE1WJ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1S3M0YwfzPA2VpCxlyOpAQs-OQL_aSUDB/view?usp=sharing"
             target="_blank"
             class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-orange-400 hover:bg-[#16171a] hover:brightness-75"
             >Lihat Guidebook</a
@@ -771,7 +771,7 @@
             <p class="text-base font-light">
                 Selamat berkas pendaftaran kamu telah berhasil kami verifikasi, silahkan unduh soal berikut untuk tahap penyisihan            </p>
             <a href="https://drive.google.com/file/d/1HKcnfETvTOFItAC844Gb2-4i3mifbirG/view?usp=sharing" target="blank" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Unduh Soal</a>
-            {{-- <a href="/my/rise/penyisihan" class="text-lg font-semibold text-center text-white hover:bg-gradient-orange-r rounded-md py-1.5 border border-orange-400">Penyisihan</a> --}}
+            <a href="/my/rise/penyisihan" class="text-lg font-semibold text-center text-white hover:bg-gradient-orange-r rounded-md py-1.5 border border-orange-400">Submit Penyisihan</a>
           </div>
         </div>
       </div>
@@ -875,8 +875,25 @@
       </div>
     </div>
             @elseif($peserta->status_type->id == '40')
-              <!-- Berhasil Pembayaran -->
+              <!-- Temp-->
               <div
+          class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+        >
+          <div class="flex flex-col gap-y-3">
+            <p
+              class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
+            >
+              Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+            <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+              <p class="text-base font-light">
+                  Pembayaran kamu berhasil diverifikasi. Silahkan persiapkan dirimu untuk semifinal pada tanggal 18 September.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Berhasil Pembayaran -->
+              {{-- <div
           class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
         >
           <div class="flex flex-col gap-y-3">
@@ -892,7 +909,7 @@
               <a href="/my/rise/semifinal" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Semifinal</a>
             </div>
           </div>
-        </div>
+        </div> --}}
         @elseif($peserta->status_type->id == '42')
         <!-- After Semifinal -->
         <div
