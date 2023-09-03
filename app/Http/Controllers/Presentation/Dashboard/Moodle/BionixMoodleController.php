@@ -38,7 +38,7 @@ class BionixMoodleController extends Component
     {
         $this->index();
 
-        redirect()->route('moodle.download');
+        redirect()->route('admin.moodle.download');
 
         return view('livewire.errors.500')->layout('layouts.only-layout');
     }

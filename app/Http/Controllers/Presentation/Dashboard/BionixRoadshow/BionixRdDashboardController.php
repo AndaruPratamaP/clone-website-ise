@@ -4,12 +4,14 @@ namespace App\Http\Controllers\Presentation\Dashboard\BionixRoadshow;
 
 use App\Core\Application\Services\Event\EventService;
 use App\Core\Application\Services\BionixRoadshow\BionixRdService;
+use App\Core\Application\Services\Moodle\BionixMoodleService;
 use Livewire\Component;
 
 class BionixRdDashboardController extends Component
 {
     private EventService $event_service;
     private BionixRdService $service;
+    private BionixMoodleService $moodle_service;
 
     public bool $isOpen = false;
     public bool $isRegistered = false;
@@ -17,12 +19,15 @@ class BionixRdDashboardController extends Component
 
     public $peserta;
 
+    public $username = Null;
+    public $password = Null;
+
     public array $msg = [
         'error' => '',
         'success' => '',
     ];
 
-    public function boot(EventService $event_service, BionixRdService $service)
+    public function boot(EventService $event_service, BionixRdService $service, BionixMoodleService $moodle_service)
     {
         $this->event_service = $event_service;
 
@@ -31,6 +36,8 @@ class BionixRdDashboardController extends Component
         $this->date = $this->event_service->getEventDate('3e003d84-884c-4762-aa7a-66f8a7458e88');
 
         $this->service = $service;
+
+        $this->moodle_service = $moodle_service;
 
         if ($this->isRegistered) {
             $this->getUserData();
@@ -42,5 +49,13 @@ class BionixRdDashboardController extends Component
         $ds_peserta = $this->service->getPeserta(auth()->user()->id);
 
         $this->peserta = $ds_peserta;
+
+        $credential = $this->moodle_service->getMyCredential(auth()->user()->id);
+        
+        if($credential != Null)
+        {
+            $this->username = $credential->username;
+            $this->password = $credential->password;
+        }
     }
 }

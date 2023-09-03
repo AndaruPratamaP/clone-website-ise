@@ -68,8 +68,6 @@ class BionixMoodleService
 
     public function generate()
     {
-        $csv = "username,password,firstname,lastname,email,course1,role1\n";
-
         $generated = [];
 
         $pesertas = $this->getVerifiedBionix();
@@ -82,7 +80,7 @@ class BionixMoodleService
             $first_name = $name['first_name'];
             $last_name = $name['last_name'];
             $password = $this->generatePassword();
-            $email = $peserta->ketua->email;
+            $email = $peserta->user->email;
 
             $generated[] = [
                 "users_id" => $user_id,
@@ -105,6 +103,8 @@ class BionixMoodleService
             $username = $this->formatUsername($peserta->team_name);
             $first_name = $name['first_name'];
             $last_name = $name['last_name'];
+            $password = $this->generatePassword();
+            $email = $peserta->ketua->email;
 
             $generated[] = [
                 "users_id" => $user_id,
@@ -124,5 +124,12 @@ class BionixMoodleService
         }
 
         return true;
+    }
+
+    public function getMyCredential(string $user_id)
+    {
+        $credential = BionixMoodle::where('users_id', $user_id)->first();
+
+        return $credential;
     }
 }

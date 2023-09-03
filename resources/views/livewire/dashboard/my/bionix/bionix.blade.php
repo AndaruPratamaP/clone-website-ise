@@ -574,6 +574,7 @@
       </div>
       </div>
       @elseif($peserta->status_type->id == '31')
+          @if($username != Null)
         <div
             class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
             >
@@ -591,10 +592,10 @@
                 <br>
                 <ul class="font-medium text-lg">
                     <li>
-                        Username: example
+                        Username: {{ $username }}
                     </li>
                     <li>
-                        Password: example
+                        Password: {{ $password }}
                     </li>
                 </ul>
             </p>
@@ -603,6 +604,7 @@
           </div>
         </div>
       </div>
+      @endif
           @elseif($peserta->status_type->id == '32')
             <!-- Gagal Berkas -->
             <div
