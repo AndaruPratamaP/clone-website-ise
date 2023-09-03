@@ -152,7 +152,7 @@
                   >
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1wMvypz73pRS4K_ZhJBOn2sRU2UorE1WJ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1S3M0YwfzPA2VpCxlyOpAQs-OQL_aSUDB/view?usp=sharing"
                   class="mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r rounded-[24px] p-[2px] self-center"
                   type="button"
                 >
@@ -392,7 +392,7 @@
                   >
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1wMvypz73pRS4K_ZhJBOn2sRU2UorE1WJ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1S3M0YwfzPA2VpCxlyOpAQs-OQL_aSUDB/view?usp=sharing"
                   class="mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r rounded-[24px] p-[2px] self-center"
                   type="button"
                 >

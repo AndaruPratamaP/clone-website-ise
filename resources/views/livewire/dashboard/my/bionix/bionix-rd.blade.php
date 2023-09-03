@@ -598,6 +598,7 @@
             >
             </div>
           </div>
+          @if($peserta->status_type->id == '28')
           <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full border border-green-500 mt-3">
             <div class="flex flex-col items-center text-center text-white gap-4">
               <p class="text-xl font-medium">You're currently in</p>
@@ -611,6 +612,7 @@
             > --}}
             </div>
           </div>
+          @endif
           <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-6 mb-4">Pengumuman</div>
         <div class="flex flex-col space-y-4">
           @if($peserta->status_type->id == '22')
