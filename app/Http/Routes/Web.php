@@ -1,5 +1,6 @@
 <?php
 
+use App\Core\Application\Services\Moodle\BionixMoodleService;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Pages\Error404;
 use App\Http\Controllers\Pages\Error500;
@@ -78,6 +79,7 @@ use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerTable;
 use App\Http\Controllers\Pages\Dashboard\Shortener\LinkShortenerAction;
 use App\Http\Controllers\Pages\Error403;
 use App\Http\Controllers\Presentation\Dashboard\CouponController;
+use App\Http\Controllers\Presentation\Dashboard\Moodle\BionixMoodleController;
 
 Route::get('go/{short}', RedirectShortener::class);
 Route::get('/', IseLanding::class)->name('landing.ise');
@@ -171,6 +173,9 @@ Route::middleware(['auth'])->group(function () {
     ->middleware(['permission:admin'])
     ->group(function () {
       Route::get('/', AdminHomeDashboard::class)->name('');
+
+      Route::get('moodle', BionixMoodleController::class)->name('moodle');
+      Route::get('moodle/download', [BionixMoodleController::class, 'export'])->name('moodle.download');
 
       Route::prefix('shortener')->group(function () {
         Route::get('/', LinkShortenerTable::class)->name('shortener.table');
