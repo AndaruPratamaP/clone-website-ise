@@ -45,6 +45,7 @@ class BionixMoodleService
     {
         $team_name = strtolower($team_name);
         $team_name = str_replace(' ', '_', $team_name);
+        $team_name = str_replace(['.', ',', '-', '(', ')', '[', ']', '{', '}', '/', '\\', '?', '!', '@', '#', '$', '%', '^', '&', '*', '+', '=', '|', '~', '`', '"', "'", ';', ':', '<', '>'], '', $team_name);
 
         return $team_name;
     }
