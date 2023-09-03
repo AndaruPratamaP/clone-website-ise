@@ -574,7 +574,7 @@
       </div>
       </div>
       @elseif($peserta->status_type->id == '31')
-        {{-- <div
+        <div
             class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
             >
             <div class="flex flex-col gap-y-3">
@@ -602,7 +602,7 @@
             <a href="http://ise-its.com/go/TutorialMoodleBIONIX" class="text-lg font-semibold text-center text-white border border-green-500 hover:brightness-75 rounded-md py-1.5">Competition Guide</a>
           </div>
         </div>
-      </div> --}}
+      </div>
           @elseif($peserta->status_type->id == '32')
             <!-- Gagal Berkas -->
             <div

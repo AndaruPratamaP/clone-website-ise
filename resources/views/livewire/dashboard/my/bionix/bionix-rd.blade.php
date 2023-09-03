@@ -451,7 +451,7 @@
                 @if($peserta->ketua_student_card !== NULL)
                 <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
                 <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                  <a href="{{ url($peserta->ketua_twibbon_link) }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+                  <a href="{{ url($peserta->ketua_twibbon_link) }}" target="_blank" class="text-green-400">Lihat Twibbon</a>
                 </p>
 
                 <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Kartu Pelajar</p>
@@ -506,7 +506,7 @@
 
                 <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Link Twibbon</p>
                 <p class="flex mb-3 text-base font-medium tracking-wider text-white font-lg font-poppins">
-                  <a href="{{ url($peserta->anggota_twibbon_link) }}" target="_blank" class="text-blue-400">Lihat Twibbon</a>
+                  <a href="{{ url($peserta->anggota_twibbon_link) }}" target="_blank" class="text-green-400">Lihat Twibbon</a>
                 </p>
 
                 <p class="flex text-[#B5B3BC] font-normal text-base font-poppins">Foto Kartu Pelajar</p>
@@ -697,20 +697,32 @@
     </div>
           @elseif($peserta->status_type->id == '28')
             <!-- Verif DP Success -->
-            <div
-        class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
-      >
-        <div class="flex flex-col gap-y-3">
+        <div
+            class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+            >
+            <div class="flex flex-col gap-y-3">
           <p
             class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-2xl font-poppins"
           >
-            Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+          Competition Site Zone! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
           </p>
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
-                Silahkan persiapkan penyisihan dan tunggu informasi lebih lanjut dari kami.
+                Terimakasih telah mengikuti BIONIX 2023. Untuk memulai tahap seleksi, maka tiap tim dipersilakan untuk masuk pada Competition Site menggunakan akun yang sudah tertera dibawah. Jangan lupa ikuti guide yang ada untuk meminimalisir kesalahan!
+                <br class="my-0.5">
+                Berikut merupakan akun yang dapat digunakan untuk tahap Tryout:
+                <br>
+                <ul class="font-medium text-lg">
+                    <li>
+                        Username: example
+                    </li>
+                    <li>
+                        Password: example
+                    </li>
+                </ul>
             </p>
-            {{-- <a href="/my/bionix-rd/registration" class="text-lg font-semibold text-center text-white bg-gradient-green-r hover:brightness-75 rounded-md py-1.5">Pelunasan</a> --}}
+            <a href="https://competition.ise-its.com" class="text-lg font-semibold text-center text-white bg-gradient-green-r hover:brightness-75 rounded-md py-1.5">Competition Site</a>
+            <a href="http://ise-its.com/go/TutorialMoodleBIONIX" class="text-lg font-semibold text-center text-white border border-green-500 hover:brightness-75 rounded-md py-1.5">Competition Guide</a>
           </div>
         </div>
       </div>
