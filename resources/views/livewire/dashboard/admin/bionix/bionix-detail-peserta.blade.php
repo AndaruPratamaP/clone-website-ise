@@ -15,6 +15,30 @@
             <a href="{{ $peserta->user->id }}/reject-berkas"
                 class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Berkas</a>
             @endif
+            @if($peserta->status_type->id == 57 || $peserta->status_type->id == 59 || $peserta->status_type->id == 31)
+            <a href="{{ $peserta->user->id }}/accept-penyisihan"
+                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Penyisihan</a>
+            @endif
+            @if($peserta->status_type->id == 57 || $peserta->status_type->id == 58)
+            <a href="{{ $peserta->user->id }}/reject-penyisihan"
+                class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Penyisihan</a>
+            @endif
+            @if($peserta->status_type->id == 60 || $peserta->status_type->id == 62 || $peserta->status_type->id == 58)
+            <a href="{{ $peserta->user->id }}/accept-semifinal"
+                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Semifinal</a>
+            @endif
+            @if($peserta->status_type->id == 60 || $peserta->status_type->id == 61)
+            <a href="{{ $peserta->user->id }}/reject-semifinal"
+                class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Semifinal</a>
+            @endif
+            @if($peserta->status_type->id == 63 || $peserta->status_type->id == 65 || $peserta->status_type->id == 61)
+            <a href="{{ $peserta->user->id }}/accept-final"
+                 class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Final</a>
+            @endif
+            @if($peserta->status_type->id == 63 || $peserta->status_type->id == 64)
+            <a href="{{ $peserta->user->id }}/reject-final"
+                class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Final</a>
+            @endif
         </div>
     </div>
     <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-5 mb-3.5">Biodata Tim Kamu</div>

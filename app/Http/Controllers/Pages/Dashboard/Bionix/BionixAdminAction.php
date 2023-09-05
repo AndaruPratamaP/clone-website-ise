@@ -21,8 +21,27 @@ class BionixAdminAction extends BionixDetailPesertaController
             case "reject-berkas":
                 $this->rejectRegistration();
                 break;
-            default:
+            case 'accept-penyisihan':
+                $this->acceptPenyisihan();
                 break;
+            case 'reject-penyisihan':
+                $this->rejectPenyisihan();
+                break;
+            case 'accept-semifinal':
+                $this->acceptSemifinal();
+                break;
+            case 'reject-semifinal':
+                $this->rejectSemifinal();
+                break;
+            case 'accept-final':
+                $this->acceptFinal();
+                break;
+            case 'reject-final':
+                $this->rejectFinal();
+                break;
+                default:
+                break;
+
         }
         redirect()->route("admin.bionix.table");
     }

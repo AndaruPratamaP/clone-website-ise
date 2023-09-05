@@ -222,6 +222,42 @@
     {
         "id": "56",
         "name": "BionixRd.Rejected.Final"
+    },
+    {
+        "id": "57",
+        "name": "Bionix.Registered.Penyisihan"
+    },
+    {
+        "id": "58",
+        "name": "Bionix.Verified.Penyisihan"
+    },
+    {
+        "id": "59",
+        "name": "Bionix.Rejected.Penyisihan"
+    },
+    {
+        "id": "60",
+        "name": "Bionix.Registered.Semifinal"
+    },
+    {
+        "id": "61",
+        "name": "Bionix.Verified.Semifinal"
+    },
+    {
+        "id": "62",
+        "name": "Bionix.Rejected.Semifinal"
+    },
+    {
+        "id": "63",
+        "name": "Bionix.Registered.Final"
+    },
+    {
+        "id": "64",
+        "name": "Bionix.Verified.Final"
+    },
+    {
+        "id": "65",
+        "name": "Bionix.Rejected.Final"
     }
 
 
