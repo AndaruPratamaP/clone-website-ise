@@ -211,5 +211,33 @@ class BionixService
         $bionixPeserta->delete();
         $userHasEvent->delete();
     }
+    public function acceptPenyisihan($user_id)
+    {
+      $this->updateStatus($user_id, 58);
+    }
+
+    public function rejectPenyisihan($user_id)
+    {
+      $this->updateStatus($user_id, 59);
+    }
+    public function acceptSemifinal($user_id)
+    {
+      $this->updateStatus($user_id, 61);
+    }
+
+    public function rejectSemifinal($user_id)
+    {
+      $this->updateStatus($user_id, 62);
+    }
+    public function acceptFinal($user_id)
+    {
+      $this->updateStatus($user_id, 64);
+    }
+
+    public function rejectFinal($user_id)
+    {
+      $this->updateStatus($user_id, 65);
+    }
+
 
 }

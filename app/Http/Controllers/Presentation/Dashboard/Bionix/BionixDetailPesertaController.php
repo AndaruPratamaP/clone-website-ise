@@ -40,5 +40,32 @@ class BionixDetailPesertaController extends Component
     {
         $this->service->rejectRegistration(request()->route('user_id'));
     }
+    public function acceptPenyisihan()
+    {
+        $this->service->acceptPenyisihan(request()->route('user_id'));
+    }
+
+    public function rejectPenyisihan()
+    {
+        $this->service->rejectPenyisihan(request()->route('user_id'));
+    }
+    public function acceptSemifinal()
+    {
+        $this->service->acceptSemifinal(request()->route('user_id'));
+    }
+
+    public function rejectSemifinal()
+    {
+        $this->service->rejectSemifinal(request()->route('user_id'));
+    }
+    public function acceptFinal()
+    {
+        $this->service->acceptFinal(request()->route('user_id'));
+    }
+
+    public function rejectFinal()
+    {
+        $this->service->rejectFinal(request()->route('user_id'));
+    }
 
 }

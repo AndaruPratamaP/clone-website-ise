@@ -35,7 +35,7 @@
             <a href="{{ $peserta->ketua->id }}/reject-berkas"
                 class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Berkas</a>
             @endif
-            @if($peserta->status_type->id == 48 || $peserta->status_type->id == 50)
+            @if($peserta->status_type->id == 48 || $peserta->status_type->id == 50 || $peserta->status_type->id == 28)
             <a href="{{ $peserta->ketua->id }}/accept-penyisihan"
                  class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Penyisihan</a>
             @endif
@@ -43,7 +43,7 @@
             <a href="{{ $peserta->ketua->id }}/reject-penyisihan"
                 class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Penyisihan</a>
             @endif
-            @if($peserta->status_type->id == 51 || $peserta->status_type->id == 53 )
+            @if($peserta->status_type->id == 51 || $peserta->status_type->id == 53 || $peserta->status_type->id == 49)
             <a href="{{ $peserta->ketua->id }}/accept-semifinal"
                  class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Semifinal</a>
             @endif
@@ -51,7 +51,7 @@
             <a href="{{ $peserta->ketua->id }}/reject-semifinal"
                 class="px-6 py-2 bg-red-600 rounded-xl hover:brightness-75">Reject Semifinal</a>
             @endif
-            @if($peserta->status_type->id == 54 || $peserta->status_type->id == 56)
+            @if($peserta->status_type->id == 54 || $peserta->status_type->id == 56 || $peserta->status_type->id == 52)
             <a href="{{ $peserta->ketua->id }}/accept-final"
                  class="px-6 py-2 bg-gradient-green-r rounded-xl hover:brightness-75">Accept Final</a>
             @endif
