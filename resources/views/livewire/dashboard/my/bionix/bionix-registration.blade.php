@@ -523,7 +523,7 @@
                         1295633675 <br>
                         a.n DEWI ANGELINE</p>
                     <p class="mt-8 text-xs sm:text-base lg:text-xl">Jumlah yang harus dibayarkan:
-                        <br> <span class="font-bold">Rp. 100.000,00</span>
+                        <br> <span class="font-bold" id="bionix_promo">Rp. 100.000,00</span>
                         </p>
                 </div>
                 <div class="my-6 md:my-8 lg:my-10 xl:my-12">
@@ -666,3 +666,15 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    const currentDate = new Date().getTime();
+    const bionixPromoStart = new Date('September 07, 2023 00:00:01').getTime();
+    const bionixPromoEnd = new Date('September 12, 2023 23:59:59').getTime();
+    if(currentDate >= bionixPromoStart && currentDate <= bionixPromoEnd) {
+        document.querySelector('#bionix_promo').innerHTML = "Rp. 74.500,00"
+    } else {
+        document.querySelector('#bionix_promo').innerHTML = "Rp. 100.000,00"
+    }
+</script>
