@@ -545,7 +545,7 @@
         <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full border border-green-500 mt-3">
           <div class="flex flex-col items-center text-center text-white gap-4">
             <p class="text-xl font-medium">You're currently in</p>
-            <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Tryout 1</p>
+            <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Tryout 2</p>
             <p class="text-xl font-medium">of BIONIX 2023</p>
             {{-- <a
             href="http://ise-its.com/go/TutorialMoodleBIONIX"
