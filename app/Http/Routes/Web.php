@@ -160,7 +160,7 @@ Route::middleware(['auth'])->group(function () {
       ->middleware(['permission:my.ux'])
       ->group(function () {
         Route::get('/', RiseDashboard::class)->name('rise');
-        Route::get('/registration', RiseRegistration::class)->name('rise.registration');
+        // Route::get('/registration', RiseRegistration::class)->name('rise.registration');
         Route::get('/penyisihan', RisePenyisihanForm::class)->name('rise.penyisihan');
         Route::get('/pembayaran', RisePembayaranForm::class)->name('rise.pembayaran');
         Route::get('/semifinal', RiseSemifinalForm::class)->name('rise.semifinal');
