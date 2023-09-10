@@ -115,7 +115,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div
-              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]"
+              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px] pb-20"
             >
               <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src=
               {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
@@ -128,21 +128,21 @@
                 ITS selama masa belajar mengajar berlangsung. Konsep terbaru dari BIONIX Competition
               </p>
               <a
-                href="/login"
+                href="#"
                 class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
-                  >Registrasi Sekarang</span
+                  >Registrasi Ditutup</span
                 >
               </a>
-              <h5
+              {{-- <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
               >
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
                 class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8"
-              >
+                >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
                 >
@@ -219,7 +219,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="hidden lg:block swiper-slide">
@@ -337,7 +337,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div
-              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]"
+              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px] pb-8"
             >
               <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src=
               {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
@@ -350,21 +350,21 @@
                 ITS selama masa belajar mengajar berlangsung. Konsep terbaru dari BIONIX Competition
               </p>
               <a
-              href="/login"
+              href="#"
                 class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
-                  >Registrasi Sekarang</span
+                  >Registrasi Ditutup</span
                 >
               </a>
-              <h5
+              {{-- <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
-              >
+                >
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
                 class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8"
-              >
+                >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
                 >
@@ -445,7 +445,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="swiper-slide">
@@ -613,7 +613,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div
-              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]"
+              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px] pb-20"
             >
               <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src=
               {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
@@ -624,20 +624,20 @@
               </p>
               <a
                 class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
-                href="/login"
+                href="#"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
-                  >Registrasi Sekarang</span
+                  >Registrasi Ditutup</span
                 >
               </a>
-              <h5
+              {{-- <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
-              >
+                >
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
                 class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8"
-              >
+                >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
                 >
@@ -718,7 +718,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="hidden lg:block swiper-slide">
@@ -837,7 +837,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div
-              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]"
+              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px] pb-8"
             >
               <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src=
               {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
@@ -847,20 +847,20 @@
               BIONIX COMPETITION merupakan rangkaian kompetisi berupa seleksi olimpiade tingkat nasional untuk siswa SMA/SMK/sederajat di seluruh Indonesia berdasarkan bidang keilmuan Sistem Informasi yang akan dibagi kedalam tiga tahap dimana keseluruhan rangkaian acara akan ditutup dengan adanya Awarding beserta Gala Dinner dengan para peserta finalis.              </p>
               <a
                 class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
-                href="/login"
+                href="#"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
-                  >Registrasi Sekarang</span
+                  >Registrasi Ditutup</span
                 >
               </a>
-              <h5
+              {{-- <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
-              >
+                >
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
                 class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-8"
-              >
+                >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-r from-[#006C56] to-[#AFD196]"
                 >
@@ -941,7 +941,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="swiper-slide">

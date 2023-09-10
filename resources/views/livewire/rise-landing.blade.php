@@ -141,14 +141,14 @@
                 terkait business case yang diperuntukkan untuk mahasiswa aktif jenjang D3, D4, atau S1 di Indonesia yang
                 dapat diikuti secara berkelompok atau tim yang dilaksanakan secara online.
               </p>
-              <div class="flex flex-col content-center justify-center lg:flex-row lg:gap-6">
+              <div class="flex flex-col content-center justify-center lg:flex-row lg:gap-6 mb-24">
                 <a
-                  href="/login"
+                  href="#"
                   class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r text-transparent rounded-[24px] hover:brightness-75 self-center"
                   type="button"
                 >
                   <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
-                    >Registrasi Sekarang</span
+                    >Registrasi Ditutup</span
                   >
                 </a>
                 <a
@@ -171,20 +171,20 @@
                   </div>
                 </a>
               </div>
-              <h5
+              {{-- <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text self-center"
-              >
+                >
                 Pendaftaran&nbsp;<span id="regist_status"></span>&nbsp; dalam waktu:
               </h5>
               <div
                 class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-4"
-              >
+                >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]"
                 >
                   <div
                     class="rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col"
-                  >
+                    >
                     <span
                       class="self-center font-montserrat font-extrabold text-[14px] sm:text-[18px] md:text-[20px] lg:text-[37px] xl:text-[56px] text-transparent from-[#FF9355] to-[#FFD693] bg-gradient-to-b bg-clip-text"
                       style="line-height: 100%"
@@ -201,7 +201,7 @@
                 </div>
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]"
-                >
+                    >
                   <div
                     class="rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col"
                   >
@@ -221,7 +221,7 @@
                 </div>
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]"
-                >
+                    >
                   <div
                     class="rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col"
                   >
@@ -241,7 +241,7 @@
                 </div>
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]"
-                >
+                    >
                   <div
                     class="rounded-[10px] bg-[#121316]/90 p-[5px] md:px-[0px] lg:p-[0.25rem] xl:p-[0.4rem] flex justify-center content-center flex-col"
                   >
@@ -259,7 +259,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="hidden lg:block swiper-slide">
@@ -381,14 +381,14 @@
                 terkait business case yang diperuntukkan untuk mahasiswa aktif jenjang D3, D4, atau S1 di Indonesia yang
                 dapat diikuti secara berkelompok atau tim yang dilaksanakan secara online.
               </p>
-              <div class="flex flex-col content-center justify-center lg:flex-row lg:gap-6">
+              <div class="flex flex-col content-center justify-center lg:flex-row lg:gap-6 mb-8">
                 <a
-                  href="/login"
+                  href="#"
                   class="text-center items-center flex justify-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#D1692D] to-[#FFBF7E] bg-gradient-to-r text-transparent rounded-[24px] self-center"
                   type="button"
                 >
                   <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
-                    >Registrasi Sekarang</span
+                    >Registrasi Ditutup</span
                   >
                 </a>
                 <a
@@ -409,14 +409,14 @@
                   </div>
                 </a>
               </div>
-              <h5
+              {{-- <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#FF9355] to-[#FFD693] bg-gradient-to-b text-transparent bg-clip-text self-center"
-              >
+                >
                 Pendaftaran ditutup dalam waktu:
               </h5>
               <div
                 class="flex content-center justify-center gap-2 mt-2 mb-4 lg:mt-2 xl:mt-4 lg:mb-12 xl:mb-12 lg:gap-4"
-              >
+                >
                 <div
                   class="p-[1px] md:p-[2px] lg:p-[2px] xl:p-[3px] rounded-[10px] w-[35px] sm:w-[38px] md:w-[45px] lg:w-[66px] xl:w-[100px] h-[35px] sm:h-[38px] md:h-[45px] lg:h-[66px] xl:h-[100px] bg-gradient-to-b from-[#FF9355] to-[#FFD693]"
                 >
@@ -497,14 +497,14 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="swiper-slide">
             <div
               class="flex content-center flex-col min-h-full xs:min-h-[483px] md:min-h-[580px] from-[#6BB9E7] to-[#894584] bg-gradient-to-tl mx-12 xs:mx-14 sm:mx-20 lg:mx-32 lg:mt-[14rem] xl:mt-[22rem] p-4 xs:p-6 lg:p-8 xl:p-10 rounded-[25px]"
               style="box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25)"
-            >
+                >
               <div
                 class="bg-[#894584] py-1 lg:py-1 xl:py-2 pl-2 lg:pl-2 xl:pl-4 pr-12 xs:pr-16 lg:pr-20 xl:pr-24 w-fit mb-4"
                 style="box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); border-radius: 20px 30px 30px 20px"
@@ -665,8 +665,7 @@
                     Bisa dapat
                   </span>
                   <span
-
-                  <span
+                    <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
                   >
                     ,
@@ -740,8 +739,7 @@
                     Bisa dapat
                   </span>
                   <span
-
-                  <span
+                    <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
                   >
                     ,
@@ -815,8 +813,7 @@
                     Bisa dapat
                   </span>
                   <span
-
-                  <span
+                    <span
                     class="z-30 font-montserrat text-[16px] sm:text-[18px] lg:text-[27px] xl:text-[36px] font-extrabold text-white leading-[50%] lg:leading-none"
                   >
                     ,

@@ -39,7 +39,7 @@ class FileUpload
             "image/png",
             "application/pdf",
         ];
-        $this->file_size_limit = 1048576; // 1Mb
+        $this->file_size_limit = 3145728; // 3Mb
 
         $this->check();
     }
@@ -93,5 +93,5 @@ class FileUpload
     public function getUrl()
     {
         return Storage::url($this->path . '/' . $this->file_name);
-    }   
+    }
 }

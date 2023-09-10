@@ -664,7 +664,7 @@
       <div class="flex flex-col items-center md:items-start my-1.5 w-full">
         <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
           <div class="flex flex-col items-center text-center text-white">
-            <p class="text-xl font-medium">Penyisihan RISE Ditutup</p>
+            <p class="text-xl font-medium">Semifinal RISE Dibuka Dalam</p>
             <div class="flex flex-row gap-x-3 my-7">
               <div class="flex flex-col items-center justify-center">
                 <div
@@ -758,7 +758,7 @@
           </div>
           @elseif($peserta->status_type->id == '34')
             <!-- Verif Berkas Success -->
-            <div
+            {{-- <div
         class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
       >
         <div class="flex flex-col gap-y-3">
@@ -775,7 +775,26 @@
           </div>
         </div>
       </div>
+    </div> --}}
+    <div
+    class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
+  >
+    <div class="flex flex-col gap-y-3">
+        <p
+        class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
+      >
+        Penyisihan telah ditutup
+      </p>
+      <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
+        <p class="text-base font-light">
+          Terimakasih telah mendaftar RISE 2023, sayangnya fase penyisihan telah ditutup.
+          <div class="my-1"></div>
+          Hubungi kami apabila ada pertanyaaan lebih lanjut.
+          <a href="https://wa.me/+6281332049750" target="blank" class="text-orange-400 hover:underline decoration-orange-400 ">Contact Us</a>
+        </p>
+      </div>
     </div>
+  </div>
     @elseif($peserta->status_type->id == '36')
     <!-- After Penyisihan -->
     <div
@@ -829,7 +848,7 @@
           </p>
           <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
             <p class="text-base font-light">
-                Kamu lolos tahap penyisihan RISE 2023. Silahkan lakukan pembayaran untuk melanjutkan ke tahap selanjutnya
+                Kamu lolos tahap penyisihan RISE 2023. Silahkan lakukan pembayaran sebelum tanggal 17 September pukul 16:00 untuk melanjutkan ke tahap selanjutnya
             </p>
             <a href="/my/rise/pembayaran" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Bayar</a>
           </div>
@@ -1076,7 +1095,7 @@
 
   // After Regist Countdown
   // Set the countdown date and time
-  const countdownDate_gts = new Date('September 10, 2023 23:59:59').getTime();
+  const countdownDate_gts = new Date('September 18, 2023 23:59:59').getTime();
 
   // Update the countdown every second
   const countdownTimer_gts = setInterval(() => {
