@@ -613,7 +613,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div
-              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px] pb-20"
+              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]"
             >
               <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src=
               {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
@@ -624,13 +624,13 @@
               </p>
               <a
                 class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
-                href="#"
+                href="/my/bionix"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
-                  >Registrasi Ditutup</span
+                  >Registrasi Disini</span
                 >
               </a>
-              {{-- <h5
+              <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
                 >
                 Pendaftaran ditutup dalam waktu:
@@ -718,7 +718,7 @@
                     </p>
                   </div>
                 </div>
-              </div> --}}
+              </div>
             </div>
           </div>
           <div class="hidden lg:block swiper-slide">
@@ -837,7 +837,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div
-              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px] pb-8"
+              class="flex justify-center content-center flex-col bg-[#141414] mx-15 xs:mx-14 sm:mx-20 lg:mx-32 rounded-[20px]"
             >
               <img class=" lg:w-[642px] xl:w-[973px] lg:h-[323px] xl:h-[488px] mb-4 lg:mb-10 xl:mb-12 self-center" src=
               {{ asset('images/icon/IconLP_Sect4_CarImg.png') }} alt="">
@@ -847,13 +847,13 @@
               BIONIX COMPETITION merupakan rangkaian kompetisi berupa seleksi olimpiade tingkat nasional untuk siswa SMA/SMK/sederajat di seluruh Indonesia berdasarkan bidang keilmuan Sistem Informasi yang akan dibagi kedalam tiga tahap dimana keseluruhan rangkaian acara akan ditutup dengan adanya Awarding beserta Gala Dinner dengan para peserta finalis.              </p>
               <a
                 class="flex justify-center items-center mt-4 lg:mt-8 xl:mt-12 z-30 w-[150px] md:w-[175px] lg:w-[212px] xl:w-[321px] h-[35px] md:h-[38px] lg:h-[38px] xl:h-[58px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent rounded-[24px] self-center hover:brightness-75"
-                href="#"
+                href="/my/bionix"
               >
                 <span class="font-montserrat text-[12px] lg:text-[13px] xl:text-[20px] font-semibold text-[#FFEEE4]"
-                  >Registrasi Ditutup</span
+                  >Registrasi Disini</span
                 >
               </a>
-              {{-- <h5
+              <h5
                 class="mt-2 md:mt-4 lg:mt-6 xl:mt-10 inline-flex font-montserrat font-bold text-[10px] md:text-[14px] lg:text-[16px] xl:text-[24px] from-[#006C56] to-[#AFD196] bg-gradient-to-r text-transparent bg-clip-text self-center"
                 >
                 Pendaftaran ditutup dalam waktu:
@@ -941,7 +941,7 @@
                     </p>
                   </div>
                 </div>
-              </div> --}}
+              </div>
             </div>
           </div>
           <div class="swiper-slide">
@@ -1951,7 +1951,7 @@
 <script>
 // GTS Countdown Start
 // Set the countdown date and time
-const countdownDate_gts = new Date('September 10, 2023 00:00:00').getTime();
+const countdownDate_gts = new Date('September 18, 2023 00:00:00').getTime();
 
 // Update the countdown every second
 const countdownTimer_gts = setInterval(() => {
