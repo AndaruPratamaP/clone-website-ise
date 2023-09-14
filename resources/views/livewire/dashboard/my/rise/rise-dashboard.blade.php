@@ -902,12 +902,13 @@
             <p
               class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
             >
-              Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+              Pembayaran Terverifikasi! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
             </p>
             <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
               <p class="text-base font-light">
-                  Pembayaran kamu berhasil diverifikasi. Silahkan persiapkan dirimu untuk semifinal pada tanggal 18 September.
+                  Pembayaran kamu berhasil diverifikasi. Silahkan persiapkan dirimu untuk semifinal pada tanggal 18 September dan jangan lupa baca guidebook dibawah:.
               </p>
+              <a href="https://drive.google.com/file/d/1vLQgX0GdHuzmX2h-CXwvbEYD76Rw7r3b/view?usp=sharing" target="blank" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Guidebook Semifinal</a>
             </div>
           </div>
         </div>
@@ -923,7 +924,7 @@
             </p>
             <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
               <p class="text-base font-light">
-                  Pembayaran kamu berhasil diverifikasi. Silahkan lanjutkan Business Case kamu dan kirimkan hasilnya sebelum deadline.
+                  Pembayaran kamu berhasil diverifikasi. Silahkan lanjutkan Business Case kamu dan kirimkan hasilnya sebelum 30 September 2023.
               </p>
               <a href="/my/rise/semifinal" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Semifinal</a>
             </div>
