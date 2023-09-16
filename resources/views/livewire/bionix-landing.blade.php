@@ -1549,7 +1549,7 @@
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
-            28 Jul - 17 Sep
+            28 Jul - 20 Sep
           </p>
           <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px]
           md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/bionix/BionixLP_Sect6_Circle.png') }} alt="">
@@ -1951,7 +1951,7 @@
 <script>
 // GTS Countdown Start
 // Set the countdown date and time
-const countdownDate_gts = new Date('September 18, 2023 00:00:00').getTime();
+const countdownDate_gts = new Date('September 20, 2023 23:59:59').getTime();
 
 // Update the countdown every second
 const countdownTimer_gts = setInterval(() => {
