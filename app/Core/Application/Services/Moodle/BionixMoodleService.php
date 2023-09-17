@@ -71,17 +71,6 @@ class BionixMoodleService
     {
         $generated = [];
 
-        $generated[] = [
-            "users_id" => "users_id",
-            "username" => "username",
-            "firstname" => "firstname",
-            "lastname" => "lastname",
-            "email" => "email",
-            "password" => "password",
-            "course1" => "course1",
-            "role1" => "role1"
-        ];
-
         $pesertas = $this->getVerifiedBionix();
 
         foreach ($pesertas as $peserta) {
