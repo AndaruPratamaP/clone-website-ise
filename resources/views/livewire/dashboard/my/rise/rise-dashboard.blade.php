@@ -372,7 +372,7 @@
           </div>
         </div>
 
-        {{-- <div
+        <div
           class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
           <div class="flex flex-row items-center w-full gap-x-6">
             @if($peserta->status_type->id == 44)
@@ -406,7 +406,7 @@
           </div>
         </div>
 
-        <div
+        {{-- <div
           class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
           <div class="flex flex-row items-center w-full gap-x-6">
             @if($peserta->status_type->id == 47)
@@ -902,13 +902,15 @@
             <p
               class="flex items-center gap-1 text-xl font-bold tracking-wider text-transparent bg-gradient-orange-r bg-clip-text font-lg sm:text-2xl font-poppins"
             >
-              Pembayaran Terverifikasi! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+              Semifinal Dibuka <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
             </p>
             <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
               <p class="text-base font-light">
-                  Pembayaran kamu berhasil diverifikasi. Silahkan persiapkan dirimu untuk semifinal pada tanggal 18 September dan jangan lupa baca guidebook dibawah:.
+                  Pembayaran kamu berhasil diverifikasi. Silahkan kerjakan dan kumpulkan jawaban fase semifinal sebelum tanggal 30 September. Jangan lupa untuk membaca guidebook semifinal dibawah, membuka soal semifinal, dan mengumpulkan jawaban semifinal!
               </p>
-              <a href="https://drive.google.com/file/d/1vLQgX0GdHuzmX2h-CXwvbEYD76Rw7r3b/view?usp=sharing" target="blank" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Guidebook Semifinal</a>
+              <a href="https://ise-its.com/go/GuidebookSemifinalRISE2023" target="blank" class="text-lg font-semibold text-center text-white bg-transparent hover:brightness-75 rounded-md py-1.5 border border-orange-400">Guidebook Semifinal</a>
+              <a href="http://ise-its.com/go/SoalSemifinalRISE" target="blank" class="text-lg font-semibold text-center text-white bg-gradient-transparent hover:brightness-75 rounded-md py-1.5 border border-orange-400">Soal Semifinal</a>
+              <a href="/my/rise/semifinal" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Submit Jawaban</a>
             </div>
           </div>
         </div>
