@@ -15,7 +15,7 @@ class BionixMoodleExport implements FromCollection
         $data = BionixMoodle::select('username', 'firstname', 'lastname', 'email', 'password', 'course1', 'role1')
             ->get();
 
-        // add data to first row
+        // add data to first rows
         $data->prepend([
             'username' => 'username',
             'firstname' => 'firstname',
