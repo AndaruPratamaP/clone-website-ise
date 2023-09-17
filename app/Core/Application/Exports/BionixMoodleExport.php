@@ -26,12 +26,12 @@ class BionixMoodleExport implements FromCollection
             'role1' => 'role1',
         ]);
 
-        // foreach through each row
-        $data = $data->map(function ($user){
-            if (empty($user->lastname)) {
-                $user->lastname = $user->firstname;
+        // if lastname is empty, fill it with firstname
+        foreach ($data as $key => $value) {
+            if ($value->lastname == '') {
+                $data[$key]->lastname = $value->firstname;
             }
-        });
+        }
 
         return $data;
     }
