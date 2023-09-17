@@ -71,6 +71,17 @@ class BionixMoodleService
     {
         $generated = [];
 
+        $generated[] = [
+            "users_id" => "users_id",
+            "username" => "username",
+            "firstname" => "firstname",
+            "lastname" => "lastname",
+            "email" => "email",
+            "password" => "password",
+            "course1" => "course1",
+            "role1" => "role1"
+        ];
+
         $pesertas = $this->getVerifiedBionix();
 
         foreach ($pesertas as $peserta) {
@@ -80,6 +91,12 @@ class BionixMoodleService
             $username = $this->formatUsername($peserta->team_name);
             $first_name = $name['first_name'];
             $last_name = $name['last_name'];
+
+            // check if last name is empty
+            if (empty($last_name)) {
+                $last_name = $first_name;
+            }
+
             $password = $this->generatePassword();
             $email = $peserta->user->email;
 
@@ -104,6 +121,12 @@ class BionixMoodleService
             $username = $this->formatUsername($peserta->team_name);
             $first_name = $name['first_name'];
             $last_name = $name['last_name'];
+
+            // check if last name is empty
+            if (empty($last_name)) {
+                $last_name = $first_name;
+            }
+
             $password = $this->generatePassword();
             $email = $peserta->ketua->email;
 
