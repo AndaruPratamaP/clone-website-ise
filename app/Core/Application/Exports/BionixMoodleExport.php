@@ -26,6 +26,13 @@ class BionixMoodleExport implements FromCollection
             'role1' => 'role1',
         ]);
 
+        // check foreach data if lastname is empty then fill with firstname
+        foreach ($data as $key => $value) {
+            if (empty($value->lastname)) {
+                $data[$key]->lastname = $value->firstname;
+            }
+        }
+
         return $data;
     }
 }
