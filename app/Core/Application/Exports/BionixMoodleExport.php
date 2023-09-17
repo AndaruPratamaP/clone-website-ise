@@ -15,6 +15,13 @@ class BionixMoodleExport implements FromCollection
         $data = BionixMoodle::select('username', 'firstname', 'lastname', 'email', 'password', 'course1', 'role1')
             ->get();
 
+        // Modify 'lastname' to be 'firstname' if it's empty
+        $data->each(function ($item, $key) {
+            if (empty($item['lastname'])) {
+                $item['lastname'] = $item['firstname'];
+            }
+        });
+
         // add data to first rows
         $data->prepend([
             'username' => 'username',
@@ -25,13 +32,6 @@ class BionixMoodleExport implements FromCollection
             'course1' => 'course1',
             'role1' => 'role1',
         ]);
-
-        // if lastname is empty, fill it with firstname
-        foreach ($data as $key => $value) {
-            if ($value->lastname == '') {
-                $data[$key]->lastname = $value->firstname;
-            }
-        }
 
         return $data;
     }
