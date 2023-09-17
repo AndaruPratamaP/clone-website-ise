@@ -12,23 +12,13 @@ class BionixMoodleExport implements FromCollection
      */
     public function collection()
     {
-        $data = BionixMoodle::select('username', 'firstname', 'lastname', 'email', 'password', 'course1', 'role1')
-            ->get();
+        $data = BionixMoodle::all()
+            ->pluck('username', 'firstname', 'lastname', 'email', 'password', 'course1', 'role1')
+            ->prepend('username', 'firstname', 'lastname', 'email', 'password', 'course1', 'role1');
 
-        // add data to first row
-        $data->prepend([
-            'username' => 'username',
-            'firstname' => 'firstname',
-            'lastname' => 'lastname',
-            'email' => 'email',
-            'password' => 'password',
-            'course1' => 'course1',
-            'role1' => 'role1',
-        ]);
-
-        foreach ($data as $datum) {
-            if($datum->lastname == "")
-                $datum->lastname = $datum->firstname;
+        foreach ($data as $data=>$value) 
+        {
+            $value['lastname'] = empty($value['lastname']) ? $value['firstname'] : $value['lastname'];
         }
 
         return $data;
