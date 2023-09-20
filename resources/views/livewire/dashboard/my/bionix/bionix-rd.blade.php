@@ -26,8 +26,8 @@
         class="flex rounded-xl bg-[#191A1E] p-5 max-w-4xl xl:max-w-[400px] w-full shrink-0 justify-center items-center"
         >
         <div class="flex flex-col items-center text-center text-white">
-          <p class="text-xl font-medium">Pendaftaran Ditutup Dalam</p>
-          <div class="flex flex-row gap-x-3 my-7">
+          <p class="text-xl font-medium">Pendaftaran Telah Ditutup</p>
+          {{-- <div class="flex flex-row gap-x-3 my-7">
             <div class="flex flex-col items-center justify-center">
               <div
                 id="days"
@@ -80,7 +80,7 @@
               class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
               >Lihat Guidebook</a
             >
-          </div>
+          </div> --}}
         </div>
       </div>
 

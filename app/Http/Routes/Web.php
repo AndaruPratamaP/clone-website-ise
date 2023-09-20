@@ -137,14 +137,14 @@ Route::middleware(['auth'])->group(function () {
         ->middleware(['permission:my.is'])
         ->group(function () {
         Route::get('/', BionixDashboard::class)->name('bionix');
-        Route::get('/registration', BionixRegistration::class)->name('bionix.registration');
+        // Route::get('/registration', BionixRegistration::class)->name('bionix.registration');
       });
 
       Route::prefix('bionix-rd')
         ->middleware(['permission:my.is'])
         ->group(function () {
         Route::get('/', BionixRdDashboard::class)->name('bionixroadshow');
-        Route::get('/dp', BionixRdDpForm::class)->name('bionixroadshow.dp');
+        // Route::get('/dp', BionixRdDpForm::class)->name('bionixroadshow.dp');
         Route::get('/pelunasan', BionixRdPelunasanForm::class)->name('bionixroadshow.pelunasan');
         Route::get('/registration', BionixRdRegistration::class)->name('bionixroadshow.registration');
       });
