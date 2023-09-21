@@ -598,18 +598,53 @@
             >
             </div>
           </div>
-          @if($peserta->status_type->id == '28')
+          @if($peserta->status_type->id >= '28')
           <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full border border-green-500 mt-3">
             <div class="flex flex-col items-center text-center text-white gap-4">
+              @if($peserta->status_type->id == '28')
               <p class="text-xl font-medium">You're currently in</p>
               <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Tryout 2</p>
               <p class="text-xl font-medium">of BIONIX 2023</p>
-              {{-- <a
-              href="http://ise-its.com/go/TutorialMoodleBIONIX"
-              target="_blank"
-              class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
-              >Guidebook Tryout</a
-            > --}}
+              @elseif($peserta->status_type->id == '49')
+              <p
+              class="flex items-center gap-1 text-lg font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-xl font-poppins"
+            >
+            <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" /> Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+              <p class="text-xl font-medium">You're currently in</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Semifinal</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              @elseif($peserta->status_type->id == '50')
+              <p class="text-3xl text-red-600 font-semibold">Jangan Putus Asa</p>
+              <p class="text-base font-medium">Kamu dinyatakan gagal dalam Penyisihan BIONIX Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                Tetap semangat dan terus berjuang!</p>
+              @elseif($peserta->status_type->id == '52')
+              <p
+              class="flex items-center gap-1 text-lg font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-xl font-poppins"
+            >
+            <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" /> Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+              <p class="text-xl font-medium">You're currently in</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Final</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              @elseif($peserta->status_type->id == '53')
+              <p class="text-3xl text-red-600 font-semibold">Jangan Putus Asa</p>
+              <p class="text-base font-medium">Kamu dinyatakan gagal dalam Semifinal BIONIX Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                Tetap semangat dan terus berjuang!</p>
+              @elseif($peserta->status_type->id == '55')
+              <p
+              class="flex items-center gap-1 text-lg font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-xl font-poppins"
+            >
+            <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" /> Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+              <p class="text-xl font-medium">You're the</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Champion</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              @elseif($peserta->status_type->id == '56')
+              <p class="text-3xl text-red-600 font-semibold">Jangan Putus Asa</p>
+              <p class="text-base font-medium">Kamu dinyatakan gagal dalam Final BIONIX Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                Tetap semangat dan terus berjuang!</p>
+              @endif
             </div>
           </div>
           @endif
@@ -697,7 +732,7 @@
         </div>
       </div>
     </div>
-        @elseif($peserta->status_type->id == '28')
+        @elseif($peserta->status_type->id >= '28')
             <!-- Verif DP Success -->
           @if($username != Null)
             <div
@@ -713,7 +748,7 @@
                 <p class="text-base font-light">
                     Terimakasih telah mengikuti BIONIX 2023. Untuk memulai tahap seleksi, maka tiap tim dipersilakan untuk masuk pada Competition Site menggunakan akun yang sudah tertera dibawah. Jangan lupa ikuti guide yang ada untuk meminimalisir kesalahan!
                     <br class="my-0.5">
-                    Berikut merupakan akun yang dapat digunakan untuk tahap Tryout:
+                    Berikut merupakan akun yang dapat digunakan untuk tahap seleksi:
                     <br>
                     <ul class="font-medium text-lg">
                         <li>
@@ -726,6 +761,7 @@
                 </p>
                 <a href="https://competition.ise-its.com" class="text-lg font-semibold text-center text-white bg-gradient-green-r hover:brightness-75 rounded-md py-1.5">Competition Site</a>
                 <a href="http://ise-its.com/go/TutorialMoodleBIONIX" class="text-lg font-semibold text-center text-white border border-green-500 hover:brightness-75 rounded-md py-1.5">Competition Guide</a>
+                <a href="https://ise-its.com/go/JadwalSesiPenyisihan" class="text-lg font-semibold text-center text-white border border-green-500 hover:brightness-75 rounded-md py-1.5">Jadwal Sesi Penyisihan</a>
               </div>
               </div>
             </div>

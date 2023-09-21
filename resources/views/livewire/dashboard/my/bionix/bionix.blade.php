@@ -274,7 +274,7 @@
           <div class="flex flex-row items-center w-full gap-x-6">
             @if($peserta->status_type->id == '32')
             <x-heroicon-s-folder-open class="relative z-0 text-red-800 w-14 h-14" />
-            @elseif ($peserta->status_type->id == '31')
+            @elseif ($peserta->status_type->id >= '31')
             <x-heroicon-s-folder-open class="relative z-0 text-green-400 w-14 h-14" />
             @elseif($peserta->status_type->id == '30')
             <x-heroicon-s-folder-open class="relative z-0 w-14 h-14 text-[#B5B3BC]" />
@@ -283,7 +283,7 @@
             <div class="flex flex-col">
               <p class="text-base font-normal text-[#B5B3BC] mb-1 font-poppins">Status Berkas</p>
               <p
-                class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id == '31') bg-gradient-green-r bg-clip-text text-transparent @endif"
+                class="text-2xl font-bold text-[#B5B3BC] @if ($peserta->status_type->id >= '31') bg-gradient-green-r bg-clip-text text-transparent @endif"
               >
                 @if($peserta->status_type->id == '30')
                   Sedang Diperiksa Admin
@@ -291,7 +291,7 @@
                 <span class="text-red-800">
                   Ditolak Admin
                 </span>
-                @elseif($peserta->status_type->id == '31')
+                @elseif($peserta->status_type->id >= '31')
                 <span class="text-transparent bg-gradient-green-r bg-clip-text">Terverifikasi</span>
                 @endif
               </p>
@@ -541,18 +541,54 @@
         >
           </div>
         </div>
-        @if($peserta->status_type->id == '31')
+        @if($peserta->status_type->id >= '31')
         <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full border border-green-500 mt-3">
           <div class="flex flex-col items-center text-center text-white gap-4">
-            <p class="text-xl font-medium">You're currently in</p>
-            <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Tryout 2</p>
-            <p class="text-xl font-medium">of BIONIX 2023</p>
-            {{-- <a
-            href="http://ise-its.com/go/TutorialMoodleBIONIX"
-            target="_blank"
-            class="flex max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
-            >Guidebook Tryout</a
-          > --}}
+            @if($peserta->status_type->id == '31')
+              <p class="text-xl font-medium">You're currently in</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Tryout 2</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              @elseif($peserta->status_type->id == '58')
+              <p
+              class="flex items-center gap-1 text-lg font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-xl font-poppins"
+            >
+            <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" /> Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+              <p class="text-xl font-medium">You're currently in</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Semifinal</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              @elseif($peserta->status_type->id == '59')
+              <p class="text-3xl text-red-600 font-semibold">Jangan Putus Asa</p>
+              <p class="text-base font-medium">Kamu dinyatakan gagal dalam Penyisihan BIONIX Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                Tetap semangat dan terus berjuang!</p>
+              @elseif($peserta->status_type->id == '61')
+              <p
+              class="flex items-center gap-1 text-lg font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-xl font-poppins"
+            >
+            <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" /> Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+              <p class="text-xl font-medium">You're currently in</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Final</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              @elseif($peserta->status_type->id == '62')
+              <p class="text-3xl text-red-600 font-semibold">Jangan Putus Asa</p>
+              <p class="text-base font-medium">Kamu dinyatakan gagal dalam Semifinal BIONIX Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                Tetap semangat dan terus berjuang!</p>
+              @elseif($peserta->status_type->id == '64')
+              <p
+              class="flex items-center gap-1 text-lg font-bold tracking-wider text-transparent bg-gradient-green-r bg-clip-text font-lg sm:text-xl font-poppins"
+            >
+            <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" /> Congratulations! <x-heroicon-s-sparkles class="w-7 h-7 text-amber-400" />
+            </p>
+              <p class="text-xl font-medium">You're the</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Champion</p>
+              <p class="text-xl font-medium">of BIONIX 2023</p>
+              @elseif($peserta->status_type->id == '65')
+              <p class="text-3xl text-red-600 font-semibold">Jangan Putus Asa</p>
+              <p class="text-base font-medium">Kamu dinyatakan gagal dalam Final BIONIX Competition 2023. Ini bukanlah akhir dan kesempatan lain akan selalu terbuka.
+                Tetap semangat dan terus berjuang!</p>
+              @endif
+
           </div>
         </div>
         @endif
@@ -575,7 +611,7 @@
         </div>
       </div>
       </div>
-      @elseif($peserta->status_type->id == '31')
+      @elseif($peserta->status_type->id >= '31')
           @if($username != Null)
         <div
             class="flex max-w-[580px] md:max-w-[477px] w-full rounded-xl bg-[#191A1E] mb-1.5 py-8 justify-start items-center px-4 sm:px-9"
@@ -603,7 +639,8 @@
             </p>
             <a href="https://competition.ise-its.com" class="text-lg font-semibold text-center text-white bg-gradient-green-r hover:brightness-75 rounded-md py-1.5">Competition Site</a>
             <a href="http://ise-its.com/go/TutorialMoodleBIONIX" class="text-lg font-semibold text-center text-white border border-green-500 hover:brightness-75 rounded-md py-1.5">Competition Guide</a>
-          </div>
+            <a href="https://ise-its.com/go/JadwalSesiPenyisihan" class="text-lg font-semibold text-center text-white border border-green-500 hover:brightness-75 rounded-md py-1.5">Jadwal Sesi Penyisihan</a>
+        </div>
         </div>
       </div>
       @endif
