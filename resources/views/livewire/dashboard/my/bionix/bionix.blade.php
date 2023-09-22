@@ -485,7 +485,7 @@
       <div class="flex flex-col items-center md:items-start my-1.5 w-full">
         <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
           <div class="flex flex-col items-center text-center text-white">
-            <p class="text-xl font-medium">Penyisihan BIONIX Competition Dimulai</p>
+            <p class="text-xl font-medium">Semifinal BIONIX Competition Dimulai</p>
             <div class="flex flex-row gap-x-3 my-7">
               <div class="flex flex-col items-center justify-center">
                 <div
@@ -546,7 +546,7 @@
           <div class="flex flex-col items-center text-center text-white gap-4">
             @if($peserta->status_type->id == '31')
               <p class="text-xl font-medium">You're currently in</p>
-              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Tryout 2</p>
+              <p class="text-4xl bg-gradient-green-r bg-clip-text text-transparent font-semibold">Penyisihan</p>
               <p class="text-xl font-medium">of BIONIX 2023</p>
               @elseif($peserta->status_type->id == '58')
               <p
@@ -746,7 +746,7 @@
 
   // After Regist Countdown
   // Set the countdown date and time
-  const countdownDate_gts = new Date('September 23, 2023 23:59:59').getTime();
+  const countdownDate_gts = new Date('October 20, 2023 23:59:59').getTime();
 
   // Update the countdown every second
   const countdownTimer_gts = setInterval(() => {
