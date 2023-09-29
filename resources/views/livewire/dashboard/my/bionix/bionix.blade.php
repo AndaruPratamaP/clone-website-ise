@@ -145,7 +145,7 @@
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3">
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              21 Okt
+              28 Okt
             </p>
             <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
               <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-green-r"></div>
@@ -157,7 +157,7 @@
           </div>
           <div class="flex gap-1.5 sm:gap-0 flex-col w-24 text-center translate-y-0 sm:translate-y-2 lg:translate-y-3 sm:translate-x-10">
             <p class="text-sm sm:text-[11px] md:text-xs lg:text-sm xl:text-base font-poppins font-bold">
-              22 Okt
+              29 Okt
             </p>
             <div class="w-4 h-4 mx-auto bg-black rounded-full sm:w-5 sm:h-5">
               <div class="w-4 h-5 mx-auto rounded-full sm:w-4 sm:h-5 bg-gradient-green-r"></div>
@@ -539,6 +539,24 @@
           class="flex mt-2 max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
           >Lihat Guidebook Penyisihan</a
         >
+        @if ($peserta->status_type->id >= '58' && $peserta->status_type->id != '59')
+          <a
+          href="https://ise-its.com/go/GuidebookSemifinalBIONIX"
+          target="_blank"
+          class="flex mt-2 max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
+          >Lihat Guidebook Semifinal</a>
+          <a
+          href="https://ise-its.com/go/TMSemifinalBIONIX"
+          target="_blank"
+          class="flex mt-2 max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
+          >Zoom TM Semifinal</a>
+          {{-- @elseif()
+          <a
+          href="https://ise-its.com/go/GuidebookPenyisihanBIONIX"
+          target="_blank"
+          class="flex mt-2 max-w-[400px] w-full h-[52px] rounded-lg justify-center items-center text-white text-lg font-normal bg-[#191A1E] border border-green-400 hover:bg-[#16171a] hover:brightness-75"
+          >Lihat Guidebook Semifinal</a> --}}
+        @endif
           </div>
         </div>
         @if($peserta->status_type->id >= '31')
@@ -711,7 +729,7 @@
 @endif
 
 <script type="text/javascript">
-  const datetime = 'September 20, 2023 23:59:59';
+  const datetime = 'September 27, 2023 23:59:59';
   const countdownDate = new Date(datetime).getTime();
 
   // Update the countdown every second

@@ -1624,7 +1624,7 @@
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
-            21 Oktober
+            28 Oktober
           </p>
           <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px]
           md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/bionix/BionixLP_Sect6_Circle.png') }} alt="">
@@ -1649,7 +1649,7 @@
           <p
             class="z-30 font-montserrat text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[24px] font-bold text-white text-center"
           >
-            22 Oktober
+            29 Oktober
           </p>
           <img class=" my-4 self-center h-[9px] sm:h-[12px] md:h-[14px] lg:h-[16px] xl:h-[20px] w-[9px] sm:w-[12px]
           md:w-[14px] lg:w-[16px] xl:w-[20px]" src= {{ asset('images/bionix/BionixLP_Sect6_Circle.png') }} alt="">
