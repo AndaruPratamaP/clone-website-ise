@@ -985,7 +985,7 @@
               </p>
               <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
                 <p class="text-base font-light">
-                    Kamu lolos semifinal RISE 2023. Silahkan lanjutkan Business Case kamu dan kirimkan hasilnya sebelum deadline.
+                    Kamu lolos semifinal RISE 2023. Mohon tunggu informasi lebih lanjut dari kami.
                 </p>
                 <a href="/my/rise/final" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Final</a>
               </div>
