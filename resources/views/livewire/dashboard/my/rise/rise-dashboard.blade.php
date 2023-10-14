@@ -406,7 +406,7 @@
           </div>
         </div>
 
-        {{-- <div
+        <div
           class="flex max-w-[580px] xl:max-w-full w-full rounded-2xl bg-[#191A1E] mb-1.5 py-8 px-5 justify-start items-center">
           <div class="flex flex-row items-center w-full gap-x-6">
             @if($peserta->status_type->id == 47)
@@ -438,7 +438,7 @@
               </p>
             </div>
           </div>
-        </div> --}}
+        </div>
 
 
         <div class="flex self-center md:self-start text-2xl text-[#B5B3BC] font-bold mt-5 mb-3.5">Biodata Tim Kamu</div>
@@ -664,7 +664,7 @@
       <div class="flex flex-col items-center md:items-start my-1.5 w-full">
         <div class="flex justify-center rounded-xl bg-[#191A1E] p-5 max-w-[580px] md:max-w-[477px] w-full">
           <div class="flex flex-col items-center text-center text-white">
-            <p class="text-xl font-medium">Semifinal RISE Dibuka Dalam</p>
+            <p class="text-xl font-medium">Final RISE Ditutup Dalam</p>
             <div class="flex flex-row gap-x-3 my-7">
               <div class="flex flex-col items-center justify-center">
                 <div
@@ -985,10 +985,14 @@
               </p>
               <div class="flex flex-col justify-center space-y-4 text-left text-white items-left">
                 <p class="text-base font-light">
-                    Kamu lolos semifinal RISE 2023. Mohon tunggu informasi lebih lanjut dari kami.
+                    Kamu lolos semifinal RISE 2023. Silahkan lihat guidebook dan soal final dibawah dan kumpulkan pekerjaan kamu sebelum tanggal 29 Oktober 2023.
                 </p>
+                <div class="flex flex-col gap-2 mt-4">
+                <a href="https://ise-its.com/go/GuidebookFinalRISE2023" target="blank" class="text-lg font-semibold text-center text-white bg-transparent hover:brightness-75 rounded-md py-1.5 border border-orange-400">Guidebook Final</a>
+                <a href="https://ise-its.com/go/SoalFinalPetroRISE2023" target="blank" class="text-lg font-semibold text-center text-white bg-gradient-transparent hover:brightness-75 rounded-md py-1.5 border border-orange-400">Soal Final</a>
                 <a href="/my/rise/final" class="text-lg font-semibold text-center text-white bg-gradient-orange-r hover:brightness-75 rounded-md py-1.5">Final</a>
-              </div>
+            </div>
+            </div>
             </div>
           </div>
           @elseif($peserta->status_type->id == '45')
@@ -1098,7 +1102,7 @@
 
   // After Regist Countdown
   // Set the countdown date and time
-  const countdownDate_gts = new Date('September 18, 2023 23:59:59').getTime();
+  const countdownDate_gts = new Date('October 29, 2023 23:59:59').getTime();
 
   // Update the countdown every second
   const countdownTimer_gts = setInterval(() => {
