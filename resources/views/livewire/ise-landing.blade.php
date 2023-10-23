@@ -505,7 +505,7 @@
     <!-- Carousel -->
 
     {{-- Sponsor section --}}
-    <div class="mt-[-2px] relative bg-[#121316] w-full md:h-[846px] lg:h-[1246px] xl:h-[1446px] px-2">
+    <div class="mt-[-2px] relative bg-[#121316] w-full md:h-[1546px] lg:h-[1746px] xl:h-[1946px] px-2">
         <h1
             class="font-bold text-[19.36px] md:text-[45px] lg:text-[58px] xl:text-[72px] text-white text-center pt-[88px] md:pt-[60px] lg:pt-[90px] xl:pt-[130px]">
             Meet our
@@ -516,16 +516,20 @@
                     <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-12 h-[94.1px] sm:h-[170px] md:h-[200px] lg:h-[300px] xl:h-[350px]">
                         <img src="{{ asset('images/sponsor/kompas-l.png') }}" alt="kompas" class="w-4/5 sm:w-auto">
                     </div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-6 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/pln-m.png') }}" alt="pln" class="w-4/5 sm:w-auto"></div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-6 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/bmri-s.png') }}" alt="bmri" class="w-4/5 sm:w-auto"></div>
                     <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/pelindo-s.png') }}" alt="pelindo" class="w-4/5 sm:w-auto"></div>
                     <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/alfa-s.png') }}" alt="alfa" class="w-4/5 sm:w-auto"></div>
                     <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/ahm-s.png') }}" alt="ahm" class="w-4/5 sm:w-auto"></div>
                     <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/kai-s.png') }}" alt="kai" class="w-4/5 sm:w-auto"></div>
                     <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/semen-s.png') }}" alt="semen" class="w-4/5 sm:w-auto"></div>
-
-                    {{-- <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div>
-                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div> --}}
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/petrokim-s.png') }}" alt="petrokim" class="w-4/5 sm:w-auto"></div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/semenindo-s.png') }}" alt="semenindo" class="w-4/5 sm:w-auto"></div>
+                    <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-4 h-[88.72px] sm:h-[110px] md:h-[200px] lg:h-[230px] xl:h-[250px]"><img src="{{ asset('images/sponsor/ikasi-s.png') }}" alt="ikasi" class="w-4/5 sm:w-auto"></div>
+                    {{-- <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div> --}}
+                    {{-- <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div> --}}
+                    {{-- <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div> --}}
+                    {{-- <div class="flex justify-center items-center px-3 py-2 rounded-[20px] bg-[#191A1E] col-span-3 h-[61.83px] md:h-[130px] lg:h-[180px] xl:h-[230px]">02</div> --}}
                 </div>
             </div>
     </div>
